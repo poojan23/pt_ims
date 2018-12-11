@@ -1,0 +1,40 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul>
+                    <?php for($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                        <?php if($i != (count($breadcrumbs) - 1)) : ?>
+                        <li><a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
+                        <?php else : ?>
+                        <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                </ul><!-- end breadcrumb -->
+            </div><!-- end col -->    
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end breadcrumbs -->
+
+<!-- start section -->
+<section class="section white-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="title-wrap">
+                    <h2 class="title lines"><?php echo $heading_title; ?></h2>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <?php echo $description; ?>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>

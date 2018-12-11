@@ -1,0 +1,14 @@
+table.table-bordered.dataTable th, table.table-bordered.dataTable td {
+  vertical-align: middle;
+}
+
+table.table-bordered.dataTable th, table.table-bordered.dataTable td {
+  vertical-align: middle !important;
+}
+
+.table thead td span[data-toggle="tooltip"]:after, label.control-label span[data-toggle="tooltip"]:after {
+  font-family: FontAwesome;
+  color: #3c8dbc;
+  content: "\f059";
+  margin-left: 4px;
+}

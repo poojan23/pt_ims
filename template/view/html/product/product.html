@@ -1,0 +1,290 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul>
+                    <?php for($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                        <?php if($i != (count($breadcrumbs) - 1)) : ?>
+                        <li><a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
+                        <?php else : ?>
+                        <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                </ul><!-- end breadcrumb -->
+            </div><!-- end col -->    
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end breadcrumbs -->
+    
+<!-- start section -->
+<section class="section white-backgorund">
+    <div class="container">
+        <div class="row">
+            <!-- start sidebar -->
+            <div class="col-sm-4">
+                <div class='carousel slide product-slider' data-ride='carousel' data-interval="false">
+                    <div class='carousel-inner'>
+                        <div class='item active'>
+                            <figure>
+                                <img src='<?php echo $thumb; ?>' alt='' />
+                            </figure>
+                        </div><!-- end item -->
+                        <?php foreach($images as $image) : ?>
+                        <div class='item'>
+                            <figure>
+                                <img src='<?php echo $image["thumb"]; ?>' alt='' />
+                            </figure>
+                        </div><!-- end item -->
+                        <?php endforeach; ?>
+
+                        <!-- Arrows -->
+                        <a class='left carousel-control' href='.product-slider' data-slide='prev'>
+                            <span class='fa fa-angle-left'></span>
+                        </a>
+                        <a class='right carousel-control' href='.product-slider' data-slide='next'>
+                            <span class='fa fa-angle-right'></span>
+                        </a>
+                    </div><!-- end carousel-inner -->
+
+                    <!-- thumbs -->
+                    <ol class='carousel-indicators mCustomScrollbar meartlab'>
+                        <li data-target='.product-slider' data-slide-to='0' class='active'><img src='<?php echo $thumb; ?>' alt='' /></li>
+                        <?php foreach($images as $image) : ?>
+                        <li data-target='.product-slider' data-slide-to='1'><img src='<?php echo $image["thumb"]; ?>' alt='' /></li>
+                        <?php endforeach; ?>
+                    </ol><!-- end carousel-indicators -->
+                </div><!-- end carousel -->
+            </div><!-- end col -->
+            <!-- end sidebar -->
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="title"><?php echo $heading_title; ?></h2>
+                            <p class="text-gray alt-font">Product code: <?php echo $model; ?></p>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+                
+                <hr class="spacer-5"><hr class="spacer-10 no-border">
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="list alt-list">
+                            <?php for($i = 0; $i < 3; $i++) : ?>
+                            <li><i class="fa fa-check"></i> <?php echo $attribute_groups[0]['attribute'][$i]['name']; ?>: <?php echo $attribute_groups[0]['attribute'][$i]['text']; ?></li>
+                            <?php endfor; ?>
+                        </ul>
+                        <hr class="spacer-15">
+                        
+                        <ul class="list list-inline">
+                            <li>Share this product: </li>
+                            <li>
+                                <ul class="social-icons style1">
+                                    <li class="facebook"><a href="https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="pinterest"><a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <hr class="spacer-60">
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs style2 tabs-left">
+                    <li class="active"><a href="#description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
+                    <li><a href="#attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+                    <?php if($downloads) : ?>
+                    <li><a href="#download" data-toggle="tab"><?php echo $tab_download; ?></a></li>
+                    <?php endif; ?>
+                    <?php if($videos) : ?>
+                    <li><a href="#video" data-toggle="tab"><?php echo $tab_video; ?></a></li>
+                    <?php endif; ?>
+                    <li><a href="#enquiry" data-toggle="tab"><?php echo $tab_enquiry; ?></a></li>
+                </ul>
+            </div><!-- end col -->
+            <div class="col-xs-12 col-sm-9">
+                <!-- Tab panes -->
+                <div class="tab-content style2">
+                    <div class="tab-pane active" id="description">
+                        <h5><?php echo $tab_description; ?></h5>
+                        <?php echo $description; ?>
+                    </div><!-- end tab-pane -->
+                    <div class="tab-pane" id="attribute">
+                        <h5><?php echo $tab_attribute; ?></h5>
+                        
+                        <hr class="spacer-10 no-border">
+
+                        <div class="row">
+                            <?php foreach($attribute_groups as $attribute_group) : ?>
+                                <?php for($i = 0; $i < (count($attribute_group['attribute'])); $i++) : ?>
+                                <div class="col-sm-12 col-md-6">
+                                    <dl class="dl-horizontal">
+                                        <dt><?php echo $attribute_group['attribute'][$i]['name']; ?></dt>
+                                        <dd><?php echo $attribute_group['attribute'][$i]['text']; ?></dd>
+                                    </dl>
+                                </div><!-- end col -->
+                                <?php endfor; ?>
+                            <?php endforeach; ?>
+                        </div><!-- end row -->
+                    </div><!-- end tab-pane -->
+                    <?php if($downloads) : ?>
+                    <div class="tab-pane" id="download">
+                        <h5><?php echo $tab_download; ?></h5>
+                        
+                        <hr class="spacer-10 no-border">
+
+                        <?php foreach($downloads as $download) : ?>
+                        <a href="<?php echo $download['href']; ?>">
+                            <p><?php echo $download['name']; ?> (<?php echo $download['size']; ?>)</p>
+                        </a>
+                        <?php endforeach; ?>
+                    </div><!-- end tab-pane -->
+                    <?php endif; ?>
+                    <?php if($videos) : ?>
+                    <div class="tab-pane" id="video">
+                        <h5><?php echo $tab_video; ?></h5>
+                        
+                        <hr class="spacer-10 no-border">
+
+                        <div class='carousel slide product-slider video' data-ride='carousel' data-interval="false">
+                            <div class='carousel-inner'>
+                                <?php foreach($videos as $video) : ?>
+                                <div class='item active'>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="<?php echo $video['link']; ?>" frameborder="0"></iframe>
+                                    </div>
+                                </div><!-- end item -->
+                                <?php endforeach; ?>
+        
+                                <!-- Arrows -->
+                                <a class='left carousel-control' href='.video' data-slide='prev'>
+                                    <span class='fa fa-angle-left'></span>
+                                </a>
+                                <a class='right carousel-control' href='.video' data-slide='next'>
+                                    <span class='fa fa-angle-right'></span>
+                                </a>
+                            </div><!-- end carousel-inner -->
+        
+                            <!-- thumbs -->
+                            <ol class='carousel-indicators mCustomScrollbar meartlab'>
+                                <?php foreach($videos as $video) : ?>
+                                <li data-target='.video' data-slide-to='0' class='active'><img src='<?php echo $video["thumb"]; ?>' alt='' /></li>
+                                <?php endforeach; ?>
+                            </ol><!-- end carousel-indicators -->
+                        </div><!-- end carousel -->
+                    </div><!-- end tab-pane -->
+                    <?php endif; ?>
+                    <div class="tab-pane" id="enquiry">
+                        <h5><?php echo $text_enquiry; ?></h5>
+                        
+                        <hr class="spacer-10 no-border">
+
+                        <span id="alert-box"></span>
+
+                        <form id="form-product-enquiry" action="" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name"><?php echo $entry_name; ?> <span class="text-danger">*</span></label>
+                                <input type="text" id="name" name="name" class="form-control input-lg" placeholder="<?php echo $entry_name; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="company"><?php echo $entry_company; ?></label>
+                                <input type="text" id="company" name="company" class="form-control input-lg" placeholder="<?php echo $entry_company; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><?php echo $entry_email; ?> <span class="text-danger">*</span></label>
+                                <input type="text" id="email" name="email" class="form-control input-lg" placeholder="<?php echo $entry_email; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><?php echo $entry_phone; ?> <span class="text-danger">*</span></label>
+                                <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="<?php echo $entry_phone; ?> (Include STD Code)">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="message"><?php echo $entry_message; ?></label>
+                                <textarea id="message" name="message" rows="6" class="form-control input-lg" placeholder="<?php echo $entry_message; ?>"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-default round btn-lg" id="button-submit" data-loading-text="<?php echo $text_loading; ?>"><?php echo $button_submit; ?></button>
+                            </div>
+                        </form>
+                    </div><!-- end tab-pane -->
+                </div><!-- end tab-content -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+
+        <hr class="spacer-60">
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="mb-20"><?php echo $text_related; ?></h4>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="owl-demo" class="owl-carousel column-4 owl-theme">
+                    <?php foreach($products as $product) : ?>
+                    <div class="item">
+                        <div class="thumbnail store style1">
+                            <div class="header">
+                                <figure>
+                                    <a href="<?php echo $product['href']; ?>">
+                                        <img src="<?php echo $product['thumb']; ?>" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="caption">
+                                <h6 class="regular"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h6>
+                                <div class="price">
+                                    <small class="text-primary"><?php echo $product['manufacturer']; ?></small>
+                                </div>
+                            </div><!-- end caption -->
+                        </div><!-- end thumbnail -->
+                    </div><!-- end item -->
+                    <?php endforeach; ?>
+                </div><!-- end owl carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>
+<script type="text/javascript">    
+    $('#button-submit').on('click', function() {
+        $.ajax({
+            url: 'index.php?url=product/product/enquiry&product_id=<?php echo $product_id; ?>',
+            type: 'post',
+            dataType: 'json',
+            data: $("#form-product-enquiry").serialize(),
+            beforeSend: function() {
+                $('#button-submit').button('loading');
+            },
+            complete: function() {
+                $('#button-submit').button('reset');
+            },
+            success: function(json) {
+                $('.alert-dismissible').remove();
+    
+                if (json['error']) {
+                    $('#alert-box').after('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                }
+    
+                if (json['success']) {
+                    $('#alert-box').after('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+    
+                    $('input[name=\'name\']').val('');
+                    $('input[name=\'company\']').val('');
+                    $('input[name=\'email\']').val('');
+                    $('input[name=\'phone\']').val('');
+                    $('input[name=\'message\']').val('');
+                }
+            }
+        });
+    });
+</script>

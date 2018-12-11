@@ -1,0 +1,53 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul>
+                    <?php for($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                        <?php if($i != (count($breadcrumbs) - 1)) : ?>
+                        <li><a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
+                        <?php else : ?>
+                        <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                </ul><!-- end breadcrumb -->
+            </div><!-- end col -->    
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end breadcrumbs -->
+
+<!-- start section -->
+<section class="section white-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <ul class="list list-inline">
+                            <li><i class="fa fa-cloud-download mr-5"></i> <?php echo $heading_title; ?></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+                
+                <hr class="spacer-5"><hr class="spacer-20 no-border">
+
+                <div class="row column-5">
+                    <?php foreach($downloads as $download) : ?>
+                    <div class="col-sm-12 col-md-12">
+                        <div class="thumbnail store style1">
+                            <div class="caption">
+                                <h6 class="regular"><a href="<?php echo $download['href']; ?>"><?php if($download['mask'] == 'pdf') : ?><i class="fa fa-file-pdf-o mr-5"></i><?php elseif(($download['mask'] == 'xls') || ($download['mask'] == 'xlsx')) : ?><i class="fa fa-file-excel-o mr-5"></i><?php elseif(($download['mask'] == 'doc') || ($download['mask'] == 'docx')) : ?><i class="fa fa-file-word-o mr-5"></i><?php elseif(($download['mask'] == 'ppt') || ($download['mask'] == 'pptx')) : ?><i class="fa fa-file-powerpoint-o mr-5"></i><?php else : ?><i class="fa fa-file-o mr-5"></i><?php endif; ?><?php echo $download['name']; ?>  (<?php echo $download['size']; ?>)</a></h6>
+                            </div><!-- end caption -->
+                        </div><!-- end thumbnail -->
+                    </div><!-- end col -->
+                    <?php endforeach; ?>
+                </div><!-- end row -->
+            </div><!-- end col -->   
+        </div><!-- end row -->
+        
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>

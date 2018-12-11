@@ -1,0 +1,58 @@
+<?php echo $header; ?>
+<!-- start section -->
+<section class="section image-background fullscreen" style="background-image: url(image/coming-soon-bg.jpg);">
+    <div class="middle layer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <a href="javascript:void(0);">
+                        <img width="160" src="<?php echo $logo; ?>" alt="plus"/>
+                    </a>
+                    <h1 class="title text-white">Coming Soon</h1>
+                    <p class="lead text-white"><?php echo $message; ?></p>
+                    
+                    <hr class="spacer-10 no-border">
+                    
+                    <ul class="countdown-coming-soon list-inline">
+                        <li class="round">
+                            <span class="days">00</span>
+                            <p>Days</p>
+                        </li>
+                        <li class="round">
+                            <span class="hours">00</span>
+                            <p>Hours</p>
+                        </li>
+                        <li class="round">
+                            <span class="minutes">00</span>
+                            <p>Mins</p>
+                        </li>
+                        <li class="round">
+                            <span class="seconds">00</span>
+                            <p>Secs</p>
+                        </li>
+                    </ul><!-- end countdown -->
+                    
+                    <hr class="spacer-10 no-border">
+                    
+                    <ul class="social-icons style2">
+                        <li class="facebook"><a class="semi-circle" href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                        <li class="twitter"><a class="semi-circle" href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                        <li class="dribbble"><a class="semi-circle" href="javascript:void(0);"><i class="fa fa-dribbble"></i></a></li>
+                        <li class="linkedin"><a class="semi-circle" href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div><!-- end col -->    
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end middle -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>
+<script type="text/javascript">
+    //CountDown
+    $('.countdown-coming-soon').downCount({
+        date: '10/31/2018 12:00:00',
+        offset: +1
+    }, function () {
+        //alert('WOOT WOOT, done!');
+    });
+</script>

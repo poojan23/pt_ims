@@ -1,0 +1,702 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1><span><?php echo $heading_title; ?></span></h1>
+          <ol class="breadcrumb">
+            <?php foreach($breadcrumbs as $breadcrumb) : ?>
+            <li>
+                <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+            </li>
+            <?php endforeach; ?>
+          </ol>
+        </section>
+    
+        <!-- Main content -->
+        <section class="content">
+    
+          <div class="row">
+            <div class="col-md-12">
+              <?php if($success) : ?>
+              <div class="alert alert-success alert-dismissible"><i class="fa fa-exclamation-circle"></i> <?php echo $success; ?>
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+              </div>
+              <?php endif; ?>
+              <?php if($warning_err) : ?>
+                <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> <?php echo $warning_err; ?>
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+              <?php endif; ?>
+            </div>
+            <div class="col-md-3">
+    
+              <!-- Profile Image -->
+              <div class="box box-primary">
+                <div class="box-body box-profile">
+                  <img class="profile-user-img img-responsive img-circle" src="<?php echo $thumb; ?>" alt="">
+    
+                  <h3 class="profile-username text-center"><?php echo $config_name; ?></h3>
+    
+                  <p class="text-muted text-center"><?php echo $zone; ?>, <?php echo $country; ?></p>
+    
+                  <ul class="list-group list-group-unbordered">
+                    <li class="list-group-item">
+                      <b><?php echo $entry_owner; ?></b> <a class="pull-right"><?php echo $config_owner; ?></a>
+                    </li>
+                    <li class="list-group-item">
+                      <b><?php echo $entry_email; ?></b> <a class="pull-right"><?php echo $config_email; ?></a>
+                    </li>
+                    <li class="list-group-item">
+                      <b><?php echo $entry_telephone; ?></b> <a class="pull-right"><?php echo $config_telephone; ?></a>
+                    </li>
+                    <?php if($config_fax) : ?><li class="list-group-item">
+                      <b><?php echo $entry_fax; ?></b> <a class="pull-right"><?php echo $config_fax; ?></a>
+                    </li><?php endif; ?>
+                  </ul>
+    
+                  <button type="submit" form="form-settings" class="btn btn-primary btn-block"><b><?php echo $text_save; ?></b></button>
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+    
+              <!-- About Me Box -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title"><?php echo $tab_image; ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                  <strong><i class="fa fa-image margin-r-5"></i> <?php echo $entry_logo; ?></strong>
+    
+                  <img class="profile-user-img img-responsive img-circle" src="<?php echo $logo; ?>" alt="">
+    
+                  <hr>
+    
+                  <strong><i class="fa fa-image margin-r-5"></i> <?php echo $entry_icon; ?></strong>
+    
+                  <img class="profile-user-img img-responsive img-circle" src="<?php echo $icon; ?>" alt="">
+    
+                  <hr>
+    
+                  <strong><i class="fa fa-image margin-r-5"></i> <?php echo $entry_mobile_logo; ?></strong>
+    
+                  <img class="profile-user-img img-responsive img-circle" src="<?php echo $mobile_logo; ?>" alt="">
+    
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+              <form id="form-settings" class="form-horizontal" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+                <div class="nav-tabs-custom">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
+                    <li><a href="#store" data-toggle="tab"><?php echo $tab_store; ?></a></li>
+                    <li><a href="#local" data-toggle="tab"><?php echo $tab_local; ?></a></li>
+                    <li><a href="#options" data-toggle="tab"><?php echo $tab_option; ?></a></li>
+                    <li><a href="#image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
+                    <li><a href="#mail" data-toggle="tab"><?php echo $tab_mail; ?></a></li>
+                    <li><a href="#server" data-toggle="tab"><?php echo $tab_server; ?></a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="active tab-pane" id="general">
+                      <!-- General -->
+                      <div class="box-body">
+                        <div class="form-group <?php echo (!empty($url_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-url" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo nl2br2($help_url); ?>"><?php echo $entry_url; ?> <span class="text-red">*</span></span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_url" class="form-control" id="input-url" placeholder="<?php echo $entry_url; ?>" value="<?php echo $config_url; ?>">
+                            <span class="help-block"><?php echo $url_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-ssl" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_ssl; ?>"><?php echo $entry_ssl; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_ssl" class="form-control" id="input-ssl" placeholder="<?php echo $entry_ssl; ?>" value="<?php echo $config_ssl; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group <?php echo (!empty($meta_title_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-meta-title" class="col-sm-2 control-label"><?php echo $entry_meta_title; ?> <span class="text-red">*</span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_meta_title" class="form-control" id="input-meta-title" placeholder="<?php echo $entry_meta_title; ?>" value="<?php echo $config_meta_title; ?>">
+                            <span class="help-block"><?php echo $meta_title_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-meta-description" class="col-sm-2 control-label"><?php echo $entry_meta_description; ?></label>
+      
+                          <div class="col-sm-10">
+                              <textarea name="config_meta_description" rows="5" class="form-control" id="input-meta-description" placeholder="<?php echo $entry_meta_description; ?>"><?php echo $config_meta_description; ?></textarea>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-meta-keyword" class="col-sm-2 control-label"><?php echo $entry_meta_keyword; ?></label>
+      
+                          <div class="col-sm-10">
+                              <textarea name="config_meta_keyword" rows="5" class="form-control" id="input-meta-keyword" placeholder="<?php echo $entry_meta_keyword; ?>"><?php echo $config_meta_keyword; ?></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="store">
+                      <!-- General -->
+                      <div class="box-body">
+                        <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-name" class="col-sm-2 control-label"><?php echo $entry_name; ?> <span class="text-red">*</span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_name" class="form-control" id="input-name" placeholder="<?php echo $entry_name; ?>" value="<?php echo $config_name; ?>">
+                            <span class="help-block"><?php echo $name_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group <?php echo (!empty($owner_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-owner" class="col-sm-2 control-label"><?php echo $entry_owner; ?> <span class="text-red">*</span></label>
+      
+                          <div class="col-sm-10">
+                              <input type="text" name="config_owner" class="form-control" id="input-owner" placeholder="<?php echo $entry_owner; ?>" value="<?php echo $config_owner; ?>">
+                              <span class="help-block"><?php echo $owner_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-address" class="col-sm-2 control-label"><?php echo $entry_address; ?> <span class="text-red">*</span></label>
+      
+                          <div class="col-sm-10">
+                              <textarea name="config_address" rows="5" class="form-control" id="input-address" placeholder="<?php echo $entry_address; ?>"><?php echo $config_address; ?></textarea>
+                              <span class="help-block"><?php echo $address_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-geocode" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_geocode; ?>"><?php echo $entry_geocode; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_geocode" class="form-control" id="input-geocode" placeholder="<?php echo $entry_geocode; ?>" value="<?php echo $config_geocode; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-email" class="col-sm-2 control-label"><?php echo $entry_email; ?> <span class="text-red">*</span></label>
+      
+                          <div class="col-sm-10">
+                              <input type="text" name="config_email" class="form-control" id="input-email" placeholder="<?php echo $entry_email; ?>" value="<?php echo $config_email; ?>">
+                              <span class="help-block"><?php echo $email_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group <?php echo (!empty($telephone_err)) ? 'has-error' : ''; ?>">
+                          <label for="input-telephone" class="col-sm-2 control-label"><?php echo $entry_telephone; ?> <span class="text-red">*</span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_telephone" class="form-control" id="input-telephone" placeholder="<?php echo $entry_telephone; ?>" value="<?php echo $config_telephone; ?>">
+                            <span class="help-block"><?php echo $telephone_err; ?></span>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-fax" class="col-sm-2 control-label"><?php echo $entry_fax; ?></label>
+      
+                          <div class="col-sm-10">
+                              <input type="text" name="config_fax" class="form-control" id="input-fax" placeholder="<?php echo $entry_fax; ?>" value="<?php echo $config_fax; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-image" class="col-sm-2 control-label"><?php echo $entry_image; ?></label>
+      
+                          <div class="col-sm-10">
+                            <a href="" id="thumb-image" data-toggle="image" class="img-thumbnail">
+                              <img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" />
+                            </a>
+                            <input type="hidden" name="config_image" value="<?php echo $config_image; ?>" id="input-image" />
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-open" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_open; ?>"><?php echo $entry_open; ?></span></label>
+      
+                          <div class="col-sm-10">
+                              <textarea name="config_open" id="input-open" rows="5" class="form-control" placeholder="<?php echo $entry_open; ?>"><?php echo $config_open; ?></textarea>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-comment" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_comment; ?>"><?php echo $entry_comment; ?></span></label>
+      
+                          <div class="col-sm-10">
+                              <textarea name="config_comment" id="input-comment" rows="5" class="form-control" placeholder="<?php echo $entry_comment; ?>"><?php echo $config_comment; ?></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+      
+                    <div class="tab-pane" id="local">
+                      <div class="box-body">
+                        <div class="form-group">
+                          <label for="input-country" class="col-sm-2 control-label"><?php echo $entry_country; ?></label>
+      
+                          <div class="col-sm-10">
+                              <select name="config_country_id" id="input-country" class="form-control">
+                                <?php foreach($countries as $country) : ?>
+                                <?php if($country['country_id'] == $config_country_id) : ?>
+                                <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
+                                <?php else : ?>
+                                <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
+                              </select>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-zone" class="col-sm-2 control-label"><?php echo $entry_zone; ?></label>
+    
+                          <div class="col-sm-10">
+                            <select name="config_zone_id" id="input-zone" class="form-control"></select>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-language" class="col-sm-2 control-label"><?php echo $entry_language; ?></label>
+    
+                          <div class="col-sm-10">
+                            <select name="config_language" id="input-language" class="form-control">
+                              <?php foreach($languages as $language) : ?>
+                              <?php if($language['code'] == $config_language) : ?>
+                              <option value="<?php echo $language['code']; ?>" selected="selected"><?php echo $language['name']; ?></option>
+                              <?php else : ?>
+                              <option value="<?php echo $language['code']; ?>"><?php echo $language['name']; ?></option>
+                              <?php endif; ?>
+                              <?php endforeach; ?>
+                            </select>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-admin-language" class="col-sm-2 control-label"><?php echo $entry_admin_language; ?></label>
+
+                          <div class="col-sm-10">
+                            <select name="config_admin_language" id="input-admin-language" class="form-control">
+                              <?php foreach($languages as $language) : ?>
+                              <?php if($language['code'] == $config_admin_language) : ?>
+                              <option value="<?php echo $language['code']; ?>" selected="selected"><?php echo $language['name']; ?></option>
+                              <?php else : ?>
+                              <option value="<?php echo $language['code']; ?>"><?php echo $language['name']; ?></option>
+                              <?php endif; ?>
+                              <?php endforeach; ?>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+
+                    <div class="tab-pane" id="options">
+                      <div class="box-body">
+                        <fieldset>
+                          <legend><?php echo $text_enquiry; ?></legend>
+                          <div class="form-group">
+                            <label for="input-enquiry-prefix" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_enquiry_prefix; ?>"><?php echo $entry_enquiry_prefix; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <input type="text" name="config_enquiry_prefix" class="form-control" id="input-enquiry-prefix" placeholder="<?php echo $entry_enquiry_prefix; ?>" value="<?php echo $config_enquiry_prefix; ?>">
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-enquiry-web-prefix" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_enquiry_web_prefix; ?>"><?php echo $entry_enquiry_web_prefix; ?></span></label>
+        
+                            <div class="col-sm-10">
+                                <input type="text" name="config_enquiry_web_prefix" class="form-control" id="input-enquiry-web-prefix" placeholder="<?php echo $entry_enquiry_web_prefix; ?>" value="<?php echo $config_enquiry_web_prefix; ?>">
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+
+                    <div class="tab-pane" id="image">
+                      <div class="box-body">
+                        <div class="form-group">
+                          <label for="input-logo" class="col-sm-2 control-label"><span></span><?php echo $entry_logo; ?></label>
+      
+                          <div class="col-sm-10">
+                            <a href="" id="thumb-logo" data-toggle="image" class="img-thumbnail">
+                              <img src="<?php echo $logo; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" />
+                            </a>
+                            <input type="hidden" name="config_logo" value="<?php echo $config_logo; ?>" id="input-logo" />
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-icon" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_icon; ?>"><?php echo $entry_icon; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <a href="" id="thumb-icon" data-toggle="image" class="img-thumbnail">
+                              <img src="<?php echo $icon; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" />
+                            </a>
+                            <input type="hidden" name="config_icon" value="<?php echo $config_icon; ?>" id="input-icon" />
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mobile-logo" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_mobile_logo; ?>"><?php echo $entry_mobile_logo; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <a href="" id="thumb-mobile-logo" data-toggle="image" class="img-thumbnail">
+                              <img src="<?php echo $mobile_logo; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" />
+                            </a>
+                            <input type="hidden" name="config_mobile_logo" value="<?php echo $config_mobile_logo; ?>" id="input-mobile-logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+
+                    <div class="tab-pane" id="mail">
+                      <div class="box-body">
+                        <div class="form-group">
+                          <label for="input-mail-engine" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_mail_engine; ?>"><?php echo $entry_mail_engine; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <select name="config_mail_engine" id="input-mail-engine" class="form-control">
+                              <?php if($config_mail_engine == 'mail') : ?>
+                              <option value="mail" selected="selected"><?php echo $text_mail; ?></option>
+                              <?php else : ?>
+                              <option value="mail"><?php echo $text_mail; ?></option>
+                              <?php endif; ?>
+
+                              <?php if($config_mail_engine == 'smtp') : ?>
+                              <option value="smtp" selected="selected"><?php echo $text_smtp; ?></option>
+                              <?php else : ?>
+                              <option value="smtp"><?php echo $text_smtp; ?></option>
+                              <?php endif; ?>
+                            </select>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mail-parameter" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_mail_parameter; ?>"><?php echo $entry_mail_parameter; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_mail_parameter" class="form-control" id="input-mail-parameter" placeholder="<?php echo $entry_mail_parameter; ?>" value="<?php echo $config_mail_parameter; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mail-smtp-hostname" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_mail_smtp_hostname; ?>"><?php echo $entry_mail_smtp_hostname; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_mail_smtp_hostname" class="form-control" id="input-mail-smtp-hostname" placeholder="<?php echo $entry_mail_smtp_hostname; ?>" value="<?php echo $config_mail_smtp_hostname; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mail-smtp-username" class="col-sm-2 control-label"><?php echo $entry_mail_smtp_username; ?></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_mail_smtp_username" class="form-control" id="input-mail-smtp-username" placeholder="<?php echo $entry_mail_smtp_username; ?>" value="<?php echo $config_mail_smtp_username; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mail-smtp-password" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_mail_smtp_password; ?>"><?php echo $entry_mail_smtp_password; ?></span></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_mail_smtp_password" class="form-control" id="input-mail-smtp-password" placeholder="<?php echo $entry_mail_smtp_password; ?>" value="<?php echo $config_mail_smtp_password; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mail-smtp-port" class="col-sm-2 control-label"><?php echo $entry_mail_smtp_port; ?></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_mail_smtp_port" class="form-control" id="input-mail-smtp-port" placeholder="<?php echo $entry_mail_smtp_port; ?>" value="<?php echo $config_mail_smtp_port; ?>">
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="input-mail-smtp-timeout" class="col-sm-2 control-label"><?php echo $entry_mail_smtp_timeout; ?></label>
+      
+                          <div class="col-sm-10">
+                            <input type="text" name="config_mail_smtp_timeout" class="form-control" id="input-mail-smtp-timeout" placeholder="<?php echo $entry_mail_smtp_timeout; ?>" value="<?php echo $config_mail_smtp_timeout; ?>">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+
+                    <div class="tab-pane" id="server">
+                      <div class="box-body">
+                        <fieldset>
+                          <legend><?php echo $text_general; ?></legend>
+
+                          <div class="form-group">
+                            <label for="input-mail-smtp-timeout" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_maintenance; ?>"><?php echo $entry_maintenance; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <?php if($config_maintenance) : ?>
+                                <input type="radio" name="config_maintenance" value="1" checked="checked"> <?php echo $text_yes; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_maintenance" value="1"> <?php echo $text_yes; ?>
+                                <?php endif; ?>
+                              </label>
+                              <label class="radio-inline">
+                                <?php if(!$config_maintenance) : ?>
+                                <input type="radio" name="config_maintenance" value="0" checked="checked"> <?php echo $text_no; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_maintenance" value="0"> <?php echo $text_no; ?>
+                                <?php endif; ?>
+                              </label>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-seo-url" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_seo_url; ?>"><?php echo $entry_seo_url; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <?php if($config_seo_url) : ?>
+                                <input type="radio" name="config_seo_url" value="1" checked="checked"> <?php echo $text_yes; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_seo_url" value="1"> <?php echo $text_yes; ?>
+                                <?php endif; ?>
+                              </label>
+                              <label class="radio-inline">
+                                <?php if(!$config_seo_url) : ?>
+                                <input type="radio" name="config_seo_url" value="0" checked="checked"> <?php echo $text_no; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_seo_url" value="0"> <?php echo $text_no; ?>
+                                <?php endif; ?>
+                              </label>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-robots" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_robots; ?>"><?php echo $entry_robots; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <textarea name="config_robots" id="input-robots" rows="5" class="form-control" placeholder="<?php echo $entry_robots; ?>"><?php echo $config_robots; ?></textarea>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend><?php echo $text_security; ?></legend>
+
+                          <div class="form-group">
+                            <label for="input-secure" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_secure; ?>"><?php echo $entry_secure; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <?php if($config_secure) : ?>
+                                <input type="radio" name="config_secure" value="1" checked="checked"> <?php echo $text_yes; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_secure" value="1"> <?php echo $text_yes; ?>
+                                <?php endif; ?>
+                              </label>
+                              <label class="radio-inline">
+                                <?php if(!$config_secure) : ?>
+                                <input type="radio" name="config_secure" value="0" checked="checked"> <?php echo $text_no; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_secure" value="0"> <?php echo $text_no; ?>
+                                <?php endif; ?>
+                              </label>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-password" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_password; ?>"><?php echo $entry_password; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <?php if($config_password) : ?>
+                                <input type="radio" name="config_password" value="1" checked="checked"> <?php echo $text_yes; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_password" value="1"> <?php echo $text_yes; ?>
+                                <?php endif; ?>
+                              </label>
+                              <label class="radio-inline">
+                                <?php if(!$config_password) : ?>
+                                <input type="radio" name="config_password" value="0" checked="checked"> <?php echo $text_no; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_password" value="0"> <?php echo $text_no; ?>
+                                <?php endif; ?>
+                              </label>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend><?php echo $text_upload; ?></legend>
+
+                          <div class="form-group">
+                            <label for="input-file-max-size" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_file_max_size; ?>"><?php echo $entry_file_max_size; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <input type="text" name="config_file_max_size" value="<?php echo $config_file_max_size; ?>" class="form-control" placeholder="<?php echo $entry_file_max_size; ?>" id="input-file-max-size">
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-file-ext-allowed" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_file_ext_allowed; ?>"><?php echo $entry_file_ext_allowed; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <textarea name="config_file_ext_allowed" id="input-file-ext-allowed" rows="5" class="form-control" placeholder="<?php echo $entry_file_ext_allowed; ?>"><?php echo $config_file_ext_allowed; ?></textarea>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-file-mime-allowed" class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_file_mime_allowed; ?>"><?php echo $entry_file_mime_allowed; ?></span></label>
+        
+                            <div class="col-sm-10">
+                              <textarea name="config_file_mime_allowed" id="input-file-mime-allowed" rows="5" class="form-control" placeholder="<?php echo $entry_file_mime_allowed; ?>"><?php echo $config_file_mime_allowed; ?></textarea>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend><?php echo $text_error; ?></legend>
+
+                          <div class="form-group">
+                            <label for="input-error-display" class="col-sm-2 control-label"><?php echo $entry_error_display; ?></label>
+        
+                            <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <?php if($config_error_display) : ?>
+                                <input type="radio" name="config_error_display" value="1" checked="checked"> <?php echo $text_yes; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_error_display" value="1"> <?php echo $text_yes; ?>
+                                <?php endif; ?>
+                              </label>
+                              <label class="radio-inline">
+                                <?php if(!$config_error_display) : ?>
+                                <input type="radio" name="config_error_display" value="0" checked="checked"> <?php echo $text_no; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_error_display" value="0"> <?php echo $text_no; ?>
+                                <?php endif; ?>
+                              </label>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <label for="input-error-log" class="col-sm-2 control-label"><?php echo $entry_error_log; ?></label>
+        
+                            <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <?php if($config_error_log) : ?>
+                                <input type="radio" name="config_error_log" value="1" checked="checked"> <?php echo $text_yes; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_error_log" value="1"> <?php echo $text_yes; ?>
+                                <?php endif; ?>
+                              </label>
+                              <label class="radio-inline">
+                                <?php if(!$config_error_log) : ?>
+                                <input type="radio" name="config_error_log" value="0" checked="checked"> <?php echo $text_no; ?>
+                                <?php else : ?>
+                                <input type="radio" name="config_error_log" value="0"> <?php echo $text_no; ?>
+                                <?php endif; ?>
+                              </label>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group <?php echo (!empty($filename_err)) ? 'has-error' : ''; ?>">
+                            <label for="input-error-filename" class="col-sm-2 control-label"><?php echo $entry_error_filename; ?> <span class="text-red">*</span></label>
+        
+                            <div class="col-sm-10">
+                              <input type="text" name="config_error_filename" class="form-control" value="<?php echo $config_error_filename; ?>" placeholder="<?php echo $entry_error_filename; ?>" id="input-error-filename">
+                              <span class="help-block"><?php echo $filename_err; ?></span>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.tab-pane -->
+                  </div>
+                  <!-- /.tab-content -->
+                </div>
+              </form>
+              <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+    
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+<?php echo $footer; ?>
+<!-- iCheck -->
+<link rel="stylesheet" href="<?php echo HTTP_SERVER; ?>/view/dist/plugins/iCheck/square/blue.css">
+<!-- iCheck -->
+<script src="<?php echo HTTP_SERVER; ?>/view/dist/plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+<script type="text/javascript">
+  $('select[name=\'config_country_id\']').on('change', function() {
+    $.ajax({
+      url: 'index.php?url=localisation/country/country&user_token=<?php echo $user_token; ?>&country_id=' + this.value,
+      dataType: 'json',
+      beforeSend: function() {
+        $('select[name=\'config_country_id\']').prop('disabled', true);
+      },
+      complete: function() {
+        $('select[name=\'config_country_id\']').prop('disabled', false);
+      },
+      success: function(json) {
+        html = '<option value=""><?php echo $text_select; ?></option>';
+  
+        if (json['zone'] && json['zone'] != '') {
+          for (i = 0; i < json['zone'].length; i++) {
+                  html += '<option value="' + json['zone'][i]['zone_id'] + '"';
+  
+            if (json['zone'][i]['zone_id'] == '<?php echo $config_zone_id; ?>') {
+                    html += ' selected="selected"';
+            }
+  
+            html += '>' + json['zone'][i]['name'] + '</option>';
+          }
+        } else {
+          html += '<option value="0" selected="selected"><?php echo $text_none; ?></option>';
+        }
+  
+        $('select[name=\'config_zone_id\']').html(html);
+        
+        $('#button-save').prop('disabled', false);
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+      }
+    });
+  });
+  
+  $('select[name=\'config_country_id\']').trigger('change');
+  </script>

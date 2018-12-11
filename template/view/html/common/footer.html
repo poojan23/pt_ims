@@ -1,0 +1,78 @@
+<?php if(!$maintenance) : ?>
+<!-- start footer -->
+<footer class="footer">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-3">
+                <h5 class="title"><?php echo $store_name; ?></h5>
+                <p><?php echo $short_desc; ?></p>
+                
+                <hr class="spacer-10 no-border">
+                
+                <ul class="social-icons">
+                    <li class="facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                    <li class="twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                    <li class="dribbble"><a href="javascript:void(0);"><i class="fa fa-dribbble"></i></a></li>
+                    <li class="linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="youtube"><a href="javascript:void(0);"><i class="fa fa-youtube"></i></a></li>
+                    <li class="behance"><a href="javascript:void(0);"><i class="fa fa-behance"></i></a></li>
+                </ul>
+            </div><!-- end col -->
+            <div class="col-sm-3">
+                <h5 class="title"><?php echo $text_service; ?></h5>
+                <ul class="list alt-list">
+                    <li><a href="<?php echo $contact; ?>"><i class="fa fa-angle-right"></i><?php echo $text_contact; ?></a></li>
+                    <li><a href="<?php echo $dealer; ?>"><i class="fa fa-angle-right"></i><?php echo $text_dealer; ?></a></li>
+                    <li><a href="<?php echo $sitemap; ?>"><i class="fa fa-angle-right"></i><?php echo $text_sitemap; ?></a></li>
+                </ul>
+                <h5 class="title"><?php echo $text_extra; ?></h5>
+                <ul class="list alt-list">
+                    <li><a href="<?php echo $manufacturer; ?>"><i class="fa fa-angle-right"></i><?php echo $text_manufacturer; ?></a></li>
+                    <li><a href="<?php echo $industry; ?>"><i class="fa fa-angle-right"></i><?php echo $text_industry; ?></a></li>
+                </ul>
+            </div><!-- end col -->
+            <div class="col-sm-3">
+                <h5 class="title"><?php echo $text_information; ?></h5>
+                <ul class="list alt-list">
+                    <?php foreach($informations as $information) : ?>
+                    <li><a href="<?php echo $information['href']; ?>"><i class="fa fa-angle-right"></i><?php echo $information['title']; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div><!-- end col -->
+            <div class="col-sm-3">
+                <h5 class="title"><?php echo $text_social; ?></h5>
+                <div id="fb-root"></div>
+                <div class="fb-page" data-href="https://www.facebook.com/prismimpex.in" data-width="380" data-hide-cover="false" data-show-facepile="true"></div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <hr class="spacer-30">
+        
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <p class="text-sm">&COPY; <?php echo $date; ?>. Made with <i class="fa fa-heart text-danger"></i> by <?php echo $powered; ?></p>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</footer>
+<!-- end footer -->
+<?php endif; ?>
+
+<!-- JavaScript Files -->
+<?php foreach($scripts as $script) : ?>
+<script type="text/javascript" src="<?php echo $script; ?>"></script>
+<?php endforeach; ?>
+<script type="text/javascript" src="template/view/dist/js/main.js"></script>
+<script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_IN/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul>
+                    <?php for($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                        <?php if($i != (count($breadcrumbs) - 1)) : ?>
+                        <li><a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
+                        <?php else : ?>
+                        <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                </ul><!-- end breadcrumb -->
+            </div><!-- end col -->    
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end breadcrumbs -->
+
+<!-- start section -->
+<section class="light-background">
+    <div class="container-fluid">
+        <div class="row grid-space-0">
+            <div class="col-sm-12">
+                <div class="map" id="map"></div>
+            </div><!-- end col -->    
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+
+<!-- start section -->
+<section class="section white-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-wrap">
+                    <h2 class="title lines">Contact Us</h2>
+                </div>
+            </div><!-- end col -->    
+        </div><!-- end row -->
+        
+        <div class="row">
+            <div class="col-sm-5">
+                <h6 class="subtitle"><?php echo $store; ?></h6>
+                <ul class="list alt-list">
+                    <li><i class="fa fa-map-marker"></i> <b>Address:</b> <?php echo $address; ?></li>
+                    <li><i class="fa fa-phone"></i> <b>Phone Number:</b> <?php echo $telephone; ?></li>
+                    <?php if($fax) : ?><li><i class="fa fa-fax"></i> <b>Fax Number:</b> <?php echo $fax; ?></li><?php endif; ?>
+                    <li><i class="fa fa-envelope"></i> <b>Email Us:</b> <?php echo $email_add; ?></li>
+                    <?php if($open) : ?><li><i class="fa fa-clock-o"></i> <b>Working hours:</b> <?php echo $open; ?></li><?php endif; ?>
+                    <?php if($comment) : ?><li><i class="fa fa-comment"></i> <b>Comment:</b> <?php echo $comment; ?></li><?php endif; ?>
+                </ul>
+                
+                <hr class="spacer-15">
+                
+                <h6 class="subtitle">Stay in touch</h6>
+                
+                <div class="form-group">
+                    <input type="text" id="email" class="form-control input-sm" placeholder="Coming Soon ..." disabled="disabled">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default btn-block round btn-sm" value="Subscribe">
+                </div>
+                <ul class="social-icons style2">
+                    <li class="facebook"><a class="semi-circle" href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                    <li class="linkedin"><a class="semi-circle" href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                
+            </div><!-- end col -->
+            <div class="col-sm-7">
+                <form action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
+                    <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                        <label for="name"><?php echo $entry_name; ?></label>
+                        <input type="text" id="name" name="name" class="form-control input-lg" placeholder="<?php echo $entry_name; ?>" value="<?php echo $name; ?>">
+                        <span id="helpBlock2" class="help-block"><?php echo $name_err; ?></span>
+                    </div>
+                    <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                        <label for="email"><?php echo $entry_email; ?></label>
+                        <input type="text" id="email" name="email" class="form-control input-lg" placeholder="<?php echo $entry_email; ?>" value="<?php echo $email; ?>">
+                        <span id="helpBlock2" class="help-block"><?php echo $email_err; ?></span>
+                    </div>
+                    <div class="form-group <?php echo (!empty($phone_err)) ? 'has-error' : ''; ?>">
+                        <label for="phone"><?php echo $entry_phone; ?></label>
+                        <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="<?php echo $entry_phone; ?>" value="<?php echo $phone; ?>">
+                        <span id="helpBlock2" class="help-block"><?php echo $phone_err; ?></span>
+                    </div>
+                    <div class="form-group <?php echo (!empty($message_err)) ? 'has-error' : ''; ?>">
+                        <label class="control-label" for="message"><?php echo $entry_enquiry; ?></label>
+                        <textarea id="message" name="message" rows="6" class="form-control input-lg" placeholder="<?php echo $entry_enquiry; ?>"><?php echo $message; ?></textarea>
+                        <span id="helpBlock2" class="help-block"><?php echo $message_err; ?></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default round btn-lg" value="<?php echo $button_submit; ?>">
+                    </div>
+                </form>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        // Contact Map
+        if ($("#map").length > 0)
+        {
+            var map;
+
+            map = new GMaps({
+                el: "#map",
+                lat: '<?php echo $lat; ?>',
+                lng: '<?php echo $lng; ?>',
+                scrollwheel: false,
+                zoom: 14,
+                zoomControl: true,
+                panControl: false,
+                streetViewControl: false,
+                mapTypeControl: false,
+                overviewMapControl: false,
+                clickable: false
+            });
+
+            var image = "";
+            map.addMarker({
+                lat: '<?php echo $lat; ?>',
+                lng: '<?php echo $lng; ?>',
+                icon: "<?php echo $icon; ?>",
+                animation: google.maps.Animation.DROP,
+                verticalAlign: "bottom",
+                horizontalAlign: "center",
+                backgroundColor: "#d3cfcf"
+            });
+
+            var styles = [
+                {
+                    "featureType": "road",
+                    "stylers": [
+                        {"color": "#ffffff"}
+                    ]
+                }, {
+                    "featureType": "water",
+                    "stylers": [
+                        {"color": "#f2f2f2"}
+                    ]
+                }, {
+                    "featureType": "landscape",
+                    "stylers": [
+                        {"color": "#f2f2f2"}
+                    ]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {"color": "#2d2d2d"}
+                    ]
+                }, {
+                    "featureType": "poi",
+                    "stylers": [
+                        {"color": "#f2f2f2"}
+                    ]
+                }, {
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {"saturation": 1},
+                        {"weight": 0.1},
+                        {"color": "#b1b1b1"}
+                    ]
+                }
+
+            ];
+
+            map.addStyle({
+                styledMapName: "Styled Map",
+                styles: styles,
+                mapTypeId: "map_style"
+            });
+
+            map.setStyle("map_style");
+        }
+    });
+</script>

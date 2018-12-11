@@ -1,0 +1,335 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<!-- start section -->
+<section class="section light-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-3">
+                <div class="navbar-vertical">
+                    <ul class="nav nav-stacked">
+                        <li class="header">
+                            <h6 class="text-uppercase"><?php echo $text_industry; ?> <i class="fa fa-navicon pull-right"></i></h6>
+                        </li>
+                        <?php foreach($industries as $industry) : ?>
+                        <li><a href="<?php echo $industry['href']; ?>"><?php echo $industry['name']; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div><!-- end navbar-vertical -->
+            </div><!-- end col -->
+            <div class="col-sm-8 col-md-9">
+                <div class="owl-carousel slider owl-theme">
+                    <?php foreach($banners as $banner) : ?>
+                    <div class="item">
+                        <?php if($banner['link']) : ?>
+                        <figure>
+                            <a href="<?php echo $banner['link']; ?>">
+                                <img src="<?php echo $banner['image']; ?>" alt=""/>
+                            </a>
+                        </figure>
+                        <?php else : ?>
+                        <figure>
+                            <img src="<?php echo $banner['image']; ?>" alt=""/>
+                        </figure>
+                        <?php endif; ?>
+                    </div><!-- end item -->
+                    <?php endforeach; ?>
+                </div><!-- end owl carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+
+
+<!-- start section -->
+<section class="section white-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-wrap">
+                    <h2 class="title"><span class="text-primary"><?php echo $text_newest; ?></span> <?php echo $text_products; ?></h2>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <div class="row column-4">
+            <?php foreach($latest_products as $product) : ?>                
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail store style1">
+                    <div class="header">
+                        <figure class="layer">
+                            <a href="javascript:void(0);">
+                                <img class="front" src="<?php echo $product['thumb']; ?>" alt="">
+                                <img class="back" src="<?php echo $product['thumb']; ?>" alt="">
+                            </a>
+                        </figure>
+                        <div class="icons">
+                            <a class="icon semi-circle" href="<?php echo $product['href']; ?>"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <h6 class="regular"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h6>
+                        <div class="price">
+                            <small class="text-primary"><?php echo $product['manufacturer']; ?></small>
+                        </div>
+                        <a href="<?php echo $product['href']; ?>"><i class="fa fa-long-arrow-right mr-5"></i><?php echo $text_view; ?></a>
+                    </div><!-- end caption -->
+                </div><!-- end thumbnail -->
+            </div><!-- end col -->
+            <?php endforeach; ?>
+        </div><!-- end row -->
+                        
+        <hr class="spacer-30 no-border"/>
+        
+        <div class="row">
+            <?php foreach($ad_banners as $banner) : ?>
+            <div class="col-sm-6">
+                <div class="box-banner-img">
+                    <figure>
+                        <?php if($banner['link']) : ?>
+                        <a href="<?php echo $banner['link']; ?>">
+                            <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>"/>
+                        </a>
+                        <?php else : ?>
+                        <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>"/>
+                        <?php endif; ?>
+                    </figure>
+                </div><!-- end box-banner-img -->
+            </div><!-- end col -->
+            <?php endforeach; ?>
+        </div><!-- end row -->
+        
+        <hr class="spacer-30 no-border"/>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-wrap">
+                    <h2 class="title"><span class="text-primary"><?php echo $text_popular; ?></span> <?php echo $text_products; ?></h2>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="owl-carousel column-4 owl-theme">
+                    <?php foreach($popular_products as $product) : ?>
+                    <div class="item">
+                        <div class="thumbnail store style1">
+                            <div class="header">
+                                <figure class="layer">
+                                    <a href="javascript:void(0);">
+                                        <img src="<?php echo $product['thumb']; ?>" alt="">
+                                    </a>
+                                </figure>
+                                <div class="icons">
+                                    <a class="icon semi-circle" href="<?php echo $product['href']; ?>"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h6 class="regular"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h6>
+                                <div class="price">
+                                    <small class="text-primary"><?php echo $product['manufacturer']; ?></small>
+                                </div>
+                                <a href="javascript:void(0);"><i class="fa fa-long-arrow-right mr-5"></i><?php echo $text_view; ?></a>
+                            </div><!-- end caption -->
+                        </div><!-- end thumbnail -->
+                    </div><!-- end item -->
+                    <?php endforeach; ?>
+                </div><!-- end owl carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+
+
+<!-- start section -->
+<section class="section light-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="owl-carousel product-showcase owl-theme">
+                    <?php foreach($focus_products as $product) : ?>
+                    <div class="product">
+                        <div class="row">
+                            <div class="col-sm-4 vertical-align">
+                                <figure>
+                                    <a href="<?php echo $product['href']; ?>"> 
+                                        <img alt="img" src="<?php echo $product['thumb']; ?>">
+                                    </a>
+                                </figure>
+                            </div><!-- end col -->
+                            <div class="col-sm-8 vertical-align">
+                                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+                                <h5 class="text-primary"><?php echo $product['manufacturer']; ?></h5>
+
+                                <?php echo $product['description']; ?>
+
+                                <a title="<?php echo $text_view; ?>" class="btn btn-default btn-sm semi-circle"> 
+                                    <i class="fa fa-long-arrow-right mr-5"></i> <?php echo $text_view; ?>
+                                </a>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                    </div><!-- end product -->
+                    <?php endforeach; ?>
+                </div><!-- end owl carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+
+
+<!-- start section -->
+<section class="section image-background layer-dark" style="background-image: url(<?php echo $banner_bg; ?>);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-wrap">
+                    <h2 class="title text-white"><?php echo $text_category; ?></h2>
+                    <p class="text-white"><?php echo $text_category_message; ?></p>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="owl-carousel column-5 owl-theme">
+                    <?php foreach($categories as $category) : ?>
+                    <div class="cat-item">
+                        <div class="cat-img">
+                            <figure>
+                                <a href="<?php echo $category['href']; ?>">
+                                    <img src="<?php echo $category['thumb']; ?>" />
+                                </a>
+                            </figure>
+                        </div><!-- end cat-img -->
+                        <div class="cat-title">
+                            <h6><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></h6>
+                        </div><!-- end cat-title -->
+                    </div><!-- end cat-item -->
+                    <?php endforeach; ?>
+                </div><!-- end owl carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+
+
+<!-- start section -->
+<section class="section white-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-wrap">
+                    <h2 class="title"><span class="text-primary">Latest</span> News</h2>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h6 class="regular text-center">Coming Soon</h6>
+                <div id="owl-demo" class="owl-carousel column-3 owl-theme">
+                    
+                </div><!-- end owl carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+        
+        <hr class="spacer-30 no-border"/>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h5 class="subtitle text-uppercase"><span class="text-primary"><?php echo $text_new; ?></span> <?php echo $text_products; ?></h5>
+                    
+                    <ul class="items">
+                        <?php foreach($new_products as $product) : ?>
+                        <li> 
+                            <a href="<?php echo $product['href']; ?>" class="product-image">
+                                <img src="<?php echo $product['thumb']; ?>" alt="Sample Product ">
+                            </a>
+                            <div class="product-details">
+                                <h6 class="regular"> 
+                                    <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a> 
+                                </h6>
+                                <span class="text-primary"><?php echo $product['manufacturer']; ?></span>
+                            </div>
+                        </li><!-- end item -->
+                        <?php endforeach; ?>
+                    </ul>
+                </div><!-- end widget -->
+            </div><!-- end col -->
+            
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h5 class="subtitle text-uppercase"><span class="text-primary"><?php echo $text_market; ?></span> <?php echo $text_we_serve; ?></h5>
+                    
+                    <ul class="items">
+                        <?php foreach($markets as $market) : ?>
+                        <li> 
+                            <a href="<?php echo $market['href']; ?>" class="product-image">
+                                <img src="<?php echo $market['thumb']; ?>" alt="Sample Product ">
+                            </a>
+                            <div class="product-details">
+                                <h6 class="regular"> 
+                                    <a href="<?php echo $market['href']; ?>"><?php echo $market['name']; ?></a> 
+                                </h6>
+                                <!-- <span class="text-primary"><?php echo $market['country']; ?></span> -->
+                            </div>
+                        </li><!-- end item -->
+                        <?php endforeach; ?>
+                    </ul>
+                </div><!-- end widget -->
+            </div><!-- end col -->
+            
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h5 class="subtitle text-uppercase"><span class="text-primary"><?php echo $text_most_viewed; ?></span> <?php echo $text_products; ?></h5>
+                    
+                    <ul class="items">
+                        <?php foreach($most_viewed_products as $product) : ?>
+                        <li> 
+                            <a href="<?php echo $product['href']; ?>" class="product-image">
+                                <img src="<?php echo $product['thumb']; ?>" alt="Sample Product ">
+                            </a>
+                            <div class="product-details">
+                                <h6 class="regular"> 
+                                    <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a> 
+                                </h6>
+                                <span class="text-primary"><?php echo $product['manufacturer']; ?></span>
+                            </div>
+                        </li><!-- end item -->
+                        <?php endforeach; ?>
+                    </ul>
+                </div><!-- end widget -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+
+
+<!-- start section -->
+<section class="primary-background">
+    <div class="container">
+        <div class="box-banner-wide primary-background">
+            <div class="row">
+                <div class="col-sm-4 vertical-align">
+                    <h2 class="alt-font text-uppercase text-white">
+                        Dealers <span class="regular">Invited!</span>
+                    </h2>
+                </div><!-- end col -->
+                <div class="col-sm-4 vertical-align">
+                    <p class="mt-20">We're inviting dealers all over India to join hands with us.</p>
+                </div><!-- end col -->
+                <div class="col-sm-4 vertical-align text-right">
+                    <a target="_blank" href="<?php echo $dealers; ?>" class="btn btn-light semi-circle btn-md">Join Now</a>
+                </div><!-- end col -->   
+            </div><!-- end row -->
+        </div><!-- end box-banner-wide -->
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>

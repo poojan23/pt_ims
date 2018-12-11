@@ -1,0 +1,64 @@
+<?php echo $header; ?>
+<?php echo $nav; ?>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul>
+                    <?php for($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                        <?php if($i != (count($breadcrumbs) - 1)) : ?>
+                        <li><a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
+                        <?php else : ?>
+                        <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                </ul><!-- end breadcrumb -->
+            </div><!-- end col -->    
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end breadcrumbs -->
+
+<!-- start section -->
+<section class="section white-backgorund">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <ul class="list list-inline">
+                            <li><i class="fa fa-industry mr-5"></i> <?php echo $heading_title; ?></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+                
+                <hr class="spacer-5"><hr class="spacer-20 no-border">
+
+                <div class="row column-5">
+                    <?php foreach($industries as $industry) : ?>
+                    <div class="col-sm-6 col-md-2">
+                        <div class="thumbnail store style1">
+                            <div class="header">
+                                <figure class="layer">
+                                    <a href="<?php echo $industry['href']; ?>">
+                                        <img class="front" src="<?php echo $industry['thumb']; ?>" alt="">
+                                        <img class="back" src="<?php echo $industry['thumb']; ?>" alt="">
+                                    </a>
+                                </figure>
+                                <div class="icons">
+                                    <a class="icon semi-circle" href="<?php echo $industry['href']; ?>"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="caption text-center">
+                                <h6 class="regular"><a href="<?php echo $industry['href']; ?>"><?php echo $industry['name']; ?></a></h6>
+                            </div><!-- end caption -->
+                        </div><!-- end thumbnail -->
+                    </div><!-- end col -->
+                    <?php endforeach; ?>
+                </div><!-- end row -->
+            </div><!-- end col -->   
+        </div><!-- end row -->
+        
+    </div><!-- end container -->
+</section>
+<!-- end section -->
+<?php echo $footer; ?>

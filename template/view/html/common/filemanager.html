@@ -1,0 +1,101 @@
+<div id="filemanager" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-primary" id="save-image">
+                            <i class="fa fa-floppy-o"></i>
+                        </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                        </button>
+                    </div>
+                
+                <h4 class="modal-title">File Manager</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="col-sm-1">
+                        <button type="button" data-toggle="tooltip" title="Upload Image" id="button-upload" class="btn btn-primary"><i class="fa fa-upload"></i></button>
+                    </div>
+                    <div class="col-sm-2">
+                        <span class="thumbnail">
+                            <img src="<?php echo HTTP_CATALOG ?>image/no-image.png" alt="" title="" width="100" height="100" />
+                        </span>
+                        <input type="hidden" name="path" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        '<?php if(isset($target)) : ?>'
+            $('#save-image').on('click', function(e) {
+                e.preventDefault();
+                var $this = $('span.thumbnail');
+    
+                '<?php if(isset($thumb)) : ?>'
+                    $('#<?php echo $thumb; ?>').find('img').attr('src', $this.find('img').attr('src'));
+                '<?php endif; ?>'
+    
+                $('#<?php echo $target; ?>').val($this.next('input').val());
+    
+                $('#modal-image').modal('hide');
+            });
+        '<?php endif; ?>'
+    </script>
+    <script>
+        $('#button-upload').on('click', function() {
+        $('#form-upload').remove();
+    
+        $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" value="" /></form>');
+    
+        $('#form-upload input[name=\'file\']').trigger('click');
+    
+        if (typeof timer != 'undefined') {
+            clearInterval(timer);
+        }
+    
+        timer = setInterval(function() {
+            if ($('#form-upload input[name=\'file\']').val() != '') {
+                clearInterval(timer);
+
+                var directory = $('section.content-header h1').find('span').text().toLowerCase();
+                //alert(directory);
+
+                $.ajax({
+                    url: 'index.php?url=common/filemanager/upload&user_token=' + getURLVar('user_token') + '&directory=' + directory,
+                    type: 'post',
+                    dataType: 'json',
+                    data: new FormData($('#form-upload')[0]),
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function() {
+                        $('#button-upload i').replaceWith('<i class="fa fa-circle-o-notch fa-spin"></i>');
+                        $('#button-upload').prop('disabled', false);
+                    },
+                    complete: function() {
+                        $('#button-upload i').replaceWith('<i class="fa fa-upload"></i>');
+                        $('#button-upload').prop('disabled', false);
+                    },
+                    success: function(json) {
+                        if(json['error']) {
+                            alert(json['error']);
+                        }
+
+                        if(json['success']) {
+                            alert(json['success']);
+
+                            $('span.thumbnail img').attr('src', json['thumb']);
+                            $('span.thumbnail').next('input').attr('value', json['path']);
+                        }
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                        console.warn(xhr);
+                    }
+                });
+            }
+	    }, 500);
+    });
+    </script>
