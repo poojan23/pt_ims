@@ -118,7 +118,7 @@ class ControllerCommonNav extends Controller
             if($this->member->hasPermission('access', 'sale/inward')) {
                 $sale[] = array(
                     'name'      => $this->language->get('text_inward'),
-                    'href'      => $this->url->link('product/inward', 'member_token=' . $this->session->data['member_token'], true),
+                    'href'      => $this->url->link('sale/inward', 'member_token=' . $this->session->data['member_token'], true),
                     'children'  => array()
                 );
             }
@@ -126,7 +126,7 @@ class ControllerCommonNav extends Controller
             if($this->member->hasPermission('access', 'sale/order')) {
                 $sale[] = array(
                     'name'      => $this->language->get('text_order'),
-                    'href'      => $this->url->link('customer/customer_group', 'member_token=' . $this->session->data['member_token'], true),
+                    'href'      => $this->url->link('sale/order', 'member_token=' . $this->session->data['member_token'], true),
                     'children'  => array()
                 );
             }
@@ -134,7 +134,7 @@ class ControllerCommonNav extends Controller
             if($this->member->hasPermission('access', 'sale/outward')) {
                 $sale[] = array(
                     'name'      => $this->language->get('text_outward'),
-                    'href'      => $this->url->link('customer/customer_group', 'member_token=' . $this->session->data['member_token'], true),
+                    'href'      => $this->url->link('sale/outward', 'member_token=' . $this->session->data['member_token'], true),
                     'children'  => array()
                 );
             }
