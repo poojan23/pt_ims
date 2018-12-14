@@ -126,21 +126,20 @@ class ControllerUserUser extends Controller
             $nestedData['member_id']    = $result['member_id'];
             $nestedData['name']         = $result['name'];
             $nestedData['email']        = $result['email'];
-            $nestedData['member_group'] = $result['member_group'];
+            $nestedData['member_group_id'] = $result['member_group_id'];
             $nestedData['status']       = $result['status'];
             $nestedData['ip']           = $result['ip'];
             $nestedData['date_added']   = ($result['date_added'] != 0000-00-00) ? date('d/m/Y', strtotime($result['date_added'])) : '00/00/0000';
 
             $table[] = $nestedData;
         }
-
         $json = array(
             'recordsTotal'      => intval($totalData),
             'recordsFiltered'   => intval($totalFiltered),
             'data'              => $table
         );
-
-        echo json_encode($json);
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
 
     protected function getForm() {
@@ -228,6 +227,18 @@ class ControllerUserUser extends Controller
             $member_info = $this->model_user_user->getUser($this->request->get['member_id']);
         }
 
+        $this->load->model('user/user_role');
+
+        $data['user_roles'] = $this->model_user_user_role->getUserRoles();
+        
+        if(isset($this->request->post['member_role_id'])) {
+            $data['member_role_id'] = $this->request->post['member_role_id'];
+        } elseif(!empty($member_info)) {
+            $data['member_role_id'] = $member_info['member_role_id'];
+        } else {
+            $data['member_role_id'] = '';
+        }
+        
         $this->load->model('user/user_group');
 
         $data['user_groups'] = $this->model_user_user_group->getUserGroups();
@@ -272,12 +283,12 @@ class ControllerUserUser extends Controller
             $data['telephone'] = '';
         }
 
-        if(isset($this->request->post['fax'])) {
-            $data['fax'] = $this->request->post['fax'];
+        if(isset($this->request->post['mobile'])) {
+            $data['mobile'] = $this->request->post['mobile'];
         } elseif(!empty($member_info)) {
-            $data['fax'] = $member_info['fax'];
+            $data['mobile'] = $member_info['mobile'];
         } else {
-            $data['fax'] = '';
+            $data['mobile'] = '';
         }
 
         if(isset($this->request->post['status'])) {

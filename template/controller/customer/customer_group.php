@@ -128,14 +128,14 @@ class ControllerCustomerCustomerGroup extends Controller
 
             $table[] = $nestedData;
         }
-
         $json = array(
             'recordsTotal'      => $totalData,
             'recordsFiltered'   => $totalFiltered,
             'data'              => $table
         );
-
-        echo json_encode($json);
+        
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
 
     protected function getForm() {

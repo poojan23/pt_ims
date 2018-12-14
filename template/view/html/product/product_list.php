@@ -4,10 +4,10 @@
     <div class="col-lg-10">
         <h2><?php echo $text_title; ?></h2>
         <ol class="breadcrumb">
-            <?php foreach ($breadcrumbs as $breadcrumb) : ?>
-                <li>
-                    <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-                </li>
+            <?php foreach($breadcrumbs as $breadcrumb) : ?>
+            <li>
+                <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+            </li>
             <?php endforeach; ?> 
         </ol>
     </div>
@@ -37,7 +37,7 @@
                 <div class="ibox-content">
 
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-user">
+                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-product">
                             <thead>
                                 <tr>
                                     <th style="width: 1px;" class="center">
@@ -47,11 +47,7 @@
                                         </label>
                                     </th>
                                     <th><?php echo $column_name; ?></th>
-                                    <th><?php echo $column_email; ?></th>
-                                    <th><?php echo $column_group; ?></th>
-                                    <th><?php echo $column_status; ?></th>
-                                    <th><?php echo $column_ip; ?></th>
-                                    <th><?php echo $column_date_added; ?></th>
+                                    <th><?php echo $column_code; ?></th>
                                     <th><?php echo $column_action; ?></th>
                                 </tr>
                             </thead>
@@ -78,13 +74,13 @@
 <script>
                             $(document).ready(function () {
                                 var myTable =
-                                        $('#table-user')
+                                        $('#table-product')
                                         .DataTable({
                                             bAutoWidth: false,
                                             order: [[1, 'asc']],
                                             "aoColumns": [
                                                 {
-                                                    data: "member_id",
+                                                    data: "product_id",
                                                     render: function (data, type, row) {
                                                         if (type === 'display') {
                                                             return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
@@ -95,26 +91,12 @@
                                                     "bSearchable": false,
                                                     "bSortable": false
                                                 },
-                                                {data: "name"},
-                                                {data: 'email'},
-                                                {data: 'member_group_id'},
-                                                {
-                                                    data: 'status',
-                                                    render: function (data, type, row) {
-                                                        if (data == 1) {
-                                                            return '<?php echo $text_enabled; ?>';
-                                                        } else {
-                                                            return '<?php echo $text_disabled; ?>';
-                                                        }
-                                                        return data;
-                                                    }
-                                                },
-                                                {data: 'ip'},
-                                                {data: 'date_added'},
+                                                {data: "product_name"},
+                                                {data: 'product_code'},
                                                 {
                                                     data: function (data, type, row) {
                                                         if (type === 'display') {
-                                                            return '<a href="<?php echo $edit; ?>&member_id=' + data.member_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
+                                                            return '<a href="<?php echo $edit; ?>&product_id=' + data.product_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
                                                         }
                                                         return data;
                                                     },
@@ -127,7 +109,7 @@
 
                                             "bProcessing": true,
                                             //"bServerSide": true,
-                                            "sAjaxSource": "index.php?url=user/user/getData&member_token=" + getURLVar('member_token'),
+                                            "sAjaxSource": "index.php?url=product/product/getData&member_token=" + getURLVar('member_token'),
                                         });
                             });
 

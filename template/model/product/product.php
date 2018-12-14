@@ -1,22 +1,13 @@
 <?php
 
-class ModelUserUser extends Model
+class ModelProductProduct extends Model
 {
-    public function addUser($data) {
-        $salt = ['salt' => token(22)];
-
-        $this->db->query("INSERT INTO " . DB_PREFIX . "member SET member_group_id = '" . (int)$data['member_group_id'] . "', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', mobile = '" . $this->db->escape($data['mobile']) . "', salt = '" . $this->db->escape($salt['salt']) . "', password = '" . $this->db->escape(password_hash($data['password'], PASSWORD_DEFAULT, $salt)) . "', newsletter = '" . (int)$data['newsletter'] . "', status = '" . (int)$data['status'] . "', date_added = NOW(), date_modified = NOW()");
-
-        $member_id = $this->db->lastInsertId();
-
-        if(isset($data['image'])) {
-            $this->db->query("UPDATE " . DB_PREFIX . "member SET image = '" . $this->db->escape($data['image']) . "' WHERE member_id = '" . (int)$member_id . "'");
-        }
-
-        return $member_id;
+    public function addProduct($data) {
+        $sql= $this->db->query("INSERT INTO " . DB_PREFIX . "product SET product_name = '" . $this->db->escape($data['product_name']) . "', product_code = '" . $this->db->escape($data['product_code']) . "', sort_order = '" . (int)$data['sort_order'] . "', status = '1', org_id = '1', date_added = NOW(), date_modified = NOW()");
+        return $sql;
     }
 
-    public function editUser($member_id, $data) {
+    public function editProduct($member_id, $data) {
         $this->db->query("UPDATE " . DB_PREFIX . "member SET member_group_id = '" . (int)$data['member_group_id'] . "', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', gender = '" . (isset($data['gender']) ? $this->db->escape($data['gender']) : 'm') . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', newsletter = '" . (isset($data['newsletter']) ? (int)$data['newsletter'] : '') . "', status = '" . (int)$data['status'] . "', safe = '" . (isset($data['safe']) ? (int)$data['safe'] : '') . "' WHERE member_id = '" . (int)$member_id . "'");
 
         if(isset($data['avatar'])) {
@@ -42,15 +33,15 @@ class ModelUserUser extends Model
         }
     }
 
-    public function deleteUser($member_id) {
+    public function deleteProduct($member_id) {
         $this->db->query("DELETE FROM " . DB_PREFIX . "member WHERE member_id = '" . (int)$member_id . "'");
         $this->db->query("DELETE FROM " . DB_PREFIX . "member_ip WHERE member_id = '" . (int)$member_id . "'");
     }
 
-    public function getUser($member_id) {
-        $query = $this->db->query("SELECT *, (SELECT mgd.name FROM `" . DB_PREFIX ."member_group_description` mgd WHERE mgd.member_group_id = m.member_group_id) AS member_group FROM `" . DB_PREFIX . "member` m WHERE member_id = '" . (int)$member_id . "'");
+    public function getProduct() {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product");
 
-        return $query->row;
+        return $query->rows;
     }
     
     public function getUserByEmail($email) {
@@ -100,35 +91,11 @@ class ModelUserUser extends Model
         return $query->rows;
     }
 
-    public function getTotalUsers() {
-        $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "member");
+    public function getTotalProducts() {
+        $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "product");
 
         return $query->row['total'];
     }
 
-    public function getTotalUsersByUserGroupId($member_group_id) {
-        $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "member WHERE member_group_id = '" . (int)$member_group_id . "'");
-
-        return $query->row['total'];
-    }
-
-    public function addLoginAttempts($email) {
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "member_login WHERE email = '" . $this->db->escape(utf8_strtolower((string)$email)) . "' AND ip = '" . $this->db->escape($this->request->server["REMOTE_ADDR"]) . "'");
-
-        if(!$query->num_rows) {
-            $this->db->query("INSERT INTO " . DB_PREFIX . "member_login SET email = '" . $this->db->escape(utf8_strtolower((string)$email)) . "', ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "', total = 1, date_added = '" . $this->db->escape(date('Y-m-d H:i:s')) . "', date_modified = '" . $this->db->escape(date('Y-m-d H:i:s')) . "'");
-        } else {
-            $this->db->query("UPDATE " . DB_PREFIX . "member_login SET total = (total + 1), date_modified = '" . $this->db->escape(date('Y-m-d H:i:s')) . "' WHERE member_login_id = '" . (int)$query->row['member_login_id'] . "'");
-        }
-    }
-
-    public function getLoginAttempts($email) {
-        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "member_login` WHERE email = '" . $this->db->escape(utf8_strtolower($email)) . "'");
-
-        return $query->row;
-    }
-
-    public function deleteLoginAttempts($email) {
-        $this->db->query("DELETE FROM `" . DB_PREFIX . "member_login` WHERE email = '" . $this->db->escape(utf8_strtolower($email)) . "'");
-    }
+  
 }

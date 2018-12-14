@@ -391,15 +391,16 @@
 </body>
 </html>
 
-<!-- Custom and plugin javascript -->
-<script src="template/view/dist/js/inspinia.js"></script>
-<script src="template/view/dist/js/plugins/pace/pace.min.js"></script>
-
 <!-- jQuery UI -->
-<script src="template/view/dist/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript">
+if('ontouchstart' in document.documentElement) document.write("<script src='template/view/dist/js/plugins/jquery-ui/jquery-ui.min.js'>"+"<"+"/script>");
+</script>
 
 <?php foreach($scripts as $script) : ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php endforeach; ?>
 
+<!-- Custom and plugin javascript -->
+<script src="template/view/dist/js/inspinia.js"></script>
+<script src="template/view/dist/js/plugins/pace/pace.min.js"></script>
 <script src="template/view/dist/js/main.js"></script>

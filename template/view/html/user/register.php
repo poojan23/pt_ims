@@ -40,6 +40,25 @@
                                     <div class="widget-main">
                                         <fieldset>
                                             <legend><?php echo $text_account; ?></legend>
+                                            <?php echo "abcd=".$member_role_id;?>
+                                            <div class="form-group">
+                                                <label for="input-user-role" class="col-sm-2 control-label"><?php echo $entry_user_role; ?></label>
+
+                                                <div class="col-sm-10">
+                                                    <select name="member_role_id" class="form-control" id="input-user-role">
+                                                        
+                                                        <?php foreach ($user_roles as $user_role) : ?>
+                                                            <?php if ($user_role['member_role_id'] == $member_role_id) : ?>
+                                                                <option value="<?php echo $user_role['member_role_id']; ?>" selected="selected"><?php echo $user_role['name']; ?></option>
+                                                            <?php else : ?>
+                                                                <option value="<?php echo $user_role['member_role_id']; ?>"><?php echo $user_role['name']; ?></option>
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <hr>
                                             <div class="form-group">
                                                 <label for="input-user-group" class="col-sm-2 control-label"><?php echo $entry_user_group; ?></label>
 
@@ -111,10 +130,10 @@
                                             <hr>
 
                                             <div class="form-group">
-                                                <label for="input-fax" class="col-sm-2 control-label"><?php echo $entry_fax; ?></label>
+                                                <label for="input-mobile" class="col-sm-2 control-label"><?php echo $entry_mobile; ?></label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="fax" placeholder="<?php echo $entry_fax; ?>" value="<?php echo $fax; ?>" id="input-fax">
+                                                    <input type="text" class="form-control" name="mobile" placeholder="<?php echo $entry_mobile; ?>" value="<?php echo $mobile; ?>" id="input-mobile">
                                                 </div>
                                             </div>
 

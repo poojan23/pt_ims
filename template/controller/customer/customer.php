@@ -129,7 +129,7 @@ class ControllerCustomerCustomer extends Controller
             $nestedData['status']           = $result['status'];
             $nestedData['newsletter']       = $result['newsletter'];
             $nestedData['date_added']       = date('d/m/Y', strtotime($result['date_added']));
-
+            
             $table[] = $nestedData;
         }
 
@@ -226,6 +226,14 @@ class ControllerCustomerCustomer extends Controller
 
         $data['customer_groups'] = $this->model_customer_customer_group->getCustomerGroups();
 
+        if(isset($this->request->post['name'])) {
+            $data['customer_group_id'] = $this->request->post['name'];
+        } elseif(!empty($customer_info)) {
+            $data['name'] = $customer_info['name'];
+        } else {
+            $data['name'] = '';
+        }
+        
         if(isset($this->request->post['customer_group_id'])) {
             $data['customer_group_id'] = $this->request->post['customer_group_id'];
         } elseif(!empty($customer_info)) {
@@ -266,52 +274,12 @@ class ControllerCustomerCustomer extends Controller
             $data['telephone'] = '';
         }
 
-        if(isset($this->request->post['fax'])) {
-            $data['fax'] = $this->request->post['fax'];
+        if(isset($this->request->post['mobile'])) {
+            $data['mobile'] = $this->request->post['mobile'];
         } elseif(!empty($customer_info)) {
-            $data['fax'] = $customer_info['fax'];
+            $data['mobile'] = $customer_info['mobile'];
         } else {
-            $data['fax'] = '';
-        }
-
-        if(isset($this->request->post['birthdate'])) {
-            $data['birthdate'] = $this->request->post['birthdate'];
-        } elseif(!empty($customer_info)) {
-            $data['birthdate'] = ($customer_info['birthdate'] != '0000-00-00') ? $customer_info['birthdate'] : '';
-        } else {
-            $data['birthdate'] = '';
-        }
-
-        if(isset($this->request->post['anniversary'])) {
-            $data['anniversary'] = $this->request->post['anniversary'];
-        } elseif(!empty($customer_info)) {
-            $data['anniversary'] = ($customer_info['anniversary'] != '0000-00-00') ? $customer_info['anniversary'] : '';
-        } else {
-            $data['anniversary'] = '';
-        }
-
-        if(isset($this->request->post['user'])) {
-            $data['user'] = $this->request->post['user'];
-        } elseif(!empty($customer_info)) {
-            $data['user'] = $customer_info['user'];
-        } else {
-            $data['user'] = '';
-        }
-
-        if(isset($this->request->post['user_id'])) {
-            $data['user_id'] = $this->request->post['user_id'];
-        } elseif(!empty($customer_info)) {
-            $data['user_id'] = $customer_info['member_id'];
-        } else {
-            $data['user_id'] = 0;
-        }
-
-        if(isset($this->request->post['remarks'])) {
-            $data['remarks'] = $this->request->post['remarks'];
-        } elseif(!empty($customer_info)) {
-            $data['remarks'] = $customer_info['remarks'];
-        } else {
-            $data['remarks'] = '';
+            $data['mobile'] = '';
         }
 
         if(isset($this->request->post['newsletter'])) {
@@ -328,14 +296,6 @@ class ControllerCustomerCustomer extends Controller
             $data['status'] = $customer_info['status'];
         } else {
             $data['status'] = true;
-        }
-
-        if(isset($this->request->post['safe'])) {
-            $data['safe'] = $this->request->post['safe'];
-        } elseif(!empty($customer_info)) {
-            $data['safe'] = $customer_info['safe'];
-        } else {
-            $data['safe'] = 0;
         }
 
         $this->load->model('localisation/country');
@@ -357,7 +317,6 @@ class ControllerCustomerCustomer extends Controller
         } else {
             $data['default'] = '';
         }
-
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');
         $data['footer'] = $this->load->controller('common/footer');

@@ -9,7 +9,7 @@
     <div class="col-lg-10">
         <h2><?php echo $header_title; ?></h2>
         <ol class="breadcrumb">
-            <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
+             <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
                 <?php if ($i != (count($breadcrumbs) - 1)) : ?>
                     <?php if ($i == 0) : ?>
                         <li>
@@ -54,19 +54,12 @@
                 <div class="ibox-content">
                     <form method="get" class="form-horizontal">
 
-                        <div class="hr-line-dashed"></div>
-<!--
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_date; ?></label>
-                            <div class="col-sm-10"><input type="date" class="form-control"></div>
-                        </div>-->
-                        
                         <div class="form-group" id="data_1">
                             <label class="col-sm-2 control-label"><?= $label_date; ?></label>
                             <div class="col-sm-10 input-group date">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
                             </div>
                         </div>
-                        
                         
                         <div class="hr-line-dashed"></div>
 

@@ -4,10 +4,10 @@
     <div class="col-lg-10">
         <h2><?php echo $text_title; ?></h2>
         <ol class="breadcrumb">
-            <?php foreach($breadcrumbs as $breadcrumb) : ?>
-            <li>
-                <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-            </li>
+            <?php foreach ($breadcrumbs as $breadcrumb) : ?>
+                <li>
+                    <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+                </li>
             <?php endforeach; ?> 
         </ol>
     </div>
@@ -30,15 +30,22 @@
                         <a href="<?php echo $add; ?>" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
                         </a>
+                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-user-group').submit() : false;"><i class="fa fa-trash-o"></i></button>
                     </div>
 
                 </div>
                 <div class="ibox-content">
 
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-client">
+                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-user_group">
                             <thead>
                                 <tr>
+                                    <th style="width: 1px;" class="center">
+                                        <label class="pos-rel">
+                                            <input type="checkbox" class="ace" />
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </th>
                                     <th><?php echo $column_name; ?></th>
                                     <th><?php echo $column_sort_order; ?></th>
                                     <th><?php echo $column_action; ?></th>
@@ -65,56 +72,64 @@
 <script src="template/view/dist/js/buttons.colVis.min.js"></script>
 <script src="template/view/dist/js/dataTables.select.min.js"></script>
 <script>
-    $(document).ready(function () {
-        var table = $('#table-client').DataTable({
-            pageLength: 10,
-            responsive: true,
-            dom: '<"html5buttons"B>lTfgitp',
-            buttons: [
-                {extend: 'copy'},
-                {extend: 'csv'},
-                {extend: 'excel', title: 'ExampleFile'},
-                {extend: 'pdf', title: 'ExampleFile'},
+                            $(document).ready(function () {
+                                var table = $('#table-user_group').DataTable({
+                                    pageLength: 10,
+                                    responsive: true,
+                                    dom: '<"html5buttons"B>lTfgitp',
+                                    buttons: [
+                                        {extend: 'copy'},
+                                        {extend: 'csv'},
+                                        {extend: 'excel', title: 'ExampleFile'},
+                                        {extend: 'pdf', title: 'ExampleFile'},
 
-                {extend: 'print',
-                    customize: function (win) {
-                        $(win.document.body).addClass('white-bg');
-                        $(win.document.body).css('font-size', '10px');
+                                        {extend: 'print',
+                                            customize: function (win) {
+                                                $(win.document.body).addClass('white-bg');
+                                                $(win.document.body).css('font-size', '10px');
 
-                        $(win.document.body).find('table')
-                                .addClass('compact')
-                                .css('font-size', 'inherit');
-                    }
-                }
-            ]
-//                            'ajax': {
-//                                url: 'index.php?url=master/client/getData&user_token=' + getURLVar('user_token'),
-//                                dataType: 'json',
-//                                type: 'POST',
-//                            },
-//                            "columns": [
-//
-//                                {"data": "partyName"},
-//                                {"data": "addressLine1"},
-//                                {"data": "pinCode"},
-//                                {"data": "gstNo"},
-//                                {"data": "emailID"},
-//                                {
-//                                "data": function(data, type, row) {
-//                                    if ( type === 'display' ) {
-//                                         return '<a href=""  class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>&nbsp;<a href=""  class="btn btn-info btn-sm"><i class="fa fa-trash"></i></a>';
-//                                     }
-//                                     return data;
-//                                },
-//                                className: "dt-center nowrap text-center",
-//                                searchable: false,
-//                                orderable: false,
-//                                width: 80
-//                            },
-//                            ],
+                                                $(win.document.body).find('table')
+                                                        .addClass('compact')
+                                                        .css('font-size', 'inherit');
+                                            }
+                                        }
+                                    ],
+                                    'ajax': {
+                                        url: 'index.php?url=user/user_permission/getData&member_token=' + getURLVar('member_token'),
+                                        dataType: 'json',
+                                        type: 'POST',
+                                    },
+                                    "columns": [
 
-        });
+                                        {
+                                            data: "member_group_id",
+                                            render: function (data, type, row) {
+                                                if (type === 'display') {
+                                                    return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
+                                                }
+                                                return data;
+                                            },
+                                            "className": "center",
+                                            "bSearchable": false,
+                                            "bSortable": false
+                                        },
+                                        {data: "name"},
+                                        {data: 'sort_order'},
+                                        {
+                                            data: function (data, type, row) {
+                                                if (type === 'display') {
+                                                    return '<a href="<?php echo $edit; ?>&member_group_id=' + data.member_group_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
+                                                }
+                                                return data;
+                                            },
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "width": 80
+                                        }
+                                    ],
 
-    });
+                                });
+
+                            });
 
 </script>

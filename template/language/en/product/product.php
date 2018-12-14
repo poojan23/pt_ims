@@ -1,37 +1,26 @@
 <?php
 # Heading
-$_['heading_title']     = 'Users';
-$_['header_title']     = 'Users';
+$_['heading_title']     = 'Product';
+$_['header_title']      = 'Product';
 
 # Text
-$_['text_title']        = 'User List';
+$_['text_title']        = 'Product List';
 $_['text_success']      = 'Success: You have added/modified users!';
-$_['text_add']          = 'Add User';
-$_['text_edit']         = 'Edit User';
-$_['text_account']      = 'User Details';
+$_['text_add']          = 'Add Product';
+$_['text_edit']         = 'Edit Product';
+$_['text_account']      = 'Product Details';
 $_['text_password']     = 'Password';
 $_['text_other']        = 'Others';
 
 # Column
-$_['column_name']       = 'User Name';
-$_['column_email']      = 'E-mail Address';
-$_['column_group']      = 'User Group';
-$_['column_status']     = 'Status';
-$_['column_ip']         = 'IP';
-$_['column_date_added'] = 'Date Added';
+$_['column_name']       = 'Product Name';
+$_['column_code']       = 'Product Code';
 $_['column_action']     = 'Action';
 
 # Entry
-$_['entry_user_group']  = 'User Group';
-$_['entry_firstname']   = 'First Name';
-$_['entry_lastname']    = 'Last Name';
-$_['entry_email']       = 'E-mail Address';
-$_['entry_telephone']   = 'Telephone';
-$_['entry_mobile']         = 'Mobile';
-$_['entry_password']    = 'Password';
-$_['entry_confirm']     = 'Confirm Password';
-$_['entry_status']      = 'Status';
-$_['entry_user_role']   = 'User Role';
+$_['entry_product_name']  = 'Product Name';
+$_['entry_product_code']  = 'Product Code';
+$_['entry_sort_order']    = 'Sort Order';
 
 # Error
 $_['error_warning']     = 'Warning: Please check the form carefully for errors!';

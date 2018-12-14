@@ -1,17 +1,26 @@
 <?php
 // Heading
-$_['heading_title']          = 'Inward';
-$_['header_title']            = 'Inward';
+$_['heading_title']         = 'Inward';
+$_['header_title']          = 'Inward';
 
 // Text
-$_['text_success']           = 'Success: You have modified inward!';
-$_['text_list']              = 'Inward List';
-$_['text_add']               = 'Add Inward';
-$_['text_form']              = 'Add Inward';
-$_['text_edit']              = 'Edit Inward';
-$_['text_default']           = 'Default';
-$_['text_keyword']           = 'Do not use spaces, instead replace spaces with - and make sure the SEO URL is globally unique.';
 
+$_['text_title']            = 'Inward List';
+$_['text_success']          = 'Success: You have added/modified inward!';
+$_['text_add']              = 'Add Inward';
+$_['text_edit']             = 'Edit Inward';
+$_['text_default']          = 'Default';
+$_['text_account']          = 'Inward Details';
+$_['text_remarks']          = 'Remarks';
+$_['text_other']            = 'Other';
+$_['text_address']          = 'Address';
+$_['text_file']             = 'Files';
+$_['text_file_add']         = 'Add File';
+$_['text_upload']           = 'Your file was successfully uploaded!';
+$_['text_history']          = 'History';
+$_['text_history_add']      = 'Add History';
+$_['text_read']             = 'Read';
+$_['text_unread']           = 'Unread';
 
 
 // Label

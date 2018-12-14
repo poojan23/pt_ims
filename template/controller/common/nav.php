@@ -77,7 +77,7 @@ class ControllerCommonNav extends Controller
             # Products
             $product = array();
 
-            if(!$this->member->hasPermission('access', 'product/product')) {
+            if($this->member->hasPermission('access', 'product/product')) {
                 $product[] = array(
                     'name'      => $this->language->get('text_product'),
                     'href'      => $this->url->link('product/product', 'member_token=' . $this->session->data['member_token'], true),
@@ -85,7 +85,7 @@ class ControllerCommonNav extends Controller
                 );
             }
             
-            if(!$this->member->hasPermission('access', 'product/product_type')) {
+            if($this->member->hasPermission('access', 'product/product_type')) {
                 $product[] = array(
                     'name'      => $this->language->get('text_product_type'),
                     'href'      => $this->url->link('product/product_type', 'member_token=' . $this->session->data['member_token'], true),

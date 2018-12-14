@@ -62,9 +62,9 @@
                                             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
                                             <li><a href="#tab-address" data-toggle="tab"><?php echo $tab_address; ?></a></li>
                                             <?php if ($customer_id) : ?>
-                                                <li><a href="#tab-file" data-toggle="tab"><?php echo $tab_file; ?></a></li>
+<!--                                                <li><a href="#tab-file" data-toggle="tab"><?php echo $tab_file; ?></a></li>
                                                 <li><a href="#tab-history" data-toggle="tab"><?php echo $tab_history; ?></a></li>
-                                                <li><a href="#tab-mail" data-toggle="tab"><?php echo $tab_mail; ?></a></li>
+                                                <li><a href="#tab-mail" data-toggle="tab"><?php echo $tab_mail; ?></a></li>-->
                                             <?php endif; ?>
                                         </ul>
                                         <div class="tab-content">
@@ -143,52 +143,16 @@
                                                         <hr>
 
                                                         <div class="form-group">
-                                                            <label for="input-fax" class="col-sm-2 control-label"><?php echo $entry_fax; ?></label>
+                                                            <label for="input-mobile" class="col-sm-2 control-label"><?php echo $entry_fax; ?></label>
 
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" name="fax" placeholder="<?php echo $entry_fax; ?>" value="<?php echo $fax; ?>" id="input-fax">
+                                                                <input type="text" class="form-control" name="mobile" placeholder="<?php echo $entry_fax; ?>" value="<?php echo $mobile; ?>" id="input-mobile">
                                                             </div>
                                                         </div>
 
                                                         <hr>
 
-                                                        <!--                                                    <div class="form-group" id="data_1">
-                                                                                                                <label class="col-sm-2 control-label"><?php echo $entry_dob; ?></label>
-                                                                                                                <div class="input-group date">
-                                                                                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" name="birthdate" placeholder="<?php echo $entry_dob; ?>" value="<?php echo $birthdate; ?>" id="id-dob" >
-                                                                                                                </div>
-                                                                                                            </div>
-                                                        
-                                                                                                            <hr>
-                                                                                                            <div class="form-group" id="data_1">
-                                                                                                                <label class="col-sm-2 control-label"><?php echo $entry_ani; ?></label>
-                                                                                                                <div class="input-group date">
-                                                                                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" name="anniversary" placeholder="<?php echo $entry_ani; ?>" value="<?php echo $anniversary; ?>" id="id-ani" >
-                                                                                                                </div>
-                                                                                                            </div>-->
                                                     </fieldset>
-
-                                                    <!--                                                <fieldset>
-                                                                                                        <legend><?php echo $text_remarks; ?></legend>
-                                                                                                        <div class="form-group">
-                                                                                                            <label for="input-user" class="col-sm-2 control-label"><?php echo $entry_user; ?></label>
-                                                    
-                                                                                                            <div class="col-sm-10">
-                                                                                                                <input type="text" name="user" placeholder="<?php echo $entry_user; ?>" value="<?php echo $user; ?>" class="form-control" id="input-user">
-                                                                                                                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                                                                                                            </div>
-                                                                                                        </div>
-                                                    
-                                                                                                        <hr>
-                                                    
-                                                                                                        <div class="form-group">
-                                                                                                            <label for="input-remarks" class="col-sm-2 control-label"><?php echo $entry_remarks; ?></label>
-                                                    
-                                                                                                            <div class="col-sm-10">
-                                                                                                                <textarea name="remarks" rows="8" placeholder="<?php echo $entry_remarks; ?>" class="form-control" id="input-remarks"><?php echo $remarks; ?></textarea>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </fieldset>-->
 
                                                     <fieldset>
                                                         <legend><?php echo $text_other; ?></legend>
@@ -233,25 +197,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!--                                                    <div class="form-group">
-                                                                                                                <label for="input-safe" class="col-sm-2 control-label"><?php echo $entry_safe; ?></label>
-                                                        
-                                                                                                                <div class="col-sm-10">
-                                                                                                                    <div class="switch">
-                                                                                                                        <div class="onoffswitch">
-                                                        <?php if ($safe) : ?>
-                                                                                                                                <input type="checkbox" checked="checked"  value="1" class="onoffswitch-checkbox" id="input-safe" name="safe">
-                                                        <?php else : ?>
-                                                                                                                                <input type="checkbox" checked="" value="1" class="onoffswitch-checkbox" id="input-safe" name="safe">
-                                                        <?php endif; ?>
-                                                                                                                            <label class="onoffswitch-label" for="input-safe">
-                                                                                                                                <span class="onoffswitch-inner"></span>
-                                                                                                                                <span class="onoffswitch-switch"></span>
-                                                                                                                            </label>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>-->
                                                     </fieldset>
                                                 </div>
                                             </div>
@@ -403,7 +348,7 @@
                                                 </div>
                                             </div>
                                             <?php if ($customer_id) : ?>
-                                                <div class="tab-pane" id="tab-file">
+<!--                                                <div class="tab-pane" id="tab-file">
                                                     <fieldset>
                                                         <legend><?php echo $text_file; ?></legend>
                                                         <div id="file"></div>
@@ -469,7 +414,7 @@
                                                         <legend><?php echo $text_mail; ?></legend>
                                                         <div id="mail"></div>
                                                     </fieldset>
-                                                </div>
+                                                </div>-->
                                             <?php endif; ?>
                                         </div>
                                     </div>

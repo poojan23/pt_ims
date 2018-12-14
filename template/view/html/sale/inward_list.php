@@ -2,7 +2,7 @@
 <?php echo $nav; ?>
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2><?php echo $text_list; ?></h2>
+        <h2><?php echo $text_title; ?></h2>
         <ol class="breadcrumb">
             <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
                 <?php if ($i != (count($breadcrumbs) - 1)) : ?>
@@ -31,11 +31,12 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5><?= $text_list; ?></h5>
+                    <h5><?= $text_title; ?></h5>
                     <div class="ibox-tools">
                         <a href="<?php echo $add; ?>" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
                         </a>
+                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-user-group').submit() : false;"><i class="fa fa-trash-o"></i></button>
                     </div>
 
                 </div>
@@ -45,6 +46,12 @@
                         <table class="table table-striped table-bordered table-hover dataTables-example" id="table-inward">
                             <thead>
                                 <tr>
+                                    <th style="width: 1px;" class="center">
+                                        <label class="pos-rel">
+                                            <input type="checkbox" class="ace" />
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </th>
                                     <th><?= $head_date; ?></th>
                                     <th><?= $head_truck_no; ?></th>
                                     <th><?= $head_client_name; ?></th>
@@ -110,6 +117,7 @@
             },
             "columns": [
 
+                {},
                 {"data": "createDate"},
                 {"data": "tructNo"},
                 {"data": "partyName"},
