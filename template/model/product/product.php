@@ -43,6 +43,11 @@ class ModelProductProduct extends Model
 
         return $query->rows;
     }
+    public function getProductByID($product_id) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+
+        return $query->row;
+    }
     
     public function getUserByEmail($email) {
         $query = $this->db->query("SELECT DISTINCT * FROM " . DB_PREFIX . "member WHERE LCASE(email) = '" . $this->db->escape(utf8_strtolower($email)) . "'");

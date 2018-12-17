@@ -29,7 +29,7 @@
 <div class="wrapper wrapper-content">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5><?php echo $text_add; ?></h5>
+            <h5><?php echo $text_form; ?></h5>
             <div class="ibox-tools">
                 <div class="text-right">
                     <button type="submit" form="form-user-group" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
@@ -73,16 +73,17 @@
                                             <label for="input-product-name" class="col-sm-2 control-label"><?php echo $entry_product_name; ?></label>
 
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="product_name" placeholder="<?php echo $entry_product_name; ?>" id="input-product-name">
+                                                <input type="text" class="form-control" name="product_name" placeholder="<?php echo $entry_product_name; ?>" value="<?php echo $product_name; ?>" id="input-product-name">
                                             </div>
                                         </div>
+                                       
                                         <hr>
                                         
                                         <div class="form-group">
                                             <label for="input-product-code" class="col-sm-2 control-label"><?php echo $entry_product_code; ?></label>
 
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="product_code" placeholder="<?php echo $entry_product_code; ?>" id="input-product-code">
+                                                <input type="text" class="form-control" name="product_code" placeholder="<?php echo $entry_product_code; ?>" value="<?php echo $product_code; ?>" id="input-product-code">
                                             </div>
                                         </div>
                                         <hr>
@@ -95,7 +96,6 @@
                                             </div>
                                         </div>
 
-                                        <hr />
                                     </div>
                                 </div>
                             </div>

@@ -1285,3 +1285,68 @@
 2018-Dec-14 09:19:18 - PHP Notice: Undefined index: status in C:\ATDI\LMS\htdocs\pt_ims\template\model\product\product.php on line 6
 2018-Dec-14 09:19:18 - PHP Notice: Undefined index: status in C:\ATDI\LMS\htdocs\pt_ims\template\model\product\product.php on line 6
 2018-Dec-14 09:19:53 - PHP Notice: Undefined index: status in C:\ATDI\LMS\htdocs\pt_ims\template\model\product\product.php on line 6
+2018-Dec-17 04:52:21 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 46
+2018-Dec-17 04:52:21 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 51
+2018-Dec-17 04:52:21 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 57
+2018-Dec-17 04:59:56 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 208
+2018-Dec-17 04:59:56 - PHP Notice: Undefined index: sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 235
+2018-Dec-17 05:00:02 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 208
+2018-Dec-17 05:00:02 - PHP Notice: Undefined index: sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 235
+2018-Dec-17 05:47:28 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 208
+2018-Dec-17 05:47:28 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:47:28 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:47:33 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 208
+2018-Dec-17 05:47:33 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:47:33 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:47:51 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:47:51 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:48:13 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 208
+2018-Dec-17 05:48:13 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:48:13 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 05:49:53 - PHP Notice: Undefined index: member_role_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\user.php on line 237
+2018-Dec-17 06:09:06 - PHP Notice: Undefined variable: entry_sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 67
+2018-Dec-17 06:09:06 - PHP Notice: Undefined variable: entry_sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 70
+2018-Dec-17 06:09:06 - PHP Notice: Undefined variable: sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 70
+2018-Dec-17 06:10:01 - PHP Notice: Undefined variable: sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 70
+2018-Dec-17 06:10:17 - PHP Notice: Undefined variable: sort_order in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 70
+2018-Dec-17 06:41:06 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 208
+2018-Dec-17 06:41:06 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 06:41:06 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 06:43:32 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 207
+2018-Dec-17 06:43:32 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 06:43:32 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 06:44:55 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 43
+2018-Dec-17 06:45:16 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_type_form.php on line 43
+2018-Dec-17 06:48:11 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\model\product\product_type.php on line 6
+2018-Dec-17 06:49:23 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\model\product\product_type.php on line 6
+2018-Dec-17 07:16:28 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 207
+2018-Dec-17 07:16:28 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:28 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:32 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 207
+2018-Dec-17 07:16:32 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:32 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:36 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 207
+2018-Dec-17 07:16:36 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:36 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:58 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 207
+2018-Dec-17 07:16:58 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:16:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:20:18 - PHP Notice: Undefined variable: url in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product.php on line 207
+2018-Dec-17 07:21:44 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:21:44 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 07:21:52 - PHP Notice: Undefined variable: user_group_info in C:\ATDI\LMS\htdocs\pt_ims\template\controller\product\product_type.php on line 226
+2018-Dec-17 08:51:01 - PHP Notice: Undefined variable: languages in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 08:51:01 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\product\product_form.php on line 61
+2018-Dec-17 08:51:11 - PHP Notice: Undefined index: member_role_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\user.php on line 237
+2018-Dec-17 08:51:45 - PHP Notice: Undefined index: member_role_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\user.php on line 237
+2018-Dec-17 08:51:59 - PHP Notice: Undefined index: member_role_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\user.php on line 237
+2018-Dec-17 08:59:31 - PHP Notice: Undefined variable: customer_info in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 224
+2018-Dec-17 08:59:44 - PHP Notice: Undefined variable: customer_info in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 224
+2018-Dec-17 08:59:45 - PHP Notice: Undefined variable: customer_info in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 224
+2018-Dec-17 09:03:13 - PHP Notice: Undefined variable: customer_info in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 224
+2018-Dec-17 09:10:08 - PHP Notice: Undefined index: name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 232
+2018-Dec-17 09:18:31 - PHP Notice: Undefined index: email in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 87
+2018-Dec-17 09:18:31 - PHP Notice: Undefined index: email in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 97
+2018-Dec-17 09:18:31 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 46
+2018-Dec-17 09:18:31 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 51
+2018-Dec-17 09:18:31 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 57

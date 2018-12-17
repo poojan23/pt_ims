@@ -48,7 +48,7 @@ class ModelCustomerCustomer extends Model
     }
 
     public function getCustomer($customer_id) {
-        $query = $this->db->query("SELECT DISTINCT *, (SELECT CONCAT(m.firstname, ' ', m.lastname) FROM " . DB_PREFIX . "member m LEFT JOIN " . DB_PREFIX . "customer c1 ON (m.member_id = c1.member_id) WHERE m.member_id = c.member_id) AS user FROM " . DB_PREFIX . "customer c WHERE c.customer_id = '" . (int)$customer_id . "'");
+        $query = $this->db->query("SELECT DISTINCT *, (SELECT CONCAT(c.firstname, ' ', c.lastname) FROM " . DB_PREFIX . "customer c LEFT JOIN " . DB_PREFIX . "customer_group cg ON (c.customer_group_id = cg.customer_group_id) WHERE c.customer_group_id = cg.customer_group_id) AS customer FROM " . DB_PREFIX . "customer c WHERE c.customer_id = '" . (int)$customer_id . "'");
 
         return $query->row;
     }

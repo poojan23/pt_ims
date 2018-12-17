@@ -226,14 +226,14 @@ class ControllerCustomerCustomer extends Controller
 
         $data['customer_groups'] = $this->model_customer_customer_group->getCustomerGroups();
 
-        if(isset($this->request->post['name'])) {
-            $data['customer_group_id'] = $this->request->post['name'];
-        } elseif(!empty($customer_info)) {
-            $data['name'] = $customer_info['name'];
-        } else {
-            $data['name'] = '';
-        }
-        
+//        if(isset($this->request->post['name'])) {
+//            $data['customer_group_id'] = $this->request->post['name'];
+//        } elseif(!empty($customer_info)) {
+//            $data['name'] = $customer_info['name'];
+//        } else {
+//            $data['name'] = '';
+//        }
+//        
         if(isset($this->request->post['customer_group_id'])) {
             $data['customer_group_id'] = $this->request->post['customer_group_id'];
         } elseif(!empty($customer_info)) {

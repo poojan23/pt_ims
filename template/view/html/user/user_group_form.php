@@ -30,7 +30,7 @@
 
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5><?php echo $text_add; ?></h5>
+            <h5><?php echo $text_form; ?></h5>
             <div class="ibox-tools">
                 <div class="text-right">
                     <button type="submit" form="form-user-group" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>

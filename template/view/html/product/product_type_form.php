@@ -29,7 +29,7 @@
 <div class="wrapper wrapper-content">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5><?php echo $text_add; ?></h5>
+            <h5><?php echo $text_form; ?></h5>
             <div class="ibox-tools">
                 <div class="text-right">
                     <button type="submit" form="form-user-group" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
@@ -55,14 +55,20 @@
                                 <div class="widget-body">
                                     <div class="widget-main">
                                         <div class="form-group">
-                                            <label for="input-sort-order" class="col-sm-2 control-label"><?php echo $entry_product_type; ?></label>
-
+                                            <label for="input-product-type" class="col-sm-2 control-label"><?php echo $entry_product_type; ?></label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="sort_order" placeholder="<?php echo $entry_product_type; ?>" id="input-sort-order">
+                                                <input type="text" class="form-control" name="product_type" placeholder="<?php echo $entry_product_type; ?>" value="<?php echo $product_type; ?>" id="input-product-type">
                                             </div>
                                         </div>
 
                                         <hr />
+                                        <div class="form-group">
+                                            <label for="input-sort-order" class="col-sm-2 control-label"><?php echo $entry_sort_order; ?></label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" name="sort_order" placeholder="<?php echo $entry_sort_order; ?>"  value="<?php echo $sort_order; ?>"id="input-sort-order">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

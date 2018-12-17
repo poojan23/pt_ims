@@ -37,7 +37,7 @@
                 <div class="ibox-content">
 
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-client">
+                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-producttype">
                             <thead>
                                 <tr>
                                     <th style="width: 1px;" class="center">
@@ -47,6 +47,7 @@
                                         </label>
                                     </th>
                                     <th><?php echo $column_name; ?></th>
+                                    <th><?php echo $column_sort_order; ?></th>
                                     <th><?php echo $column_action; ?></th>
                                 </tr>
                             </thead>
@@ -71,56 +72,45 @@
 <script src="template/view/dist/js/buttons.colVis.min.js"></script>
 <script src="template/view/dist/js/dataTables.select.min.js"></script>
 <script>
-    $(document).ready(function () {
-        var table = $('#table-client').DataTable({
-            pageLength: 10,
-            responsive: true,
-            dom: '<"html5buttons"B>lTfgitp',
-            buttons: [
-                {extend: 'copy'},
-                {extend: 'csv'},
-                {extend: 'excel', title: 'ExampleFile'},
-                {extend: 'pdf', title: 'ExampleFile'},
+                            $(document).ready(function () {
+                                var myTable =
+                                        $('#table-producttype')
+                                        .DataTable({
+                                            bAutoWidth: false,
+                                            order: [[1, 'asc']],
+                                            "aoColumns": [
+                                                {
+                                                    data: "product_type_id",
+                                                    render: function (data, type, row) {
+                                                        if (type === 'display') {
+                                                            return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
+                                                        }
+                                                        return data;
+                                                    },
+                                                    "className": "center",
+                                                    "bSearchable": false,
+                                                    "bSortable": false
+                                                },
+                                                {data: "product_type"},
+                                                {data: "sort_order"},
+                                                {
+                                                    data: function (data, type, row) {
+                                                        if (type === 'display') {
+                                                            return '<a href="<?php echo $edit; ?>&product_type_id=' + data.product_type_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
+                                                        }
+                                                        return data;
+                                                    },
+                                                    "bSearchable": false,
+                                                    "bSortable": false,
+                                                    "width": 80
+                                                }
+                                            ],
+                                            "aaSorting": [],
 
-                {extend: 'print',
-                    customize: function (win) {
-                        $(win.document.body).addClass('white-bg');
-                        $(win.document.body).css('font-size', '10px');
-
-                        $(win.document.body).find('table')
-                                .addClass('compact')
-                                .css('font-size', 'inherit');
-                    }
-                }
-            ]
-//                            'ajax': {
-//                                url: 'index.php?url=master/client/getData&user_token=' + getURLVar('user_token'),
-//                                dataType: 'json',
-//                                type: 'POST',
-//                            },
-//                            "columns": [
-//
-//                                {"data": "partyName"},
-//                                {"data": "addressLine1"},
-//                                {"data": "pinCode"},
-//                                {"data": "gstNo"},
-//                                {"data": "emailID"},
-//                                {
-//                                "data": function(data, type, row) {
-//                                    if ( type === 'display' ) {
-//                                         return '<a href=""  class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>&nbsp;<a href=""  class="btn btn-info btn-sm"><i class="fa fa-trash"></i></a>';
-//                                     }
-//                                     return data;
-//                                },
-//                                className: "dt-center nowrap text-center",
-//                                searchable: false,
-//                                orderable: false,
-//                                width: 80
-//                            },
-//                            ],
-
-        });
-
-    });
+                                            "bProcessing": true,
+                                            //"bServerSide": true,
+                                            "sAjaxSource": "index.php?url=product/product_type/getData&member_token=" + getURLVar('member_token'),
+                                        });
+                            });
 
 </script>

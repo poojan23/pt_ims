@@ -175,8 +175,7 @@ class ControllerProductProduct extends Controller {
     }
 
     protected function getForm() {
-        $data['text_form'] = !isset($this->request->get['category_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
-
+        $data['text_form'] = !isset($this->request->get['product_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
         if (isset($this->error['warning'])) {
             $data['warning_err'] = $this->error['warning'];
         } else {
@@ -205,47 +204,47 @@ class ControllerProductProduct extends Controller {
         if (!isset($this->request->get['product_id'])) {
             $data['action'] = $this->url->link('product/product/add', 'member_token=' . $this->session->data['member_token'], true);
         } else {
-            $data['action'] = $this->url->link('product/product/edit', 'member_token=' . $this->session->data['member_token'] . '&product_id=' . $this->request->get['product_id'] . $url, true);
+            $data['action'] = $this->url->link('product/product/edit', 'member_token=' . $this->session->data['member_token'] . '&product_id=' . $this->request->get['product_id'], true);
         }
 
         $data['cancel'] = $this->url->link('product/product', 'member_token=' . $this->session->data['member_token'], true);
 
         if (isset($this->request->get['product_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
-            $category_info = $this->model_product_product->getProduct($this->request->get['product_id']);
+            $product_info = $this->model_product_product->getProductByID($this->request->get['product_id']);
         }
 
         $data['member_token'] = $this->session->data['member_token'];
 
-        $this->load->model('localisation/language');
-
-        $data['languages'] = $this->model_localisation_language->getLanguages();
-
-//        if(isset($this->request->post['product_code'])) {
-//            $data['product_code'] = $this->request->post['product_code'];
-//        } elseif(isset($this->request->get['product_id'])) {
-//            $data['product_code'] = $this->model_product_product->getCategoryDescriptions($this->request->get['product_id']);
-//        } else {
-//            $data['product_code'] = array();
-//        }
+//        $this->load->model('localisation/language');
+//
+//        $data['languages'] = $this->model_localisation_language->getLanguages();
 
 
+
+
+        if (isset($this->request->post['product_name'])) {
+            $data['product_name'] = $this->request->post['product_name'];
+        } elseif (!empty($product_info)) {
+            $data['product_name'] = $product_info['product_name'];
+        } else {
+            $data['product_name'] = '';
+        }
+        
+        if (isset($this->request->post['product_code'])) {
+            $data['product_code'] = $this->request->post['product_code'];
+        } elseif (!empty($product_info)) {
+            $data['product_code'] = $product_info['product_code'];
+        } else {
+            $data['product_code'] = '';
+        }
+        
         if (isset($this->request->post['sort_order'])) {
             $data['sort_order'] = $this->request->post['sort_order'];
-        } elseif (!empty($category_info)) {
-            $data['sort_order'] = $category_info['sort_order'];
+        } elseif (!empty($product_info)) {
+            $data['sort_order'] = $product_info['sort_order'];
         } else {
             $data['sort_order'] = 0;
         }
-
-
-
-//        if(isset($this->request->post['category_seo_url'])) {
-//            $data['category_seo_url'] = $this->request->post['category_seo_url'];
-//        } elseif(isset($this->request->get['product_id'])) {
-//            $data['category_seo_url'] = $this->model_product_product->getCategorySeoUrls($this->request->get['product_id']);
-//        } else {
-//            $data['category_seo_url'] = array();
-//        }
 
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');

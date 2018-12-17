@@ -12,10 +12,12 @@ $_['text_account']      = 'Product Type Details';
 
 # Column
 $_['column_name']       = 'Product Type';
+$_['column_sort_order'] = 'Sort Order';
 $_['column_action']     = 'Action';
 
 # Entry
 $_['entry_product_type']  = 'Product Type';
+$_['entry_sort_order']    = 'Sort Order';
 
 
 # Error
