@@ -57,7 +57,7 @@ class ControllerCustomerCustomer extends Controller
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        if(isset($this->request->post['selected']) && $this->validateDelete()) {
+        if(isset($this->request->post['selected'])) {
             foreach($this->request->post['selected'] as $customer_id) {
                 $this->model_customer_customer->deleteCustomer($customer_id);
             }
@@ -317,6 +317,7 @@ class ControllerCustomerCustomer extends Controller
         } else {
             $data['default'] = '';
         }
+        
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');
         $data['footer'] = $this->load->controller('common/footer');
@@ -404,6 +405,8 @@ class ControllerCustomerCustomer extends Controller
         if(!$this->member->hasPermission('modify', 'customer/customer')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
+        
+        return !$this->error;
     }
 
     public function file() {

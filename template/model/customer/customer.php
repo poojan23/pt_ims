@@ -23,7 +23,7 @@ class ModelCustomerCustomer extends Model
     }
 
     public function editCustomer($customer_id, $data) {
-        $this->db->query("UPDATE " . DB_PREFIX . "customer SET customer_group_id = '" . (int)$data['customer_group_id'] . "', member_id = '" . (int)$data['user_id'] . "', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', birthdate = '" . $this->db->escape($data['birthdate']) . "', anniversary = '" . $this->db->escape($data['anniversary']) . "', remarks = '" . $this->db->escape($data['remarks']) . "', newsletter = '" . (isset($data['newsletter']) ? (int)$data['newsletter'] : 0) . "', status = '" . (isset($data['status']) ? (int)$data['status'] : 0) . "', safe = '" . (isset($data['safe']) ? (int)$data['safe'] : 0) . "', date_modified = NOW() WHERE customer_id = '" . (int)$customer_id . "'");
+        $this->db->query("UPDATE " . DB_PREFIX . "customer SET customer_group_id = '" . (int)$data['customer_group_id'] . "', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', mobile = '" . $this->db->escape($data['mobile']) . "', newsletter = '" . (isset($data['newsletter']) ? (int)$data['newsletter'] : 0) . "', status = '" . (isset($data['status']) ? (int)$data['status'] : 0) . "', date_modified = NOW() WHERE customer_id = '" . (int)$customer_id . "'");
 
         $this->db->query("DELETE FROM " . DB_PREFIX . "address WHERE customer_id = '" . (int)$customer_id . "'");
 
@@ -42,8 +42,6 @@ class ModelCustomerCustomer extends Model
 
     public function deleteCustomer($customer_id) {
         $this->db->query("DELETE FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int)$customer_id . "'");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "customer_file WHERE customer_id = '" . (int)$customer_id . "'");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "customer_history WHERE customer_id = '" . (int)$customer_id . "'");
         $this->db->query("DELETE FROM " . DB_PREFIX . "address WHERE customer_id = '" . (int)$customer_id . "'");
     }
 

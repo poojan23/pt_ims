@@ -230,7 +230,6 @@ class ControllerUserUser extends Controller
         $this->load->model('user/user_role');
 
         $data['user_roles'] = $this->model_user_user_role->getUserRoles();
-        
         if(isset($this->request->post['member_role_id'])) {
             $data['member_role_id'] = $this->request->post['member_role_id'];
         } elseif(!empty($member_info)) {
@@ -242,7 +241,7 @@ class ControllerUserUser extends Controller
         $this->load->model('user/user_group');
 
         $data['user_groups'] = $this->model_user_user_group->getUserGroups();
-
+        
         if(isset($this->request->post['member_group_id'])) {
             $data['member_group_id'] = $this->request->post['member_group_id'];
         } elseif(!empty($member_info)) {

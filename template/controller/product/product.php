@@ -41,28 +41,28 @@ class ControllerProductProduct extends Controller {
 
         $this->load->model('product/product');
 
-        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+        if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
             //$this->request->post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-            $this->model_product_product->editCategory($this->request->get['category_id'], $this->request->post);
+            $this->model_product_product->editProduct($this->request->get['product_id'], $this->request->post);
 
             $this->session->data['success'] = $this->language->get('text_success');
+//
+//            $url = '';
+//
+//            if (isset($this->request->get['sort'])) {
+//                $url .= '&sort=' . $this->request->get['sort'];
+//            }
+//
+//            if (isset($this->request->get['order'])) {
+//                $url .= '&order=' . $this->request->get['order'];
+//            }
+//
+//            if (isset($this->request->get['page'])) {
+//                $url .= '&page=' . $this->request->get['page'];
+//            }
 
-            $url = '';
-
-            if (isset($this->request->get['sort'])) {
-                $url .= '&sort=' . $this->request->get['sort'];
-            }
-
-            if (isset($this->request->get['order'])) {
-                $url .= '&order=' . $this->request->get['order'];
-            }
-
-            if (isset($this->request->get['page'])) {
-                $url .= '&page=' . $this->request->get['page'];
-            }
-
-            $this->response->redirect($this->url->link('product/product', 'member_token=' . $this->session->data['member_token'] . $url, true));
+            $this->response->redirect($this->url->link('product/product', 'member_token=' . $this->session->data['member_token'], true));
         }
 
         $this->getForm();
@@ -75,28 +75,14 @@ class ControllerProductProduct extends Controller {
 
         $this->load->model('product/product');
 
-        if (isset($this->request->post['selected']) && $this->validateDelete()) {
+        if (isset($this->request->post['selected'])) {
             foreach ($this->request->post['selected'] as $category_id) {
-                $this->model_product_product->deleteCategory($category_id);
+                $this->model_product_product->deleteProduct($category_id);
             }
 
             $this->session->data['success'] = $this->language->get('text_success');
 
-            $url = '';
-
-            if (isset($this->request->get['sort'])) {
-                $url .= '&sort=' . $this->request->get['sort'];
-            }
-
-            if (isset($this->request->get['order'])) {
-                $url .= '&order=' . $this->request->get['order'];
-            }
-
-            if (isset($this->request->get['page'])) {
-                $url .= '&page=' . $this->request->get['page'];
-            }
-
-            $this->response->redirect($this->url->link('product/product', 'member_token=' . $this->session->data['member_token'] . $url, true));
+            $this->response->redirect($this->url->link('product/product', 'member_token=' . $this->session->data['member_token'], true));
         }
 
         $this->getList();
@@ -203,8 +189,16 @@ class ControllerProductProduct extends Controller {
 
         if (!isset($this->request->get['product_id'])) {
             $data['action'] = $this->url->link('product/product/add', 'member_token=' . $this->session->data['member_token'], true);
+            $data['breadcrumbs'][] = array(
+                'text'  => $this->language->get('text_add'),
+                'href'  => $this->url->link('product/product/add', 'member_token=' . $this->session->data['member_token'], true)
+            );
         } else {
             $data['action'] = $this->url->link('product/product/edit', 'member_token=' . $this->session->data['member_token'] . '&product_id=' . $this->request->get['product_id'], true);
+            $data['breadcrumbs'][] = array(
+                'text'  => $this->language->get('text_edit'),
+                'href'  => $this->url->link('product/product/edit', 'member_token=' . $this->session->data['member_token'], true)
+            );
         }
 
         $data['cancel'] = $this->url->link('product/product', 'member_token=' . $this->session->data['member_token'], true);

@@ -51,7 +51,7 @@
 
                 </div>
                 <div class="ibox-content">
-
+                    <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-customer">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover dataTables-example" id="table-client">
                             <thead>
@@ -74,7 +74,7 @@
 
                         </table>
                     </div>
-
+                    </form>
                 </div>
             </div>
         </div>

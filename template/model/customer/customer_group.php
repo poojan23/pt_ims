@@ -16,12 +16,10 @@ class ModelCustomerCustomerGroup extends Model
 
     public function editCustomerGroup($customer_group_id, $data) {
         $this->db->query("UPDATE " . DB_PREFIX . "customer_group SET sort_order = '" . (int)$data['sort_order'] . "' WHERE customer_group_id = '" . (int)$customer_group_id . "'");
-
-        $this->db->query("DELETE FROM " . DB_PREFIX . "customer_group WHERE customer_group_id = '" . (int)$customer_group_id . "'");
-
-        foreach($data['customer_group_id'] as $language_id => $value) {
-            $this->db->query("INSERT INTO " . DB_PREFIX . "customer_group_description SET customer_group_id = '" . (int)$customer_group_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "'");
+        foreach($data['customer_group_description'] as $language_id => $value) {
+            $this->db->query("UPDATE " . DB_PREFIX . "customer_group_description SET name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "'  WHERE customer_group_id = '" . (int)$customer_group_id . "'");
         }
+
     }
 
     public function deleteCustomerGroup($customer_group_id) {

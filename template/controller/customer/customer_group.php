@@ -213,7 +213,7 @@ class ControllerCustomerCustomerGroup extends Controller
     }
 
     protected function validateForm() {
-        if($this->member->hasPermission('modify', 'customer/customer_group')) {
+        if(!$this->member->hasPermission('modify', 'customer/customer_group')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
 

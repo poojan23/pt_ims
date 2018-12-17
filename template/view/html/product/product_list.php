@@ -30,13 +30,14 @@
                         <a href="<?php echo $add; ?>" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
                         </a>
-                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-user-group').submit() : false;"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-product').submit() : false;"><i class="fa fa-trash-o"></i></button>
                     </div>
 
                 </div>
                 <div class="ibox-content">
 
                     <div class="table-responsive">
+                        <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-product">
                         <table class="table table-striped table-bordered table-hover dataTables-example" id="table-product">
                             <thead>
                                 <tr>
@@ -53,6 +54,7 @@
                             </thead>
 
                         </table>
+                        </form>
                     </div>
 
                 </div>
