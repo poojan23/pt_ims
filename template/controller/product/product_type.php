@@ -11,51 +11,7 @@ class ControllerProductProductType extends Controller {
 
         $this->load->model('product/product_type');
 
-        $url = '';
-
-        if (isset($this->request->get['sort'])) {
-            $url .= '&sort=' . $this->request->get['sort'];
-        }
-
-        if (isset($this->request->get['order'])) {
-            $url .= '&order=' . $this->request->get['order'];
-        }
-
-        if (isset($this->request->get['page'])) {
-            $url .= '&page=' . $this->request->get['page'];
-        }
-
-        $data['breadcrumbs'] = array();
-
-        $data['breadcrumbs'][] = array(
-            'text' => $this->language->get('text_home'),
-            'href' => $this->url->link('common/dashboard', 'member_token=' . $this->session->data['member_token'], true)
-        );
-
-        $data['breadcrumbs'][] = array(
-            'text' => $this->language->get('heading_title'),
-            'href' => $this->url->link('product/product_type', 'member_token=' . $this->session->data['member_token'] . $url, true)
-        );
-
-        if (isset($this->session->data['success'])) {
-            $data['success'] = $this->session->data['success'];
-
-            unset($this->session->data['success']);
-        } else {
-            $data['success'] = '';
-        }
-
-        $data['add'] = $this->url->link('product/product_type/add', 'member_token=' . $this->session->data['member_token'] . $url, true);
-        $data['edit'] = $this->url->link('product/product_type/edit', 'member_token=' . $this->session->data['member_token'] . $url, true);
-        $data['delete'] = $this->url->link('product/product_type/delete', 'member_token=' . $this->session->data['member_token'] . $url, true);
-
-        $data['text_confirm'] = $this->language->get('text_confirm');
-
-        $data['header'] = $this->load->controller('common/header');
-        $data['nav'] = $this->load->controller('common/nav');
-        $data['footer'] = $this->load->controller('common/footer');
-
-        $this->response->setOutput($this->load->view('product/product_type_list', $data));
+        $this->getList();
     }
 
     public function add() {
@@ -92,66 +48,66 @@ class ControllerProductProductType extends Controller {
 
             $this->session->data['success'] = $this->language->get('text_success');
 
-//            # Url
-//            $url = '';
-//
-//            if (isset($this->request->get['sort'])) {
-//                $url .= '&sort=' . $this->request->get['sort'];
-//            }
-//
-//            if (isset($this->request->get['order'])) {
-//                $url .= '&order=' . $this->request->get['order'];
-//            }
-//
-//            if (isset($this->request->get['page'])) {
-//                $url .= '&page=' . $this->request->get['page'];
-//            }
-
             $this->response->redirect($this->url->link('product/product_type', 'member_token=' . $this->session->data['member_token'], true));
         }
 
         $this->getForm();
     }
 
-    public function delete() {
+     public function delete() {
         
-    }
+        $this->load->language('product/product_type');
 
-    public function getList() {
-        $json = [];
-
-        $data = [
-            'sort' => 'name',
-            'order' => 'ASC',
-            'start' => 0,
-            'limit' => 5
-        ];
+        $this->document->setTitle($this->language->get('heading_title'));
 
         $this->load->model('product/product_type');
 
-        $totalData = $this->model_product_product_type->getTotalUserGroups();
+        if (isset($this->request->post['selected'])) {
+            
+            foreach ($this->request->post['selected'] as $product_type_id) {
+                $this->model_product_product_type->deleteProductType($product_type_id);
+            }
 
-        $totalFiltered = $totalData;
+            $this->session->data['success'] = $this->language->get('text_success');
 
-        $results = $this->model_product_product_type->showUserGroups($data);
-
-        $table = [];
-
-        foreach ($results as $result) {
-
-            $nestedData['user_group_id'] = $result['user_group_id'];
-            $nestedData['name'] = $result['name'];
-
-            $table[] = $nestedData;
+            $this->response->redirect($this->url->link('product/product_type', 'member_token=' . $this->session->data['member_token'], true));
         }
 
-        $json = array(
-            "recordsTotal" => intval($totalData),
-            "recordsFiltered" => intval($totalFiltered),
-            "data" => $table
+        $this->getList();
+    }
+
+    public function getList() {
+        $data['breadcrumbs'] = array();
+
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/dashboard', 'member_token=' . $this->session->data['member_token'], true)
         );
 
-        echo json_encode($json);
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('heading_title'),
+            'href' => $this->url->link('product/product_type', 'member_token=' . $this->session->data['member_token'], true)
+        );
+
+        if (isset($this->session->data['success'])) {
+            $data['success'] = $this->session->data['success'];
+
+            unset($this->session->data['success']);
+        } else {
+            $data['success'] = '';
+        }
+
+        $data['add'] = $this->url->link('product/product_type/add', 'member_token=' . $this->session->data['member_token'], true);
+        $data['edit'] = $this->url->link('product/product_type/edit', 'member_token=' . $this->session->data['member_token'], true);
+        $data['delete'] = $this->url->link('product/product_type/delete', 'member_token=' . $this->session->data['member_token'], true);
+
+        $data['text_confirm'] = $this->language->get('text_confirm');
+
+        $data['header'] = $this->load->controller('common/header');
+        $data['nav'] = $this->load->controller('common/nav');
+        $data['footer'] = $this->load->controller('common/footer');
+
+        $this->response->setOutput($this->load->view('product/product_type_list', $data));
     }
 
     public function getData() {

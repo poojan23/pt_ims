@@ -12,9 +12,9 @@ class ModelProductProductType extends Model {
 
     }
 
-    public function deleteProductType($member_id) {
-        $this->db->query("DELETE FROM " . DB_PREFIX . "member WHERE member_id = '" . (int) $member_id . "'");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "member_ip WHERE member_id = '" . (int) $member_id . "'");
+    public function deleteProductType($product_type_id) {
+        $this->db->query("DELETE FROM " .DB_PREFIX. "product_type WHERE product_type_id='" .(int)$product_type_id. "'");
+        
     }
 
     public function getProductType() {

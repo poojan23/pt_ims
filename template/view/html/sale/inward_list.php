@@ -36,12 +36,12 @@
                         <a href="<?php echo $add; ?>" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
                         </a>
-                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-user-group').submit() : false;"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-inward').submit() : false;"><i class="fa fa-trash-o"></i></button>
                     </div>
 
                 </div>
                 <div class="ibox-content">
-
+                    <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-inward">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover dataTables-example" id="table-inward">
                             <thead>
@@ -71,6 +71,7 @@
 
                         </table>
                     </div>
+                    </form>
 
                 </div>
             </div>
@@ -88,72 +89,86 @@
 <script src="template/view/dist/js/buttons.colVis.min.js"></script>
 <script src="template/view/dist/js/dataTables.select.min.js"></script>
 <script>
-    $(document).ready(function () {
-        var table = $('#table-inward').DataTable({
-            pageLength: 10,
-            responsive: true,
-            dom: '<"html5buttons"B>lTfgitp',
-            buttons: [
-                {extend: 'copy'},
-                {extend: 'csv'},
-                {extend: 'excel', title: 'ExampleFile'},
-                {extend: 'pdf', title: 'ExampleFile'},
+                            $(document).ready(function () {
+                                var table = $('#table-inward').DataTable({
+                                    pageLength: 10,
+                                    responsive: true,
+                                    dom: '<"html5buttons"B>lTfgitp',
+                                    buttons: [
+                                        {extend: 'copy'},
+                                        {extend: 'csv'},
+                                        {extend: 'excel', title: 'ExampleFile'},
+                                        {extend: 'pdf', title: 'ExampleFile'},
 
-                {extend: 'print',
-                    customize: function (win) {
-                        $(win.document.body).addClass('white-bg');
-                        $(win.document.body).css('font-size', '10px');
+                                        {extend: 'print',
+                                            customize: function (win) {
+                                                $(win.document.body).addClass('white-bg');
+                                                $(win.document.body).css('font-size', '10px');
 
-                        $(win.document.body).find('table')
-                                .addClass('compact')
-                                .css('font-size', 'inherit');
-                    }
-                }
-            ],
-            'ajax': {
-                url: 'index.php?url=inventory/inward/getData&user_token=' + getURLVar('user_token'),
-                dataType: 'json',
-                type: 'POST',
-            },
-            "columns": [
+                                                $(win.document.body).find('table')
+                                                        .addClass('compact')
+                                                        .css('font-size', 'inherit');
+                                            }
+                                        }
+                                    ],
+                                    'ajax': {
+                                        url: 'index.php?url=sale/inward/getData&member_token=' + getURLVar('member_token'),
+                                        dataType: 'json',
+                                        type: 'POST',
+                                    },
+                                    "columns": [
 
-                {},
-                {"data": "createDate"},
-                {"data": "tructNo"},
-                {"data": "partyName"},
+                                        {
+                                            data: "inward_id",
+                                            render: function (data, type, row) {
+                                                if (type === 'display') {
+                                                    return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
+                                                }
+                                                return data;
+                                            },
+                                            "className": "center",
+                                            "bSearchable": false,
+                                            "bSortable": false
+                                        },
+                                        {"data": "inward_date"},
+                                        {"data": "truck_no"},
+                                        {"data": "customer_name"},
+                                        {"data": "product_type"},
+                                        {"data": "product_code"},
+                                        {"data": "coil_no"},
+                                        {"data": "thickness"},
+                                        {"data": "width"},
+                                        {"data": "length"},
+                                        {"data": "pieces"},
+                                        {"data": "gross_weight"},
+                                        {"data": "net_weight"},
+                                        {
+                                            "data": "packaging",
+                                            render: function (data, type, row) {
+                                                if (data == 1) {
+                                                    return '<?php echo $text_yes; ?>';
+                                                } else {
+                                                    return '<?php echo $text_no; ?>';
+                                                }
+                                                return data;
+                                            }
+                                        },
+                                        {
+                                            data: function (data, type, row) {
+                                                if (type === 'display') {
+                                                    return '<a href="<?php echo $edit; ?>&inward_id=' + data.inward_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
+                                                }
+                                                return data;
+                                            },
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "width": 80
+                                        }
+                                    ],
 
-                {"data": "product_type"},
-                {"data": "grade"},
-                {"data": "coilNo"},
-                {"data": "thickness"},
-                {"data": "width"},
-                {"data": "length"},
-                {"data": "pieces"},
-                {"data": "netWeight"},
-                {"data": "grossWeight"},
-                {
-                    "data": "packaging",
-                    render: function (data, type, row) {
-                        return data == 1 ? 'Yes' : 'No'
-                    },
-                },
-                {
-                    "data": function (data, type, row) {
-                        if (type === 'display') {
-                            return '<a href=""  class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>&nbsp;<a href=""  class="btn btn-info btn-sm"><i class="fa fa-trash"></i></a>';
-                        }
-                        return data;
-                    },
-                    className: "dt-center nowrap text-center",
-                    searchable: false,
-                    orderable: false,
-                    width: 80
-                },
-            ],
+                                });
 
-        });
-
-    });
+                            });
 
 </script>
 

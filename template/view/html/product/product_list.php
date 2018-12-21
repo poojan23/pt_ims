@@ -4,10 +4,10 @@
     <div class="col-lg-10">
         <h2><?php echo $text_title; ?></h2>
         <ol class="breadcrumb">
-            <?php foreach($breadcrumbs as $breadcrumb) : ?>
-            <li>
-                <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-            </li>
+            <?php foreach ($breadcrumbs as $breadcrumb) : ?>
+                <li>
+                    <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+                </li>
             <?php endforeach; ?> 
         </ol>
     </div>
@@ -35,28 +35,25 @@
 
                 </div>
                 <div class="ibox-content">
-
-                    <div class="table-responsive">
-                        <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-product">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-product">
-                            <thead>
-                                <tr>
-                                    <th style="width: 1px;" class="center">
-                                        <label class="pos-rel">
-                                            <input type="checkbox" class="ace" />
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </th>
-                                    <th><?php echo $column_name; ?></th>
-                                    <th><?php echo $column_code; ?></th>
-                                    <th><?php echo $column_action; ?></th>
-                                </tr>
-                            </thead>
-
-                        </table>
-                        </form>
-                    </div>
-
+                    <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-product">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example" id="table-product" style="overflow: auto;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 1px;" class="center">
+                                            <label class="pos-rel">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </th>
+                                        <th><?php echo $column_name; ?></th>
+                                        <th><?php echo $column_code; ?></th>
+                                        <th><?php echo $column_action; ?></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

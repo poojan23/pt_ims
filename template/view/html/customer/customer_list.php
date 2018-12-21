@@ -52,28 +52,28 @@
                 </div>
                 <div class="ibox-content">
                     <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-customer">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-client">
-                            <thead>
-                                <tr>
-                                    <th style="width: 1px;" class="center">
-                                        <label class="pos-rel">
-                                            <input type="checkbox" class="ace" />
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </th>
-                                    <th><?php echo $column_name; ?></th>
-                                    <th><?php echo $column_email; ?></th>
-                                    <th><?php echo $column_group; ?></th>
-                                    <th><?php echo $column_status; ?></th>
-                                    <th><?php echo $column_newsletter; ?></th>
-                                    <th><?php echo $column_date_added; ?></th>
-                                    <th><?php echo $column_action; ?></th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example" id="table-client">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 1px;" class="center">
+                                            <label class="pos-rel">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </th>
+                                        <th><?php echo $column_name; ?></th>
+                                        <th><?php echo $column_email; ?></th>
+                                        <th><?php echo $column_group; ?></th>
+                                        <th><?php echo $column_status; ?></th>
+                                        <th><?php echo $column_newsletter; ?></th>
+                                        <th><?php echo $column_date_added; ?></th>
+                                        <th><?php echo $column_action; ?></th>
+                                    </tr>
+                                </thead>
 
-                        </table>
-                    </div>
+                            </table>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -92,72 +92,92 @@
 <script src="template/view/dist/js/buttons.colVis.min.js"></script>
 <script src="template/view/dist/js/dataTables.select.min.js"></script>
 <script>
-                             $(document).ready(function () {
-                                 var table = $('#table-client').DataTable({
-                                     processing: true,
-                                     serverSide: false,
-                                     order: [[1, 'asc']],
-                                     pageLength: 10,
-                                     responsive: true,
-                                     dom: '<"html5buttons"B>lTfgitp',
-                                     buttons: [
-                                         {extend: 'copy'},
-                                         {extend: 'csv'},
-                                         {extend: 'excel', title: 'ExampleFile'},
-                                         {extend: 'pdf', title: 'ExampleFile'},
+                            $(document).ready(function () {
+                                var table = $('#table-client').DataTable({
+                                    processing: true,
+                                    serverSide: false,
+                                    order: [[1, 'asc']],
+                                    pageLength: 10,
+                                    responsive: true,
+                                    dom: '<"html5buttons"B>lTfgitp',
+                                    buttons: [
+                                        {extend: 'copy'},
+                                        {extend: 'csv'},
+                                        {extend: 'excel', title: 'ExampleFile'},
+                                        {extend: 'pdf', title: 'ExampleFile'},
 
-                                         {extend: 'print',
-                                             customize: function (win) {
-                                                 $(win.document.body).addClass('white-bg');
-                                                 $(win.document.body).css('font-size', '10px');
+                                        {extend: 'print',
+                                            customize: function (win) {
+                                                $(win.document.body).addClass('white-bg');
+                                                $(win.document.body).css('font-size', '10px');
 
-                                                 $(win.document.body).find('table')
-                                                         .addClass('compact')
-                                                         .css('font-size', 'inherit');
-                                             }
-                                         }
-                                     ],
-                                     'ajax': {
-                                         url: 'index.php?url=customer/customer/getData&member_token=' + getURLVar('member_token'),
-                                         dataType: 'json',
-                                         type: 'POST',
-                                     },
-                                     "columns": [
+                                                $(win.document.body).find('table')
+                                                        .addClass('compact')
+                                                        .css('font-size', 'inherit');
+                                            }
+                                        }
+                                    ],
+                                    'ajax': {
+                                        url: 'index.php?url=customer/customer/getData&member_token=' + getURLVar('member_token'),
+                                        dataType: 'json',
+                                        type: 'POST',
+                                    },
+                                    "columns": [
 
-                                         {
-                                             data: "customer_id",
-                                             render: function (data, type, row) {
-                                                 if (type === 'display') {
-                                                     return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
-                                                 }
-                                                 return data;
-                                             },
-                                             "className": "center",
-                                             "bSearchable": false,
-                                             "bSortable": false
-                                         },
-                                         {"data": "name"},
-                                         {"data": "email"},
-                                         {"data": "customer_group"},
-                                         {"data": "status"},
-                                         {"data": "newsletter"},
-                                         {"data": "date_added"},
-                                         { 
-                                            data: function(data, type, row) {
-                                                if(type === 'display') {
+                                        {
+                                            data: "customer_id",
+                                            render: function (data, type, row) {
+                                                if (type === 'display') {
+                                                    return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
+                                                }
+                                                return data;
+                                            },
+                                            "className": "center",
+                                            "bSearchable": false,
+                                            "bSortable": false
+                                        },
+                                        {"data": "customer"},
+                                        {"data": "email"},
+                                        {"data": "name"},
+                                        {
+                                            data: 'status',
+                                            render: function (data, type, row) {
+                                                if (data == 1) {
+                                                    return '<?php echo $text_enabled; ?>';
+                                                } else {
+                                                    return '<?php echo $text_disabled; ?>';
+                                                }
+                                                return data;
+                                            }
+                                        },
+                                        {
+                                            data: 'newsletter',
+                                            render: function (data, type, row) {
+                                                if (data == 1) {
+                                                    return '<?php echo $text_yes; ?>';
+                                                } else {
+                                                    return '<?php echo $text_no; ?>';
+                                                }
+                                                return data;
+                                            }
+                                        },
+                                        {"data": "date_added"},
+                                        {
+                                            data: function (data, type, row) {
+                                                if (type === 'display') {
                                                     return '<a href="<?php echo $edit; ?>&customer_id=' + data.customer_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
                                                 }
-                                              return data;
+                                                return data;
                                             },
                                             "bSearchable": false,
                                             "bSortable": false,
                                             "width": 80
                                         }
 
-                                     ],
+                                    ],
 
-                                 });
+                                });
 
-                             });
+                            });
 
 </script>

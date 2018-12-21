@@ -4,10 +4,10 @@
     <div class="col-lg-10">
         <h2><?php echo $text_title; ?></h2>
         <ol class="breadcrumb">
-            <?php foreach($breadcrumbs as $breadcrumb) : ?>
-            <li>
-                <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-            </li>
+            <?php foreach ($breadcrumbs as $breadcrumb) : ?>
+                <li>
+                    <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+                </li>
             <?php endforeach; ?> 
         </ol>
     </div>
@@ -30,30 +30,31 @@
                         <a href="<?php echo $add; ?>" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
                         </a>
-                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-user-group').submit() : false;"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-product-type').submit() : false;"><i class="fa fa-trash-o"></i></button>
                     </div>
 
                 </div>
                 <div class="ibox-content">
+                    <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-product-type">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example" id="table-producttype">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 1px;" class="center">
+                                            <label class="pos-rel">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </th>
+                                        <th><?php echo $column_name; ?></th>
+                                        <th><?php echo $column_sort_order; ?></th>
+                                        <th><?php echo $column_action; ?></th>
+                                    </tr>
+                                </thead>
 
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-producttype">
-                            <thead>
-                                <tr>
-                                    <th style="width: 1px;" class="center">
-                                        <label class="pos-rel">
-                                            <input type="checkbox" class="ace" />
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </th>
-                                    <th><?php echo $column_name; ?></th>
-                                    <th><?php echo $column_sort_order; ?></th>
-                                    <th><?php echo $column_action; ?></th>
-                                </tr>
-                            </thead>
-
-                        </table>
-                    </div>
+                            </table>
+                        </div>
+                    </form>
 
                 </div>
             </div>
