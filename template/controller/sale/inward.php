@@ -146,6 +146,11 @@ class ControllerSaleInward extends Controller {
     protected function getForm() {
         $data['text_form'] = !isset($this->request->get['inward_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
         
+        if (isset($this->request->get['inward_id'])) {
+            $data['inward_id'] = (int) $this->request->get['inward_id'];
+        } else {
+            $data['inward_id'] = 0;
+        }
         if (isset($this->error['warning'])) {
             $data['warning_err'] = $this->error['warning'];
         } else {
@@ -171,7 +176,7 @@ class ControllerSaleInward extends Controller {
                 'href' => $this->url->link('sale/inward/add', 'member_token' . $this->session->data['member_token'], true)
             );
         } else {
-            $data['action'] = $this->url->link('sale/inward/edit', 'member_token=' . $this->session->data['member_token'], true);
+            $data['action'] = $this->url->link('sale/inward/edit', 'member_token=' . $this->session->data['member_token'] . '&inward_id=' . $this->request->get['inward_id'], true);
             $data['breadcrumbs'][] = array(
                 'text' => $this->language->get('text_edit'),
                 'href' => $this->url->link('sale/inward/edit', 'member_token' . $this->session->data['member_token'], true)

@@ -1,8 +1,8 @@
 <?php
 
-class ModelSaleInward extends Model {
+class ModelSaleOrder extends Model {
 
-    public function addInward($data) {
+    public function addOrder($data) {
         $truck_no = strtoupper($data['truck_no']);
         $coil_no = strtoupper($data['coil_no']);
         
@@ -15,14 +15,14 @@ class ModelSaleInward extends Model {
         return $inward_id;
     }
 
-    public function editInward($inward_id, $data) {
+    public function editOrder($inward_id, $data) {
         $truck_no = strtoupper($data['truck_no']);
         $this->db->query("UPDATE " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', product_id = '" . (int)$data['product_id'] . "', truck_no = '" . $this->db->escape($truck_no) . "', thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "', `length` = '" . (isset($data['length']) ?  $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ?  $data['pieces'] : 0) . "',  packaging = '" . (int)$data['packaging'] . "',  date_modified = NOW() WHERE inward_id = '" . (int) $inward_id . "'");
         $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET net_weight='" . $data['net_weight'] . "',gross_weight='" . $data['gross_weight'] . "' WHERE inward_id = '" . (int) $inward_id . "' limit 1");
 
     }
 
-    public function deleteInward($inward_id) {
+    public function deleteOrder($inward_id) {
         $this->db->query("DELETE FROM " . DB_PREFIX . "inward WHERE inward_id = '" . (int) $inward_id . "'");
         $this->db->query("DELETE FROM " . DB_PREFIX . "inward_weight WHERE inward_id = '" . (int) $inward_id . "'");
     }
@@ -51,7 +51,7 @@ class ModelSaleInward extends Model {
         }
     }
 
-    public function getInwards() {
+    public function getOrders() {
         $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " .DB_PREFIX. "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " .DB_PREFIX. "customer c ON i.customer_id = c.customer_id "
@@ -61,7 +61,7 @@ class ModelSaleInward extends Model {
         return $query->rows;
     }
     
-    public function getInward($inward_id) {
+    public function getOrder($inward_id) {
         $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " .DB_PREFIX. "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " .DB_PREFIX. "customer c ON i.customer_id = c.customer_id "
@@ -150,7 +150,7 @@ class ModelSaleInward extends Model {
         return $category_seo_url_data;
     }
 
-    public function getTotalInward() {
+    public function getTotalOrder() {
         $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "inward_details");
 
         return $query->row['total'];

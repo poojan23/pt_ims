@@ -88,12 +88,22 @@
                         <div class="hr-line-dashed"></div>
 
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_coil_no; ?></label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="coil_no" value="<?php echo $coil_no; ?>" placeholder="<?= $entry_coil_no; ?>"></div>
+                            <div class="col-sm-10">
+                                <?php if ($coil_no) : ?>
+                                <input type="text" class="form-control" name="coil_no" value="<?php echo $coil_no; ?>" placeholder="<?= $entry_coil_no; ?>" disabled="">
+                                <?php else : ?>
+                                     <input type="text" class="form-control" name="coil_no"  placeholder="<?= $entry_coil_no; ?>">
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_product; ?></label>
                             <div class="col-sm-10">
+                                
+                                <?php if ($product_type_id) : ?>
+                                <input type="text" class="form-control"  value="<?php echo $product_type_name; ?>"  disabled="">
+                                <?php else : ?>
                                 <select data-placeholder="<?= $entry_product; ?>" class="chosen-select" tabindex="-1" style="display: none;" id="type" name="product_type_id" onchange="getproduct();">
                                     <option value=""><?= $entry_product; ?></option>
                                     <?php foreach ($product_types as $product_type) : ?>
@@ -104,30 +114,32 @@
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>
+                                
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
                        
                         <div style="display:none;" id="show_coil">
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_thickness; ?></label>
-                            <div class="col-sm-10"><input type="number" class="form-control" name="thickness" value="<?php echo $thickness; ?>" placeholder="<?= $entry_thickness; ?>"></div>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="thickness" value="<?php echo $thickness; ?>" placeholder="<?= $entry_thickness; ?>"></div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_width; ?></label>
-                            <div class="col-sm-10"><input type="number" class="form-control" name="width" value="<?php echo $width; ?>" placeholder="<?= $entry_width; ?>"></div>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="width" value="<?php echo $width; ?>" placeholder="<?= $entry_width; ?>"></div>
                         </div>
                         <div class="hr-line-dashed"></div>
                          </div>
                         
                         <div style="display:none;" id="show_bundle">
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
-                            <div class="col-sm-10"><input type="number" class="form-control" name="length"  value="<?php echo $length; ?>" placeholder="<?= $entry_lenght; ?>"></div>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="length"  value="<?php echo $length; ?>" placeholder="<?= $entry_lenght; ?>"></div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
-                            <div class="col-sm-10"><input type="number" class="form-control" name="pieces" value="<?php echo $pieces; ?>" placeholder="<?= $entry_pieces; ?>"></div>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="pieces" value="<?php echo $pieces; ?>" placeholder="<?= $entry_pieces; ?>"></div>
                         </div>
                         <div class="hr-line-dashed"></div>
                         </div>
