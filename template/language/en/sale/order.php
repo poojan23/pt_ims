@@ -37,10 +37,13 @@ $_['label_pieces'] 	     = 'Pieces';
 $_['label_gr_wt']            = 'Gross Weight';
 $_['label_net_wt'] 	     = 'Net Weight';
 $_['label_pack'] 	     = 'Packaging';
+$_['label_service'] 	     = 'Service Type';
 
 // Placeholder
 $_['entry_truck_no']         = 'Truck No.';
 $_['entry_client_name']      = 'Select Client Name';
+$_['entry_coil_no']          = 'Select Coil No.';
+$_['entry_service']          = 'Select Service Type';
 $_['entry_product'] 	     = 'Select Product';
 $_['entry_garde'] 	     = 'Select Grade';
 $_['entry_coil_no']          = 'Coil No.';

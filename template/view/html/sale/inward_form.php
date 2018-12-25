@@ -59,7 +59,15 @@
                         <div class="form-group" id="data_1">
                             <label class="col-sm-2 control-label"><?= $label_date; ?></label>
                             <div class="col-sm-10 input-group date">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" name="inward_date" value="<?php echo $inward_date; ?>">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <?php
+                                if($inward_date) {
+                                    echo '<input type="text" class="form-control" name="inward_date" value="'.$inward_date.'">';
+                                }else {
+                                    echo '<input type="text" class="form-control" name="inward_date" value="'.$date.'">';
+                                }
+                                ?>
+                                
                             </div>
                         </div>
 

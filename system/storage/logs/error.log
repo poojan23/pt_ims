@@ -1936,3 +1936,275 @@
 2018-Dec-24 04:58:08 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 46
 2018-Dec-24 04:58:08 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 51
 2018-Dec-24 04:58:08 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 57
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: text_form in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 44
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 62
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:06:26 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 92
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: product_type_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: product_types in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 109
+2018-Dec-24 10:06:26 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 109
+2018-Dec-24 10:06:26 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 123
+2018-Dec-24 10:06:50 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:06:50 - PHP Notice: Undefined variable: text_form in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 44
+2018-Dec-24 10:06:50 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 62
+2018-Dec-24 10:06:50 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:06:50 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:06:50 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:09:13 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:09:13 - PHP Notice: Undefined variable: text_form in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 44
+2018-Dec-24 10:09:13 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 62
+2018-Dec-24 10:09:13 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:09:13 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:09:13 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:10:14 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:10:14 - PHP Notice: Undefined variable: text_form in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 44
+2018-Dec-24 10:10:14 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 62
+2018-Dec-24 10:10:14 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:10:14 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:10:14 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:11:23 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:11:23 - PHP Notice: Undefined variable: text_form in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 44
+2018-Dec-24 10:11:23 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 62
+2018-Dec-24 10:11:23 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:11:23 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:11:23 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:11:45 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:11:45 - PHP Notice: Undefined variable: text_form in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 44
+2018-Dec-24 10:11:45 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:11:45 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:11:45 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:12:47 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 37
+2018-Dec-24 10:12:47 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:12:47 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:12:47 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:13:19 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:13:19 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:13:19 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:13:43 - PHP Notice: Undefined variable: customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:13:43 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 73
+2018-Dec-24 10:13:43 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:19:35 - PHP Notice: Undefined index: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:35 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:35 - PHP Notice: Undefined index: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:35 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:35 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:19:49 - PHP Notice: Undefined index: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:49 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:49 - PHP Notice: Undefined index: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:49 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:19:49 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:20:06 - PHP Notice: Undefined index: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:20:06 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:20:06 - PHP Notice: Undefined index: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:20:06 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 74
+2018-Dec-24 10:20:06 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:20:36 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:25:04 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:25:26 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:26:01 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 110
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 114
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 116
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_lastname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 120
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_lastname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 122
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_company in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 126
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_company in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 128
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_address_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 132
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_address_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 134
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_address_2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 138
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_address_2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 140
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_city in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 144
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_city in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 146
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_postcode in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 150
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_postcode in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 152
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_country in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 156
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: countries in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 160
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_zone in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 169
+2018-Dec-24 10:35:08 - PHP Notice: Undefined variable: entry_default in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 175
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 110
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 114
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 116
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_lastname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 120
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_lastname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 122
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_company in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 126
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_company in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 128
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_address_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 132
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_address_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 134
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_address_2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 138
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_address_2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 140
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_city in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 144
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_city in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 146
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_postcode in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 150
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_postcode in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 152
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_country in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 156
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: countries in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 160
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_zone in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 169
+2018-Dec-24 10:35:24 - PHP Notice: Undefined variable: entry_default in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 175
+2018-Dec-24 10:36:13 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:36:13 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:36:13 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 110
+2018-Dec-24 10:36:13 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 114
+2018-Dec-24 10:36:13 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 116
+2018-Dec-24 10:37:29 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:37:29 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:37:29 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 110
+2018-Dec-24 10:37:29 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 114
+2018-Dec-24 10:37:29 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 116
+2018-Dec-24 10:38:02 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:38:02 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:38:02 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 109
+2018-Dec-24 10:38:02 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 113
+2018-Dec-24 10:38:02 - PHP Notice: Undefined variable: entry_firstname in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 115
+2018-Dec-24 10:39:31 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:39:31 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:39:52 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 86
+2018-Dec-24 10:39:52 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 104
+2018-Dec-24 10:50:01 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 88
+2018-Dec-24 10:50:01 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 106
+2018-Dec-24 10:51:03 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 10:51:03 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 108
+2018-Dec-24 10:58:19 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 10:58:19 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 108
+2018-Dec-24 11:01:05 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:01:05 - PHP Notice: Undefined variable: address_row in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 108
+2018-Dec-24 11:04:10 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:04:49 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:06:01 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:06:38 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:10:18 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:10:51 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:11:15 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:11:44 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:11:50 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:12:12 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:13:05 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:13:33 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:14:02 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:14:25 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:14:33 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:14:53 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-24 11:17:12 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-25 04:41:42 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 46
+2018-Dec-25 04:41:42 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 51
+2018-Dec-25 04:41:42 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 57
+2018-Dec-25 04:43:16 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-25 05:28:27 - PHP Notice: Undefined variable: product_type_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 90
+2018-Dec-25 05:29:41 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 153
+2018-Dec-25 05:47:42 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 111
+2018-Dec-25 05:47:42 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 149
+2018-Dec-25 05:49:40 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 111
+2018-Dec-25 05:50:20 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 111
+2018-Dec-25 05:51:15 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 05:51:30 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 05:53:50 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 05:54:50 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 05:54:54 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 05:55:31 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 05:55:39 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 112
+2018-Dec-25 08:31:28 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 153
+2018-Dec-25 08:31:36 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 153
+2018-Dec-25 08:32:01 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 153
+2018-Dec-25 08:42:44 - PHP Notice: Undefined variable: member_token in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 111
+2018-Dec-25 09:32:43 - PHP Notice: Use of undefined constant V001 - assumed 'V001' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 144
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:33:06 - PHP Warning: Illegal string offset 'thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 148
+2018-Dec-25 09:34:18 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 46
+2018-Dec-25 09:34:18 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 51
+2018-Dec-25 09:34:18 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 57
+2018-Dec-25 09:36:12 - PHP Notice: Undefined variable: result in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 146
+2018-Dec-25 09:45:24 - PHP Notice: Undefined index: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 131
+2018-Dec-25 09:45:31 - PHP Notice: Undefined index: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 131
+2018-Dec-25 09:51:59 - PHP Notice: Undefined index: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 131
+2018-Dec-25 09:52:52 - PHP Notice: Undefined index: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 131
+2018-Dec-25 10:13:43 - PHP Notice: Undefined variable: label_length in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 105
+2018-Dec-25 10:17:21 - PHP Notice: Undefined variable: label_length in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 105
+2018-Dec-25 10:20:38 - PHP Notice: Undefined variable: label_length in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 105
+2018-Dec-25 10:21:13 - PHP Notice: Undefined variable: label_length in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 105
+2018-Dec-25 10:29:52 - PHP Notice: Undefined variable: label_service_type in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 121
+2018-Dec-25 11:30:21 - PHP Notice: Undefined index: REQUEST_METHOD in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 24
+2018-Dec-25 11:44:04 - PHP Notice: Undefined index: hdnCustomerId in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 11:44:57 - PHP Notice: Undefined index: hdnCustomerId in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 11:45:42 - PHP Notice: Undefined index: hdnCustomerId in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 11:55:21 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 7
+2018-Dec-25 11:55:21 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 7
+2018-Dec-25 11:56:18 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 11:56:18 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 11:57:29 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 11:57:29 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:14:50 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:14:50 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:15:05 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:15:05 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:16:24 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:16:24 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:16:35 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:18:25 - PHP Notice: Undefined index: hdnthickness in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:18:25 - PHP Notice: Undefined index: hdnwidth in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 6
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 158
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 159
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 160
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 161
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 162
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 163
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 164
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 165
+2018-Dec-25 12:57:50 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 166
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 158
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 159
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 160
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 161
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 162
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 163
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 164
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 165
+2018-Dec-25 12:59:20 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 166
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 158
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 159
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 160
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 161
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 162
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 163
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 164
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 165
+2018-Dec-25 12:59:36 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 166
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 158
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 159
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 160
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 161
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 162
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 163
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 164
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 165
+2018-Dec-25 13:00:01 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 166
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 158
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 159
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 160
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 161
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 162
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 163
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 164
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 165
+2018-Dec-25 13:00:46 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 166
+2018-Dec-25 13:01:14 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 159
