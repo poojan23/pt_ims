@@ -57,7 +57,7 @@ $_['entry_pack'] 	     = 'Packaging';
 
 // Table Head
 $_['head_date']             = 'Date';
-$_['head_truck_no']         = 'Truck No.';
+$_['head_order_no']         = 'Order No.';
 $_['head_client_name']      = 'Client Name';
 $_['head_product'] 	    = 'Product';
 $_['head_garde'] 	    = 'Grade';
@@ -69,5 +69,6 @@ $_['head_pieces'] 	    = 'Pieces';
 $_['head_gr_wt']            = 'Gross Weight';
 $_['head_net_wt'] 	    = 'Net Weight';
 $_['head_pack'] 	    = 'Packaging';
+$_['head_service'] 	    = 'Service Type';
 $_['head_action'] 	    = 'Action';
 

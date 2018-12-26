@@ -36,14 +36,14 @@
                         <a href="<?php echo $add; ?>" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
                         </a>
-                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-inward').submit() : false;"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger btn-bold" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-order').submit() : false;"><i class="fa fa-trash-o"></i></button>
                     </div>
 
                 </div>
                 <div class="ibox-content">
-                    <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-inward">
+                    <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-order">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-inward">
+                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-order">
                             <thead>
                                 <tr>
                                     <th style="width: 1px;" class="center">
@@ -53,18 +53,16 @@
                                         </label>
                                     </th>
                                     <th><?= $head_date; ?></th>
-                                    <th><?= $head_truck_no; ?></th>
                                     <th><?= $head_client_name; ?></th>
-                                    <th><?= $head_product; ?></th>
+                                    <th><?= $head_order_no; ?></th>
                                     <th><?= $head_garde; ?></th>
                                     <th><?= $head_coil_no; ?></th>
                                     <th><?= $head_thickness; ?></th>
                                     <th><?= $head_width; ?></th>
                                     <th><?= $head_lenght; ?></th>
                                     <th><?= $head_pieces; ?></th>
-                                    <th><?= $head_gr_wt; ?></th>
                                     <th><?= $head_net_wt; ?></th>
-                                    <th><?= $head_pack; ?></th>
+                                    <th><?= $head_service; ?></th>
                                     <th><?= $head_action; ?></th>
                                 </tr>
                             </thead>
@@ -90,7 +88,7 @@
 <script src="template/view/dist/js/dataTables.select.min.js"></script>
 <script>
                             $(document).ready(function () {
-                                var table = $('#table-inward').DataTable({
+                                var table = $('#table-order').DataTable({
                                     pageLength: 10,
                                     responsive: true,
                                     dom: '<"html5buttons"B>lTfgitp',
@@ -112,14 +110,14 @@
                                         }
                                     ],
                                     'ajax': {
-                                        url: 'index.php?url=sale/inward/getData&member_token=' + getURLVar('member_token'),
+                                        url: 'index.php?url=sale/order/getData&member_token=' + getURLVar('member_token'),
                                         dataType: 'json',
                                         type: 'POST',
                                     },
                                     "columns": [
 
                                         {
-                                            data: "inward_id",
+                                            data: "order_id",
                                             render: function (data, type, row) {
                                                 if (type === 'display') {
                                                     return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
@@ -130,33 +128,23 @@
                                             "bSearchable": false,
                                             "bSortable": false
                                         },
-                                        {"data": "inward_date"},
-                                        {"data": "truck_no"},
+                                        
+                                        {"data": "order_date"},
                                         {"data": "customer_name"},
-                                        {"data": "product_type"},
+                                        {"data": "order_no"},
                                         {"data": "product_code"},
                                         {"data": "coil_no"},
                                         {"data": "thickness"},
                                         {"data": "width"},
                                         {"data": "length"},
                                         {"data": "pieces"},
-                                        {"data": "gross_weight"},
                                         {"data": "net_weight"},
-                                        {
-                                            "data": "packaging",
-                                            render: function (data, type, row) {
-                                                if (data == 1) {
-                                                    return '<?php echo $text_yes; ?>';
-                                                } else {
-                                                    return '<?php echo $text_no; ?>';
-                                                }
-                                                return data;
-                                            }
-                                        },
+                                        {"data": "service_type"},
+                                        
                                         {
                                             data: function (data, type, row) {
                                                 if (type === 'display') {
-                                                    return '<a href="<?php echo $edit; ?>&inward_id=' + data.inward_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
+                                                    return '<a href="<?php echo $edit; ?>&order_id=' + data.order_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
                                                 }
                                                 return data;
                                             },

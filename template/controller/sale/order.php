@@ -30,7 +30,24 @@ class ControllerSaleOrder extends Controller {
         }
         $this->getForm();
     }
+    
+    public function delete() {
+        $this->load->model('sale/order');
 
+        $this->load->language('sale/order');
+
+        $this->document->setTitle($this->language->get('heading_title'));
+
+        if ($this->request->post['selected']) {
+            foreach ($this->request->post['selected'] as $order_id) {
+                $this->model_sale_order->deleteOrder($order_id);
+            }
+
+            $this->session->data['success'] = $this->language->get('text_success');
+
+            $this->response->redirect($this->url->link('sale/order', 'member_token=' . $this->session->data['member_token'], true));
+        }
+    }
     protected function getList() {
         if (isset($this->error['warning'])) {
             $data['warning_err'] = $this->error['warning'];
@@ -69,6 +86,42 @@ class ControllerSaleOrder extends Controller {
         $data['footer'] = $this->load->controller('common/footer');
 
         $this->response->setOutput($this->load->view('sale/order_list', $data));
+    }
+    public function getData() {
+        $json = array();       
+        
+        $this->load->model('sale/order');
+        
+        $results = $this->model_sale_order->getOrders();
+        
+        $table = array();
+        
+        foreach ($results as $result) {
+            $nestedData['order_id']             = $result['order_id'];
+            $nestedData['order_no']             = $result['order_no'];
+            $nestedData['order_date']           = $result['order_date'];
+            $nestedData['customer_name']        = $result['customer_name'];
+            $nestedData['coil_no']              = $result['coil_no'];
+            $nestedData['customer_id']          = $result['customer_id'];
+            $nestedData['inward_weight_id']     = $result['inward_weight_id'];
+            $nestedData['product_id']           = $result['product_id'];
+            $nestedData['product_code']         = $result['product_code'];
+            $nestedData['thickness']            = $result['thickness'];
+            $nestedData['width']                = $result['width'];
+            $nestedData['length']               = $result['length'];
+            $nestedData['pieces']               = $result['pieces'];
+            $nestedData['net_weight']           = $result['net_weight'];
+            $nestedData['service_type']         = $result['service_type'];
+            
+            $table[] = $nestedData;
+        }
+        $json = array(
+            'data' => $table
+        );
+        
+        $this->response->addHeader('Content-Type : application/json');
+        $this->response->setOutput(json_encode($json));
+        
     }
 
     protected function getForm() {
@@ -155,6 +208,8 @@ class ControllerSaleOrder extends Controller {
 
         $json = array(
             'inward_id' => $results['inward_id'],
+            'net_weight' => $results['net_weight'],
+            'gross_weight' => $results['gross_weight'],
             'inward_weight_id' => $results['inward_weight_id'],
             'customer_id' => $results['customer_id'],
             'customer_name' => $results['customer_name'],

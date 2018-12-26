@@ -142,6 +142,8 @@
                             <input type="hidden" id="hdnwidth" name="hdnwidth">
                             <input type="hidden" id="hdnCustomerId" name="hdnCustomerId">
                             <input type="hidden" id="hdnProductId" name="hdnProductId">
+                            <input type="hidden" id="hdnNetWeight" name="hdnNetWeight">
+                            <input type="hidden" id="hdnGrossWeight" name="hdnGrossWeight">
                         </div>
 
                     </form>
@@ -186,6 +188,8 @@
                         $("#product_code").val(json['product_code']);
                         $("#thickness").val(json['thickness']);
                         $("#hdnthickness").val(json['thickness']);
+                        $("#hdnNetWeight").val(json['net_weight']);
+                        $("#hdnGrossWeight").val(json['gross_weight']);
                         $("#width").val(json['width']);
                         $("#hdnwidth").val(json['width']);
                     },
