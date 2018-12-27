@@ -184,6 +184,12 @@ class ControllerCustomerCustomer extends Controller {
             $data['telephone_err'] = '';
         }
 
+        if (isset($this->error['mobile'])) {
+            $data['mobile_err'] = $this->error['mobile'];
+        } else {
+            $data['mobile_err'] = '';
+        }
+
         if (isset($this->error['address'])) {
             $data['address_err'] = $this->error['address'];
         } else {
@@ -348,6 +354,10 @@ class ControllerCustomerCustomer extends Controller {
 
         if ((utf8_strlen($this->request->post['telephone']) < 8) || (utf8_strlen($this->request->post['telephone']) > 32)) {
             $this->error['telephone'] = $this->language->get('error_telephone');
+        }
+
+        if ((utf8_strlen($this->request->post['mobile']) < 10) || (utf8_strlen($this->request->post['mobile']) > 11)) {
+            $this->error['mobile'] = $this->language->get('error_mobile');
         }
 
         if (isset($this->request->post['address'])) {

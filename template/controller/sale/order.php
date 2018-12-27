@@ -31,6 +31,24 @@ class ControllerSaleOrder extends Controller {
         $this->getForm();
     }
     
+    public function edit() {
+        $this->load->model('sale/order');
+
+        $this->load->language('sale/order');
+
+        $this->document->setTitle($this->language->get('heading_title'));
+
+        if ($this->request->server['REQUEST_METHOD'] == 'POST') {
+            $this->model_sale_order->editOrder($this->request->get['order_id'], $this->request->post);
+
+            $this->session->data['success'] = $this->language->get['text_success'];
+
+            $this->response->redirect($this->url->link('sale/order', 'member_token=' . $this->session->data['member_token'], true));
+        }
+
+        $this->getForm();
+    }
+    
     public function delete() {
         $this->load->model('sale/order');
 
@@ -112,6 +130,7 @@ class ControllerSaleOrder extends Controller {
             $nestedData['pieces']               = $result['pieces'];
             $nestedData['net_weight']           = $result['net_weight'];
             $nestedData['service_type']         = $result['service_type'];
+            $nestedData['aging']                = $result['aging'];
             
             $table[] = $nestedData;
         }
@@ -126,6 +145,12 @@ class ControllerSaleOrder extends Controller {
 
     protected function getForm() {
         $data['text_form'] = !isset($this->request->get['order_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
+        
+        if (isset($this->request->get['order_id'])) {
+            $data['order_id'] = (int) $this->request->get['order_id'];
+        } else {
+            $data['order_id'] = 0;
+        }
 
         if (isset($this->error['warning'])) {
             $data['warning_err'] = $this->error['warning'];
@@ -152,7 +177,7 @@ class ControllerSaleOrder extends Controller {
                 'href' => $this->url->link('sale/order/add', 'member_token=' . $this->session->data['member_token'], true)
             );
         } else {
-            $data['action'] = $this->url->link('sale/order/edit', 'member_token=' . $this->session->data['member_token'], true);
+            $data['action'] = $this->url->link('sale/order/edit', 'member_token=' . $this->session->data['member_token'] . '&order_id=' . $this->request->get['order_id'], true);
             $dat['breadcrumbs'][] = array(
                 'text' => $this->language->get('text_edit'),
                 'href' => $this->url->link('sale/order/edit', 'member_token=' . $this->session->data['member_token'], true)
@@ -163,12 +188,91 @@ class ControllerSaleOrder extends Controller {
             $order_info = $this->model_sale_order->getOrder($this->request->get['order_id']);
         }
 
+        if (isset($this->post['order_id'])) {
+            $data['order_id'] = $this->request->post['order_id'];
+        } elseif (!empty($order_info)) {
+            $data['order_id'] = $order_info['order_id'];
+        } else {
+            $data['order_id'] = '';
+        }
         if (isset($this->post['order_date'])) {
             $data['order_date'] = $this->request->post['order_date'];
         } elseif (!empty($order_info)) {
             $data['order_date'] = $order_info['order_date'];
         } else {
             $data['order_date'] = '';
+        }
+        
+        if (isset($this->post['customer_name'])) {
+            $data['customer_name'] = $this->request->post['customer_name'];
+        } elseif (!empty($order_info)) {
+            $data['customer_name'] = $order_info['customer_name'];
+        } else {
+            $data['customer_name'] = '';
+        }
+        
+        if (isset($this->post['customer_id'])) {
+            $data['customer_id'] = $this->request->post['customer_id'];
+        } elseif (!empty($order_info)) {
+            $data['customer_id'] = $order_info['customer_id'];
+        } else {
+            $data['customer_id'] = '';
+        }
+        
+        if (isset($this->post['product_code'])) {
+            $data['product_code'] = $this->request->post['product_code'];
+        } elseif (!empty($order_info)) {
+            $data['product_code'] = $order_info['product_code'];
+        } else {
+            $data['product_code'] = '';
+        }
+        
+        if (isset($this->post['thickness'])) {
+            $data['thickness'] = $this->request->post['thickness'];
+        } elseif (!empty($order_info)) {
+            $data['thickness'] = $order_info['thickness'];
+        } else {
+            $data['thickness'] = '';
+        }
+        
+        if (isset($this->post['width'])) {
+            $data['width'] = $this->request->post['width'];
+        } elseif (!empty($order_info)) {
+            $data['width'] = $order_info['width'];
+        } else {
+            $data['width'] = '';
+        }
+        
+        if (isset($this->post['length'])) {
+            $data['width'] = $this->request->post['length'];
+        } elseif (!empty($order_info)) {
+            $data['length'] = $order_info['length'];
+        } else {
+            $data['length'] = '';
+        }
+        
+        if (isset($this->post['pieces'])) {
+            $data['pieces'] = $this->request->post['pieces'];
+        } elseif (!empty($order_info)) {
+            $data['pieces'] = $order_info['pieces'];
+        } else {
+            $data['pieces'] = '';
+        }
+        
+        if (isset($this->post['net_weight'])) {
+            $data['net_weight'] = $this->request->post['net_weight'];
+        } elseif (!empty($order_info)) {
+            $data['net_weight'] = $order_info['net_weight'];
+        } else {
+            $data['net_weight'] = '';
+        }
+        
+        if (isset($this->post['service_type'])) {
+            $data['net_weight'] = $this->request->post['service_type'];
+        } elseif (!empty($order_info)) {
+            $data['service_type'] = $order_info['service_type'];
+        } else {
+            $data['service_type'] = '';
         }
 
         $this->load->model('sale/inward');

@@ -14,17 +14,15 @@
         <group>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/order_list.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/user/user.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/customer/customer.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/sale/inward.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/customer/customer_form.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/order_form.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/sale/order.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/inward_form.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/customer/customer.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/order.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/sale/inward.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/inward.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/sale/order.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/customer/customer.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/index.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/order_form.php</file>
         </group>
     </open-files>
 </project-private>

@@ -69,6 +69,7 @@ $_['head_pieces'] 	    = 'Pieces';
 $_['head_gr_wt']            = 'Gross Weight';
 $_['head_net_wt'] 	    = 'Net Weight';
 $_['head_pack'] 	    = 'Packaging';
+$_['head_aging'] 	    = 'Aging';
 $_['head_service'] 	    = 'Service Type';
 $_['head_action'] 	    = 'Action';
 

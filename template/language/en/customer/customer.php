@@ -49,7 +49,7 @@ $_['entry_firstname']       = 'Firstname';
 $_['entry_lastname']        = 'Lastname';
 $_['entry_email']           = 'E-mail Address';
 $_['entry_telephone']       = 'Telephone';
-$_['entry_fax']             = 'Mobile';
+$_['entry_mobile']          = 'Mobile';
 $_['entry_dob']             = 'Birthdate';
 $_['entry_ani']             = 'Anniversary';
 $_['entry_user']            = 'Assigned User';
@@ -69,6 +69,7 @@ $_['entry_comment']         = 'Comment';
 $_['entry_download_name']   = 'Download Name';
 $_['entry_filename']        = 'Filename';
 $_['entry_mask']            = 'Mask';
+$_['entry_customer_group']  = 'Select Customer Group';
 
 # Button
 $_['button_file_add']       = 'Add File';
@@ -84,6 +85,7 @@ $_['error_firstname']       = 'First Name must be between 1 and 32 characters!';
 $_['error_lastname']        = 'Last Name must be between 1 and 32 characters!';
 $_['error_email']           = 'E-Mail Address does not appear to be valid!';
 $_['error_telephone']       = 'Telephone must be between 8 and 32 characters!';
+$_['error_mobile']          = 'Mobile must be 10 characters!';
 $_['error_address_1']       = 'Address 1 must be between 3 and 128 characters!';
 $_['error_city']            = 'City must be between 2 and 128 characters!';
 $_['error_postcode']        = 'Postcode must be between 2 and 10 characters for this country!';

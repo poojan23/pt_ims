@@ -62,6 +62,7 @@
                                     <th><?= $head_lenght; ?></th>
                                     <th><?= $head_pieces; ?></th>
                                     <th><?= $head_net_wt; ?></th>
+                                    <th><?= $head_aging; ?></th>
                                     <th><?= $head_service; ?></th>
                                     <th><?= $head_action; ?></th>
                                 </tr>
@@ -139,6 +140,7 @@
                                         {"data": "length"},
                                         {"data": "pieces"},
                                         {"data": "net_weight"},
+                                        {"data": "aging"},
                                         {"data": "service_type"},
                                         
                                         {

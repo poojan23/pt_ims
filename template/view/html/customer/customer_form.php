@@ -81,6 +81,7 @@
                                                                         <?php if ($customer_group['customer_group_id'] == $customer_group_id) : ?>
                                                                             <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
                                                                         <?php else : ?>
+                                                                            <option><?php echo $entry_customer_group; ?></option>
                                                                             <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
                                                                         <?php endif; ?>
                                                                     <?php endforeach; ?>
@@ -142,11 +143,14 @@
 
                                                         <hr>
 
-                                                        <div class="form-group">
-                                                            <label for="input-mobile" class="col-sm-2 control-label"><?php echo $entry_fax; ?></label>
+                                                        <div class="form-group <?php echo (!empty($mobile_err)) ? 'has-error' : ''; ?>">
+                                                            <label for="input-mobile" class="col-sm-2 control-label"><?php echo $entry_mobile; ?> <span class="red">*</span></label>
 
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" name="mobile" placeholder="<?php echo $entry_fax; ?>" value="<?php echo $mobile; ?>" id="input-mobile">
+                                                                <input type="text" class="form-control" name="mobile" placeholder="<?php echo $entry_mobile; ?>" value="<?php echo $mobile; ?>" id="input-mobile">
+                                                                <?php if (isset($telephone_err)) : ?>
+                                                                    <span class="help-block"><?php echo $mobile_err; ?></span>
+                                                                <?php endif; ?>
                                                             </div>
                                                         </div>
 
