@@ -71,11 +71,9 @@
                                     <th><?= $head_action; ?></th>
                                 </tr>
                             </thead>
-
                         </table>
                     </div>
                     </form>
-
                 </div>
             </div>
         </div>

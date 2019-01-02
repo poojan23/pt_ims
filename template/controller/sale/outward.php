@@ -313,19 +313,6 @@ class ControllerSaleOutward extends Controller {
             $data['packaging'] = '';
         }
 
-//        $this->load->model('sale/order');
-//
-//        $data['coil_nos'] = $this->model_sale_order->getCoilNo();
-////         print_r($data['coil_nos']);exit;
-//        if (isset($this->post['coil_no'])) {
-//            $data['coil_no'] = $this->request->post['coil_no'];
-//        } elseif (!empty($outward_info)) {
-//            $data['coil_no'] = $outward_info['coil_no'];
-//        } else {
-//            $data['coil_no'] = '';
-//        }
-
-
         $data['cancel'] = $this->url->link('sale/outward', 'member_token=' . $this->session->data['member_token'], true);
 
         $data['header'] = $this->load->controller('common/header');
@@ -371,7 +358,6 @@ class ControllerSaleOutward extends Controller {
 
         $results = $this->model_sale_outward->getOutwardDetailsByOrderNo($order_no);
 
-
         $json = array(
             'order_id' => $results['order_id'],
             'customer_id' => $results['customer_id'],
@@ -383,8 +369,6 @@ class ControllerSaleOutward extends Controller {
             'length' => $results['length'],
             'service_type' => $results['service_type'],
         );
-
-
 
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));

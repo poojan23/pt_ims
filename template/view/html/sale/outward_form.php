@@ -275,20 +275,20 @@
 <script src="template/view/dist/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
 <script type="text/javascript">
-                                        $('select[name=\'coil_no\']').on('change', function () {
-                                            var $this = $(this).val();
-                                            $.ajax({
-                                                url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
-                                                dataType: 'json',
-                                                type: 'POST',
-                                                data: 'coil_no=' + $this,
-                                                beforeSend: function () {
+$('select[name=\'coil_no\']').on('change', function () {
+    var $this = $(this).val();
+    $.ajax({
+        url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
+        dataType: 'json',
+        type: 'POST',
+        data: 'coil_no=' + $this,
+        beforeSend: function () {
 
-                                                },
-                                                complete: function () {
+        },
+        complete: function () {
 
-                                                },
-                                                success: function (json) {
+        },
+        success: function (json) {
 //                                    $('#showOrderNo').show();
 
 //                                    var select = $('#order_no');
@@ -304,62 +304,62 @@
 //                                     select.append('<option value="' + json[i].order_no + '">' + json[i].order_no + '</option>');
 //                                     }
 
-                                                    var bind = '<div class="form-group">'
-                                                    bind += '<label for="inputName" class="col-sm-2 control-label">Order No &nbsp; </label>'
-                                                    bind += '<div class="col-sm-10">'
-                                                    bind += '<select class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">'
-                                                    bind += '<option value="0">Select Order No</option>'
-                                                    for (var i = 0; i < json.length; i++)
-                                                    {
-                                                        var order_no = json[i].order_no;
-                                                        bind += '<option value=' + order_no + '>' + order_no + '</option>'
-                                                    }
-                                                    bind += '</select>'
-                                                    bind += '</div>'
-                                                    bind += '</div>';
-                                                    $('#getcuttingID').html(bind);
-                                                },
-                                                error: function (xhr, ajaxOptions, thrownError) {
-                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                                }
-                                            });
-                                        });
-                                        function getCuttingDetails()
-                                        {
-                                            var $this = $('#order_no').val();
-                                            $.ajax({
-                                                url: 'index.php?url=sale/outward/getOutwardDetailsByOrderNo&member_token=' + getURLVar('member_token'),
-                                                dataType: 'json',
-                                                type: 'POST',
-                                                data: 'order_no=' + $this,
-                                                beforeSend: function () {
+            var bind = '<div class="form-group">'
+            bind += '<label for="inputName" class="col-sm-2 control-label">Order No &nbsp; </label>'
+            bind += '<div class="col-sm-10">'
+            bind += '<select class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">'
+            bind += '<option value="0">Select Order No</option>'
+            for (var i = 0; i < json.length; i++)
+            {
+                var order_no = json[i].order_no;
+                bind += '<option value=' + order_no + '>' + order_no + '</option>'
+            }
+            bind += '</select>'
+            bind += '</div>'
+            bind += '</div>';
+            $('#getcuttingID').html(bind);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
+});
+function getCuttingDetails()
+{
+    var $this = $('#order_no').val();
+    $.ajax({
+        url: 'index.php?url=sale/outward/getOutwardDetailsByOrderNo&member_token=' + getURLVar('member_token'),
+        dataType: 'json',
+        type: 'POST',
+        data: 'order_no=' + $this,
+        beforeSend: function () {
 
-                                                },
-                                                complete: function () {
+        },
+        complete: function () {
 
-                                                },
-                                                success: function (json) {
-                                                    $('#showDetails').show();
-                                                    $("#hdnOrderId").val(json['order_id']);
-                                                    $("#hdnCustomerId").val(json['customer_id']);
-                                                    $("#customer_name").val(json['customer_name']);
-                                                    $("#hdnProductId").val(json['product_id']);
-                                                    $("#product_code").val(json['product_code']);
-                                                    $("#thickness").val(json['thickness']);
-                                                    $("#hdnthickness").val(json['thickness']);
-                                                    $("#width").val(json['width']);
-                                                    $("#hdnwidth").val(json['width']);
-                                                    $("#length").val(json['length']);
-                                                    $("#hdnlength").val(json['thickness']);
-                                                    $("#service_type").val(json['service_type']);
-                                                    $("#hdnservice").val(json['service_type']);
-                                                },
-                                                error: function (xhr, ajaxOptions, thrownError) {
-                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                                }
-                                            });
+        },
+        success: function (json) {
+            $('#showDetails').show();
+            $("#hdnOrderId").val(json['order_id']);
+            $("#hdnCustomerId").val(json['customer_id']);
+            $("#customer_name").val(json['customer_name']);
+            $("#hdnProductId").val(json['product_id']);
+            $("#product_code").val(json['product_code']);
+            $("#thickness").val(json['thickness']);
+            $("#hdnthickness").val(json['thickness']);
+            $("#width").val(json['width']);
+            $("#hdnwidth").val(json['width']);
+            $("#length").val(json['length']);
+            $("#hdnlength").val(json['thickness']);
+            $("#service_type").val(json['service_type']);
+            $("#hdnservice").val(json['service_type']);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
 
-                                        }
+}
 </script>
 <script>
     $(document).ready(function () {
