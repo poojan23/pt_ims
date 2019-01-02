@@ -313,6 +313,14 @@ class ControllerSaleOutward extends Controller {
             $data['packaging'] = '';
         }
 
+        if (isset($this->post['challan_no'])) {
+            $data['challan_no'] = $this->request->post['challan_no'];
+        } elseif (!empty($outward_info)) {
+            $data['challan_no'] = $outward_info['challan_no'];
+        } else {
+            $data['challan_no'] = '';
+        }
+
         $this->load->model('sale/order');
 
         $data['coil_nos'] = $this->model_sale_order->getCoilNo();

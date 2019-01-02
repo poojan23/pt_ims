@@ -87,6 +87,11 @@
                             </div>
                             <div class="hr-line-dashed"></div>
 
+                            <div class="form-group"><label class="col-sm-2 control-label">' . $label_truck_no . '</label>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="truck_no" value="' . $truck_no . '" id="truck_no"></div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_service . '</label>
                                 <div class="col-sm-10"><input type="text" class="form-control" name="service_type" value=' . $service_type . ' id="service_type" disabled=""></div>
                             </div>
@@ -140,8 +145,7 @@
                                 <label class="checkbox-inline">
                                     <input type="radio" value="0" id="no" name="packaging" checked=""> No 
                                 </label>
-                                }
-                               
+                    
                             </div>    
                         </div>';
                             }

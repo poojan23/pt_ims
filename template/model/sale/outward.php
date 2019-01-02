@@ -61,7 +61,7 @@ class ModelSaleOutward extends Model {
 
                 $cal_pieces = $order_info->row['pieces'] + ($query->row['pieces'] - $data['pieces']);
 
-                $this->db->query("UPDATE " . DB_PREFIX . "delivery SET  delivery_date='" . $data['delivery_date'] . "', challan_no='" . $data['challan_no'] . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', gross_weight ='" . $data['gross_weight'] . "' WHERE delivery_id = '" . (int) $delivery_id . "'");
+                $this->db->query("UPDATE " . DB_PREFIX . "delivery SET  delivery_date='" . $data['delivery_date'] . "', truck_no='" . $data['truck_no'] . "',   challan_no='" . $data['challan_no'] . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', gross_weight ='" . $data['gross_weight'] . "', packaging='" . (int) $data['packaging'] . "'  WHERE delivery_id = '" . (int) $delivery_id . "'");
 
                 $this->db->query("UPDATE " . DB_PREFIX . "order_weight SET  `pieces` = '" . $cal_pieces . "' WHERE order_weight_id = '" . (int) $order_info->row['order_weight_id'] . "'");
 
