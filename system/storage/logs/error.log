@@ -2871,3 +2871,9 @@
 2019-Jan-02 11:37:52 - PHP Notice: Undefined property: Language::$get in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\outward.php on line 44
 2019-Jan-02 11:40:47 - PHP Notice: Undefined property: Language::$get in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\outward.php on line 44
 2019-Jan-02 11:58:41 - PHP Notice: Undefined property: Language::$get in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\outward.php on line 44
+2019-Jan-02 12:03:15 - PHP Notice: Undefined variable: coil_nos in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 167
+2019-Jan-02 12:03:15 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 167
+2019-Jan-02 12:03:22 - PHP Notice: Undefined variable: coil_nos in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 167
+2019-Jan-02 12:03:22 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 167
+2019-Jan-02 12:05:11 - PHP Notice: Undefined variable: coil_nos in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 167
+2019-Jan-02 12:05:11 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 167

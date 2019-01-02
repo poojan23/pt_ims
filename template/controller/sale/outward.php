@@ -313,6 +313,18 @@ class ControllerSaleOutward extends Controller {
             $data['packaging'] = '';
         }
 
+        $this->load->model('sale/order');
+
+        $data['coil_nos'] = $this->model_sale_order->getCoilNo();
+        if (isset($this->post['coil_no'])) {
+            $data['coil_no'] = $this->request->post['coil_no'];
+        } elseif (!empty($outward_info)) {
+            $data['coil_no'] = $outward_info['coil_no'];
+        } else {
+            $data['coil_no'] = '';
+        }
+
+
         $data['cancel'] = $this->url->link('sale/outward', 'member_token=' . $this->session->data['member_token'], true);
 
         $data['header'] = $this->load->controller('common/header');
