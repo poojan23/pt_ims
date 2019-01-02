@@ -122,7 +122,8 @@ class ControllerCommonNav extends Controller
                     'children'  => array()
                 );
             }
-
+            
+            # Sale
             if($this->member->hasPermission('access', 'sale/order')) {
                 $sale[] = array(
                     'name'      => $this->language->get('text_order'),
@@ -131,6 +132,7 @@ class ControllerCommonNav extends Controller
                 );
             }
             
+            # Outward
             if($this->member->hasPermission('access', 'sale/outward')) {
                 $sale[] = array(
                     'name'      => $this->language->get('text_outward'),

@@ -48,64 +48,35 @@ class ModelSaleOrder extends Model {
         }
 
         return $order_id;
-
     }
 
     public function editOrder($order_id, $data) {
         $order_info = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE order_id = '" . (int) $order_id . "'");
-        
+
         if ($order_info->num_rows) {
-           $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");
-//           print_r($query);exit;
-           if ($query->row) {
+            $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");
+
+            if ($query->row) {
                 $net_weight = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_weight WHERE order_id = '" . (int) $order_id . "'");
-                $cal_net_weight = $query->row['net_weight'] + ($net_weight->row['net_weight'] - $data['netWeight']) ;
-                
+                $cal_net_weight = $query->row['net_weight'] + ($net_weight->row['net_weight'] - $data['netWeight']);
+
                 $this->db->query("UPDATE " . DB_PREFIX . "order SET  `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "' WHERE order_id = '" . (int) $order_id . "'");
-        
+
                 $this->db->query("UPDATE " . DB_PREFIX . "order_weight SET net_weight='" . $data['netWeight'] . "' , `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "' WHERE order_id = '" . (int) $order_id . "'");
 
-                $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET net_weight='" .$cal_net_weight . "'  WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");  
-           }
-            
+                $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET net_weight='" . $cal_net_weight . "'  WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");
+            }
         }
-        
-        
-        
     }
 
     public function deleteOrder($order_id) {
         $order_info = $this->db->query("SELECT inward_weight_id FROM " . DB_PREFIX . "order WHERE order_id = '" . (int) $order_id . "'");
-        
+
         $this->db->query("DELETE FROM " . DB_PREFIX . "order WHERE order_id = '" . (int) $order_id . "'");
-        
+
         $this->db->query("DELETE FROM " . DB_PREFIX . "order_weight WHERE order_id = '" . (int) $order_id . "'");
-        
+
         $this->db->query("DELETE FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");
-    }
-
-    public function repairCategories($parent_id = 0) {
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category WHERE parent_id = '" . (int) $parent_id . "'");
-
-        foreach ($query->rows as $category) {
-            // Delete the path below the current one
-            $this->db->query("DELETE FROM `" . DB_PREFIX . "category_path` WHERE category_id = '" . (int) $category['category_id'] . "'");
-
-            // Fix for records with no paths
-            $level = 0;
-
-            $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "category_path` WHERE category_id = '" . (int) $parent_id . "' ORDER BY level ASC");
-
-            foreach ($query->rows as $result) {
-                $this->db->query("INSERT INTO `" . DB_PREFIX . "category_path` SET category_id = '" . (int) $category['category_id'] . "', `path_id` = '" . (int) $result['path_id'] . "', level = '" . (int) $level . "'");
-
-                $level++;
-            }
-
-            $this->db->query("REPLACE INTO `" . DB_PREFIX . "category_path` SET category_id = '" . (int) $category['category_id'] . "', `path_id` = '" . (int) $category['category_id'] . "', level = '" . (int) $level . "'");
-
-            $this->repairCategories($category['category_id']);
-        }
     }
 
     public function getOrders() {
@@ -118,6 +89,12 @@ class ModelSaleOrder extends Model {
         return $query->rows;
     }
 
+    public function getCoilNo() {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order group by coil_no");
+
+        return $query->rows;
+    }
+
     public function getOrder($order_id) {
         $query = $this->db->query("SELECT o.*,ow.net_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code FROM " . DB_PREFIX . "order o "
                 . " LEFT JOIN " . DB_PREFIX . "order_weight ow ON o.order_id = ow.order_id"
@@ -125,85 +102,6 @@ class ModelSaleOrder extends Model {
                 . " LEFT JOIN " . DB_PREFIX . "product p ON o.product_id = p.product_id  where o.order_id = '" . $order_id . "' group by o.order_id");
 
         return $query->row;
-    }
-
-    public function getClients($data = array()) {
-        $sql = "SELECT cp.category_id AS category_id, GROUP_CONCAT(cd1.name ORDER BY cp.level SEPARATOR '&nbsp;&nbsp;&gt;&nbsp;&nbsp;') AS name, c1.parent_id, c1.sort_order FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "category c1 ON (cp.category_id = c1.category_id) LEFT JOIN " . DB_PREFIX . "category c2 ON (cp.path_id = c2.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd1 ON (cp.path_id = cd1.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd2 ON (cp.category_id = cd2.category_id) WHERE cd1.language_id = '" . (int) $this->config->get('config_language_id') . "' AND cd2.language_id = '" . (int) $this->config->get('config_language_id') . "'";
-
-        if (!empty($data['filter_name'])) {
-            $sql .= " AND cd2.name LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
-        }
-
-        $sql .= " GROUP BY cp.category_id";
-
-        $sort_data = array(
-            'name',
-            'sort_order'
-        );
-
-        if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
-            $sql .= " ORDER BY " . $data['sort'];
-        } else {
-            $sql .= " ORDER BY sort_order";
-        }
-
-        if (isset($data['order']) && ($data['order'] == 'DESC')) {
-            $sql .= " DESC";
-        } else {
-            $sql .= " ASC";
-        }
-
-        if (isset($data['start']) || isset($data['limit'])) {
-            if ($data['start'] < 0) {
-                $data['start'] = 0;
-            }
-
-            if ($data['limit'] < 1) {
-                $data['limit'] = 20;
-            }
-
-            $sql .= " LIMIT " . (int) $data['start'] . "," . (int) $data['limit'];
-        }
-
-        $query = $this->db->query($sql);
-
-        return $query->rows;
-    }
-
-    public function getClientDescriptions($category_id) {
-        $category_description_data = array();
-
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category_description WHERE category_id = '" . (int) $category_id . "'");
-
-        foreach ($query->rows as $result) {
-            $category_description_data[$result['language_id']] = array(
-                'name' => $result['name'],
-                'meta_title' => $result['meta_title'],
-                'meta_description' => $result['meta_description'],
-                'meta_keyword' => $result['meta_keyword'],
-                'description' => $result['description']
-            );
-        }
-
-        return $category_description_data;
-    }
-
-    public function getCategoryPath($category_id) {
-        $query = $this->db->query("SELECT category_id, path_id, level FROM " . DB_PREFIX . "category_path WHERE category_id = '" . (int) $category_id . "'");
-
-        return $query->rows;
-    }
-
-    public function getCategorySeoUrls($category_id) {
-        $category_seo_url_data = array();
-
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "seo_url WHERE query = 'category_id=" . (int) $category_id . "'");
-
-        foreach ($query->rows as $result) {
-            $category_seo_url_data[$result['language_id']] = $result['keyword'];
-        }
-
-        return $category_seo_url_data;
     }
 
     public function getOrderDetailsByCoilNo($coil_no) {
@@ -220,49 +118,6 @@ class ModelSaleOrder extends Model {
         $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "inward_details");
 
         return $query->row['total'];
-    }
-
-    public function showCategories() {
-        $sql = "SELECT cp.category_id AS category_id, GROUP_CONCAT(cd1.name ORDER BY cp.level SEPARATOR '&nbsp;&nbsp;&gt;&nbsp;&nbsp;') AS name, c1.parent_id, c1.sort_order, c1.status, c1.top FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "category c1 ON (cp.category_id = c1.category_id) LEFT JOIN " . DB_PREFIX . "category c2 ON (cp.path_id = c2.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd1 ON (cp.path_id = cd1.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd2 ON (cp.category_id = cd2.category_id) WHERE cd1.language_id = '" . (int) $this->config->get('config_language_id') . "' AND cd2.language_id = '" . (int) $this->config->get('config_language_id') . "'";
-
-        if (isset($this->request->post['search']['value'])) {
-            $sql .= " AND name LIKE '%" . $_POST['search']['value'] . "%'";
-        }
-
-        $sql .= " GROUP BY category_id";
-
-        $sort_data = array(
-            'name',
-            'sort_order'
-        );
-
-        if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
-            $sql .= " ORDER BY " . $data['sort'];
-        } else {
-            $sql .= " ORDER BY sort_order";
-        }
-
-        if (isset($data['order']) && ($data['order'] == 'DESC')) {
-            $sql .= " DESC";
-        } else {
-            $sql .= " ASC";
-        }
-
-        if (isset($data['start']) || isset($data['limit'])) {
-            if ($data['start'] < 0) {
-                $data['start'] = 0;
-            }
-
-            if ($data['limit'] < 1) {
-                $data['limit'] = 20;
-            }
-
-            $sql .= " LIMIT " . $data['start'] . "," . $data['limit'];
-        }
-
-        $query = $this->db->query($sql);
-
-        return $query->rows;
     }
 
 }

@@ -309,7 +309,6 @@ class ControllerSaleOrder extends Controller {
         $this->load->model('sale/order');
 
         $results = $this->model_sale_order->getOrderDetailsByCoilNo($coil_no);
-
         $json = array(
             'inward_id' => $results['inward_id'],
             'net_weight' => $results['net_weight'],
