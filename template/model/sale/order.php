@@ -23,7 +23,7 @@ class ModelSaleOrder extends Model {
 
                 $this->db->query("UPDATE " . DB_PREFIX . "order SET order_no = '" . ($data['service_type'] . '/' . $date . '/' . $order_id ) . "' WHERE order_id = '" . $order_id . "'");
 
-                $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET date_added='" . $data['order_date'] . "', net_weight = '" . $data['netWeight'] . "',pieces = '" . (int) $data['pieces'] . "',order_id = '" . (int) $order_id . "', delivery_date='" . $data['order_date'] . "'");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET order_no = '" . ($data['service_type'] . '/' . $date . '/' . $order_id ) . "',date_added='" . $data['order_date'] . "', net_weight = '" . $data['netWeight'] . "',pieces = '" . (int) $data['pieces'] . "',order_id = '" . (int) $order_id . "', delivery_date='" . $data['order_date'] . "'");
             }
         } else {
             $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_id = '" . (int) $data['hdnInwardId'] . "'");
@@ -31,7 +31,7 @@ class ModelSaleOrder extends Model {
             if ($query->row) {
                 $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET cutting_date = '" . $data['order_date'] . "' WHERE inward_weight_id = '" . (int) $query->row['inward_weight_id'] . "'");
 
-                $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET inward_id = '" . (int) $data['hdnInwardId'] . "',date_added='" . $data['order_date'] . "',cutting_date='" . $data['order_date'] . "', net_weight = '" . ($query->row['net_weight'] - $data['netWeight']) . "',gross_weight='" . $data['hdnGrossWeight'] . "'");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET inward_id = '" . (int) $data['hdnInwardId'] . "', date_added='" . $data['order_date'] . "',cutting_date='" . $data['order_date'] . "', net_weight = '" . ($query->row['net_weight'] - $data['netWeight']) . "',gross_weight='" . $data['hdnGrossWeight'] . "'");
 
                 $inward_weight_id = $this->db->lastInsertId();
 
@@ -43,7 +43,7 @@ class ModelSaleOrder extends Model {
 
                 $this->db->query("UPDATE " . DB_PREFIX . "order SET order_no = '" . ($data['service_type'] . '/' . $date . '/' . $order_id ) . "' WHERE order_id = '" . $order_id . "'");
 
-                $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET date_added='" . $data['order_date'] . "', net_weight = '" . $data['netWeight'] . "',pieces = '" . (int) $data['pieces'] . "',order_id = '" . (int) $order_id . "', delivery_date='" . $data['order_date'] . "'");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET order_no = '" . ($data['service_type'] . '/' . $date . '/' . $order_id ) . "', date_added='" . $data['order_date'] . "', net_weight = '" . $data['netWeight'] . "',pieces = '" . (int) $data['pieces'] . "',order_id = '" . (int) $order_id . "', delivery_date='" . $data['order_date'] . "'");
             }
         }
 

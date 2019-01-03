@@ -80,12 +80,17 @@ class ModelSaleOutward extends Model {
                 $inward_weight_id = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE order_id = '" . (int) $query->row['order_id'] . "'");
 
                 $gross_weight = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . (int) $inward_weight_id->row['inward_weight_id'] . "'");
-
-                $cal_gross_weight = $order_info->row['gross_weight'] + $gross_weight->row['gross_weight'];
-
+               
+                $cal_gross_weight = ($order_info->row['gross_weight'] + $gross_weight->row['gross_weight']);
+                
                 $cal_pieces = $order_info->row['pieces'] + $query->row['pieces'];
 
-                $this->db->query("UPDATE " . DB_PREFIX . "order_weight SET  `pieces` = '" . $cal_pieces . "' WHERE order_weight_id = '" . (int) $order_info->row['order_weight_id'] . "'");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "cancel_delivery SET order_id = '" . (int) $order_info->row['order_id'] . "', org_id = '1' ,delivery_id = '" . $delivery_id . "',"
+                        . " customer_id='" . (int) $order_info->row['customer_id'] . "',truck_no='" . (int) $order_info->row['truck_no'] . "',product_id='" . (int) $order_info->row['product_id'] . "',"
+                        . " coil_no = '" . $order_info->row['coil_no'] . "',challan_no='" . (int) $order_info->row['challan_no'] . "',thickness='" . (int) $order_info->row['thickness'] . "',"
+                        . " width='" . (int) $order_info->row['width'] . "',length='" . (int) $order_info->row['length'] . "',pieces='" . (int) $order_info->row['pieces'] . "',service_type='" . (int) $order_info->row['service_type'] . "',gross_weight='" . (int) $order_info->row['gross_weight'] . "',"
+                        . " packaging='" . (int) $order_info->row['packaging'] . "', status = '1', date_added = NOW()");
+                $this->db->query("DELETE FROM " . DB_PREFIX . "order_weight  WHERE order_weight_id = '" . (int) $order_info->row['order_weight_id'] . "'");
 
                 $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET gross_weight='" . $cal_gross_weight . "'  WHERE inward_weight_id = '" . (int) $inward_weight_id->row['inward_weight_id'] . "'");
 

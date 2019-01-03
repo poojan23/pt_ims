@@ -65,7 +65,7 @@
                                     <th><?= $head_gr_wt; ?></th>
                                     <th><?= $head_net_wt; ?></th>
                                     <th><?= $head_pack; ?></th>
-                                    <th><?= $head_action; ?></th>
+                                    <!--<th><?= $head_action; ?></th>-->
                                 </tr>
                             </thead>
 
@@ -152,18 +152,18 @@
                                                 }
                                                 return data;
                                             }
-                                        },
-                                        {
-                                            data: function (data, type, row) {
-                                                if (type === 'display') {
-                                                    return '<a href="<?php echo $edit; ?>&inward_id=' + data.inward_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
-                                                }
-                                                return data;
-                                            },
-                                            "bSearchable": false,
-                                            "bSortable": false,
-                                            "width": 80
                                         }
+//                                        {
+//                                            data: function (data, type, row) {
+//                                                if (type === 'display') {
+//                                                    return '<a href="<?php echo $edit; ?>&inward_id=' + data.inward_id + '" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-xs btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>';
+//                                                }
+//                                                return data;
+//                                            },
+//                                            "bSearchable": false,
+//                                            "bSortable": false,
+//                                            "width": 80
+//                                        }
                                     ],
 
                                 });

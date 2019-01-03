@@ -3090,3 +3090,15 @@
 2019-Jan-03 10:34:32 - PHP Notice: Undefined index: transfer_date in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\transfer_inward.php on line 124
 2019-Jan-03 10:34:36 - PHP Notice: Undefined index: transfer_date in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\transfer_inward.php on line 124
 2019-Jan-03 10:35:25 - PHP Notice: Undefined index: transfer_date in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\transfer_inward.php on line 124
+2019-Jan-03 11:30:15 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 16
+2019-Jan-03 11:30:42 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 84
+2019-Jan-03 11:31:39 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 16
+2019-Jan-03 11:32:27 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 84
+2019-Jan-03 11:33:20 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 84
+2019-Jan-03 11:35:00 - PHP Notice: Undefined index: selected in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\outward.php on line 59
+2019-Jan-03 11:38:04 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 84
+2019-Jan-03 11:44:05 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 84
+2019-Jan-03 11:44:23 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\outward.php on line 84
+2019-Jan-03 11:54:23 - PHP Notice: Undefined index: selected in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\outward.php on line 59
+2019-Jan-03 12:09:06 - PHP Notice: Undefined variable: order_no in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 45
+2019-Jan-03 12:10:51 - PHP Notice: Undefined variable: order_no in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 45
