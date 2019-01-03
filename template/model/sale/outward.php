@@ -43,7 +43,7 @@ class ModelSaleOutward extends Model {
             }
         }
 
-        return $order_id;
+        return $delivery_id;
     }
 
     public function editOutward($delivery_id, $data) {

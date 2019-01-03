@@ -27,7 +27,7 @@ class ModelSaleInward extends Model {
     }
 
     public function getInwards() {
-        $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
+        $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " INNER JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
@@ -45,11 +45,26 @@ class ModelSaleInward extends Model {
 
         return $query->row;
     }
-
+    
     public function getTotalInward() {
         $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "inward_details");
 
         return $query->row['total'];
     }
+    
+    public function getCoilNosByCustomerId($customer_id) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward WHERE customer_id = '" . $customer_id . "'");
 
+        return $query->rows;
+    }
+    
+    public function getInwardDetailsByCoilNo($coil_no) {
+        $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
+                . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " LEFT JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id = pt.product_type_id "
+                . " LEFT JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id WHERE i.coil_no = '" . $coil_no . "'");
+
+        return $query->row;
+    }
 }

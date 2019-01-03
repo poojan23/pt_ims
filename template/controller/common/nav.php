@@ -140,6 +140,15 @@ class ControllerCommonNav extends Controller
                     'children'  => array()
                 );
             }
+            
+            # Transfer Inward
+            if($this->member->hasPermission('access', 'sale/transfer_inward')) {
+                $sale[] = array(
+                    'name'      => $this->language->get('text_transfer_inward'),
+                    'href'      => $this->url->link('sale/transfer_inward', 'member_token=' . $this->session->data['member_token'], true),
+                    'children'  => array()
+                );
+            }
 
             if($sale) {
                 $data['menus'][] = [

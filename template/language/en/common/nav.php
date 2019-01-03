@@ -25,3 +25,4 @@ $_['text_sale']             = 'Sales';
 $_['text_inward']           = 'Inward';
 $_['text_order']            = 'Order';
 $_['text_outward']          = 'Outward';
+$_['text_transfer_inward']  = 'Transfer Inward';
