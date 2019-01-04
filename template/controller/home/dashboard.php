@@ -32,7 +32,7 @@ class ControllerHomeDashboard extends Controller {
         $html = '';
         for ($r = 0; $r < count($inwards); $r++) {
             $customers = $inwards[$r]['customer_name'];
-            $totalinward = $inwards[$r]['net_weight'];
+            $totalinward = $inwards[$r]['totalInward'];
             $data[$j]['label'] = $customers;
             $data[$j]['value'] = $totalinward;
             $html .= $data[$j]['label'] . ' : ' . $data[$j]['value'];
@@ -58,15 +58,15 @@ class ControllerHomeDashboard extends Controller {
         $outwards = $this->model_sale_outward->getOutwardReport();
 
         $outward_data = [];
-        $j = 0;
-        $html = '';
-        for ($r = 0; $r < count($outwards); $r++) {
-            $customers = $outwards[$r]['customer_name'];
-            $totaloutward = $outwards[$r]['total_gross_weight'];
-            $outward_data[$j]['label'] = $customers;
-            $outward_data[$j]['value'] = $totaloutward;
-            $html .= $outward_data[$j]['label'] . ' : ' . $outward_data[$j]['value'];
-            $j++;
+        $s = 0;
+        $html1 = '';
+        for ($p = 0; $p < count($outwards); $p++) {
+            $customers = $outwards[$p]['customer_name'];
+            $totaloutward = $outwards[$p]['total_gross_weight'];
+            $outward_data[$s]['label'] = $customers;
+            $outward_data[$s]['value'] = $totaloutward;
+            $html1 .= $outward_data[$s]['label'] . ' : ' . $outward_data[$s]['value'];
+            $s++;
         }
         
         $outwardData = json_encode($outward_data);

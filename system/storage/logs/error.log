@@ -4272,3 +4272,6 @@
 2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
 2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
 2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 10:22:12 - PHP Unknown: password_hash(): Use of the 'salt' option to password_hash is deprecated in C:\ATDI\LMS\htdocs\pt_ims\template\model\user\user.php on line 8
+2019-Jan-04 10:22:12 - PHP Notice: Undefined index: newsletter in C:\ATDI\LMS\htdocs\pt_ims\template\model\user\user.php on line 8
+2019-Jan-04 10:24:25 - PHP Notice: Undefined index: user_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\customer\customer.php on line 6

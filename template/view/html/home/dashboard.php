@@ -54,8 +54,8 @@
                     <h5><?php echo $text_graph_summary; ?></h5>
                     <div class="pull-right">
                         <div class="btn-group">
-                            <input type="button" class="btn btn-xs btn-white active" onclick="showTab1();" value="Tab 1">
-                            <input type="button" class="btn btn-xs btn-white" onclick="showTab2();" value="Tab 2">
+                            <input type="button" class="btn btn-xs btn-white active" onclick="showTab1();" value="Inward">
+                            <input type="button" class="btn btn-xs btn-white" onclick="showTab2();" value="Outward">
                             <!--<input type="button" class="btn btn-xs btn-white" onclick="showTab3();" value="Annual">-->
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                                 <td>' . $inward['pieces'] . '</td>
                                 <td>' . $inward['gross_weight'] . '</td>
                                 <td>' . $inward['net_weight'] . '</td>
-                            </tr>';
+                                </tr>';
 
                                 $i++;
                             }
@@ -166,14 +166,14 @@
 <script src="template/view/dist/js/chartjs-plugin-labels.js"></script>
 <!-- Mainly scripts -->
 <script>
-                                function showTab1() {
-                                    $('#tab1').show();
-                                    $('#tab2').hide();
-                                }
-                                function showTab2() {
-                                    $('#tab1').hide();
-                                    $('#tab2').show();
-                                }
+    function showTab1() {
+        $('#tab1').show();
+        $('#tab2').hide();
+    }
+    function showTab2() {
+        $('#tab1').hide();
+        $('#tab2').show();
+    }
 </script>
 
 <script>
@@ -260,11 +260,11 @@
         datasets: [
             {
                 label: "Outward(MT)",
-                backgroundColor: "#dd4b39",
-                borderColor: "#dd4b39",
+                backgroundColor: "#23c6c8",
+                borderColor: "#23c6c8",
                 borderWidth: 2,
-                hoverBackgroundColor: "#dd4b39",
-                hoverBorderColor: "#dd4b39",
+                hoverBackgroundColor: "#23c6c8",
+                hoverBorderColor: "#23c6c8",
                 data: data,
             }
         ]

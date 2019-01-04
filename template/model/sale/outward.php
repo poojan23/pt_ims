@@ -126,7 +126,7 @@ class ModelSaleOutward extends Model {
         $last_day_this_month = date('Y-m-t');
         
         $query = $this->db->query("SELECT sum(d.gross_weight) as total_gross_weight,d.customer_id, CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
-                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id GROUP BY d.customer_id ORDER BY d.gross_weight ASC limit 10");
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id GROUP BY d.customer_id ORDER BY total_gross_weight DESC limit 10");
 
         return $query->rows;
     }

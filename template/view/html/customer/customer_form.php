@@ -77,11 +77,12 @@
 
                                                             <div class="col-sm-10">
                                                                 <select name="customer_group_id" class="form-control" id="input-user-group">
+                                                                    <option><?php echo $entry_customer_group; ?></option>
                                                                     <?php foreach ($customer_groups as $customer_group) : ?>
                                                                         <?php if ($customer_group['customer_group_id'] == $customer_group_id) : ?>
                                                                             <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
                                                                         <?php else : ?>
-                                                                            <option><?php echo $entry_customer_group; ?></option>
+                                                                            
                                                                             <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
                                                                         <?php endif; ?>
                                                                     <?php endforeach; ?>

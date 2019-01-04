@@ -39,12 +39,12 @@ class ModelSaleInward extends Model {
         $first_day_this_month = date('Y-m-01');
         $last_day_this_month = date('Y-m-t');
         
-        $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
+        $query = $this->db->query("SELECT i.*,sum(iw.gross_weight) as totalInward,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " INNER JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
                 . " INNER JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id=pt.product_type_id"
-                . " WHERE (iw.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' ) GROUP BY i.inward_id ORDER BY iw.gross_weight DESC limit 10");
+                . " WHERE (iw.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' ) GROUP BY i.customer_id ORDER BY totalInward DESC limit 10");
 
         return $query->rows;
     }
