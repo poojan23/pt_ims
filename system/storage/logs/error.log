@@ -3102,3 +3102,1173 @@
 2019-Jan-03 11:54:23 - PHP Notice: Undefined index: selected in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\outward.php on line 59
 2019-Jan-03 12:09:06 - PHP Notice: Undefined variable: order_no in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 45
 2019-Jan-03 12:10:51 - PHP Notice: Undefined variable: order_no in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 45
+2019-Jan-04 04:52:19 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-04 04:52:20 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-04 04:52:20 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-04 04:52:25 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-04 04:52:25 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-04 04:52:25 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-04 04:52:38 - PHP Notice: Use of undefined constant HTTPS_SERVER - assumed 'HTTPS_SERVER' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 19
+2019-Jan-04 05:50:59 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 174
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 175
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 176
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 177
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 178
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 179
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 180
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: length in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 181
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 182
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 183
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: inward_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 174
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 175
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 176
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 177
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 178
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 179
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 180
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: length in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 181
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 182
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 183
+2019-Jan-04 06:17:20 - PHP Notice: Undefined variable: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined variable: html1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 208
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 201
+2019-Jan-04 08:32:42 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:34:48 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:34:48 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:34:48 - PHP Notice: Undefined variable: html1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 209
+2019-Jan-04 08:35:04 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 202
+2019-Jan-04 08:35:04 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:35:04 - PHP Notice: Undefined variable: html1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 209
+2019-Jan-04 08:35:15 - PHP Notice: Undefined variable: html1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 209
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:20 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:20 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 211
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:37 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:37 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:40 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:40 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:39:49 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:39:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Undefined variable: data1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 207
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:34 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:40:54 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 213
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:15 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 2 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 3 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 4 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 5 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 6 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 7 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 8 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 9 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 10 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 11 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 12 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 13 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 14 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 15 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 16 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 17 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 18 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 19 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 20 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 203
+2019-Jan-04 08:41:38 - PHP Notice: Undefined offset: 21 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 204
+2019-Jan-04 08:44:08 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 303
+2019-Jan-04 09:01:39 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 7
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 30
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: success in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 35
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: add in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 46
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: delete in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 54
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: column_group in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 67
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: column_status in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 68
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: column_newsletter in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 69
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: column_date_added in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 70
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: column_action in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 71
+2019-Jan-04 09:01:50 - PHP Notice: Undefined variable: edit in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 168
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 7
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 30
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: success in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 35
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: add in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 46
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: delete in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 54
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: column_group in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 67
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: column_status in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 68
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: column_newsletter in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 69
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: column_date_added in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 70
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: column_action in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 71
+2019-Jan-04 09:01:53 - PHP Notice: Undefined variable: edit in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 168
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 7
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: warning_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 30
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: success in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 35
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: add in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 46
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: delete in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 54
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: column_group in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 67
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: column_status in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 68
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: column_newsletter in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 69
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: column_date_added in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 70
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: column_action in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 71
+2019-Jan-04 09:01:55 - PHP Notice: Undefined variable: edit in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\customer\customer_list.php on line 168
+2019-Jan-04 09:02:22 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:02:49 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'code' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'direction' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'date_format_short' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'date_format_long' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'time_format' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'datetime_format' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'decimal_point' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'thousand_point' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_yes' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_no' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_enabled' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_disabled' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_none' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_select' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_select_all' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_unselect_all' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_all_zones' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_default' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_close' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_pagination' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_loading' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_no_results' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_confirm' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_home' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_delete' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_save' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_cancel' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_cancel_recurring' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_continue' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_clear' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_close' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_enable' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_disable' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_filter' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_send' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_edit' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_copy' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_back' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_remove' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_refresh' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_export' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_import' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_download' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_rebuild' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_upload' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_submit' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_invoice_print' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_shipping_print' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_address_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_attribute_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_banner_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_custom_field_value_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_product_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_filter_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_option_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_option_value_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_recurring_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_discount_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_special_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_image_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_geo_zone_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_history_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_translation' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_translation_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_transaction_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_route_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_rule_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_module_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_link_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_approve' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_deny' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_reset' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_generate' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_voucher_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_reward_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_reward_remove' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_commission_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_commission_remove' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_credit_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_credit_remove' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_ip_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_parent' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_folder' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_search' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_view' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_install' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_uninstall' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_link' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_currency' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_apply' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_category_add' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_order' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_order_recurring' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'button_buy' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_affiliate' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_address' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_additional' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_admin' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_attribute' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_customer' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_comment' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_data' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_description' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_design' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_discount' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_documentation' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_general' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_history' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_ftp' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_ip' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_links' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_log' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_image' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_option' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_server' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_seo' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_store' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_special' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_session' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_local' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_mail' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_module' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_payment' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_product' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_reward' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_shipping' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_total' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_transaction' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_voucher' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_sale' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_marketing' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_online' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_activity' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_recurring' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_action' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'tab_google' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_exception' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_1' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_2' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_3' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_4' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_6' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_7' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_8' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_upload_999' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'error_curl' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'ckeditor' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'datepicker' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'backup' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Notice: Array to string conversion in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'heading_title' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_title' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_mail_stats' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_mail_sent' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_mail_unread' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_mail_read' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_recent' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_welcome' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_inward' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_monthly' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_total' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_outward' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_customer' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_graph_summary' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_top_inward' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'column_name' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'column_email' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'column_telephone' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'column_mobile' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'column_communication' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_date' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_truck_no' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_client_name' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_product' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_garde' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_thickness' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_width' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_lenght' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_pieces' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_gr_wt' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_net_wt' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'head_pack' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_profile' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_store' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_help' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_homepage' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_support' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_documentation' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_logout' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_search' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_customer_group' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_dashboard' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_localisation' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_currency' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_country' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_zone' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_system' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_user' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_user_group' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_maintenance' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_error_log' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_marketing' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_mail' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_template' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_report' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_online' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_statistics' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_location' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_product' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_product_type' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_sale' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_order' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_transfer_inward' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_footer' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Illegal string offset 'text_version' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\event\language.php on line 8
+2019-Jan-04 09:02:49 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\system\engine\loader.php on line 115
+2019-Jan-04 09:03:16 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:03:38 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:04:22 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:04:32 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 184
+2019-Jan-04 09:09:20 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:09:20 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:09:20 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:09:20 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:09:20 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:09:20 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:09:20 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:10:58 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:10:58 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:10:58 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:10:58 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:10:58 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:10:58 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:10:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:05 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:11:05 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:11:05 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:11:05 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:11:05 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:11:05 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:05 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:17 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:11:30 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:11:30 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:11:30 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:11:30 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:11:30 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:30 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:30 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:11:35 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:11:35 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:11:35 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:11:35 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:11:35 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:35 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:35 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:55 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:11:55 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:12:02 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:12:02 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:12:02 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:12:02 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:12:02 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:12:02 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:12:02 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:12:43 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 197
+2019-Jan-04 09:13:29 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 12
+2019-Jan-04 09:13:29 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 23
+2019-Jan-04 09:13:29 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 34
+2019-Jan-04 09:13:29 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 45
+2019-Jan-04 09:13:29 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:13:29 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 120
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:30:50 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:43:07 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 62
+2019-Jan-04 09:43:07 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:43:07 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 62
+2019-Jan-04 09:43:07 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:44:10 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 62
+2019-Jan-04 09:44:10 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:44:10 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 62
+2019-Jan-04 09:44:10 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:45:01 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:45:01 - PHP Notice: Undefined variable: totaloutward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\home\dashboard.php on line 64
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:46:11 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:46:37 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:47:01 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:47:03 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:47:42 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:47:56 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:48:55 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:49:08 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:49:10 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-04 09:49:31 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
