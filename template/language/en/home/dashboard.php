@@ -16,6 +16,7 @@ $_['text_total']                        = 'Total';
 $_['text_outward']                      = 'Outward';
 $_['text_customer']                     = 'Customer';
 $_['text_customer']                     = 'Customer';
+$_['text_products']                     = 'Products';
 $_['text_graph_summary']                = 'Top 10 Inward And Outward Summary';
 $_['text_top_inward']                   = 'Top 10 Inward';
 

@@ -30,6 +30,8 @@ class ControllerCommonNav extends Controller
                 $data['member_group'] = '';
                 $data['image'] = '';
             }
+            
+            $data['logout'] = $this->url->link('user/logout', '', true);
 
             # Create a 3 level menu array
             # Level 2 can not have children

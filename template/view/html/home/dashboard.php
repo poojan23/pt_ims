@@ -39,7 +39,7 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <span class="label label-danger pull-right"><?php echo $text_total; ?></span>
-                    <h5>Product</h5>
+                    <h5><?php echo $text_products; ?></h5>
                 </div>
                 <div class="ibox-content">
                     <h1 class="no-margins"><?php echo $total_products; ?></h1>
@@ -63,8 +63,8 @@
                 <div class="ibox-content" id="tab1">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div>
-                                <canvas id="barChart1" height="70"></canvas>
+                            <div class="io-bar-chart">
+                                <canvas id="inward" height="150"></canvas>
                             </div>
                         </div>
                     </div>
@@ -72,8 +72,8 @@
                 <div class="ibox-content" id="tab2" style="display: none;">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div>
-                                <canvas id="barChart" height="70"></canvas>
+                            <div class="io-bar-chart">
+                                <canvas id="outward" height="150"></canvas>
                             </div>
                         </div>
                     </div>
@@ -166,14 +166,14 @@
 <script src="template/view/dist/js/chartjs-plugin-labels.js"></script>
 <!-- Mainly scripts -->
 <script>
-    function showTab1() {
-        $('#tab1').show();
-        $('#tab2').hide();
-    }
-    function showTab2() {
-        $('#tab1').hide();
-        $('#tab2').show();
-    }
+                                function showTab1() {
+                                    $('#tab1').show();
+                                    $('#tab2').hide();
+                                }
+                                function showTab2() {
+                                    $('#tab1').hide();
+                                    $('#tab2').show();
+                                }
 </script>
 
 <script>
@@ -189,7 +189,7 @@
         return e.value;
     });
     ;
-    var canvas = document.getElementById('barChart1');
+    var canvas = document.getElementById('inward');
     var data = {
         labels: labels,
         datasets: [
@@ -233,7 +233,9 @@
                         display: false
                     },
                 }]
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false
     };
 
     var myBarChart = Chart.Bar(canvas, {
@@ -254,7 +256,7 @@
         return e.value;
     });
     ;
-    var canvas = document.getElementById('barChart');
+    var canvas = document.getElementById('outward');
     var data = {
         labels: labels,
         datasets: [
@@ -301,7 +303,9 @@
                         display: false
                     },
                 }]
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false
     };
 
     var myBarChart = Chart.Bar(canvas, {

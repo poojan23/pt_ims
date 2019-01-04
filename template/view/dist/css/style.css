@@ -8560,3 +8560,14 @@ body.md-skin {
     margin: 0;
   }
 }
+
+/* CUSTOM STYLE WIDTH */
+.wrapper .ibox .ibox-content .io-bar-chart {
+    height: 350px;
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper .ibox .ibox-content .io-bar-chart {
+        height: 250px;
+    }
+}
