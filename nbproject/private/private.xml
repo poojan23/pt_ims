@@ -20,15 +20,17 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/transfer_list.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/transfer_form.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/home/dashboard.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/report/inward_summary.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/customer/customer.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/order.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/transfer_inward.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/sale/transfer_inward.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/customer/customer.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/report/inward_summary.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/inward.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/reports/director_report.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/outward.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/home/dashboard.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/sale/transfer_inward.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/reports/inward_summary.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/report/director_report.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/customer/customer_list.php</file>
         </group>
     </open-files>
 </project-private>

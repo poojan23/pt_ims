@@ -303,18 +303,18 @@ class ControllerCommonNav extends Controller
                 );
             }
 
-            if(!$this->member->hasPermission('access', 'report/online')) {
+            if($this->member->hasPermission('access', 'report/director_report')) {
                 $report[] = array(
-                    'name'      => $this->language->get('text_online'),
-                    'href'      => $this->url->link('report/online', 'member_token=' . $this->session->data['member_token']),
+                    'name'      => $this->language->get('text_director_report'),
+                    'href'      => $this->url->link('report/director_report', 'member_token=' . $this->session->data['member_token']),
                     'children'  => array()
                 );
             }
 
-            if($this->member->hasPermission('access', 'report/statistics')) {
+            if($this->member->hasPermission('access', 'report/inward_summary')) {
                 $report[] = array(
-                    'name'      => $this->language->get('text_statistics'),
-                    'href'      => $this->url->link('report/statistics', 'member_token=' . $this->session->data['member_token']),
+                    'name'      => $this->language->get('text_inward_summary'),
+                    'href'      => $this->url->link('report/inward_summary', 'member_token=' . $this->session->data['member_token']),
                     'children'  => array()
                 );
             }

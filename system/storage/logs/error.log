@@ -4282,3 +4282,272 @@
 2019-Jan-04 11:43:52 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
 2019-Jan-04 11:43:52 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
 2019-Jan-04 11:44:11 - PHP Notice: Use of undefined constant HTTPS_SERVER - assumed 'HTTPS_SERVER' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 19
+2019-Jan-07 04:54:31 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-07 04:54:31 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-07 04:54:31 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-07 06:05:24 - PHP Notice: Undefined variable: nav in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 16
+2019-Jan-07 06:05:24 - PHP Notice: Undefined variable: header in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 19
+2019-Jan-07 06:05:24 - PHP Notice: Undefined variable: footer in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 80
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 8
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: total_inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 12
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 19
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: total_outwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 23
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 30
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: total_customers in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 34
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 41
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 42
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: total_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 45
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 54
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 95
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 101
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 102
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 103
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 104
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 105
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 106
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 107
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 108
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 109
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 110
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 111
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 112
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: inwards in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 120
+2019-Jan-07 06:09:06 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 120
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 182
+2019-Jan-07 06:09:06 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 250
+2019-Jan-07 06:10:12 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 9
+2019-Jan-07 06:10:12 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 81
+2019-Jan-07 06:10:12 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 149
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 8
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_monthly in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 19
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 30
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_total in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 41
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_products in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 42
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 54
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: text_top_inward in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 95
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_date in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 101
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_truck_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 102
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_client_name in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 103
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_product in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 104
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_garde in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 105
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_coil_no in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 106
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 107
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_width in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 108
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_lenght in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 109
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_pieces in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 110
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_gr_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 111
+2019-Jan-07 06:13:46 - PHP Notice: Undefined variable: head_net_wt in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\home\dashboard.php on line 112
+2019-Jan-07 06:14:58 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 9
+2019-Jan-07 06:16:43 - PHP Notice: Undefined variable: text_graph_summary in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 9
+2019-Jan-07 06:22:39 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 258
+2019-Jan-07 06:22:39 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 332
+2019-Jan-07 06:23:46 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 260
+2019-Jan-07 06:23:46 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 334
+2019-Jan-07 06:23:49 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 260
+2019-Jan-07 06:23:49 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 334
+2019-Jan-07 06:24:17 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 300
+2019-Jan-07 06:24:17 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 374
+2019-Jan-07 06:25:17 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 06:25:17 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 344
+2019-Jan-07 06:26:20 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 06:26:20 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 344
+2019-Jan-07 06:29:29 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 06:29:29 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 344
+2019-Jan-07 07:01:37 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:01:37 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:01:37 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 62
+2019-Jan-07 07:03:07 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:03:07 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:03:11 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:03:11 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:26 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:26 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:28 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:28 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:52 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:52 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:54 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:05:54 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:06:01 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:06:01 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:06:01 - PHP Notice: Undefined variable: result_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 71
+2019-Jan-07 07:06:01 - PHP Notice: Undefined variable: result_thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 72
+2019-Jan-07 07:06:01 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 07:06:01 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 344
+2019-Jan-07 07:06:32 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:06:32 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:08:00 - PHP Unknown: Object of class stdClass could not be converted to string in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:08:00 - PHP Unknown: Object of class stdClass could not be converted to string in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:09:33 - PHP Unknown: Object of class stdClass could not be converted to string in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:09:33 - PHP Unknown: Object of class stdClass could not be converted to string in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:11:13 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:11:13 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:11:58 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:11:58 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:13:14 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:13:14 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:13:16 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:13:16 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 59
+2019-Jan-07 07:15:03 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 57
+2019-Jan-07 07:15:03 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 57
+2019-Jan-07 07:15:38 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 57
+2019-Jan-07 07:15:38 - PHP Notice: Object of class stdClass could not be converted to int in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 57
+2019-Jan-07 07:19:26 - PHP Unknown: Object of class stdClass could not be converted to string in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\inward.php on line 55
+2019-Jan-07 07:29:41 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 193
+2019-Jan-07 07:29:41 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 07:29:41 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 344
+2019-Jan-07 07:29:47 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 07:29:47 - PHP Notice: Undefined variable: myJsonString_1 in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 344
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: thL in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 82
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: thU in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 83
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:16 - PHP Notice: Undefined variable: avgth in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 79
+2019-Jan-07 07:48:53 - PHP Notice: Undefined variable: thL in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 82
+2019-Jan-07 07:48:53 - PHP Notice: Undefined variable: thU in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 83
+2019-Jan-07 09:00:09 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 09:02:01 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 09:06:11 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 09:06:12 - PHP Notice: Undefined variable: myJsonString in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\director_report.php on line 270
+2019-Jan-07 09:29:02 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 90
+2019-Jan-07 09:29:02 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:29:02 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 90
+2019-Jan-07 09:29:02 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:29:56 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:29:56 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 92
+2019-Jan-07 09:29:56 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:29:56 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 92
+2019-Jan-07 09:31:30 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:31:30 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 92
+2019-Jan-07 09:31:30 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:31:30 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 92
+2019-Jan-07 09:31:32 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:31:32 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 92
+2019-Jan-07 09:31:32 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:31:32 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 92
+2019-Jan-07 09:34:25 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 90
+2019-Jan-07 09:34:25 - PHP Notice: Undefined offset: 0 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 09:34:25 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 90
+2019-Jan-07 09:34:25 - PHP Notice: Undefined offset: 1 in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\director_report.php on line 91
+2019-Jan-07 11:36:13 - PHP Notice: Undefined property: Language::$get in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 44
+2019-Jan-07 11:38:57 - PHP Notice: Undefined variable: totalinward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 29
+2019-Jan-07 11:38:57 - PHP Notice: Undefined variable: totalinward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 29
+2019-Jan-07 11:44:23 - PHP Notice: Undefined variable: totalinward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 29
+2019-Jan-07 11:44:23 - PHP Notice: Undefined variable: totalinward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 29
+2019-Jan-07 11:50:02 - PHP Notice: Undefined variable: totalinward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 35
+2019-Jan-07 11:50:02 - PHP Notice: Undefined variable: totalinward in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 35
+2019-Jan-07 11:50:02 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 39
+2019-Jan-07 11:51:16 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 39
+2019-Jan-07 12:00:35 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 43
+2019-Jan-07 12:01:55 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 39
+2019-Jan-07 12:02:01 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 39
+2019-Jan-07 12:02:26 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 44
+2019-Jan-07 12:02:29 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 44
+2019-Jan-07 12:02:47 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 40
+2019-Jan-07 12:02:48 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 40
+2019-Jan-07 12:04:55 - PHP Notice: Undefined variable: gradeData in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 129
+2019-Jan-07 12:04:55 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:04:55 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:04:55 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:09:34 - PHP Notice: Undefined variable: j in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 31
+2019-Jan-07 12:09:34 - PHP Notice: Undefined variable: j in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 32
+2019-Jan-07 12:09:34 - PHP Notice: Undefined variable: j in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 33
+2019-Jan-07 12:09:34 - PHP Notice: Undefined variable: j in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 33
+2019-Jan-07 12:09:45 - PHP Notice: Undefined variable: gradeData in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 132
+2019-Jan-07 12:09:45 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:09:45 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:09:45 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:09:47 - PHP Notice: Undefined variable: gradeData in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 132
+2019-Jan-07 12:09:47 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:09:47 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:09:47 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:14:26 - PHP Notice: Undefined variable: gradeData in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 133
+2019-Jan-07 12:14:26 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:14:26 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:14:26 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:14:47 - PHP Notice: Undefined variable: gradeData in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 133
+2019-Jan-07 12:14:47 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:14:47 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:14:47 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:15:18 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:15:18 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:15:18 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:15:18 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:15:42 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:15:42 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:15:42 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:15:42 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:18:49 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:18:49 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:18:49 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:18:49 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:19:29 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:19:29 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:19:29 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:19:29 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:19:50 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:19:50 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:19:50 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:19:50 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:20:03 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:20:03 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:20:03 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:20:03 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:23:25 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:23:25 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:23:25 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:23:25 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:23:46 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:23:46 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:23:46 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:23:46 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:24:15 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:24:15 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:24:15 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:24:15 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:24:43 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:24:43 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:24:43 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:24:43 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:25:09 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:25:09 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:25:09 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:25:09 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:28:03 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:28:03 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:28:03 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:28:03 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:29:20 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:29:20 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:29:20 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:29:20 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:30:05 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:30:05 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:30:05 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:30:05 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:30:34 - PHP Notice: Undefined variable: report in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 63
+2019-Jan-07 12:30:34 - PHP Notice: Undefined variable: outwardreport in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 131
+2019-Jan-07 12:30:34 - PHP Notice: Undefined variable: grade in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 208
+2019-Jan-07 12:30:34 - PHP Notice: Undefined variable: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 282
+2019-Jan-07 12:34:54 - PHP Notice: Undefined variable: inSummary in C:\ATDI\LMS\htdocs\pt_ims\template\controller\report\inward_summary.php on line 58
+2019-Jan-07 13:10:09 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:10:41 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:12:03 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:12:40 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:12:41 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:13:27 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:13:48 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:13:53 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:14:05 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:14:15 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:14:45 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7
+2019-Jan-07 13:15:28 - PHP Notice: Undefined variable: breadcrumbs in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\reports\inward_summary.php on line 7

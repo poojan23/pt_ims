@@ -6,18 +6,23 @@ class ModelSaleInward extends Model {
         $truck_no = strtoupper($data['truck_no']);
         $coil_no = strtoupper($data['coil_no']);
 
-        $this->db->query("INSERT INTO " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', product_id = '" . (int) $data['product_id'] . "', product_type_id = '" . (int) $data['product_type_id'] . "', truck_no = '" . $this->db->escape($truck_no) . "', coil_no = '" . $this->db->escape($coil_no) . "',thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "',   `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "',  packaging = '" . (int) $data['packaging'] . "', status = '1', date_modified = NOW(), date_added = NOW()");
+        $this->db->query("INSERT INTO " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', "
+                . " product_id = '" . (int) $data['product_id'] . "', product_type_id = '" . (int) $data['product_type_id'] . "', truck_no = '" . $this->db->escape($truck_no) . "',"
+                . " coil_no = '" . $this->db->escape($coil_no) . "',thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "',   `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "',"
+                . " gross_weight='" . $data['gross_weight'] . "', net_weight = '" . $data['net_weight'] . "',  packaging = '" . (int) $data['packaging'] . "', status = '1', date_modified = NOW(), date_added = NOW()");
 
         $inward_id = $this->db->lastInsertId();
 
-        $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET date_added='" . $data['inward_date'] . "',gross_weight='" . $data['gross_weight'] . "', net_weight = '" . $data['net_weight'] . "',inward_id = '" . (int) $inward_id . "', cutting_date='" . $data['inward_date'] . "'");
+        $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET date_added='" . $data['inward_date'] . "',gross_weight='" . $data['gross_weight'] . "', net_weight = '" . $data['net_weight'] . "',inward_id = '" . (int) $inward_id . "', org_id = '1', cutting_date='" . $data['inward_date'] . "'");
 
         return $inward_id;
     }
 
     public function editInward($inward_id, $data) {
         $truck_no = strtoupper($data['truck_no']);
-        $this->db->query("UPDATE " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', product_id = '" . (int) $data['product_id'] . "', truck_no = '" . $this->db->escape($truck_no) . "', thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "',  packaging = '" . (int) $data['packaging'] . "',  date_modified = NOW() WHERE inward_id = '" . (int) $inward_id . "'");
+        $this->db->query("UPDATE " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', product_id = '" . (int) $data['product_id'] . "',net_weight='" . $data['net_weight'] . "',gross_weight='" . $data['gross_weight'] . "',"
+                . " truck_no = '" . $this->db->escape($truck_no) . "', thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "',  packaging = '" . (int) $data['packaging'] . "',"
+                . " date_modified = NOW() WHERE inward_id = '" . (int) $inward_id . "'");
         $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET net_weight='" . $data['net_weight'] . "',gross_weight='" . $data['gross_weight'] . "' WHERE inward_id = '" . (int) $inward_id . "' limit 1");
     }
 
@@ -48,8 +53,19 @@ class ModelSaleInward extends Model {
 
         return $query->rows;
     }
+    public function getInwardSummary() {
+        $first_day_this_month = date('Y-m-01');
+        $last_day_this_month = date('Y-m-t');
+
+        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " WHERE (i.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' ) GROUP BY i.customer_id");
+
+        return $query->rows;
+    }
 
     public function getInward($inward_id) {
+
         $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
@@ -76,6 +92,14 @@ class ModelSaleInward extends Model {
     
     public function getCoilNosByCustomerId($customer_id) {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward WHERE customer_id = '" . $customer_id . "'");
+
+        return $query->rows;
+    }
+    public function getGrade() {
+
+        $query = $this->db->query("SELECT count(i.product_id)as gd,p.product_code FROM " . DB_PREFIX . "inward as i"
+                . " INNER JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
+                . "  GROUP BY i.product_id");
 
         return $query->rows;
     }

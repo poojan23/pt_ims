@@ -170,4 +170,16 @@ class ModelSaleOutward extends Model {
         return $query->row['total'];
     }
 
+    public function getGrossWeight($customer_id) {
+        $first_day_this_month = date('Y-m-01');
+        $last_day_this_month = date('Y-m-t');
+//        echo "SELECT d.*,sum(d.gross_weight) as totalOutward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+//                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id "
+//                . " WHERE d.customer_id = '".$customer_id."' AND (d.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' )";exit;
+        $query = $this->db->query("SELECT d.*,sum(d.gross_weight) as totalOutward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id "
+                . " WHERE d.customer_id = '".$customer_id."' AND (d.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' )");
+
+        return $query->rows;
+    }
 }
