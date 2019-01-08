@@ -3,7 +3,7 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2><?php echo $text_title; ?></h2>
-<!--        <ol class="breadcrumb">
+        <ol class="breadcrumb">
             <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
                 <?php if ($i != (count($breadcrumbs) - 1)) : ?>
                     <?php if ($i == 0) : ?>
@@ -20,7 +20,7 @@
                     <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
                 <?php endif; ?>
             <?php endfor; ?> 
-        </ol>-->
+        </ol>
     </div>
     <div class="col-lg-2">
 
@@ -48,10 +48,6 @@
         </div>
     </div>
 
-
-
-
-
 </div>
 <?php echo $footer; ?>
 <script src="template/view/dist/js/plugins/flot/jquery.flot.js"></script>
@@ -72,16 +68,6 @@
 <script src="template/view/dist/js/Chart.bundle.js"></script>
 <script src="template/view/dist/js/chartjs-plugin-labels.js"></script>
 <!-- Mainly scripts -->
-<script>
-    function showTab1() {
-        $('#tab1').show();
-        $('#tab2').hide();
-    }
-    function showTab2() {
-        $('#tab1').hide();
-        $('#tab2').show();
-    }
-</script>
 
 <script>
     var canvas = document.getElementById('inward');

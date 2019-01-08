@@ -11,9 +11,9 @@ class ControllerReportInwardSummary extends Controller {
     }
 
     public function getSummary() {
-        $data['member_token'] = $this->session->data['member_token'];
-        
-         if (isset($this->error['warning'])) {
+         $data['member_token'] = $this->session->data['member_token'];
+
+        if (isset($this->error['warning'])) {
             $data['warning_err'] = $this->error['warning'];
         } else {
             $data['warning_err'] = '';
@@ -27,7 +27,7 @@ class ControllerReportInwardSummary extends Controller {
 
         $data['breadcrumbs'][] = array(
             'text' => $this->language->get('heading_title'),
-            'href' => $this->url->link('report/inward_summary', 'member_token=' . $this->session->data['member_token'], true)
+            'href' => $this->url->link('report/outward_summary', 'member_token=' . $this->session->data['member_token'], true)
         );
         
         $this->load->language('report/inward_summary');

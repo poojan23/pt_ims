@@ -1,5 +1,7 @@
 <?php
+
 error_reporting(0);
+
 class ControllerReportOutwardSummary extends Controller {
 
     public function index() {
@@ -7,10 +9,10 @@ class ControllerReportOutwardSummary extends Controller {
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->getOutwradSummary();
+        $this->getOutwardSummary();
     }
 
-    public function getOutwradSummary() {
+    public function getOutwardSummary() {
         $data['member_token'] = $this->session->data['member_token'];
 
         if (isset($this->error['warning'])) {
@@ -36,76 +38,75 @@ class ControllerReportOutwardSummary extends Controller {
 
         $this->load->model('sale/outward');
 
-        $outwardSummary = $this->model_sale_outward->getOutwardSummary();
-//        print_r($outwardSummary);exit;
-        $newArr = [];
+        $services = array();
+
         $x = 0;
-        $bar_chart_ctc = '';
-        $bar_chart_ctl = '';
-        $bar_chart_sheet = '';
-//        usort($outwardSummary, function($a, $b) {
-//            return $a['customer_id'] <=> $b['customer_id'];
-//        });
-        for ($p = 0; $p < count($outwardSummary); $p++) {
-            $customers = $outwardSummary[$p]['customer_name'];
-            if ($newArr[$x]['customer_id'] == $outwardSummary[$p]['customer_id']) {
-                if ($outwardSummary[$p]['service_type'] == 'CTC') {
-                    $newArr[$x]['gw_ctc'] += $outwardSummary[$p]['gross_weight'];
+
+        $ctc = '';
+
+        $ctl = '';
+
+        $sheet = '';
+
+        $results = $this->model_sale_outward->getOutwardSummary();
+
+        usort($results, function($a, $b) {
+            return strcmp($a['customer_id'], $b['customer_id']);
+        });
+
+        for ($i = 0; $i < count($results); $i++) {
+            if ($services[$x]['customer_id'] == $results[$i]['customer_id']) {
+                if ($results[$i]['service_type'] == 'CTC') {
+                    $services[$x]['gw_ctc'] += round($results[$i]['gross_weight'] / 1000, 2);
                 }
-                if ($outwardSummary[$p]['service_type'] == 'CTL') {
-                    $newArr[$x]['gw_ctl'] += $outwardSummary[$p]['gross_weight'];
+
+                if ($results[$i]['service_type'] == 'CTL') {
+                    $services[$x]['gw_ctl'] += round($results[$i]['gross_weight'] / 1000, 2);
                 }
-                if ($outwardSummary[$p]['service_type'] == 'SHEET') {
-                    $newArr[$x]['gw_sheet'] += $outwardSummary[$p]['gross_weight'];
+
+                if ($results[$i]['service_type'] == 'SHEET') {
+                    $services[$x]['gw_sheet'] += round($results[$i]['gross_weight'] / 1000, 2);
                 }
             } else {
-
-                if (!empty($newArr)) {
+                if (!empty($services)) {
                     $x++;
                 }
 
-                $newArr[$x]['customer_id'] = $outwardSummary[$p]['customer_id'];
-                if ($outwardSummary[$p]['service_type'] == 'CTC') {
-                    $newArr[$x]['gw_ctc'] = $outwardSummary[$p]['gross_weight'];
+                $services[$x]['customer_id'] = $results[$i]['customer_id'];
+
+                $services[$x]['name'] = $results[$i]['customer_name'];
+
+                if ($results[$i]['service_type'] == 'CTC') {
+                    $services[$x]['gw_ctc'] = round($results[$i]['gross_weight'] / 1000, 2);
+                } else {
+                    $services[$x]['gw_ctc'] = 0;
                 }
-                if ($outwardSummary[$p]['service_type'] == 'CTL') {
-                    $newArr[$x]['gw_ctl'] = $outwardSummary[$p]['gross_weight'];
+
+                if ($results[$i]['service_type'] == 'CTL') {
+                    $services[$x]['gw_ctl'] = round($results[$i]['gross_weight'] / 1000, 2);
+                } else {
+                    $services[$x]['gw_ctl'] = 0;
                 }
-                if ($outwardSummary[$p]['service_type'] == 'SHEET') {
-                    $newArr[$x]['gw_sheet'] = $outwardSummary[$p]['gross_weight'];
+
+                if ($results[$i]['service_type'] == 'SHEET') {
+                    $services[$x]['gw_sheet'] = round($results[$i]['gross_weight'] / 1000, 2);
+                } else {
+                    $services[$x]['gw_sheet'] = 0;
                 }
-                $newArr[$x]['service_type'] = $outwardSummary[$p]['service_type'];
             }
         }
 
-
-        for ($p = 0; $p < count($newArr); $p++) {
-
-            if ($newArr[$p]['gw_ctc'] == '') {
-                $newArr[$p]['gw_ctc'] = '';
-            } else {
-                $newArr[$p]['gw_ctc'] = $newArr[$p]['gw_ctc'] / 1000;
-            }
-            if ($newArr[$p]['gw_ctl'] == '') {
-                $newArr[$p]['gw_ctl'] = '';
-            } else {
-                $newArr[$p]['gw_ctl'] = $newArr[$p]['gw_ctl'] / 1000;
-            }
-            if ($newArr[$p]['gw_sheet'] == '') {
-                $newArr[$p]['gw_sheet'] = '';
-            } else {
-                $newArr[$p]['gw_sheet'] = $newArr[$p]['gw_sheet'] / 1000;
-            }
-            $bar_chart_ctc .= "{ label:'" . $customers . "',a:'" . $newArr[$p]['gw_ctc'] . "'},";
-            $bar_chart_ctl .= "{ label:'" . $customers . "',b:'" . $newArr[$x]['gw_ctl'] . "'},";
-            $bar_chart_sheet .= "{label:'" . $customers . "',c:'" . $newArr[$x]['gw_sheet'] . "'},";
+        foreach ($services as $service) {
+            $ctc .= "{ label:'" . $service['name'] . "',a:'" . $service['gw_ctc'] . "'},";
+            $ctl .= "{ label:'" . $service['name'] . "',b:'" . $service['gw_ctl'] . "'},";
+            $sheet .= "{label:'" . $service['name'] . "',c:'" . $service['gw_sheet'] . "'},";
         }
-        $data['ctc'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $bar_chart_ctc);
 
-        $data['ctl'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $bar_chart_ctl);
-        
-        $data['sheet'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $bar_chart_sheet);
+        $data['ctc'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $ctc);
 
+        $data['ctl'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $ctl);
+
+        $data['sheet'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $sheet);
 
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');
