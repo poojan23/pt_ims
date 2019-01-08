@@ -11,7 +11,6 @@ class ControllerReportInwardSummary extends Controller {
     }
 
     public function getSummary() {
-        $data['text_form'] = !isset($this->request->get['customer_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
         $data['member_token'] = $this->session->data['member_token'];
         
          if (isset($this->error['warning'])) {

@@ -122,11 +122,18 @@ class ModelSaleOutward extends Model {
         return $query->rows;
     }
     public function getOutwardReport() {
+
+        $query = $this->db->query("SELECT sum(d.gross_weight) as total_gross_weight,d.customer_id, CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id GROUP BY d.customer_id ORDER BY total_gross_weight DESC limit 10");
+
+        return $query->rows;
+    }
+    public function getOutwardSummary() {
         $first_day_this_month = date('Y-m-01');
         $last_day_this_month = date('Y-m-t');
         
-        $query = $this->db->query("SELECT sum(d.gross_weight) as total_gross_weight,d.customer_id, CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
-                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id GROUP BY d.customer_id ORDER BY total_gross_weight DESC limit 10");
+        $query = $this->db->query("SELECT d.*, CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id WHERE (d.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' )");
 
         return $query->rows;
     }

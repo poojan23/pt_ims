@@ -27,3 +27,4 @@ $_['text_order']            = 'Order';
 $_['text_outward']          = 'Outward';
 $_['text_transfer_inward']  = 'Transfer Inward';
 $_['text_director_report']  = 'Director Report';
+$_['text_outward_summary']  = 'Outward Summary';

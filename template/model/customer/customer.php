@@ -3,7 +3,8 @@
 class ModelCustomerCustomer extends Model {
 
     public function addCustomer($data) {
-        $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET customer_group_id = '" . (int) $data['customer_group_id'] . "', customer_id = '" . (int) $data['user_id'] . "', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', mobile = '" . $this->db->escape($data['mobile']) . "', newsletter = '" . (isset($data['newsletter']) ? (int) $data['newsletter'] : 0) . "', status = '" . (isset($data['status']) ? (int) $data['status'] : 0) . "', date_modified = NOW(), date_added = NOW()");
+
+        $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET customer_group_id = '" . (int) $data['customer_group_id'] . "', org_id='1', language_id='1', address_id='0', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', mobile = '" . $this->db->escape($data['mobile']) . "', newsletter = '" . (isset($data['newsletter']) ? (int) $data['newsletter'] : 0) . "', status = '" . (isset($data['status']) ? (int) $data['status'] : 0) . "', date_modified = NOW(), date_added = NOW()");
 
         $customer_id = $this->db->lastInsertId();
 
@@ -11,11 +12,9 @@ class ModelCustomerCustomer extends Model {
             foreach ($data['address'] as $key => $address) {
                 $this->db->query("INSERT INTO " . DB_PREFIX . "address SET customer_id = '" . (int) $customer_id . "', firstname = '" . $this->db->escape($address['firstname']) . "', lastname = '" . $this->db->escape($address['lastname']) . "', company = '" . $this->db->escape($address['company']) . "', address_1 = '" . $this->db->escape($address['address_1']) . "', address_2 = '" . $this->db->escape($address['address_2']) . "', city = '" . $this->db->escape($address['city']) . "', postcode = '" . $this->db->escape($address['postcode']) . "', country_id = '" . (int) $address['country_id'] . "', zone_id = '" . (int) $address['zone_id'] . "'");
 
-                if (isset($data['default']) && $data['default'] == $key) {
-                    $address_id = $this->db->lastInsertId();
+                $address_id = $this->db->lastInsertId();
 
-                    $this->db->query("UPDATE " . DB_PREFIX . "customer SET address_id = '" . (int) $address_id . "' WHERE customer_id = '" . (int) $customer_id . "'");
-                }
+                $this->db->query("UPDATE " . DB_PREFIX . "customer SET address_id = '" . (int) $address_id . "' WHERE customer_id = '" . (int) $customer_id . "'");
             }
         }
 
