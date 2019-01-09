@@ -45,7 +45,6 @@ class ControllerReportMonthlyReport extends Controller {
 
             $inwardList2 = $this->model_sale_outward->getWeeklyOutward();
 
-
             if (count($inwardList) > count($inwardList2)) {
                 $array3 = [];
                 $j = 0;
@@ -59,9 +58,6 @@ class ControllerReportMonthlyReport extends Controller {
                             $array3[$j]['commonDate'] = $inwardList[$i]['inward_date'];
                             $array3[$j]['inwardTotal'] = $inwardList[$i]['totalInward'];
                             $array3[$j]['outwardTotal'] = 0;
-
-
-                            //$flag=0;
                         }
                     }
                     if ($flag == 1) {
@@ -213,7 +209,6 @@ class ControllerReportMonthlyReport extends Controller {
 
             $array3 = super_unique($array3, 'commonDate');
 
-//        return $array3;
             $weekly_report = '';
             for ($f = 0; $f < count($array3); $f++) {
                 $flag = 0;
@@ -228,7 +223,6 @@ class ControllerReportMonthlyReport extends Controller {
                 } else {
                     $flag = 0;
                 }
-
 
                 if ($flag) {
                     $weekly_report .= "{inwardTotal:'$inwardTotal',outwardTotal:'$outwardTotal', commonDate:'$commonDate'},";
@@ -301,7 +295,6 @@ class ControllerReportMonthlyReport extends Controller {
             }
             $data['monthly_report'] = substr($monthly_summary, 0, -1);
         }
-
 
         $dateArray = [];
         $data['quarter_summary'] = array();
@@ -433,7 +426,6 @@ class ControllerReportMonthlyReport extends Controller {
             }
             $data['yearly_report'] = substr($yearly_summary, 0, -1);
         }
-
 
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');
