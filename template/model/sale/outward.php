@@ -189,4 +189,45 @@ class ModelSaleOutward extends Model {
 
         return $query->rows;
     }
+    
+    public function getWeeklyOutward() {
+        $date2 = date('Y-m-d');
+        $date1 = date('Y-m-d');
+        $date1 = date('Y-m-d', strtotime($date1 . ' -6 day'));
+
+        $query = $this->db->query("SELECT d.*,sum(d.gross_weight) as totalOutward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id "
+                . " WHERE (d.delivery_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY d.delivery_date");
+
+        return $query->rows;
+    }
+    
+    public function getMonthlyOutward() {
+        $date1 = date('Y-m-01');
+        $date2 = date('Y-m-t');
+
+        $query = $this->db->query("SELECT d.*,sum(d.gross_weight) as totalOutward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id "
+                . " WHERE (d.delivery_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT(d.delivery_date,'%m')");
+
+        return $query->rows;
+    }
+    
+    public function getQuarterlyOutward($date1,$date2) {
+
+        $query = $this->db->query("SELECT d.*,sum(d.gross_weight) as totalOutward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id "
+                . " WHERE (d.delivery_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT( d.delivery_date,'%m')");
+
+        return $query->rows;
+    }
+    
+    public function getYearlyOutward($date1,$date2) {
+
+        $query = $this->db->query("SELECT d.*,sum(d.gross_weight) as totalOutward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "delivery d "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON d.customer_id = c.customer_id "
+                . " WHERE (d.delivery_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT( d.delivery_date,'%Y')");
+
+        return $query->rows;
+    }
 }

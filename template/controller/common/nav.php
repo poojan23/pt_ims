@@ -326,6 +326,14 @@ class ControllerCommonNav extends Controller
                     'children'  => array()
                 );
             }
+            
+            if($this->member->hasPermission('access', 'report/monthly_report')) {
+                $report[] = array(
+                    'name'      => $this->language->get('text_monthly_report'),
+                    'href'      => $this->url->link('report/monthly_report', 'member_token=' . $this->session->data['member_token']),
+                    'children'  => array()
+                );
+            }
 
             if($report) {
                 $data['menus'][] = array(

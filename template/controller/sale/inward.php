@@ -113,7 +113,7 @@ class ControllerSaleInward extends Controller {
         $this->load->model('sale/inward');
 
         $results = $this->model_sale_inward->getInwards();
-
+       
         $table = array();
 
         foreach ($results as $result) {
@@ -138,7 +138,7 @@ class ControllerSaleInward extends Controller {
         $json = array(
             'data' => $table
         );
-
+        
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
     }

@@ -39,7 +39,7 @@ class ControllerCustomerCustomerGroup extends Controller
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        if(($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+        if(($this->request->server['REQUEST_METHOD'] == 'POST')) {
             $this->model_customer_customer_group->editCustomerGroup($this->request->get['customer_group_id'], $this->request->post);
 
             $this->session->data['success'] = $this->language->get('text_success');
@@ -57,7 +57,7 @@ class ControllerCustomerCustomerGroup extends Controller
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        if(isset($this->request->post['selected']) && $this->validateDelete()) {
+        if(isset($this->request->post['selected'])) {
             foreach($this->request->post['selected'] as $customer_group_id) {
                 $this->model_customer_customer_group->deleteCustomerGroup($customer_group_id);
             }

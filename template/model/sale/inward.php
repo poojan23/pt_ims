@@ -32,18 +32,19 @@ class ModelSaleInward extends Model {
     }
 
     public function getInwards() {
-        $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
-                . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
+        $query = $this->db->query("SELECT i.*,i.net_weight,i.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
+//                . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " INNER JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
-                . " INNER JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id=pt.product_type_id group by i.inward_id");
+                . " INNER JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id = pt.product_type_id  ORDER BY i.inward_date DESC");
 
         return $query->rows;
     }
+
     public function getInwardReport() {
         $first_day_this_month = date('Y-m-01');
         $last_day_this_month = date('Y-m-t');
-        
+
         $query = $this->db->query("SELECT i.*,sum(iw.gross_weight) as totalInward,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " INNER JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
@@ -53,6 +54,7 @@ class ModelSaleInward extends Model {
 
         return $query->rows;
     }
+
     public function getInwardSummary() {
         $first_day_this_month = date('Y-m-01');
         $last_day_this_month = date('Y-m-t');
@@ -60,6 +62,46 @@ class ModelSaleInward extends Model {
         $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " WHERE (i.date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' ) GROUP BY i.customer_id");
+
+        return $query->rows;
+    }
+
+    public function getWeeklyInward() {
+        $date2 = date('Y-m-d');
+        $date1 = date('Y-m-d');
+        $date1 = date('Y-m-d', strtotime($date1 . ' -6 day'));
+                
+        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " WHERE (i.date_added BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY i.inward_date");
+
+        return $query->rows;
+    }
+
+    public function getMonthlyInward() {
+        $date1 = date('Y-m-01');
+        $date2 =  date('Y-m-t');
+
+        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,(DATE_FORMAT(i.inward_date,'%Y-%m'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " WHERE (i.inward_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT(i.inward_date,'%m')");
+
+        return $query->rows;
+    }
+    
+    public function getQuarterlyInward($date1,$date2) {
+
+        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,(DATE_FORMAT(i.inward_date,'%Y-%m'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " WHERE (i.inward_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT(i.inward_date,'%m')");
+
+        return $query->rows;
+    }
+    public function getYearlyInward($date1,$date2) {
+
+        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,(DATE_FORMAT(i.inward_date,'%Y'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " WHERE (i.inward_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT(i.inward_date,'%Y')");
 
         return $query->rows;
     }
@@ -74,27 +116,28 @@ class ModelSaleInward extends Model {
 
         return $query->row;
     }
-    
+
     public function getTotalInward() {
         $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "inward_details");
 
         return $query->row['total'];
     }
-    
+
     public function getTotalInwards() {
         $first_day_this_month = date('Y-m-01');
         $last_day_this_month = date('Y-m-t');
-        
+
         $query = $this->db->query("SELECT SUM(gross_weight) AS total FROM " . DB_PREFIX . "inward_weight where (date_added BETWEEN '" . $first_day_this_month . "' AND '" . $last_day_this_month . "' )");
 
         return $query->row['total'];
     }
-    
+
     public function getCoilNosByCustomerId($customer_id) {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward WHERE customer_id = '" . $customer_id . "'");
 
         return $query->rows;
     }
+
     public function getGrade() {
 
         $query = $this->db->query("SELECT count(i.product_id)as gd,p.product_code FROM " . DB_PREFIX . "inward as i"
@@ -103,7 +146,7 @@ class ModelSaleInward extends Model {
 
         return $query->rows;
     }
-    
+
     public function getInwardDetailsByCoilNo($coil_no) {
         $query = $this->db->query("SELECT i.*,iw.net_weight,iw.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
                 . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
@@ -113,4 +156,5 @@ class ModelSaleInward extends Model {
 
         return $query->row;
     }
+
 }

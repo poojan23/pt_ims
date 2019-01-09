@@ -3,24 +3,24 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2><?php echo $text_title; ?></h2>
-            <ol class="breadcrumb">
-        <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
-            <?php if ($i != (count($breadcrumbs) - 1)) : ?>
-                <?php if ($i == 0) : ?>
-                                            <li>
-                                                <i class="ace-icon fa fa-home home-icon"></i>
-                                                <a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
-                                            </li>
+        <ol class="breadcrumb">
+            <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                <?php if ($i != (count($breadcrumbs) - 1)) : ?>
+                    <?php if ($i == 0) : ?>
+                        <li>
+                            <i class="ace-icon fa fa-home home-icon"></i>
+                            <a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
+                        </li>
+                    <?php else : ?>
+                        <li>
+                            <a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
+                        </li>
+                    <?php endif; ?>
                 <?php else : ?>
-                                            <li>
-                                                <a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
-                                            </li>
+                    <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
                 <?php endif; ?>
-            <?php else : ?>
-                                    <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
-            <?php endif; ?>
-        <?php endfor; ?> 
-                </ol>
+            <?php endfor; ?> 
+        </ol>
     </div>
     <div class="col-lg-2">
 
