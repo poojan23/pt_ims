@@ -34,17 +34,12 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <?php if ($warning_err) : ?>
-                <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> <?php echo $warning_err; ?>
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                </div>
-            <?php endif; ?>
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5><?php echo $text_form; ?></h5>
                     <div class="ibox-tools">
                         <div class="text-right">
-                            <button type="submit" form="form-user-group" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
+                            <button type="submit" form="form-inward" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
                             <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
                         </div>
                     </div>
@@ -54,26 +49,30 @@
                 $date = date("Y-m-d");
                 ?>
                 <div class="ibox-content">
-                    <form id="form-user-group" class="form-horizontal" action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
+                    <?php if ($warning_err) : ?>
+                        <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> <?php echo $warning_err; ?>
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    <?php endif; ?>
+                    <form id="form-inward" class="form-horizontal" action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
 
                         <div class="form-group" id="data_1">
                             <label class="col-sm-2 control-label"><?= $label_date; ?></label>
                             <div class="col-sm-10 input-group date">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 <?php
-                                if($inward_date) {
-                                    echo '<input type="text" class="form-control" name="inward_date" value="'.$inward_date.'">';
-                                }else {
-                                    echo '<input type="text" class="form-control" name="inward_date" value="'.$date.'">';
+                                if ($inward_date) {
+                                    echo '<input type="text" class="form-control" name="inward_date" value="' . $inward_date . '">';
+                                } else {
+                                    echo '<input type="text" class="form-control" name="inward_date" value="' . $date . '">';
                                 }
                                 ?>
-                                
                             </div>
                         </div>
 
                         <div class="hr-line-dashed"></div>
 
-                        <div class="form-group">
+                        <div class="form-group  <?php echo (!empty($customer_error)) ? 'has-error' : ''; ?>">
                             <label class="col-sm-2 control-label"><?= $label_client_name; ?></label>
                             <div class="col-sm-10">
                                 <select data-placeholder="<?= $entry_client_name; ?>" class="chosen-select" tabindex="-1" style="display: none;" name="customer_id">
@@ -86,72 +85,109 @@
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>
+                                <?php if (isset($customer_error)) : ?>
+                                    <span class="help-block"><?php echo $customer_error; ?></span>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_truck_no; ?></label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="truck_no" value="<?php echo $truck_no; ?>" placeholder="<?= $entry_truck_no; ?>"></div>
+                        <div class="form-group  <?php echo (!empty($error_truck_no)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_truck_no; ?></label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="truck_no" value="<?php echo $truck_no; ?>" placeholder="<?= $entry_truck_no; ?>">
+
+                                <?php if (isset($error_truck_no)) : ?>
+                                    <span class="help-block"><?php echo $error_truck_no; ?></span>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_coil_no; ?></label>
+                        <div class="form-group  <?php echo (!empty($error_coil_no)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_coil_no; ?></label>
                             <div class="col-sm-10">
                                 <?php if ($coil_no) : ?>
-                                <input type="text" class="form-control" name="coil_no" value="<?php echo $coil_no; ?>" placeholder="<?= $entry_coil_no; ?>" disabled="">
+                                    <input type="text" class="form-control" name="coil_no" value="<?php echo $coil_no; ?>" placeholder="<?= $entry_coil_no; ?>" disabled="">
                                 <?php else : ?>
-                                     <input type="text" class="form-control" name="coil_no"  placeholder="<?= $entry_coil_no; ?>">
+                                    <input type="text" class="form-control" name="coil_no"  placeholder="<?= $entry_coil_no; ?>">
+                                <?php endif; ?>
+
+                                <?php if (isset($error_coil_no)) : ?>
+                                    <span class="help-block"><?php echo $error_coil_no; ?></span>
                                 <?php endif; ?>
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_product; ?></label>
+                        <div class="form-group  <?php echo (!empty($error_product_type)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_product; ?></label>
                             <div class="col-sm-10">
-                                
+
                                 <?php if ($product_type_id) : ?>
-                                <input type="text" class="form-control"  value="<?php echo $product_type_name; ?>"  disabled="">
+                                    <input type="text" class="form-control"  value="<?php echo $product_type_name; ?>"  disabled="">
                                 <?php else : ?>
-                                <select data-placeholder="<?= $entry_product; ?>" class="chosen-select" tabindex="-1" style="display: none;" id="type" name="product_type_id" onchange="getproduct();">
-                                    <option value=""><?= $entry_product; ?></option>
-                                    <?php foreach ($product_types as $product_type) : ?>
-                                        <?php if ($product_type['product_type_id'] == $product_type_id) : ?>
-                                            <option value="<?php echo $product_type['product_type_id']; ?>" selected="selected" ><?php echo $product_type['product_type']; ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $product_type['product_type_id']; ?>"><?php echo $product_type['product_type']; ?></option>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
-                                </select>
-                                
+                                    <select data-placeholder="<?= $entry_product; ?>" class="chosen-select" tabindex="-1" style="display: none;" id="type" name="product_type_id" onchange="getproduct();">
+                                        <option value=""><?= $entry_product; ?></option>
+                                        <?php foreach ($product_types as $product_type) : ?>
+                                            <?php if ($product_type['product_type_id'] == $product_type_id) : ?>
+                                                <option value="<?php echo $product_type['product_type_id']; ?>" selected="selected" ><?php echo $product_type['product_type']; ?></option>
+                                            <?php else : ?>
+                                                <option value="<?php echo $product_type['product_type_id']; ?>"><?php echo $product_type['product_type']; ?></option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
+
+                                    <?php if (isset($error_product_type)) : ?>
+                                        <span class="help-block"><?php echo $error_product_type; ?></span>
+                                    <?php endif; ?>
+
                                 <?php endif; ?>
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
-                       
+
                         <div style="display:none;" id="show_coil">
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_thickness; ?></label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="thickness" value="<?php echo $thickness; ?>" placeholder="<?= $entry_thickness; ?>"></div>
-                        </div>
-                        <div class="hr-line-dashed"></div>
+                            <div class="form-group  <?php echo (!empty($error_thickness)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_thickness; ?></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="thickness" value="<?php echo $thickness; ?>" placeholder="<?= $entry_thickness; ?>">
+                                    <?php if (isset($error_thickness)) : ?>
+                                        <span class="help-block"><?php echo $error_thickness; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_width; ?></label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="width" value="<?php echo $width; ?>" placeholder="<?= $entry_width; ?>"></div>
+                            <div class="form-group  <?php echo (!empty($error_width)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_width; ?></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="width" value="<?php echo $width; ?>" placeholder="<?= $entry_width; ?>">
+                                    <?php if (isset($error_width)) : ?>
+                                        <span class="help-block"><?php echo $error_width; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
                         </div>
-                        <div class="hr-line-dashed"></div>
-                         </div>
-                        
+
                         <div style="display:none;" id="show_bundle">
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="length"  value="<?php echo $length; ?>" placeholder="<?= $entry_lenght; ?>"></div>
-                        </div>
-                        <div class="hr-line-dashed"></div>
+                            <div class="form-group  <?php echo (!empty($error_length)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="length"  value="<?php echo $length; ?>" placeholder="<?= $entry_lenght; ?>">
+                                    <?php if (isset($error_length)) : ?>
+                                        <span class="help-block"><?php echo $error_length; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="pieces" value="<?php echo $pieces; ?>" placeholder="<?= $entry_pieces; ?>"></div>
+                            <div class="form-group  <?php echo (!empty($error_pieces)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="pieces" value="<?php echo $pieces; ?>" placeholder="<?= $entry_pieces; ?>">
+                                    <?php if (isset($error_pieces)) : ?>
+                                        <span class="help-block"><?php echo $error_pieces; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
                         </div>
-                        <div class="hr-line-dashed"></div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_garde; ?></label>
+                        <div class="form-group  <?php echo (!empty($error_product)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_garde; ?></label>
                             <div class="col-sm-10">
                                 <select data-placeholder="<?= $entry_garde; ?>" class="chosen-select" tabindex="-1" name="product_id" style="display: none;">
                                     <option value=""><?= $entry_garde; ?></option>
@@ -163,36 +199,59 @@
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>
+
+                                <?php if (isset($error_product)) : ?>
+                                    <span class="help-block"><?php echo $error_product; ?></span>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_gr_wt; ?></label>
-                            <div class="col-sm-10"><input type="number" class="form-control" name="gross_weight" value="<?php echo $gross_weight; ?>" placeholder="<?= $entry_gr_wt; ?>"></div>
+                        <div class="form-group  <?php echo (!empty($error_gross_weight)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_gr_wt; ?></label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" name="gross_weight" value="<?php echo $gross_weight; ?>" placeholder="<?= $entry_gr_wt; ?>">
+                                <?php if (isset($error_gross_weight)) : ?>
+                                    <span class="help-block"><?php echo $error_gross_weight; ?></span>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
-                        <div class="form-group"><label class="col-sm-2 control-label"><?= $label_net_wt; ?></label>
-                            <div class="col-sm-10"><input type="number" class="form-control" name="net_weight" value="<?php echo $net_weight; ?>" placeholder="<?= $entry_net_wt; ?>"></div>
+                        <div class="form-group  <?php echo (!empty($error_net_weight)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_net_wt; ?></label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" name="net_weight" value="<?php echo $net_weight; ?>" placeholder="<?= $entry_net_wt; ?>">
+                                <?php if (isset($error_net_weight)) : ?>
+                                    <span class="help-block"><?php echo $error_net_weight; ?></span>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
                         <div class="form-group"><label class="col-sm-2 control-label"><?= $label_pack; ?></label>
                             <div class="col-sm-10">
-                                <?php if ($packaging == 1) : ?>
-                                <label class="checkbox-inline">
-                                    <input type="radio" value="1" id="yes" name="packaging" checked=""> Yes
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="radio" value="0" id="no" name="packaging"> No 
-                                </label>
+                                <?php if ($customer_id) : ?>
+                                    <?php if ($packaging == 1) : ?>
+                                        <label class="checkbox-inline">
+                                            <input type="radio" value="1" id="yes" name="packaging" checked=""> Yes
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="radio" value="0" id="no" name="packaging"> No 
+                                        </label>
+                                    <?php else : ?>
+                                        <label class="checkbox-inline">
+                                            <input type="radio" value="1" id="yes" name="packaging"> Yes
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="radio" value="0" id="no" name="packaging" checked=""> No 
+                                        </label>
+                                    <?php endif; ?>
                                 <?php else : ?>
-                                <label class="checkbox-inline">
-                                    <input type="radio" value="1" id="yes" name="packaging"> Yes
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="radio" value="0" id="no" name="packaging" checked=""> No 
-                                </label>
+                                    <label class="checkbox-inline">
+                                        <input type="radio" value="1" id="yes" name="packaging" checked=""> Yes
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="radio" value="0" id="no" name="packaging"> No 
+                                    </label>
                                 <?php endif; ?>
                             </div>    
                         </div>
@@ -216,81 +275,24 @@
 <script>
                                     $(document).ready(function () {
                                         var hdnid = $('#hdnid').val();
-                                        
-                                        if(hdnid == 'COIL') {
+
+                                        if (hdnid == 'COIL') {
                                             $('#show_coil').show();
                                             $('#show_bundle').hide();
                                             $('#type').prop('disabled', true);
                                         }
-                                        if(hdnid == 'SHEET'){
+                                        if (hdnid == 'SHEET') {
                                             $('#show_bundle').show();
                                             $('#show_coil').show();
                                             $('#type').prop('disabled', true);
                                         }
-                                        
+
                                         $('.tagsinput').tagsinput({
                                             tagClass: 'label label-primary'
                                         });
 
-                                        var $image = $(".image-crop > img")
-                                        $($image).cropper({
-                                            aspectRatio: 1.618,
-                                            preview: ".img-preview",
-                                            done: function (data) {
-                                                // Output the result data for cropping image.
-                                            }
-                                        });
-
-                                        var $inputImage = $("#inputImage");
-                                        if (window.FileReader) {
-                                            $inputImage.change(function () {
-                                                var fileReader = new FileReader(),
-                                                        files = this.files,
-                                                        file;
-
-                                                if (!files.length) {
-                                                    return;
-                                                }
-
-                                                file = files[0];
-
-                                                if (/^image\/\w+$/.test(file.type)) {
-                                                    fileReader.readAsDataURL(file);
-                                                    fileReader.onload = function () {
-                                                        $inputImage.val("");
-                                                        $image.cropper("reset", true).cropper("replace", this.result);
-                                                    };
-                                                } else {
-                                                    showMessage("Please choose an image file.");
-                                                }
-                                            });
-                                        } else {
-                                            $inputImage.addClass("hide");
-                                        }
-
-                                        $("#download").click(function () {
-                                            window.open($image.cropper("getDataURL"));
-                                        });
-
-                                        $("#zoomIn").click(function () {
-                                            $image.cropper("zoom", 0.1);
-                                        });
-
-                                        $("#zoomOut").click(function () {
-                                            $image.cropper("zoom", -0.1);
-                                        });
-
-                                        $("#rotateLeft").click(function () {
-                                            $image.cropper("rotate", 45);
-                                        });
-
-                                        $("#rotateRight").click(function () {
-                                            $image.cropper("rotate", -45);
-                                        });
-
-                                        $("#setDrag").click(function () {
-                                            $image.cropper("setDragMode", "crop");
-                                        });
+                                       
+                                       
 
                                         $('#data_1 .input-group.date').datepicker({
                                             todayBtn: "linked",
@@ -301,66 +303,7 @@
                                             format: "yyyy-mm-dd"
                                         });
 
-                                        $('#data_2 .input-group.date').datepicker({
-                                            startView: 1,
-                                            todayBtn: "linked",
-                                            keyboardNavigation: false,
-                                            forceParse: false,
-                                            autoclose: true,
-                                            format: "dd/mm/yyyy"
-                                        });
-
-                                        $('#data_3 .input-group.date').datepicker({
-                                            startView: 2,
-                                            todayBtn: "linked",
-                                            keyboardNavigation: false,
-                                            forceParse: false,
-                                            autoclose: true
-                                        });
-
-                                        $('#data_4 .input-group.date').datepicker({
-                                            minViewMode: 1,
-                                            keyboardNavigation: false,
-                                            forceParse: false,
-                                            forceParse: false,
-                                            autoclose: true,
-                                            todayHighlight: true
-                                        });
-
-                                        $('#data_5 .input-daterange').datepicker({
-                                            keyboardNavigation: false,
-                                            forceParse: false,
-                                            autoclose: true
-                                        });
-
-                                        var elem = document.querySelector('.js-switch');
-                                        var switchery = new Switchery(elem, {color: '#1AB394'});
-
-                                        var elem_2 = document.querySelector('.js-switch_2');
-                                        var switchery_2 = new Switchery(elem_2, {color: '#ED5565'});
-
-                                        var elem_3 = document.querySelector('.js-switch_3');
-                                        var switchery_3 = new Switchery(elem_3, {color: '#1AB394'});
-
-                                        var elem_4 = document.querySelector('.js-switch_4');
-                                        var switchery_4 = new Switchery(elem_4, {color: '#f8ac59'});
-                                        switchery_4.disable();
-
-                                        $('.i-checks').iCheck({
-                                            checkboxClass: 'icheckbox_square-green',
-                                            radioClass: 'iradio_square-green'
-                                        });
-
-                                        $('.demo1').colorpicker();
-
-                                        var divStyle = $('.back-change')[0].style;
-                                        $('#demo_apidemo').colorpicker({
-                                            color: divStyle.backgroundColor
-                                        }).on('changeColor', function (ev) {
-                                            divStyle.backgroundColor = ev.color.toHex();
-                                        });
-
-                                        $('.clockpicker').clockpicker();
+                                       
 
                                         $('input[name="daterange"]').daterangepicker();
 
@@ -415,125 +358,11 @@
                                         });
 
 
-                                        $(".touchspin1").TouchSpin({
-                                            buttondown_class: 'btn btn-white',
-                                            buttonup_class: 'btn btn-white'
-                                        });
-
-                                        $(".touchspin2").TouchSpin({
-                                            min: 0,
-                                            max: 100,
-                                            step: 0.1,
-                                            decimals: 2,
-                                            boostat: 5,
-                                            maxboostedstep: 10,
-                                            postfix: '%',
-                                            buttondown_class: 'btn btn-white',
-                                            buttonup_class: 'btn btn-white'
-                                        });
-
-                                        $(".touchspin3").TouchSpin({
-                                            verticalbuttons: true,
-                                            buttondown_class: 'btn btn-white',
-                                            buttonup_class: 'btn btn-white'
-                                        });
-
-                                        $('.dual_select').bootstrapDualListbox({
-                                            selectorMinimalHeight: 160
-                                        });
-
 
                                     });
 
                                     $('.chosen-select').chosen({width: "100%"});
 
-                                    $("#ionrange_1").ionRangeSlider({
-                                        min: 0,
-                                        max: 5000,
-                                        type: 'double',
-                                        prefix: "$",
-                                        maxPostfix: "+",
-                                        prettify: false,
-                                        hasGrid: true
-                                    });
-
-                                    $("#ionrange_2").ionRangeSlider({
-                                        min: 0,
-                                        max: 10,
-                                        type: 'single',
-                                        step: 0.1,
-                                        postfix: " carats",
-                                        prettify: false,
-                                        hasGrid: true
-                                    });
-
-                                    $("#ionrange_3").ionRangeSlider({
-                                        min: -50,
-                                        max: 50,
-                                        from: 0,
-                                        postfix: "°",
-                                        prettify: false,
-                                        hasGrid: true
-                                    });
-
-                                    $("#ionrange_4").ionRangeSlider({
-                                        values: [
-                                            "January", "February", "March",
-                                            "April", "May", "June",
-                                            "July", "August", "September",
-                                            "October", "November", "December"
-                                        ],
-                                        type: 'single',
-                                        hasGrid: true
-                                    });
-
-                                    $("#ionrange_5").ionRangeSlider({
-                                        min: 10000,
-                                        max: 100000,
-                                        step: 100,
-                                        postfix: " km",
-                                        from: 55000,
-                                        hideMinMax: true,
-                                        hideFromTo: false
-                                    });
-
-                                    $(".dial").knob();
-
-                                    var basic_slider = document.getElementById('basic_slider');
-
-                                    noUiSlider.create(basic_slider, {
-                                        start: 40,
-                                        behaviour: 'tap',
-                                        connect: 'upper',
-                                        range: {
-                                            'min': 20,
-                                            'max': 80
-                                        }
-                                    });
-
-                                    var range_slider = document.getElementById('range_slider');
-
-                                    noUiSlider.create(range_slider, {
-                                        start: [40, 60],
-                                        behaviour: 'drag',
-                                        connect: true,
-                                        range: {
-                                            'min': 20,
-                                            'max': 80
-                                        }
-                                    });
-
-                                    var drag_fixed = document.getElementById('drag-fixed');
-
-                                    noUiSlider.create(drag_fixed, {
-                                        start: [40, 60],
-                                        behaviour: 'drag-fixed',
-                                        connect: true,
-                                        range: {
-                                            'min': 20,
-                                            'max': 80
-                                        }
-                                    });
                                     function getproduct() {
                                         var type = $('#type').val();
                                         if (type == '1') {

@@ -62,7 +62,7 @@
                         if ($order_id) {
 
                             echo'<div class="form-group"><label class="col-sm-2 control-label">' . $label_coil_no . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="' . $coil_no . '" id="customer_name" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="coil_no" value="' . $coil_no . '" id="customer_name" disabled=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
@@ -133,7 +133,7 @@
 
                 <div class="hr-line-dashed"></div>
 
-                <div class="form-group">
+                <div class="form-group  <?php echo (!empty($error_coil_no)) ? 'has-error' : ''; ?>">
                     <label class="col-sm-2 control-label"><?= $label_coil_no; ?></label>
                     <div class="col-sm-10">
                         <select data-placeholder="<?= $entry_coil_no; ?>" class="chosen-select" tabindex="-1" style="display: none;" name="coil_no" id="coil_no">
@@ -146,6 +146,10 @@
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
+
+                        <?php if (isset($error_coil_no)) : ?>
+                            <span class="help-block"><?php echo $error_coil_no; ?></span>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="hr-line-dashed"></div>
@@ -171,13 +175,23 @@
                     </div>
                     <div class="hr-line-dashed"></div>
 
-                    <div class="form-group"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="length" id="length" onkeyup="calculateWt();"></div>
+                    <div class="form-group  <?php echo (!empty($error_length)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="length" id="length" onkeyup="calculateWt();">
+                            <?php if (isset($error_length)) : ?>
+                                <span class="help-block"><?php echo $error_length; ?></span>
+                            <?php endif; ?>
+                        </div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
-                    <div class="form-group"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculateWt();"></div>
+                    <div class="form-group  <?php echo (!empty($error_pieces)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculateWt();">
+                            <?php if (isset($error_pieces)) : ?>
+                                <span class="help-block"><?php echo $error_pieces; ?></span>
+                            <?php endif; ?>
+                        </div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
@@ -233,90 +247,90 @@
 <script src="template/view/dist/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
 <script type="text/javascript">
-                                        $('select[name=\'coil_no\']').on('change', function () {
-                                            var $this = $(this).val();
-                                            $.ajax({
-                                                url: 'index.php?url=sale/order/getOrderDetailsByCoilNo&member_token=' + getURLVar('member_token'),
-                                                dataType: 'json',
-                                                type: 'POST',
-                                                data: 'coil_no=' + $this,
-                                                beforeSend: function () {
+                            $('select[name=\'coil_no\']').on('change', function () {
+                                var $this = $(this).val();
+                                $.ajax({
+                                    url: 'index.php?url=sale/order/getOrderDetailsByCoilNo&member_token=' + getURLVar('member_token'),
+                                    dataType: 'json',
+                                    type: 'POST',
+                                    data: 'coil_no=' + $this,
+                                    beforeSend: function () {
 
-                                                },
-                                                complete: function () {
+                                    },
+                                    complete: function () {
 
-                                                },
-                                                success: function (json) {
-                                                    $('#showDetails').show();
-                                                    $("#hdnInwardId").val(json['inward_id']);
-                                                    $("#hdnInwardWeightId").val(json['inward_weight_id']);
-                                                    $("#hdnCustomerId").val(json['customer_id']);
-                                                    $("#customer_name").val(json['customer_name']);
-                                                    $("#hdnProductId").val(json['product_id']);
-                                                    $("#product_code").val(json['product_code']);
-                                                    $("#thickness").val(json['thickness']);
-                                                    $("#hdnthickness").val(json['thickness']);
-                                                    $("#hdnNetWeight").val(json['net_weight']);
-                                                    $("#hdnGrossWeight").val(json['gross_weight']);
-                                                    $("#width").val(json['width']);
-                                                    $("#hdnwidth").val(json['width']);
-                                                },
-                                                error: function (xhr, ajaxOptions, thrownError) {
-                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                                }
-                                            });
-                                        });
+                                    },
+                                    success: function (json) {
+                                        $('#showDetails').show();
+                                        $("#hdnInwardId").val(json['inward_id']);
+                                        $("#hdnInwardWeightId").val(json['inward_weight_id']);
+                                        $("#hdnCustomerId").val(json['customer_id']);
+                                        $("#customer_name").val(json['customer_name']);
+                                        $("#hdnProductId").val(json['product_id']);
+                                        $("#product_code").val(json['product_code']);
+                                        $("#thickness").val(json['thickness']);
+                                        $("#hdnthickness").val(json['thickness']);
+                                        $("#hdnNetWeight").val(json['net_weight']);
+                                        $("#hdnGrossWeight").val(json['gross_weight']);
+                                        $("#width").val(json['width']);
+                                        $("#hdnwidth").val(json['width']);
+                                    },
+                                    error: function (xhr, ajaxOptions, thrownError) {
+                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                    }
+                                });
+                            });
 
-                                        function calculateWt()
-                                        {
-                                            //        var remainingNetWt = $('#remainingNetWt').val();
-                                            var thickness = $('#thickness').val();
-                                            var width = $('#width').val();
-                                            var cuttinglength = $('#length').val();
-                                            var cuttingpieces = $('#pieces').val();
+                            function calculateWt()
+                            {
+                                //        var remainingNetWt = $('#remainingNetWt').val();
+                                var thickness = $('#thickness').val();
+                                var width = $('#width').val();
+                                var cuttinglength = $('#length').val();
+                                var cuttingpieces = $('#pieces').val();
 
-                                            if (cuttinglength != '')
-                                            {
-                                                $('#cuttinglength').css('border-color', '');
-                                                $('#showError').hide();
-                                            }
-                                            if (cuttingpieces != '')
-                                            {
-                                                $('#cuttingpieces').css('border-color', '');
-                                                $('#showError').hide();
-                                            }
-
-
-                                            var netWeight_1 = (thickness * (width / 1000) * (cuttinglength / 1000) * cuttingpieces * 7.85);
-                                            var net_Weight = Math.round(netWeight_1 * 100) / 100;
-                                            //        var remwt = remainingNetWt - net_Weight;
+                                if (cuttinglength != '')
+                                {
+                                    $('#cuttinglength').css('border-color', '');
+                                    $('#showError').hide();
+                                }
+                                if (cuttingpieces != '')
+                                {
+                                    $('#cuttingpieces').css('border-color', '');
+                                    $('#showError').hide();
+                                }
 
 
-                                            //        var lowerLimit = parseInt(remainingNetWt) - parseInt(1000);
-                                            //        var upperLimit = parseInt(remainingNetWt) + parseInt(1000);
-                                            //        if (net_Weight >= upperLimit)
-                                            //        {
-                                            //            $('#netWeight').css('border-color', 'red');
-                                            //            $('#errorLimit').show();
-                                            //            document.getElementById("formSubmit2").disabled = true;
-                                            //
-                                            //        } else {
-                                            //            $('#netWeight').css('border-color', '');
-                                            //            $('#errorLimit').hide();
-                                            //            $('#showCloseDiv').hide();
-                                            //            document.getElementById("formSubmit2").disabled = false;
-                                            //        }
-                                            //
-                                            //        // var remwt = remainingNetWt - grossWeight;
-                                            //        if ((net_Weight >= lowerLimit) && (net_Weight <= upperLimit)) {
-                                            //            $('#showCloseDiv').show();
-                                            //
-                                            //        }
-                                            //        if (cuttinglength == '0' && cuttingpieces == '0') {
-                                            //            $('#showCloseDiv').show();
-                                            //        }
-                                            $('#netWeight').val(net_Weight);
-                                        }
+                                var netWeight_1 = (thickness * (width / 1000) * (cuttinglength / 1000) * cuttingpieces * 7.85);
+                                var net_Weight = Math.round(netWeight_1 * 100) / 100;
+                                //        var remwt = remainingNetWt - net_Weight;
+
+
+                                //        var lowerLimit = parseInt(remainingNetWt) - parseInt(1000);
+                                //        var upperLimit = parseInt(remainingNetWt) + parseInt(1000);
+                                //        if (net_Weight >= upperLimit)
+                                //        {
+                                //            $('#netWeight').css('border-color', 'red');
+                                //            $('#errorLimit').show();
+                                //            document.getElementById("formSubmit2").disabled = true;
+                                //
+                                //        } else {
+                                //            $('#netWeight').css('border-color', '');
+                                //            $('#errorLimit').hide();
+                                //            $('#showCloseDiv').hide();
+                                //            document.getElementById("formSubmit2").disabled = false;
+                                //        }
+                                //
+                                //        // var remwt = remainingNetWt - grossWeight;
+                                //        if ((net_Weight >= lowerLimit) && (net_Weight <= upperLimit)) {
+                                //            $('#showCloseDiv').show();
+                                //
+                                //        }
+                                //        if (cuttinglength == '0' && cuttingpieces == '0') {
+                                //            $('#showCloseDiv').show();
+                                //        }
+                                $('#netWeight').val(net_Weight);
+                            }
 </script>
 <script>
     $(document).ready(function () {

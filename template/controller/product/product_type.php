@@ -21,8 +21,8 @@ class ControllerProductProductType extends Controller {
 
         $this->load->model('product/product_type');
 
-        if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
-            $this->request->post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+//            $this->request->post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $this->model_product_product_type->addProductType($this->request->post);
 
@@ -41,8 +41,8 @@ class ControllerProductProductType extends Controller {
 
         $this->load->model('product/product_type');
 
-        if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
-            $this->request->post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+//            $this->request->post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $this->model_product_product_type->editProductType($this->request->get['product_type_id'], $this->request->post);
 
@@ -54,8 +54,8 @@ class ControllerProductProductType extends Controller {
         $this->getForm();
     }
 
-     public function delete() {
-        
+    public function delete() {
+
         $this->load->language('product/product_type');
 
         $this->document->setTitle($this->language->get('heading_title'));
@@ -63,7 +63,7 @@ class ControllerProductProductType extends Controller {
         $this->load->model('product/product_type');
 
         if (isset($this->request->post['selected'])) {
-            
+
             foreach ($this->request->post['selected'] as $product_type_id) {
                 $this->model_product_product_type->deleteProductType($product_type_id);
             }
@@ -150,12 +150,12 @@ class ControllerProductProductType extends Controller {
             $data['warning_err'] = '';
         }
 
-        if (isset($this->error['name'])) {
-            $data['name_err'] = $this->error['name'];
+        if (isset($this->error['product_type'])) {
+            $data['error_product_type'] = $this->error['product_type'];
         } else {
-            $data['name_err'] = '';
+            $data['error_product_type'] = '';
         }
-
+        
         $data['breadcrumbs'] = array();
 
         $data['breadcrumbs'][] = array(
@@ -171,14 +171,14 @@ class ControllerProductProductType extends Controller {
         if (!isset($this->request->get['product_type_id'])) {
             $data['action'] = $this->url->link('product/product_type/add', 'member_token=' . $this->session->data['member_token'], true);
             $data['breadcrumbs'][] = array(
-                'text'  => $this->language->get('text_add'),
-                'href'  => $this->url->link('product/product_type/add', 'member_token=' . $this->session->data['member_token'], true)
+                'text' => $this->language->get('text_add'),
+                'href' => $this->url->link('product/product_type/add', 'member_token=' . $this->session->data['member_token'], true)
             );
         } else {
             $data['action'] = $this->url->link('product/product_type/edit', 'member_token=' . $this->session->data['member_token'] . '&product_type_id=' . $this->request->get['product_type_id'], true);
             $data['breadcrumbs'][] = array(
-                'text'  => $this->language->get('text_edit'),
-                'href'  => $this->url->link('product/product_type/edit', 'member_token=' . $this->session->data['member_token'], true)
+                'text' => $this->language->get('text_edit'),
+                'href' => $this->url->link('product/product_type/edit', 'member_token=' . $this->session->data['member_token'], true)
             );
         }
 
@@ -195,16 +195,16 @@ class ControllerProductProductType extends Controller {
         } else {
             $data['product_type'] = '';
         }
-        
+
 
         if (isset($this->request->post['sort_order'])) {
             $data['sort_order'] = $this->request->post['sort_order'];
         } elseif (!empty($product_type_info)) {
             $data['sort_order'] = $product_type_info['sort_order'];
         } else {
-            $data['sort_order'] = 0;
+            $data['sort_order'] = '';
         }
-       
+
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');
         $data['footer'] = $this->load->controller('common/footer');
@@ -213,14 +213,17 @@ class ControllerProductProductType extends Controller {
     }
 
     protected function validateForm() {
-        if (!$this->user->hasPermission('modify', 'user/user_permission')) {
-            $this->error['warning'] = $this->language->get('error_permission');
+        if (!$this->member->hasPermission('modify', 'product/product_type')) {
+            $this->error['warning'] = $this->language->get('error_warning');
         }
 
-        if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 64)) {
-            $this->error['name'] = $this->language->get('error_name');
+        if (($this->request->post['product_type'] == '')) {
+            $this->error['product_type'] = $this->language->get('error_product_type');
         }
-
+        
+        if ($this->error && !isset($this->error['warning'])) {
+            $this->error['warning'] = $this->language->get('error_warning');
+        }
         return !$this->error;
     }
 

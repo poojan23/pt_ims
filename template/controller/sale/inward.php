@@ -21,13 +21,14 @@ class ControllerSaleInward extends Controller {
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        if (($this->request->server['REQUEST_METHOD']) == 'POST') {
+        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
             $this->model_sale_inward->addInward($this->request->post);
 
             $this->session->data['success'] = $this->language->get('text_success');
 
             $this->response->redirect($this->url->link('sale/inward', 'member_token=' . $this->session->data['member_token'], true));
         }
+        
         $this->getForm();
     }
 
@@ -38,7 +39,7 @@ class ControllerSaleInward extends Controller {
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        if ($this->request->server['REQUEST_METHOD'] == 'POST') {
+        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
             $this->model_sale_inward->editInward($this->request->get['inward_id'], $this->request->post);
 
             $this->session->data['success'] = $this->language->get['text_success'];
@@ -113,7 +114,7 @@ class ControllerSaleInward extends Controller {
         $this->load->model('sale/inward');
 
         $results = $this->model_sale_inward->getInwards();
-       
+
         $table = array();
 
         foreach ($results as $result) {
@@ -138,7 +139,7 @@ class ControllerSaleInward extends Controller {
         $json = array(
             'data' => $table
         );
-        
+
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
     }
@@ -146,15 +147,84 @@ class ControllerSaleInward extends Controller {
     protected function getForm() {
         $data['text_form'] = !isset($this->request->get['inward_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
 
+        $data['member_token'] = $this->session->data['member_token'];
+
         if (isset($this->request->get['inward_id'])) {
             $data['inward_id'] = (int) $this->request->get['inward_id'];
         } else {
             $data['inward_id'] = 0;
         }
+
         if (isset($this->error['warning'])) {
             $data['warning_err'] = $this->error['warning'];
         } else {
             $data['warning_err'] = '';
+        }
+
+        if (isset($this->error['customer_id'])) {
+            $data['customer_error'] = $this->error['customer_id'];
+        } else {
+            $data['customer_error'] = '';
+        }
+
+        if (isset($this->error['truck_no'])) {
+            $data['error_truck_no'] = $this->error['truck_no'];
+        } else {
+            $data['error_truck_no'] = '';
+        }
+
+        if (isset($this->error['coil_no'])) {
+            $data['error_coil_no'] = $this->error['coil_no'];
+        } else {
+            $data['error_coil_no'] = '';
+        }
+
+        if (isset($this->error['product_type_id'])) {
+            $data['error_product_type'] = $this->error['product_type_id'];
+        } else {
+            $data['error_product_type'] = '';
+        }
+
+        if (isset($this->error['thickness'])) {
+            $data['error_thickness'] = $this->error['thickness'];
+        } else {
+            $data['error_thickness'] = '';
+        }
+
+        if (isset($this->error['width'])) {
+            $data['error_width'] = $this->error['width'];
+        } else {
+            $data['error_width'] = '';
+        }
+
+        if (isset($this->error['length'])) {
+            $data['error_length'] = $this->error['length'];
+        } else {
+            $data['error_length'] = '';
+        }
+
+        if (isset($this->error['pieces'])) {
+            $data['error_pieces'] = $this->error['pieces'];
+        } else {
+            $data['error_pieces'] = '';
+        }
+
+        if (isset($this->error['product_id'])) {
+            $data['error_product'] = $this->error['product_id'];
+        } else {
+            $data['error_product'] = '';
+        }
+
+        if (isset($this->error['gross_weight'])) {
+            $data['error_gross_weight'] = $this->error['gross_weight'];
+        } else {
+            $data['error_gross_weight'] = '';
+        }
+
+        if (isset($this->error['net_weight'])) {
+            $data['error_net_weight'] = $this->error['net_weight'];
+        } else {
+            $data['error_net_weight'] = '';
         }
 
         $data['breadcrumbs'] = array();
@@ -322,6 +392,62 @@ class ControllerSaleInward extends Controller {
         $data['footer'] = $this->load->controller('common/footer');
 
         $this->response->setOutput($this->load->view('sale/inward_form', $data));
+    }
+
+    protected function validateForm() {        
+        if (!$this->member->hasPermission('modify', 'sale/inward')) {
+            $this->error['warning'] = $this->language->get('error_warning');
+        }
+
+        if (($this->request->post['customer_id'] == '')) {
+            $this->error['customer_id'] = $this->language->get('error_customer');
+        }
+
+        if (($this->request->post['truck_no'] == '')) {
+            $this->error['truck_no'] = $this->language->get('error_truck_no');
+        }
+
+        if (($this->request->post['coil_no'] == '')) {
+            $this->error['coil_no'] = $this->language->get('error_coil_no');
+        }
+
+        if (($this->request->post['product_type_id'] == '')) {
+            $this->error['product_type_id'] = $this->language->get('error_product_type');
+        }
+
+        if (($this->request->post['thickness'] == '')) {
+            $this->error['thickness'] = $this->language->get('error_thickness');
+        }
+
+        if (($this->request->post['width'] == '')) {
+            $this->error['width'] = $this->language->get('error_width');
+        }
+
+        if (($this->request->post['length'] == '')) {
+            $this->error['length'] = $this->language->get('error_length');
+        }
+
+        if (($this->request->post['pieces'] == '')) {
+            $this->error['pieces'] = $this->language->get('error_pieces');
+        }
+
+        if (($this->request->post['product_id'] == '')) {
+            $this->error['product_id'] = $this->language->get('error_product');
+        }
+
+        if (($this->request->post['gross_weight'] == '')) {
+            $this->error['gross_weight'] = $this->language->get('error_gross_weight');
+        }
+
+        if (($this->request->post['net_weight'] == '')) {
+            $this->error['net_weight'] = $this->language->get('error_net_weight');
+        }
+
+        if ($this->error && !isset($this->error['warning'])) {
+            $this->error['warning'] = $this->language->get('error_warning');
+        }
+
+        return !$this->error;
     }
 
 }

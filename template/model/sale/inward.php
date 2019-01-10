@@ -5,7 +5,9 @@ class ModelSaleInward extends Model {
     public function addInward($data) {
         $truck_no = strtoupper($data['truck_no']);
         $coil_no = strtoupper($data['coil_no']);
-
+        
+//        $query = $this->db->query("SELECT coil_no FROM " . DB_PREFIX . "inward WHERE coil_no = '" . $this->db->escape($coil_no) . "'");
+        
         $this->db->query("INSERT INTO " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', "
                 . " product_id = '" . (int) $data['product_id'] . "', product_type_id = '" . (int) $data['product_type_id'] . "', truck_no = '" . $this->db->escape($truck_no) . "',"
                 . " coil_no = '" . $this->db->escape($coil_no) . "',thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "',   `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "',"
@@ -32,11 +34,12 @@ class ModelSaleInward extends Model {
     }
 
     public function getInwards() {
-        $query = $this->db->query("SELECT i.*,i.net_weight,i.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
+
+        $query = $this->db->query("SELECT i.*,i.net_weight,i.gross_weight,sum(i.thickness) as totalThickness,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
 //                . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
-                . " INNER JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
-                . " INNER JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
-                . " INNER JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id = pt.product_type_id  ORDER BY i.inward_date DESC");
+                . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
+                . " LEFT JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
+                . " LEFT JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id = pt.product_type_id  ORDER BY i.inward_date DESC");
 
         return $query->rows;
     }

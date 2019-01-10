@@ -64,7 +64,7 @@ class ControllerCustomerCustomerGroup extends Controller
 
             $this->session->data['success'] = $this->language->get('text_success');
 
-            $this->response->redirect($this->url->link('customer/customer_group', 'member_token=' . $this->session->data['member_token']), true);
+            $this->response->redirect($this->url->link('customer/customer_group', 'member_token=' . $this->session->data['member_token'], true));
         }
 
         $this->getList();

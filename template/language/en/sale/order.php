@@ -73,3 +73,17 @@ $_['head_aging'] 	    = 'Aging';
 $_['head_service'] 	    = 'Service Type';
 $_['head_action'] 	    = 'Action';
 
+# Error
+$_['error_warning']         = 'Warning: Please check the form carefully for errors!';
+$_['error_permission']      = 'Warning: You do not have permission to modify customers!';
+$_['error_customer']        = 'Please select a client name!';
+$_['error_truck_no']        = 'Please enter truck number!';
+$_['error_coil_no']         = 'Please select a coil number!';
+$_['error_product_type']    = 'Please select a product type!';
+$_['error_thickness']       = 'Please enter thickness!';
+$_['error_width']           = 'Please enter width!';
+$_['error_length']          = 'Please enter lenght!';
+$_['error_pieces']          = 'Please enter pieces!';
+$_['error_product']         = 'Please select a grade!';
+$_['error_gross_weight']    = 'Please enter gross weight!';
+$_['error_net_weight']      = 'Please enter net weight!';

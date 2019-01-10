@@ -32,7 +32,7 @@
             <h5><?php echo $text_form; ?></h5>
             <div class="ibox-tools">
                 <div class="text-right">
-                    <button type="submit" form="form-user-group" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
+                    <button type="submit" form="form-product" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
                     <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
                 </div>
             </div>
@@ -49,41 +49,32 @@
             <div class="row">
                 <div class="col-xs-12">
                     <!-- PAGE CONTENT BEGINS -->
-                    <form id="form-user-group" class="form-horizontal" action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
+                    <form id="form-product" class="form-horizontal" action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="widget-box">
                                 <div class="widget-body">
                                     <div class="widget-main">
-<!--                                        <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-                                            <label for="input-name" class="col-sm-2 control-label"><?php echo $entry_product_name; ?> <span class="red">*</span></label>
-
-                                            <div class="col-sm-10">
-                                                <?php foreach ($languages as $language) : ?>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon"><img src="template/language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" alt=""></span>
-                                                        <input type="text" class="form-control" name="product_name[<?php echo $language['language_id']; ?>][name]" placeholder="<?php echo $entry_product_name; ?>" value="<?php echo isset($customer_group_description[$language['language_id']]) ? $customer_group_description[$language['language_id']]['name'] : ''; ?>" id="input-name">
-                                                    </div>
-                                                    <?php if (isset($name_err[$language['language_id']])) : ?>
-                                                        <span class="help-block"><?php echo $name_err[$language['language_id']]; ?></span>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </div>
-                                        </div>-->
-                                        <div class="form-group">
+                                        <div class="form-group <?php echo (!empty($error_product_name)) ? 'has-error' : ''; ?>">
                                             <label for="input-product-name" class="col-sm-2 control-label"><?php echo $entry_product_name; ?></label>
 
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" name="product_name" placeholder="<?php echo $entry_product_name; ?>" value="<?php echo $product_name; ?>" id="input-product-name">
+                                                <?php if (isset($error_product_name)) : ?>
+                                                    <span class="help-block"><?php echo $error_product_name; ?></span>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                        
                                         <hr>
                                         
-                                        <div class="form-group">
+                                        <div class="form-group <?php echo (!empty($error_product_code)) ? 'has-error' : ''; ?>">
                                             <label for="input-product-code" class="col-sm-2 control-label"><?php echo $entry_product_code; ?></label>
 
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" name="product_code" placeholder="<?php echo $entry_product_code; ?>" value="<?php echo $product_code; ?>" id="input-product-code">
+                                                <?php if (isset($error_product_code)) : ?>
+                                                    <span class="help-block"><?php echo $error_product_code; ?></span>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                         <hr>

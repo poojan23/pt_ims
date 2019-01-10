@@ -160,6 +160,12 @@ class ControllerCustomerCustomer extends Controller {
             $data['warning_err'] = '';
         }
 
+        if (isset($this->error['customer_group_id'])) {
+            $data['customer_group_err'] = $this->error['customer_group_id'];
+        } else {
+            $data['customer_group_err'] = '';
+        }
+
         if (isset($this->error['firstname'])) {
             $data['firstname_err'] = $this->error['firstname'];
         } else {
@@ -327,7 +333,11 @@ class ControllerCustomerCustomer extends Controller {
         if (!$this->member->hasPermission('modify', 'customer/customer')) {
             $this->error['warning'] = $this->language->get('error_warning');
         }
-
+        
+        if (($this->request->post['customer_group_id'] == '')) {
+            $this->error['customer_group_id'] = $this->language->get('customer_group_err');
+        }
+        
         if ((utf8_strlen($this->request->post['firstname']) < 1) || (utf8_strlen(trim($this->request->post['firstname']) > 32))) {
             $this->error['firstname'] = $this->language->get('error_firstname');
         }

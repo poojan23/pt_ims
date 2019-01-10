@@ -81,6 +81,7 @@ $_['help_safe']             = 'Set to true to avoid this customer from being cau
 $_['error_warning']         = 'Warning: Please check the form carefully for errors!';
 $_['error_permission']      = 'Warning: You do not have permission to modify customers!';
 $_['error_exists']          = 'Warning: E-Mail Address is already registered!';
+$_['customer_group_err']    = 'Please select a customer group!';
 $_['error_firstname']       = 'First Name must be between 1 and 32 characters!';
 $_['error_lastname']        = 'Last Name must be between 1 and 32 characters!';
 $_['error_email']           = 'E-Mail Address does not appear to be valid!';

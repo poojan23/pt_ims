@@ -122,7 +122,7 @@
                                             data: "transfer_id",
                                             render: function (data, type, row) {
                                                 if (type === 'display') {
-                                                    return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data[0] + '" /><span class="lbl"></span></label>';
+                                                    return '<label class="pos-rel"><input type="checkbox" name="selected[]" class="ace" value="' + data + '" /><span class="lbl"></span></label>';
                                                 }
                                                 return data;
                                             },

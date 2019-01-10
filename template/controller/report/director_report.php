@@ -63,12 +63,12 @@ class ControllerReportDirectorReport extends Controller {
 
         $thickness = $this->model_sale_inward->getInwards();
 
-        $total_th = 0;
         $thU = 0;
         $j = 0;
         $ThReport = [];
         for ($r = 0; $r < count($thickness); $r++) {
-            $total_th += $thickness[$r]['thickness'];
+            $total_th = $thickness[$r]['totalThickness'];
+
             if ($thickness[$r]['thickness'] > 1.5 && $thickness[$r]['thickness'] < 5) {
                 $thU += $thickness[$r]['thickness'];
             }

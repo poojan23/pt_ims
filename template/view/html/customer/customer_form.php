@@ -72,12 +72,12 @@
                                                 <div class="panel-body">
                                                     <fieldset>
                                                         <legend><?php echo $text_account; ?></legend>
-                                                        <div class="form-group">
+                                                        <div class="form-group <?php echo (!empty($customer_group_err)) ? 'has-error' : ''; ?>">
                                                             <label for="input-user-group" class="col-sm-2 control-label"><?php echo $entry_group; ?></label>
 
                                                             <div class="col-sm-10">
                                                                 <select name="customer_group_id" class="form-control" id="input-user-group">
-                                                                    <option><?php echo $entry_customer_group; ?></option>
+                                                                    <option value=""><?php echo $entry_customer_group; ?></option>
                                                                     <?php foreach ($customer_groups as $customer_group) : ?>
                                                                         <?php if ($customer_group['customer_group_id'] == $customer_group_id) : ?>
                                                                             <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
@@ -87,6 +87,9 @@
                                                                         <?php endif; ?>
                                                                     <?php endforeach; ?>
                                                                 </select>
+                                                                <?php if (isset($customer_group_err)) : ?>
+                                                                    <span class="help-block"><?php echo $customer_group_err; ?></span>
+                                                                <?php endif; ?>
                                                             </div>
                                                         </div>
 

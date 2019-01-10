@@ -54,10 +54,13 @@
                             <div class="widget-box">
                                 <div class="widget-body">
                                     <div class="widget-main">
-                                        <div class="form-group">
+                                        <div class="form-group <?php echo (!empty($error_product_type)) ? 'has-error' : ''; ?>">
                                             <label for="input-product-type" class="col-sm-2 control-label"><?php echo $entry_product_type; ?></label>
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" name="product_type" placeholder="<?php echo $entry_product_type; ?>" value="<?php echo $product_type; ?>" id="input-product-type">
+                                                <?php if (isset($error_product_type)) : ?>
+                                                    <span class="help-block"><?php echo $error_product_type; ?></span>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
 

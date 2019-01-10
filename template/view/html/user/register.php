@@ -128,11 +128,14 @@
 
                                             <hr>
 
-                                            <div class="form-group">
+                                            <div class="form-group <?php echo (!empty($mobile_err)) ? 'has-error' : ''; ?>">
                                                 <label for="input-mobile" class="col-sm-2 control-label"><?php echo $entry_mobile; ?></label>
 
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" name="mobile" placeholder="<?php echo $entry_mobile; ?>" value="<?php echo $mobile; ?>" id="input-mobile">
+                                                    <?php if (isset($mobile_err)) : ?>
+                                                        <span class="help-block"><?php echo $mobile_err; ?></span>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
 
