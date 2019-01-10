@@ -221,6 +221,20 @@ class ControllerProductProductType extends Controller {
             $this->error['product_type'] = $this->language->get('error_product_type');
         }
         
+        $product_type_info = $this->model_product_product_type->getProductByProductType($this->request->post['product_type']);
+        
+        if(!isset($this->request->get['product_type_id'])) {
+            if($product_type_info) {
+                $this->error['warning'] = $this->language->get('error_exists');
+                $this->error['product_type_id'] = $this->language->get('error_exists');
+            }
+        } else {
+            if($product_type_info && ($this->request->get['product_type_id'] != $product_type_info['product_type_id'])) {
+                $this->error['warning'] = $this->language->get('error_exists');
+                $this->error['product_type_id'] = $this->language->get('error_exists');
+            }
+        }
+        
         if ($this->error && !isset($this->error['warning'])) {
             $this->error['warning'] = $this->language->get('error_warning');
         }

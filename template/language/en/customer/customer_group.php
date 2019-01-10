@@ -25,3 +25,4 @@ $_['entry_sort_order']      = 'Sort Order';
 $_['error_permission']      = 'Warning: You do not have permission to modify customer groups!';
 $_['error_name']            = 'Customer Group Name must be between 3 and 64 characters!';
 $_['error_customer']        = 'Warning: This customer group cannot be deleted as it is currently assigned to %s customers!';
+$_['error_exists']          = 'Warning: Customer group already exist!';

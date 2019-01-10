@@ -23,7 +23,7 @@ $_['entry_sort_order']    = 'Sort Order';
 # Error
 $_['error_warning']     = 'Warning: Please check the form carefully for errors!';
 $_['error_permission']  = 'Warning: You do not have permission to modify customers!';
-$_['error_exists']      = 'Warning: E-Mail Address is already registered!';
+$_['error_exists']      = 'Warning: Product Type already exist!';
 $_['error_product_type']= 'Please enter product type!';
 $_['error_lastname']    = 'Last Name must be between 1 and 32 characters!';
 $_['error_email']       = 'E-Mail Address does not appear to be valid!';

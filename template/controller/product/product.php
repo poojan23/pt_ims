@@ -240,13 +240,27 @@ class ControllerProductProduct extends Controller {
         if (!$this->member->hasPermission('modify', 'product/product')) {
             $this->error['warning'] = $this->language->get('error_warning');
         }
-
+        
         if (($this->request->post['product_name'] == '')) {
             $this->error['product_name'] = $this->language->get('error_product_name');
         }
 
         if (($this->request->post['product_code'] == '')) {
             $this->error['product_code'] = $this->language->get('error_product_code');
+        }
+        
+        $product_info = $this->model_product_product->getProductByCode($this->request->post['product_code']);
+        
+        if(!isset($this->request->get['product_id'])) {
+            if($product_info) {
+                $this->error['warning'] = $this->language->get('error_exists');
+                $this->error['product_id'] = $this->language->get('error_exists');
+            }
+        } else {
+            if($product_info && ($this->request->get['product_id'] != $product_info['product_id'])) {
+                $this->error['warning'] = $this->language->get('error_exists');
+                $this->error['product_id'] = $this->language->get('error_exists');
+            }
         }
         
         if ($this->error && !isset($this->error['warning'])) {

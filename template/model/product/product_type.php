@@ -35,4 +35,10 @@ class ModelProductProductType extends Model {
         return $query->row;
     }
 
+    public function getProductByProductType($product_type) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_type WHERE product_type = '" . $this->db->escape($product_type). "'");
+
+        return $query->row;
+    }
+
 }

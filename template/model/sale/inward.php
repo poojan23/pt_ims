@@ -34,8 +34,7 @@ class ModelSaleInward extends Model {
     }
 
     public function getInwards() {
-
-        $query = $this->db->query("SELECT i.*,i.net_weight,i.gross_weight,sum(i.thickness) as totalThickness,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
+        $query = $this->db->query("SELECT i.*,i.net_weight,i.gross_weight,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type,pt.product_type_id FROM " . DB_PREFIX . "inward i "
 //                . " INNER JOIN " . DB_PREFIX . "inward_weight iw ON i.inward_id = iw.inward_id"
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " LEFT JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id "
@@ -85,7 +84,7 @@ class ModelSaleInward extends Model {
         $date1 = date('Y-m-01');
         $date2 =  date('Y-m-t');
 
-        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,(DATE_FORMAT(i.inward_date,'%Y-%m'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
+        $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,sum(i.thickness) as totalThickness,(DATE_FORMAT(i.inward_date,'%Y-%m'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " WHERE (i.inward_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY DATE_FORMAT(i.inward_date,'%m')");
 

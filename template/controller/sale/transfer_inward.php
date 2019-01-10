@@ -319,7 +319,7 @@ class ControllerSaleTransferInward extends Controller {
 
         $this->load->model('sale/inward');
 
-        $data['customers'] = $this->model_sale_inward->getInwards();
+//        $data['customerLists'] = $this->model_sale_inward->getInwards();
 
         if (isset($this->post['customer_id'])) {
             $data['customer_id'] = $this->request->post['customer_id'];

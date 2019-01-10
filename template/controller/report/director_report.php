@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 class ControllerReportDirectorReport extends Controller {
 
     public function index() {
@@ -63,12 +63,13 @@ class ControllerReportDirectorReport extends Controller {
 
         $thickness = $this->model_sale_inward->getInwards();
 
+        $total_th = 0;
         $thU = 0;
         $j = 0;
         $ThReport = [];
         for ($r = 0; $r < count($thickness); $r++) {
-            $total_th = $thickness[$r]['totalThickness'];
-
+            $total_th += $thickness[$r]['thickness'];
+//            print_r($total_th);exit;
             if ($thickness[$r]['thickness'] > 1.5 && $thickness[$r]['thickness'] < 5) {
                 $thU += $thickness[$r]['thickness'];
             }
@@ -84,7 +85,7 @@ class ControllerReportDirectorReport extends Controller {
         $data['thickness'] = preg_replace('/"([^"]+)"\s*:\s*/', '$1:', $Thdata);
 
         $grade = $this->model_sale_inward->getGrade();
-//        print_r($grade);exit;
+
         $GradeReport = [];
         for ($d = 0; $d < count($grade); $d++) {
             $style = '';

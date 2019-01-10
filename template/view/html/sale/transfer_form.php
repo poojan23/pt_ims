@@ -166,13 +166,15 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label"><?= $label_transfer_from; ?></label>
                                 <div class="col-sm-10">
+                                   
                                     <select data-placeholder="<?= $entry_client_name; ?>" class="chosen-select" tabindex="-1" style="display: none;" name="customer_id" id="customer_id">
                                         <option value=""><?= $entry_client_name; ?></option>
+                                        
                                         <?php foreach ($customers as $customer) : ?>
                                             <?php if ($customer['customer_id'] == $customer_id) : ?>
-                                                <option value="<?php echo $customer['customer_id']; ?>" selected="selected"><?php echo $customer['customer_name']; ?></option>
+                                                <option value="<?php echo $customer['customer_id']; ?>" selected="selected"><?php echo $customer['customer']; ?></option>
                                             <?php else : ?>
-                                                <option value="<?php echo $customer['customer_id']; ?>"><?php echo $customer['customer_name']; ?></option>
+                                                <option value="<?php echo $customer['customer_id']; ?>"><?php echo $customer['customer']; ?></option>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
                                     </select>
