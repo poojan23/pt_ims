@@ -176,6 +176,12 @@ class ControllerSaleOrder extends Controller {
         } else {
             $data['error_pieces'] = '';
         }
+
+        if (isset($this->error['service_type'])) {
+            $data['error_service_type'] = $this->error['service_type'];
+        } else {
+            $data['error_service_type'] = '';
+        }
         $data['breadcrumbs'] = array();
 
         $data['breadcrumbs'][] = array(
@@ -206,14 +212,14 @@ class ControllerSaleOrder extends Controller {
             $order_info = $this->model_sale_order->getOrder($this->request->get['order_id']);
         }
 
-        if (isset($this->post['order_id'])) {
+        if (isset($this->request->post['order_id'])) {
             $data['order_id'] = $this->request->post['order_id'];
         } elseif (!empty($order_info)) {
             $data['order_id'] = $order_info['order_id'];
         } else {
             $data['order_id'] = '';
         }
-        if (isset($this->post['order_date'])) {
+        if (isset($this->request->post['order_date'])) {
             $data['order_date'] = $this->request->post['order_date'];
         } elseif (!empty($order_info)) {
             $data['order_date'] = $order_info['order_date'];
@@ -221,7 +227,7 @@ class ControllerSaleOrder extends Controller {
             $data['order_date'] = '';
         }
 
-        if (isset($this->post['customer_name'])) {
+        if (isset($this->request->post['customer_name'])) {
             $data['customer_name'] = $this->request->post['customer_name'];
         } elseif (!empty($order_info)) {
             $data['customer_name'] = $order_info['customer_name'];
@@ -229,7 +235,7 @@ class ControllerSaleOrder extends Controller {
             $data['customer_name'] = '';
         }
 
-        if (isset($this->post['customer_id'])) {
+        if (isset($this->request->post['customer_id'])) {
             $data['customer_id'] = $this->request->post['customer_id'];
         } elseif (!empty($order_info)) {
             $data['customer_id'] = $order_info['customer_id'];
@@ -237,7 +243,7 @@ class ControllerSaleOrder extends Controller {
             $data['customer_id'] = '';
         }
 
-        if (isset($this->post['product_code'])) {
+        if (isset($this->request->post['product_code'])) {
             $data['product_code'] = $this->request->post['product_code'];
         } elseif (!empty($order_info)) {
             $data['product_code'] = $order_info['product_code'];
@@ -245,7 +251,7 @@ class ControllerSaleOrder extends Controller {
             $data['product_code'] = '';
         }
 
-        if (isset($this->post['thickness'])) {
+        if (isset($this->request->post['thickness'])) {
             $data['thickness'] = $this->request->post['thickness'];
         } elseif (!empty($order_info)) {
             $data['thickness'] = $order_info['thickness'];
@@ -253,7 +259,7 @@ class ControllerSaleOrder extends Controller {
             $data['thickness'] = '';
         }
 
-        if (isset($this->post['width'])) {
+        if (isset($this->request->post['width'])) {
             $data['width'] = $this->request->post['width'];
         } elseif (!empty($order_info)) {
             $data['width'] = $order_info['width'];
@@ -261,15 +267,15 @@ class ControllerSaleOrder extends Controller {
             $data['width'] = '';
         }
 
-        if (isset($this->post['length'])) {
-            $data['width'] = $this->request->post['length'];
+        if (isset($this->request->post['length'])) {
+            $data['length'] = $this->request->post['length'];
         } elseif (!empty($order_info)) {
             $data['length'] = $order_info['length'];
         } else {
             $data['length'] = '';
         }
 
-        if (isset($this->post['pieces'])) {
+        if (isset($this->request->post['pieces'])) {
             $data['pieces'] = $this->request->post['pieces'];
         } elseif (!empty($order_info)) {
             $data['pieces'] = $order_info['pieces'];
@@ -277,7 +283,7 @@ class ControllerSaleOrder extends Controller {
             $data['pieces'] = '';
         }
 
-        if (isset($this->post['net_weight'])) {
+        if (isset($this->request->post['net_weight'])) {
             $data['net_weight'] = $this->request->post['net_weight'];
         } elseif (!empty($order_info)) {
             $data['net_weight'] = $order_info['net_weight'];
@@ -285,7 +291,7 @@ class ControllerSaleOrder extends Controller {
             $data['net_weight'] = '';
         }
 
-        if (isset($this->post['service_type'])) {
+        if (isset($this->request->post['service_type'])) {
             $data['net_weight'] = $this->request->post['service_type'];
         } elseif (!empty($order_info)) {
             $data['service_type'] = $order_info['service_type'];
@@ -297,14 +303,13 @@ class ControllerSaleOrder extends Controller {
 
         $data['coil_nos'] = $this->model_sale_inward->getInwards();
 //         print_r($data['coil_nos']);exit;
-        if (isset($this->post['coil_no'])) {
+        if (isset($this->request->post['coil_no'])) {
             $data['coil_no'] = $this->request->post['coil_no'];
         } elseif (!empty($order_info)) {
             $data['coil_no'] = $order_info['coil_no'];
         } else {
             $data['coil_no'] = '';
         }
-
 
         $data['cancel'] = $this->url->link('sale/order', 'member_token=' . $this->session->data['member_token'], true);
 
@@ -359,6 +364,10 @@ class ControllerSaleOrder extends Controller {
 
         if (($this->request->post['pieces'] == '')) {
             $this->error['pieces'] = $this->language->get('error_pieces');
+        }
+
+        if (($this->request->post['service_type'] == '')) {
+            $this->error['service_type'] = $this->language->get('error_service_type');
         }
         
         if ($this->error && !isset($this->error['warning'])) {

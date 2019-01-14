@@ -68,12 +68,12 @@
                             <div class="hr-line-dashed"></div>
                                 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_coil_no . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="coil_no" value="' . $coil_no . '" id="" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="coil_no" value="' . $coil_no . '" id="" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                            <div class="form-group"><label class="col-sm-2 control-label">' . $label_order_no . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="order_no" value="' . $order_no . '" id="order_no" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="order_no" value="' . $order_no . '" id="order_no" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
@@ -83,7 +83,7 @@
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_client_name . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="' . $customer_name . '" id="customer_name" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="' . $customer_name . '" id="customer_name" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
@@ -93,27 +93,27 @@
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_service . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="service_type" value=' . $service_type . ' id="service_type" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="service_type" value=' . $service_type . ' id="service_type" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_garde . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="product_code" value=' . $product_code . ' id="product_code" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="product_code" value=' . $product_code . ' id="product_code" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_thickness . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="thickness" value=' . $thickness . ' id="thickness" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="thickness" value=' . $thickness . ' id="thickness" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_width . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="width" value=' . $width . ' id="width" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="width" value=' . $width . ' id="width" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_lenght . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="length" value=' . $length . ' id="length" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="length" value=' . $length . ' id="length" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
@@ -163,76 +163,114 @@
 
                             <div class="hr-line-dashed"></div>
 
-                            <div class="form-group">
+                            <div class="form-group  <?php echo (!empty($error_coil_no)) ? 'has-error' : ''; ?>">
                                 <label class="col-sm-2 control-label"><?= $label_coil_no; ?></label>
                                 <div class="col-sm-10">
                                     <select data-placeholder="<?= $entry_coil_no; ?>" class="chosen-select" tabindex="-1" style="display: none;" name="coil_no" id="coil_no">
                                         <option value=""><?= $entry_coil_no; ?></option>
-                                        <?php foreach ($coil_nos as $coil_no) : ?>
-                                            <?php if ($coil_no['coil_no'] == $coil_no) : ?>
-                                                <option value="<?php echo $coil_no['coil_no']; ?>" selected="selected"><?php echo $coil_no['coil_no']; ?></option>
+                                        <?php foreach ($coil_nos as $coil) : ?>
+                                            <?php if ($coil['coil_no'] == $coil_no) : ?>
+                                                <option value="<?php echo $coil['coil_no']; ?>" selected="selected"><?php echo $coil['coil_no']; ?></option>
                                             <?php else : ?>
-                                                <option value="<?php echo $coil_no['coil_no']; ?>"><?php echo $coil_no['coil_no']; ?></option>
+                                                <option value="<?php echo $coil['coil_no']; ?>"><?php echo $coil['coil_no']; ?></option>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
                                     </select>
+
+                                    <?php if (isset($error_coil_no)) : ?>
+                                        <span class="help-block"><?php echo $error_coil_no; ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
+                           
+                            <div class="hr-line-dashed"></div>
+                                <div class="form-group  <?php echo (!empty($error_order_no)) ? 'has-error' : ''; ?>">
+                                    <label class="col-sm-2 control-label"><?= $label_order_no; ?></label>
+                                    <div class="col-sm-10">
+                                        <select data-placeholder="<?= $entry_order_no; ?>" class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">
+                                            
+                                        </select>
 
+                                        <?php if (isset($error_order_no)) : ?>
+                                            <span class="help-block"><?php echo $error_order_no; ?></span>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+
+<!--                            <div class="hr-line-dashed"></div>
+                            
+                            <div id='getcuttingID'></div>-->
                             <div class="hr-line-dashed"></div>
 
-                            <div id='getcuttingID'></div>
-                            <div class="hr-line-dashed"></div>
-
-                            <div id='showDetails' style="display: none;">
-                                <div class="form-group"><label class="col-sm-2 control-label"><?= $label_challan_no; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="challan_no"  id="challan_no" placeholder="<?= $label_challan_no; ?>"></div>
+                            <div id='showDetails'>
+                                <div class="form-group <?php echo (!empty($error_challan_no)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_challan_no; ?></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="challan_no"  id="challan_no" placeholder="<?= $label_challan_no; ?>">
+                                        <?php if (isset($error_challan_no)) : ?>
+                                            <span class="help-block"><?php echo $error_challan_no; ?></span>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
 
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-2 control-label"><?= $label_client_name; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="customer_name"  id="customer_name" disabled=""></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="customer_name"  id="customer_name" readonly=""></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
-                                <div class="form-group"><label class="col-sm-2 control-label"><?= $label_truck_no; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="truck_no"  id="truck_no" placeholder="<?= $label_truck_no; ?>"></div>
+                                <div class="form-group <?php echo (!empty($error_truck_no)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_truck_no; ?></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="truck_no"  id="truck_no" placeholder="<?= $label_truck_no; ?>">
+                                        <?php if (isset($error_truck_no)) : ?>
+                                            <span class="help-block"><?php echo $error_truck_no; ?></span>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-2 control-label"><?= $label_service; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="service_type"  id="service_type" disabled=""></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="service_type"  id="service_type" readonly=""></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-2 control-label"><?= $label_garde; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="product_code" id="product_code" disabled=""></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="product_code" id="product_code" readonly=""></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-2 control-label"><?= $label_thickness; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="thickness" id="thickness" disabled=""></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="thickness" id="thickness" readonly=""></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-2 control-label"><?= $label_width; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="width" id="width" disabled=""></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="width" id="width" readonly=""></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="length" id="length" disabled=""></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="length" id="length" readonly=""></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
-                                <div class="form-group"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculateWt();" placeholder="<?= $label_pieces; ?>"></div>
+                                <div class="form-group <?php echo (!empty($error_pieces)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculateWt();" placeholder="<?= $label_pieces; ?>">
+                                        <?php if (isset($error_pieces)) : ?>
+                                            <span class="help-block"><?php echo $error_pieces; ?></span>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
-                                <div class="form-group"><label class="col-sm-2 control-label"><?= $label_gr_wt; ?></label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="gross_weight" id="gross_weight" placeholder="<?= $label_gr_wt; ?>"></div>
+                                <div class="form-group <?php echo (!empty($error_gross_weight)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_gr_wt; ?></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="gross_weight" id="gross_weight" placeholder="<?= $label_gr_wt; ?>">
+                                        <?php if (isset($error_gross_weight)) : ?>
+                                            <span class="help-block"><?php echo $error_gross_weight; ?></span>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
 
@@ -279,91 +317,102 @@
 <script src="template/view/dist/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
 <script type="text/javascript">
-$('select[name=\'coil_no\']').on('change', function () {
-    var $this = $(this).val();
-    $.ajax({
-        url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
-        dataType: 'json',
-        type: 'POST',
-        data: 'coil_no=' + $this,
-        beforeSend: function () {
+                                        $('select[name=\'coil_no\']').on('change', function () {
+                                            var $this = $(this).val();
+                                            $.ajax({
+                                                url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
+                                                dataType: 'json',
+                                                type: 'POST',
+                                                data: 'coil_no=' + $this,
+                                                beforeSend: function () {
+                                                    $('#showOrderNo').hide();
+                                                },
+                                                complete: function () {
+                                                    $('#showOrderNo').show();
+                                                },
+                                                success: function (json) {
+                                                    console.log(json);
+                                                    var bind = '';
+                                                     bind += "<option value=''>Select Order No</option>";
+//                                                    var bind = '<div id="showOrderNo"><div class="form-group">'
+//                                                    bind += '<label for="inputName" class="col-sm-2 control-label">Order No &nbsp; </label>'
+//                                                    bind += '<div class="col-sm-10">'
+//                                                    bind += '<select class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">'
+//                                                    bind += '<option value="">Select Order No</option>'
+                                                    for (var i = 0; i < json.length; i++)
+                                                    {
+                                                        var order = json[i].order_no;
+                                                        if(order == '<?php echo $order_no; ?>') {
+                                                            bind += '<option value="' + order + '" selected="selected">' + order + '</option>';
+                                                        } else {
+                                                            bind += '<option value="' + order + '">' + order + '</option>';
+                                                        }
+                                                    }
+//                                                    bind += '</select>'
+//                                                    bind += '</div>'
+//                                                    bind += '</div></div>';
+                                                    $('#order_no').html(bind);
+//                                                        alert(order_no);
+//                                                    $("#order_no").val(order_no);
+                                                },
+                                                error: function (xhr, ajaxOptions, thrownError) {
+                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                                }
+                                            });
+                                        });
+$('#showDetails').hide();
+                                        if ($('select[name=\'coil_no\']').val() != '') {
+                                            console.log($('select[name=\'order_no\']'));
+                                            //$('#showDetails').hide();
+                                        } else {
+                                            if ($('select[name=\'order_no\']').val() == '') {
+                                                //$('#showOrderNo').hide();
+                                                $('#showDetails').hide();
+                                            }
+                                        }
+//                                        if ($('select[name=\'order_no\']').val() == '') {
+//                                            $('#showOrderNo').hide();
+//                                                $('#showDetails').hide();
+//                                        }
 
-        },
-        complete: function () {
+                                        function getCuttingDetails()
+                                        {
 
-        },
-        success: function (json) {
-//                                    $('#showOrderNo').show();
+                                            var $this = $('#order_no').val();
+                                            $.ajax({
+                                                url: 'index.php?url=sale/outward/getOutwardDetailsByOrderNo&member_token=' + getURLVar('member_token'),
+                                                dataType: 'json',
+                                                type: 'POST',
+                                                data: 'order_no=' + $this,
+                                                beforeSend: function () {
+                                                    $('#showDetails').hide();
+                                                },
+                                                complete: function () {
+//                                                    $('#showDetails').show();
+//                                                    $('#showOrderNo').show();
+                                                },
+                                                success: function (json) {
+                                                    $('#showDetails').show();
+                                                    $("#hdnOrderId").val(json['order_id']);
+                                                    $("#hdnCustomerId").val(json['customer_id']);
+                                                    $("#customer_name").val(json['customer_name']);
+                                                    $("#hdnProductId").val(json['product_id']);
+                                                    $("#product_code").val(json['product_code']);
+                                                    $("#thickness").val(json['thickness']);
+                                                    $("#hdnthickness").val(json['thickness']);
+                                                    $("#width").val(json['width']);
+                                                    $("#hdnwidth").val(json['width']);
+                                                    $("#length").val(json['length']);
+                                                    $("#hdnlength").val(json['thickness']);
+                                                    $("#service_type").val(json['service_type']);
+                                                    $("#hdnservice").val(json['service_type']);
+                                                },
+                                                error: function (xhr, ajaxOptions, thrownError) {
+                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                                }
+                                            });
 
-//                                    var select = $('#order_no');
-
-//                                    $.each(json, function (idx, obj) {
-//                                        select.append('<option value="' + obj.order_no + '">' + obj.order_no + '</option>');
-//                                    });
-
-
-
-//                                    
-//                                    for(var i = 0; i < json.length; i++) {
-//                                     select.append('<option value="' + json[i].order_no + '">' + json[i].order_no + '</option>');
-//                                     }
-
-            var bind = '<div class="form-group">'
-            bind += '<label for="inputName" class="col-sm-2 control-label">Order No &nbsp; </label>'
-            bind += '<div class="col-sm-10">'
-            bind += '<select class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">'
-            bind += '<option value="0">Select Order No</option>'
-            for (var i = 0; i < json.length; i++)
-            {
-                var order_no = json[i].order_no;
-                bind += '<option value=' + order_no + '>' + order_no + '</option>'
-            }
-            bind += '</select>'
-            bind += '</div>'
-            bind += '</div>';
-            $('#getcuttingID').html(bind);
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-});
-function getCuttingDetails()
-{
-    var $this = $('#order_no').val();
-    $.ajax({
-        url: 'index.php?url=sale/outward/getOutwardDetailsByOrderNo&member_token=' + getURLVar('member_token'),
-        dataType: 'json',
-        type: 'POST',
-        data: 'order_no=' + $this,
-        beforeSend: function () {
-
-        },
-        complete: function () {
-
-        },
-        success: function (json) {
-            $('#showDetails').show();
-            $("#hdnOrderId").val(json['order_id']);
-            $("#hdnCustomerId").val(json['customer_id']);
-            $("#customer_name").val(json['customer_name']);
-            $("#hdnProductId").val(json['product_id']);
-            $("#product_code").val(json['product_code']);
-            $("#thickness").val(json['thickness']);
-            $("#hdnthickness").val(json['thickness']);
-            $("#width").val(json['width']);
-            $("#hdnwidth").val(json['width']);
-            $("#length").val(json['length']);
-            $("#hdnlength").val(json['thickness']);
-            $("#service_type").val(json['service_type']);
-            $("#hdnservice").val(json['service_type']);
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-
-}
+                                        }
 </script>
 <script>
     $(document).ready(function () {

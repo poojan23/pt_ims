@@ -39,7 +39,7 @@ class ControllerSaleInward extends Controller {
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+        if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
             $this->model_sale_inward->editInward($this->request->get['inward_id'], $this->request->post);
 
             $this->session->data['success'] = $this->language->get['text_success'];
@@ -286,7 +286,7 @@ class ControllerSaleInward extends Controller {
 
         $data['product_types'] = $this->model_product_product_type->getProductType();
 
-        if (isset($this->post['product_type_id'])) {
+        if (isset($this->request->post['product_type_id'])) {
             $data['product_type_id'] = $this->request->post['product_type_id'];
         } elseif (!empty($inward_info)) {
             $data['product_type_id'] = $inward_info['product_type_id'];
@@ -294,7 +294,7 @@ class ControllerSaleInward extends Controller {
             $data['product_type_id'] = '';
         }
 
-        if (isset($this->post['product_type'])) {
+        if (isset($this->request->post['product_type'])) {
             $data['product_type_name'] = $this->request->post['product_type'];
         } elseif (!empty($inward_info)) {
             $data['product_type_name'] = $inward_info['product_type'];
@@ -306,7 +306,7 @@ class ControllerSaleInward extends Controller {
 
         $data['products'] = $this->model_product_product->getProduct();
 
-        if (isset($this->post['product_id'])) {
+        if (isset($this->request->post['product_id'])) {
             $data['product_id'] = $this->request->post['product_id'];
         } elseif (!empty($inward_info)) {
             $data['product_id'] = $inward_info['product_id'];
@@ -315,7 +315,7 @@ class ControllerSaleInward extends Controller {
         }
 
 
-        if (isset($this->post['truck_no'])) {
+        if (isset($this->request->post['truck_no'])) {
             $data['truck_no'] = $this->request->post['truck_no'];
         } elseif (!empty($inward_info)) {
             $data['truck_no'] = $inward_info['truck_no'];
@@ -323,7 +323,7 @@ class ControllerSaleInward extends Controller {
             $data['truck_no'] = '';
         }
 
-        if (isset($this->post['coil_no'])) {
+        if (isset($this->request->post['coil_no'])) {
             $data['coil_no'] = $this->request->post['coil_no'];
         } elseif (!empty($inward_info)) {
             $data['coil_no'] = $inward_info['coil_no'];
@@ -331,7 +331,7 @@ class ControllerSaleInward extends Controller {
             $data['coil_no'] = '';
         }
 
-        if (isset($this->post['gross_weight'])) {
+        if (isset($this->request->post['gross_weight'])) {
             $data['gross_weight'] = $this->request->post['gross_weight'];
         } elseif (!empty($inward_info)) {
             $data['gross_weight'] = $inward_info['gross_weight'];
@@ -339,7 +339,7 @@ class ControllerSaleInward extends Controller {
             $data['gross_weight'] = '';
         }
 
-        if (isset($this->post['net_weight'])) {
+        if (isset($this->request->post['net_weight'])) {
             $data['net_weight'] = $this->request->post['net_weight'];
         } elseif (!empty($inward_info)) {
             $data['net_weight'] = $inward_info['net_weight'];
@@ -347,7 +347,7 @@ class ControllerSaleInward extends Controller {
             $data['net_weight'] = '';
         }
 
-        if (isset($this->post['thickness'])) {
+        if (isset($this->request->post['thickness'])) {
             $data['thickness'] = $this->request->post['thickness'];
         } elseif (!empty($inward_info)) {
             $data['thickness'] = $inward_info['thickness'];
@@ -355,7 +355,7 @@ class ControllerSaleInward extends Controller {
             $data['thickness'] = '';
         }
 
-        if (isset($this->post['width'])) {
+        if (isset($this->request->post['width'])) {
             $data['width'] = $this->request->post['width'];
         } elseif (!empty($inward_info)) {
             $data['width'] = $inward_info['width'];
@@ -363,7 +363,7 @@ class ControllerSaleInward extends Controller {
             $data['width'] = '';
         }
 
-        if (isset($this->post['length'])) {
+        if (isset($this->request->post['length'])) {
             $data['length'] = $this->request->post['length'];
         } elseif (!empty($inward_info)) {
             $data['length'] = $inward_info['length'];
@@ -371,7 +371,7 @@ class ControllerSaleInward extends Controller {
             $data['length'] = '';
         }
 
-        if (isset($this->post['pieces'])) {
+        if (isset($this->request->post['pieces'])) {
             $data['pieces'] = $this->request->post['pieces'];
         } elseif (!empty($inward_info)) {
             $data['pieces'] = $inward_info['pieces'];
@@ -379,7 +379,7 @@ class ControllerSaleInward extends Controller {
             $data['pieces'] = '';
         }
 
-        if (isset($this->post['packaging'])) {
+        if (isset($this->request->post['packaging'])) {
             $data['packaging'] = $this->request->post['packaging'];
         } elseif (!empty($inward_info)) {
             $data['packaging'] = $inward_info['packaging'];
@@ -392,6 +392,27 @@ class ControllerSaleInward extends Controller {
         $data['footer'] = $this->load->controller('common/footer');
 
         $this->response->setOutput($this->load->view('sale/inward_form', $data));
+    }
+    
+     public function getproductType() {
+        $json = array();
+
+        if (isset($this->request->post['product_type'])) {
+            $product_type = $this->request->post['product_type'];
+        } else {
+            $product_type = '';
+        }
+
+        $this->load->model('sale/inward');
+
+        $results = $this->model_sale_inward->getproductType($product_type);
+        $json = array(
+            'product_type' => $results['product_type'],
+          
+        );
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
 
     protected function validateForm() {        
@@ -410,26 +431,41 @@ class ControllerSaleInward extends Controller {
         if (($this->request->post['coil_no'] == '')) {
             $this->error['coil_no'] = $this->language->get('error_coil_no');
         }
-
+        
+        
         if (($this->request->post['product_type_id'] == '')) {
             $this->error['product_type_id'] = $this->language->get('error_product_type');
         }
+        
+        if(($this->request->post['hdnproductType'] == 'COIL')){
+            if (($this->request->post['thickness'] == '')) {
+                $this->error['thickness'] = $this->language->get('error_thickness');
+            }
 
-        if (($this->request->post['thickness'] == '')) {
-            $this->error['thickness'] = $this->language->get('error_thickness');
+            if (($this->request->post['width'] == '')) {
+                $this->error['width'] = $this->language->get('error_width');
+            } 
         }
+        
+        if(($this->request->post['hdnproductType'] == 'SHEET')){
+            if (($this->request->post['thickness'] == '')) {
+                $this->error['thickness'] = $this->language->get('error_thickness');
+            }
 
-        if (($this->request->post['width'] == '')) {
-            $this->error['width'] = $this->language->get('error_width');
-        }
+            if (($this->request->post['width'] == '')) {
+                $this->error['width'] = $this->language->get('error_width');
+            }
+            if (($this->request->post['length'] == '')) {
+                $this->error['length'] = $this->language->get('error_length');
+            }
 
-        if (($this->request->post['length'] == '')) {
-            $this->error['length'] = $this->language->get('error_length');
+            if (($this->request->post['pieces'] == '')) {
+                $this->error['pieces'] = $this->language->get('error_pieces');
+            }
         }
+       
 
-        if (($this->request->post['pieces'] == '')) {
-            $this->error['pieces'] = $this->language->get('error_pieces');
-        }
+        
 
         if (($this->request->post['product_id'] == '')) {
             $this->error['product_id'] = $this->language->get('error_product');
@@ -442,7 +478,19 @@ class ControllerSaleInward extends Controller {
         if (($this->request->post['net_weight'] == '')) {
             $this->error['net_weight'] = $this->language->get('error_net_weight');
         }
-
+        $inward_info = $this->model_sale_inward->getCoilNo($this->request->post['coil_no']);
+      
+        if(!isset($this->request->get['inward_id'])) {
+            if($inward_info) {
+                $this->error['warning'] = $this->language->get('error_exists');
+                $this->error['inward_id'] = $this->language->get('error_exists');
+            }
+        } else {
+            if($inward_info && ($this->request->get['inward_id'] != $inward_info['inward_id'])) {
+                $this->error['warning'] = $this->language->get('error_exists');
+                $this->error['inward_id'] = $this->language->get('error_exists');
+            }
+        }
         if ($this->error && !isset($this->error['warning'])) {
             $this->error['warning'] = $this->language->get('error_warning');
         }

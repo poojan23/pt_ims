@@ -3,7 +3,7 @@
 class ModelSaleOrder extends Model {
 
     public function addOrder($data) {
-        $order_info = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE coil_no = '" . (string) $data['coil_no'] . "'");
+        $order_info = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE coil_no = '" . (string) $data['coil_no'] . "'");        
 
         if ($order_info->num_rows) {
             $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");
@@ -11,18 +11,18 @@ class ModelSaleOrder extends Model {
             if ($query->row) {
                 $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET cutting_date = '" . $data['order_date'] . "' WHERE inward_weight_id = '" . (int) $query->row['inward_weight_id'] . "'");
 
-                $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET inward_id = '" . (int) $data['hdnInwardId'] . "',date_added='" . $data['order_date'] . "',cutting_date='" . $data['order_date'] . "',org_id = '1', net_weight = '" . ($query->row['net_weight'] - $data['netWeight']) . "',gross_weight='" . $data['hdnGrossWeight'] . "'");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET inward_id = '" . (int) $data['hdnInwardId'] . "',date_added='" . $data['order_date'] . "',cutting_date='" . $data['order_date'] . "',org_id = '1', net_weight = '" . ($query->row['net_weight'] - $data['netWeight']) . "',gross_weight='" . $query->row['gross_weight'] . "'");
 
                 $inward_weight_id = $this->db->lastInsertId();
 
-                $this->db->query("INSERT INTO " . DB_PREFIX . "order SET order_date='" . $data['order_date'] . "', coil_no='" . $data['coil_no'] . "', customer_id='" . (int) $data['hdnCustomerId'] . "', inward_id='" . (int) $data['hdnInwardId'] . "', inward_weight_id='" . (int) $inward_weight_id . "', product_id='" . (int) $data['hdnProductId'] . "', thickness = '" . (int) $data['hdnthickness'] . "', width = '" . (int) $data['hdnwidth'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "', status = '1', date_modified = NOW(), date_added = NOW()");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "order SET order_date='" . $data['order_date'] . "', coil_no='" . $data['coil_no'] . "',org_id = '1', customer_id='" . (int) $data['hdnCustomerId'] . "', inward_id='" . (int) $data['hdnInwardId'] . "', inward_weight_id='" . (int) $inward_weight_id . "', product_id='" . (int) $data['hdnProductId'] . "', thickness = '" . (int) $data['hdnthickness'] . "', width = '" . (int) $data['hdnwidth'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "', net_weight = '" . $data['netWeight'] . "', status = '1', date_modified = NOW(), date_added = NOW()");
 
                 $order_id = $this->db->lastInsertId();
 
                 $date = date('Y');
 
                 $this->db->query("UPDATE " . DB_PREFIX . "order SET order_no = '" . ($data['service_type'] . '/' . $date . '/' . $order_id ) . "' WHERE order_id = '" . $order_id . "'");
-
+                                
                 $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET order_no = '" . ($data['service_type'] . '/' . $date . '/' . $order_id ) . "',date_added='" . $data['order_date'] . "', net_weight = '" . $data['netWeight'] . "',pieces = '" . (int) $data['pieces'] . "',order_id = '" . (int) $order_id . "', org_id = '1', delivery_date='" . $data['order_date'] . "'");
             }
         } else {
@@ -34,8 +34,8 @@ class ModelSaleOrder extends Model {
                 $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET inward_id = '" . (int) $data['hdnInwardId'] . "', date_added='" . $data['order_date'] . "',cutting_date='" . $data['order_date'] . "',org_id = '1', net_weight = '" . ($query->row['net_weight'] - $data['netWeight']) . "',gross_weight='" . $data['hdnGrossWeight'] . "'");
 
                 $inward_weight_id = $this->db->lastInsertId();
-
-                $this->db->query("INSERT INTO " . DB_PREFIX . "order SET order_date='" . $data['order_date'] . "', coil_no='" . $data['coil_no'] . "', customer_id='" . (int) $data['hdnCustomerId'] . "', inward_id='" . (int) $data['hdnInwardId'] . "', inward_weight_id='" . (int) $inward_weight_id . "', product_id='" . (int) $data['hdnProductId'] . "', thickness = '" . (int) $data['hdnthickness'] . "', width = '" . (int) $data['hdnwidth'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "', status = '1', date_modified = NOW(), date_added = NOW()");
+                
+                $this->db->query("INSERT INTO " . DB_PREFIX . "order SET order_date='" . $data['order_date'] . "', coil_no='" . $data['coil_no'] . "',org_id = '1', customer_id='" . (int) $data['hdnCustomerId'] . "', inward_id='" . (int) $data['hdnInwardId'] . "', inward_weight_id='" . (int) $inward_weight_id . "', product_id='" . (int) $data['hdnProductId'] . "', thickness = '" . (int) $data['hdnthickness'] . "', width = '" . (int) $data['hdnwidth'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "',  net_weight = '" . $data['netWeight'] . "', status = '1', date_modified = NOW(), date_added = NOW()");
 
                 $order_id = $this->db->lastInsertId();
 
@@ -60,7 +60,7 @@ class ModelSaleOrder extends Model {
                 $net_weight = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_weight WHERE order_id = '" . (int) $order_id . "'");
                 $cal_net_weight = $query->row['net_weight'] + ($net_weight->row['net_weight'] - $data['netWeight']);
 
-                $this->db->query("UPDATE " . DB_PREFIX . "order SET  `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "' WHERE order_id = '" . (int) $order_id . "'");
+                $this->db->query("UPDATE " . DB_PREFIX . "order SET   net_weight = '" . $data['netWeight'] . "', `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "', service_type='" . $data['service_type'] . "' WHERE order_id = '" . (int) $order_id . "'");
 
                 $this->db->query("UPDATE " . DB_PREFIX . "order_weight SET net_weight='" . $data['netWeight'] . "' , `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "' WHERE order_id = '" . (int) $order_id . "'");
 

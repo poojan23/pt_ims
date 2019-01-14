@@ -87,3 +87,4 @@ $_['error_pieces']          = 'Please enter pieces!';
 $_['error_product']         = 'Please select a grade!';
 $_['error_gross_weight']    = 'Please enter gross weight!';
 $_['error_net_weight']      = 'Please enter net weight!';
+$_['error_service_type']    = 'Please select service type!';

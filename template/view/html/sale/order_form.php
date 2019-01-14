@@ -56,33 +56,31 @@
                 <div class="ibox-content">
                     <form id="form-order" class="form-horizontal" action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
 
-
-
                         <?php
                         if ($order_id) {
 
                             echo'<div class="form-group"><label class="col-sm-2 control-label">' . $label_coil_no . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="coil_no" value="' . $coil_no . '" id="customer_name" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="coil_no" value="' . $coil_no . '" id="customer_name" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_client_name . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="' . $customer_name . '" id="customer_name" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="' . $customer_name . '" id="customer_name" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_garde . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="product_code" value=' . $product_code . ' id="product_code" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="product_code" value=' . $product_code . ' id="product_code" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_thickness . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="thickness" value=' . $thickness . ' id="thickness" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="thickness" value=' . $thickness . ' id="thickness" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_width . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="width" value=' . $width . ' id="width" disabled=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="width" value=' . $width . ' id="width" readonly=""></div>
                             </div>
                             <div class="hr-line-dashed"></div>
 
@@ -111,7 +109,7 @@
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_net_wt . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" value=' . $net_weight . ' id="netWeight"></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" value=' . $net_weight . ' id="netWeight" readonly=""></div>
                             </div>';
                         } else {
 
@@ -127,7 +125,6 @@
                                 echo '<input type = "text" class = "form-control" name = "order_date" value = "' . $date . '">';
                             }
                             ?>
-
                     </div>
                 </div>
 
@@ -138,11 +135,11 @@
                     <div class="col-sm-10">
                         <select data-placeholder="<?= $entry_coil_no; ?>" class="chosen-select" tabindex="-1" style="display: none;" name="coil_no" id="coil_no">
                             <option value=""><?= $entry_coil_no; ?></option>
-                            <?php foreach ($coil_nos as $coil_no) : ?>
-                                <?php if ($coil_no['coil_no'] == $coil_no) : ?>
-                                    <option value="<?php echo $coil_no['coil_no']; ?>" selected="selected"><?php echo $coil_no['coil_no']; ?></option>
+                            <?php foreach ($coil_nos as $coil) : ?>
+                                <?php if ($coil['coil_no'] == $coil_no) : ?>
+                                    <option value="<?php echo $coil['coil_no']; ?>" selected="selected"><?php echo $coil['coil_no']; ?></option>
                                 <?php else : ?>
-                                    <option value="<?php echo $coil_no['coil_no']; ?>"><?php echo $coil_no['coil_no']; ?></option>
+                                    <option value="<?php echo $coil['coil_no']; ?>"><?php echo $coil['coil_no']; ?></option>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
@@ -154,30 +151,30 @@
                 </div>
                 <div class="hr-line-dashed"></div>
 
-                <div id='showDetails' style="display: none;">
+                <div id='showDetails'>
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_client_name; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="<?php echo $customer_name; ?>" id="customer_name" disabled=""></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="customer_name" value="<?php echo $customer_name; ?>" id="customer_name" readonly=""></div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_garde; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="product_code" id="product_code" disabled=""></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="product_code" id="product_code" value="<?php echo $product_code; ?>" readonly=""></div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_thickness; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="thickness" id="thickness" disabled=""></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="thickness" id="thickness" value="<?php echo $thickness; ?>" readonly=""></div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_width; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="width" id="width" disabled=""></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="width" id="width" value="<?php echo $width; ?>" readonly=""></div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group  <?php echo (!empty($error_length)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="length" id="length" onkeyup="calculateWt();">
+                            <input type="text" class="form-control" name="length" id="length"  value="<?php echo $length; ?>" onkeyup="calculateWt();">
                             <?php if (isset($error_length)) : ?>
                                 <span class="help-block"><?php echo $error_length; ?></span>
                             <?php endif; ?>
@@ -187,7 +184,7 @@
 
                     <div class="form-group  <?php echo (!empty($error_pieces)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculateWt();">
+                            <input type="text" class="form-control" name="pieces" id="pieces"  value="<?php echo $pieces; ?>"onkeyup="calculateWt();">
                             <?php if (isset($error_pieces)) : ?>
                                 <span class="help-block"><?php echo $error_pieces; ?></span>
                             <?php endif; ?>
@@ -195,7 +192,7 @@
                     </div>
                     <div class="hr-line-dashed"></div>
 
-                    <div class="form-group">
+                    <div class="form-group  <?php echo (!empty($error_service_type)) ? 'has-error' : ''; ?>">
                         <label class="col-sm-2 control-label"><?= $label_service; ?></label>
                         <div class="col-sm-10">
                             <select data-placeholder="<?= $entry_service; ?>" class="chosen-select" tabindex="-1" style="display: none;"  name="service_type" id="service_type">
@@ -204,17 +201,16 @@
                                 <option value="CTL">CTL</option>
                                 <option value="SHEET">SHEET</option>
                             </select>
+                            <?php if (isset($error_service_type)) : ?>
+                                <span class="help-block"><?php echo $error_service_type; ?></span>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_net_wt; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" id="netWeight"></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" id="netWeight" readonly=""></div>
                     </div>
-
-
-
-
                 </div>
                 <input type="hidden" id="hdnInwardId" name="hdnInwardId">
                 <input type="hidden" id="hdnInwardWeightId" name="hdnInwardWeightId">
@@ -247,90 +243,96 @@
 <script src="template/view/dist/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
 <script type="text/javascript">
-                            $('select[name=\'coil_no\']').on('change', function () {
-                                var $this = $(this).val();
-                                $.ajax({
-                                    url: 'index.php?url=sale/order/getOrderDetailsByCoilNo&member_token=' + getURLVar('member_token'),
-                                    dataType: 'json',
-                                    type: 'POST',
-                                    data: 'coil_no=' + $this,
-                                    beforeSend: function () {
+                                if ($('select[name=\'coil_no\']').val() == '') {
+                                    $('#showDetails').hide();
+                                }
+                               
+                                $('select[name=\'coil_no\']').on('change', function () {
+                                    var $this = $(this).val();
+                                    $('#showDetails').hide();
+                                    $.ajax({
+                                        url: 'index.php?url=sale/order/getOrderDetailsByCoilNo&member_token=' + getURLVar('member_token'),
+                                        dataType: 'json',
+                                        type: 'POST',
+                                        data: 'coil_no=' + $this,
+                                        beforeSend: function () {
+                                            $('#showDetails').hide();
+                                        },
+                                        complete: function () {
+                                            $('#showDetails').show();
+                                        },
+                                        success: function (json) {
+                                            $('#showDetails').show();
+                                            $("#hdnInwardId").val(json['inward_id']);
+                                            $("#hdnInwardWeightId").val(json['inward_weight_id']);
+                                            $("#hdnCustomerId").val(json['customer_id']);
+                                            $("#customer_name").val(json['customer_name']);
+                                            $("#hdnProductId").val(json['product_id']);
+                                            $("#product_code").val(json['product_code']);
+                                            $("#thickness").val(json['thickness']);
+                                            $("#hdnthickness").val(json['thickness']);
+                                            $("#hdnNetWeight").val(json['net_weight']);
+                                            $("#hdnGrossWeight").val(json['gross_weight']);
+                                            $("#width").val(json['width']);
+                                            $("#hdnwidth").val(json['width']);
+                                        },
+                                        error: function (xhr, ajaxOptions, thrownError) {
 
-                                    },
-                                    complete: function () {
-
-                                    },
-                                    success: function (json) {
-                                        $('#showDetails').show();
-                                        $("#hdnInwardId").val(json['inward_id']);
-                                        $("#hdnInwardWeightId").val(json['inward_weight_id']);
-                                        $("#hdnCustomerId").val(json['customer_id']);
-                                        $("#customer_name").val(json['customer_name']);
-                                        $("#hdnProductId").val(json['product_id']);
-                                        $("#product_code").val(json['product_code']);
-                                        $("#thickness").val(json['thickness']);
-                                        $("#hdnthickness").val(json['thickness']);
-                                        $("#hdnNetWeight").val(json['net_weight']);
-                                        $("#hdnGrossWeight").val(json['gross_weight']);
-                                        $("#width").val(json['width']);
-                                        $("#hdnwidth").val(json['width']);
-                                    },
-                                    error: function (xhr, ajaxOptions, thrownError) {
-                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                    }
+                                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                        }
+                                    });
                                 });
-                            });
 
-                            function calculateWt()
-                            {
-                                //        var remainingNetWt = $('#remainingNetWt').val();
-                                var thickness = $('#thickness').val();
-                                var width = $('#width').val();
-                                var cuttinglength = $('#length').val();
-                                var cuttingpieces = $('#pieces').val();
-
-                                if (cuttinglength != '')
+                                function calculateWt()
                                 {
-                                    $('#cuttinglength').css('border-color', '');
-                                    $('#showError').hide();
+                                    //        var remainingNetWt = $('#remainingNetWt').val();
+                                    var thickness = $('#thickness').val();
+                                    var width = $('#width').val();
+                                    var cuttinglength = $('#length').val();
+                                    var cuttingpieces = $('#pieces').val();
+
+                                    if (cuttinglength != '')
+                                    {
+                                        $('#cuttinglength').css('border-color', '');
+                                        $('#showError').hide();
+                                    }
+                                    if (cuttingpieces != '')
+                                    {
+                                        $('#cuttingpieces').css('border-color', '');
+                                        $('#showError').hide();
+                                    }
+
+
+                                    var netWeight_1 = (thickness * (width / 1000) * (cuttinglength / 1000) * cuttingpieces * 7.85);
+                                    var net_Weight = Math.round(netWeight_1 * 100) / 100;
+                                    //        var remwt = remainingNetWt - net_Weight;
+
+
+                                    //        var lowerLimit = parseInt(remainingNetWt) - parseInt(1000);
+                                    //        var upperLimit = parseInt(remainingNetWt) + parseInt(1000);
+                                    //        if (net_Weight >= upperLimit)
+                                    //        {
+                                    //            $('#netWeight').css('border-color', 'red');
+                                    //            $('#errorLimit').show();
+                                    //            document.getElementById("formSubmit2").disabled = true;
+                                    //
+                                    //        } else {
+                                    //            $('#netWeight').css('border-color', '');
+                                    //            $('#errorLimit').hide();
+                                    //            $('#showCloseDiv').hide();
+                                    //            document.getElementById("formSubmit2").disabled = false;
+                                    //        }
+                                    //
+                                    //        // var remwt = remainingNetWt - grossWeight;
+                                    //        if ((net_Weight >= lowerLimit) && (net_Weight <= upperLimit)) {
+                                    //            $('#showCloseDiv').show();
+                                    //
+                                    //        }
+                                    //        if (cuttinglength == '0' && cuttingpieces == '0') {
+                                    //            $('#showCloseDiv').show();
+                                    //        }
+                                    $('#netWeight').val(net_Weight);
                                 }
-                                if (cuttingpieces != '')
-                                {
-                                    $('#cuttingpieces').css('border-color', '');
-                                    $('#showError').hide();
-                                }
-
-
-                                var netWeight_1 = (thickness * (width / 1000) * (cuttinglength / 1000) * cuttingpieces * 7.85);
-                                var net_Weight = Math.round(netWeight_1 * 100) / 100;
-                                //        var remwt = remainingNetWt - net_Weight;
-
-
-                                //        var lowerLimit = parseInt(remainingNetWt) - parseInt(1000);
-                                //        var upperLimit = parseInt(remainingNetWt) + parseInt(1000);
-                                //        if (net_Weight >= upperLimit)
-                                //        {
-                                //            $('#netWeight').css('border-color', 'red');
-                                //            $('#errorLimit').show();
-                                //            document.getElementById("formSubmit2").disabled = true;
-                                //
-                                //        } else {
-                                //            $('#netWeight').css('border-color', '');
-                                //            $('#errorLimit').hide();
-                                //            $('#showCloseDiv').hide();
-                                //            document.getElementById("formSubmit2").disabled = false;
-                                //        }
-                                //
-                                //        // var remwt = remainingNetWt - grossWeight;
-                                //        if ((net_Weight >= lowerLimit) && (net_Weight <= upperLimit)) {
-                                //            $('#showCloseDiv').show();
-                                //
-                                //        }
-                                //        if (cuttinglength == '0' && cuttingpieces == '0') {
-                                //            $('#showCloseDiv').show();
-                                //        }
-                                $('#netWeight').val(net_Weight);
-                            }
 </script>
 <script>
     $(document).ready(function () {

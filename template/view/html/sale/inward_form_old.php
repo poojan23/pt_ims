@@ -106,7 +106,7 @@
                         <div class="form-group  <?php echo (!empty($error_coil_no)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_coil_no; ?></label>
                             <div class="col-sm-10">
                                 <?php if ($coil_no) : ?>
-                                    <input type="text" class="form-control" name="coil_no" value="<?php echo $coil_no; ?>" placeholder="<?= $entry_coil_no; ?>">
+                                    <input type="text" class="form-control" name="coil_no" value="<?php echo $coil_no; ?>" placeholder="<?= $entry_coil_no; ?>" disabled="">
                                 <?php else : ?>
                                     <input type="text" class="form-control" name="coil_no"  placeholder="<?= $entry_coil_no; ?>">
                                 <?php endif; ?>
@@ -120,28 +120,31 @@
 
                         <div class="form-group  <?php echo (!empty($error_product_type)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_product; ?></label>
                             <div class="col-sm-10">
-                                <select data-placeholder="<?= $entry_product; ?>" class="chosen-select" tabindex="-1" style="display: none;" id="type" name="product_type_id" onchange="getproduct();">
-                                    <option value=""><?= $entry_product; ?></option>
-                                    <?php foreach ($product_types as $product_type) : ?>
-                                        <?php if ($product_type['product_type_id'] == $product_type_id) : ?>
 
-                                            <option value="<?php echo $product_type['product_type_id']; ?>" selected="selected" ><?php echo $product_type['product_type']; ?></option>
-                                        <?php else : ?>
-                                            <option value="<?php echo $product_type['product_type_id']; ?>"><?php echo $product_type['product_type']; ?></option>
-                                        <?php endif; ?>
+                                <?php if ($product_type_id) : ?>
+                                    <input type="text" class="form-control"  value="<?php echo $product_type_name; ?>"  disabled="">
+                                <?php else : ?>
+                                    <select data-placeholder="<?= $entry_product; ?>" class="chosen-select" tabindex="-1" style="display: none;" id="type" name="product_type_id" onchange="getproduct();">
+                                        <option value=""><?= $entry_product; ?></option>
+                                        <?php foreach ($product_types as $product_type) : ?>
+                                            <?php if ($product_type['product_type_id'] == $product_type_id) : ?>
+                                                <option value="<?php echo $product_type['product_type_id']; ?>" selected="selected" ><?php echo $product_type['product_type']; ?></option>
+                                            <?php else : ?>
+                                                <option value="<?php echo $product_type['product_type_id']; ?>"><?php echo $product_type['product_type']; ?></option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
 
-                                    <?php endforeach; ?>
-                                </select>
+                                    <?php if (isset($error_product_type)) : ?>
+                                        <span class="help-block"><?php echo $error_product_type; ?></span>
+                                    <?php endif; ?>
 
-                                <?php if (isset($error_product_type)) : ?>
-                                    <span class="help-block"><?php echo $error_product_type; ?></span>
                                 <?php endif; ?>
-
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
 
-                        <div id="show_coil">
+                        <div style="display:none;" id="show_coil">
                             <div class="form-group  <?php echo (!empty($error_thickness)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_thickness; ?></label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="thickness" value="<?php echo $thickness; ?>" placeholder="<?= $entry_thickness; ?>">
@@ -166,7 +169,7 @@
                         <div style="display:none;" id="show_bundle">
                             <div class="form-group  <?php echo (!empty($error_length)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_lenght; ?></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="length"  value="<?php echo $length; ?>" placeholder="<?= $entry_length; ?>">
+                                    <input type="text" class="form-control" name="length"  value="<?php echo $length; ?>" placeholder="<?= $entry_lenght; ?>">
                                     <?php if (isset($error_length)) : ?>
                                         <span class="help-block"><?php echo $error_length; ?></span>
                                     <?php endif; ?>
@@ -253,13 +256,13 @@
                             </div>    
                         </div>
                     </form>
-
+                    <input type="hidden" id="hdnid" value="<?php echo $product_type_name; ?>">
                 </div>
             </div>
         </div>
     </div>
 </div>
-<input type="hidden" id="hdnproductType" name="hdnproductType">
+
 <?php echo $footer; ?>
 <script src="template/view/dist/js/plugins/chosen/chosen.jquery.js"></script>
 <script src="template/view/dist/js/plugins/select2/select2.full.min.js"></script>
@@ -270,31 +273,26 @@
 <script src="template/view/dist/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
 <script src="template/view/dist/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 <script>
-
-//                                        if ($('select[name=\'product_type_id\']').val() == '3') {
-//                                            $('#show_coil').show();
-//                                            $('#show_bundle').show();
-//                                        }
                                     $(document).ready(function () {
-//                                            var hdnid = $('#hdnid').val();
-//
-//                                            if (hdnid == 'COIL') {
-//                                                $('#show_coil').show();
-//                                                $('#show_bundle').hide();
-//                                                $('#type').prop('disabled', true);
-//                                            }
-//                                            if (hdnid == 'SHEET') {
-//                                                $('#show_bundle').show();
-//                                                $('#show_coil').show();
-//                                                $('#type').prop('disabled', true);
-//                                            }
-//
-//                                            $('.tagsinput').tagsinput({
-//                                                tagClass: 'label label-primary'
-//                                            });
+                                        var hdnid = $('#hdnid').val();
 
+                                        if (hdnid == 'COIL') {
+                                            $('#show_coil').show();
+                                            $('#show_bundle').hide();
+                                            $('#type').prop('disabled', true);
+                                        }
+                                        if (hdnid == 'SHEET') {
+                                            $('#show_bundle').show();
+                                            $('#show_coil').show();
+                                            $('#type').prop('disabled', true);
+                                        }
 
+                                        $('.tagsinput').tagsinput({
+                                            tagClass: 'label label-primary'
+                                        });
 
+                                       
+                                       
 
                                         $('#data_1 .input-group.date').datepicker({
                                             todayBtn: "linked",
@@ -305,7 +303,7 @@
                                             format: "yyyy-mm-dd"
                                         });
 
-
+                                       
 
                                         $('input[name="daterange"]').daterangepicker();
 
@@ -359,45 +357,26 @@
                                             allowClear: true
                                         });
 
+
+
                                     });
 
                                     $('.chosen-select').chosen({width: "100%"});
 
                                     function getproduct() {
-                                        var product_type = $('#type').val();
-
-                                        $.ajax({
-                                            url: 'index.php?url=sale/inward/getproductType&member_token=' + getURLVar('member_token'),
-                                            dataType: 'json',
-                                            type: 'POST',
-                                            data: 'product_type=' + product_type,
-                                            beforeSend: function () {
-
-                                            },
-                                            complete: function () {
-
-                                            },
-                                            success: function (json) {
-                                                $("#hdnproductType").val(json['product_type']);
-                                                if (json['product_type'] == 'COIL') {
-                                                    $('#show_coil').show();
-                                                    $('#show_bundle').hide();
-                                                }
-                                                if (json['product_type'] == 'SHEET') {
-                                                    $('#show_coil').show();
-                                                    $('#show_bundle').show();
-                                                }
-                                                if (json['product_type'] == 'SCRAP') {
-                                                    $('#show_coil').hide();
-                                                    $('#show_bundle').hide();
-                                                }
-
-                                            },
-                                            error: function (xhr, ajaxOptions, thrownError) {
-
-                                                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                            }
-                                        });
+                                        var type = $('#type').val();
+                                        if (type == '1') {
+                                            $('#show_coil').show();
+                                            $('#show_bundle').hide();
+                                        }
+                                        if (type == '3') {
+                                            $('#show_coil').show();
+                                            $('#show_bundle').show();
+                                        }
+                                        if (type == '4') {
+                                            $('#show_coil').hide();
+                                            $('#show_bundle').hide();
+                                        }
 
                                     }
 
