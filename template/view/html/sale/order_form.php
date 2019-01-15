@@ -39,12 +39,15 @@
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
             <?php endif; ?>
+            <div class="alert alert-danger alert-dismissible"  id="errorLimit" style="display: none;"><i class="fa fa-exclamation-circle"></i> Net Weight Exceeds The Limit!
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5><?php echo $text_form; ?></h5>
                     <div class="ibox-tools">
                         <div class="text-right">
-                            <button type="submit" form="form-order" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
+                            <button type="submit" form="form-order" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>" id="submitForm"><i class="ace-icon fa fa-floppy-o"></i></button>
                             <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
                         </div>
                     </div>
@@ -211,6 +214,14 @@
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_net_wt; ?></label>
                         <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" id="netWeight" readonly=""></div>
                     </div>
+                     <div class="hr-line-dashed"></div>
+                     
+                    <div class="form-group" id="showCloseDiv" style="display:none;">
+                        <label for="inputName" class="col-sm-2 control-label">Closed Order &nbsp; </label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline"><input type="radio" name="closed" value="<?php echo $closed; ?>" id="closed">Yes</label>
+                        </div>
+                    </div>
                 </div>
                 <input type="hidden" id="hdnInwardId" name="hdnInwardId">
                 <input type="hidden" id="hdnInwardWeightId" name="hdnInwardWeightId">
@@ -246,7 +257,7 @@
                                 if ($('select[name=\'coil_no\']').val() == '') {
                                     $('#showDetails').hide();
                                 }
-                               
+
                                 $('select[name=\'coil_no\']').on('change', function () {
                                     var $this = $(this).val();
                                     $('#showDetails').hide();
@@ -275,6 +286,8 @@
                                             $("#hdnGrossWeight").val(json['gross_weight']);
                                             $("#width").val(json['width']);
                                             $("#hdnwidth").val(json['width']);
+                                            
+                                         
                                         },
                                         error: function (xhr, ajaxOptions, thrownError) {
 
@@ -285,7 +298,7 @@
 
                                 function calculateWt()
                                 {
-                                    //        var remainingNetWt = $('#remainingNetWt').val();
+                                    var inward_id = $('#hdnInwardId').val();
                                     var thickness = $('#thickness').val();
                                     var width = $('#width').val();
                                     var cuttinglength = $('#length').val();
@@ -305,32 +318,58 @@
 
                                     var netWeight_1 = (thickness * (width / 1000) * (cuttinglength / 1000) * cuttingpieces * 7.85);
                                     var net_Weight = Math.round(netWeight_1 * 100) / 100;
+
+
+                                    $.ajax({
+                                        url: 'index.php?url=sale/order/getNetWeight&member_token=' + getURLVar('member_token'),
+                                        dataType: 'json',
+                                        type: 'POST',
+                                        data: 'inward_id=' + inward_id,
+                                        beforeSend: function () {
+//                                            $('#showDetails').hide();
+                                        },
+                                        complete: function () {
+//                                            $('#showDetails').show();
+                                        },
+                                        success: function (json) {
+                                            var remainingNetWt = json['net_weight'];
+
+                                            var lowerLimit = parseInt(remainingNetWt) - parseInt(500);
+                                            var upperLimit = parseInt(remainingNetWt) + parseInt(500);
+                                            if (net_Weight >= upperLimit)
+                                            {
+                                                $('#netWeight').css('border-color', 'red');
+                                                $('#errorLimit').show();
+                                                document.getElementById("submitForm").disabled = true;
+
+                                            } else {
+                                                $('#netWeight').css('border-color', '');
+                                                $('#errorLimit').hide();
+                                                $('#showCloseDiv').hide();
+                                                $("#closed").val('0');
+                                                document.getElementById("submitForm").disabled = false;
+                                            }
+
+                                            if ((net_Weight >= lowerLimit) && (net_Weight <= upperLimit)) {
+                                                $('#showCloseDiv').show();
+                                                $("#closed").val('1');
+                                                $("#closed").prop("checked", true);
+
+                                            }
+                                            if (cuttinglength == '0' && cuttingpieces == '0') {
+                                                $('#showCloseDiv').show();
+                                            }
+                                        },
+                                        error: function (xhr, ajaxOptions, thrownError) {
+
+                                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                        }
+                                    });
+
                                     //        var remwt = remainingNetWt - net_Weight;
 
 
-                                    //        var lowerLimit = parseInt(remainingNetWt) - parseInt(1000);
-                                    //        var upperLimit = parseInt(remainingNetWt) + parseInt(1000);
-                                    //        if (net_Weight >= upperLimit)
-                                    //        {
-                                    //            $('#netWeight').css('border-color', 'red');
-                                    //            $('#errorLimit').show();
-                                    //            document.getElementById("formSubmit2").disabled = true;
-                                    //
-                                    //        } else {
-                                    //            $('#netWeight').css('border-color', '');
-                                    //            $('#errorLimit').hide();
-                                    //            $('#showCloseDiv').hide();
-                                    //            document.getElementById("formSubmit2").disabled = false;
-                                    //        }
-                                    //
-                                    //        // var remwt = remainingNetWt - grossWeight;
-                                    //        if ((net_Weight >= lowerLimit) && (net_Weight <= upperLimit)) {
-                                    //            $('#showCloseDiv').show();
-                                    //
-                                    //        }
-                                    //        if (cuttinglength == '0' && cuttingpieces == '0') {
-                                    //            $('#showCloseDiv').show();
-                                    //        }
+
                                     $('#netWeight').val(net_Weight);
                                 }
 </script>

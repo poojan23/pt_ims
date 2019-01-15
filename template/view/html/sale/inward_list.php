@@ -42,35 +42,35 @@
                 </div>
                 <div class="ibox-content">
                     <form action="<?php echo $delete; ?>" method="POST" enctype="multipart/form-data" id="form-inward">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example" id="table-inward">
-                            <thead>
-                                <tr>
-                                    <th style="width: 1px;" class="center">
-                                        <label class="pos-rel">
-                                            <input type="checkbox" class="ace" />
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </th>
-                                    <th><?= $head_date; ?></th>
-                                    <th><?= $head_truck_no; ?></th>
-                                    <th><?= $head_client_name; ?></th>
-                                    <th><?= $head_product; ?></th>
-                                    <th><?= $head_garde; ?></th>
-                                    <th><?= $head_coil_no; ?></th>
-                                    <th><?= $head_thickness; ?></th>
-                                    <th><?= $head_width; ?></th>
-                                    <th><?= $head_lenght; ?></th>
-                                    <th><?= $head_pieces; ?></th>
-                                    <th><?= $head_gr_wt; ?></th>
-                                    <th><?= $head_net_wt; ?></th>
-                                    <th><?= $head_pack; ?></th>
-                                    <th><?= $head_action; ?></th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example" id="table-inward">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 1px;" class="center">
+                                            <label class="pos-rel">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </th>
+                                        <th><?= $head_date; ?></th>
+                                        <th><?= $head_truck_no; ?></th>
+                                        <th><?= $head_client_name; ?></th>
+                                        <th><?= $head_product; ?></th>
+                                        <th><?= $head_garde; ?></th>
+                                        <th><?= $head_coil_no; ?></th>
+                                        <th><?= $head_thickness; ?></th>
+                                        <th><?= $head_width; ?></th>
+                                        <th><?= $head_lenght; ?></th>
+                                        <th><?= $head_pieces; ?></th>
+                                        <th><?= $head_gr_wt; ?></th>
+                                        <th><?= $head_net_wt; ?></th>
+                                        <th><?= $head_pack; ?></th>
+                                        <th><?= $head_action; ?></th>
+                                    </tr>
+                                </thead>
 
-                        </table>
-                    </div>
+                            </table>
+                        </div>
                     </form>
 
                 </div>

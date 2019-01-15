@@ -132,6 +132,7 @@ class ControllerSaleInward extends Controller {
             $nestedData['packaging'] = $result['packaging'];
             $nestedData['gross_weight'] = $result['gross_weight'];
             $nestedData['net_weight'] = $result['net_weight'];
+            $nestedData['closed'] = $result['closed'];
 
             $table[] = $nestedData;
         }

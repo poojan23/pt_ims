@@ -292,12 +292,14 @@ class ControllerSaleOrder extends Controller {
         }
 
         if (isset($this->request->post['service_type'])) {
-            $data['net_weight'] = $this->request->post['service_type'];
+            $data['service_type'] = $this->request->post['service_type'];
         } elseif (!empty($order_info)) {
             $data['service_type'] = $order_info['service_type'];
         } else {
             $data['service_type'] = '';
         }
+        
+       
 
         $this->load->model('sale/inward');
 
@@ -310,7 +312,15 @@ class ControllerSaleOrder extends Controller {
         } else {
             $data['coil_no'] = '';
         }
-
+        
+        if (isset($this->request->post['closed'])) {
+            $data['closed'] = $this->request->post['closed'];
+        } elseif (!empty($order_info)) {
+            $data['closed'] = $order_info['closed'];
+        } else {
+            $data['closed'] = '';
+        }
+        
         $data['cancel'] = $this->url->link('sale/order', 'member_token=' . $this->session->data['member_token'], true);
 
         $data['header'] = $this->load->controller('common/header');
@@ -343,7 +353,28 @@ class ControllerSaleOrder extends Controller {
             'product_code' => $results['product_code'],
             'product_type' => $results['product_type'],
             'thickness' => $results['thickness'],
-            'width' => $results['width']
+            'width' => $results['width'],
+            'closed' => $results['closed']
+        );
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
+
+    public function getNetWeight() {
+        $json = array();
+
+        if (isset($this->request->post['inward_id'])) {
+            $inward_id = $this->request->post['inward_id'];
+        } else {
+            $inward_id = 0;
+        }
+
+        $this->load->model('sale/order');
+
+        $results = $this->model_sale_order->getNetWeight($inward_id);
+       
+        $json = array(
+            'net_weight' => $results['net_weight'],
         );
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));

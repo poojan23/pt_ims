@@ -4,7 +4,9 @@ class ModelSaleOrder extends Model {
 
     public function addOrder($data) {
         $order_info = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE coil_no = '" . (string) $data['coil_no'] . "'");        
-
+        
+        $this->db->query("UPDATE " . DB_PREFIX . "inward SET   `closed` = '" .  $data['closed'] . "'  WHERE coil_no = '" . (string) $data['coil_no'] . "'");
+         
         if ($order_info->num_rows) {
             $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . (int) $order_info->row['inward_weight_id'] . "'");
 
@@ -112,6 +114,15 @@ class ModelSaleOrder extends Model {
                 . " LEFT JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id=pt.product_type_id where i.coil_no = '" . $coil_no . "'");
 
         return $query->row;
+    }
+    
+    public function getNetWeight($inward_id) {
+      
+        $query = $this->db->query("SELECT max(inward_weight_id) as inward_weight_id FROM " . DB_PREFIX . "inward_weight WHERE inward_id = '" .(int) $inward_id . "'");
+         
+        $net_weight = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" .(int) $query->row['inward_weight_id'] . "'");
+        
+        return $net_weight->row;
     }
 
     public function getTotalOrder() {
