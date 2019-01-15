@@ -72,10 +72,10 @@ class ModelSaleInward extends Model {
         $date2 = date('Y-m-d');
         $date1 = date('Y-m-d');
         $date1 = date('Y-m-d', strtotime($date1 . ' -6 day'));
-                
+     
         $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
-                . " WHERE (i.date_added BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY i.inward_date");
+                . " WHERE (i.inward_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY i.inward_date");
 
         return $query->rows;
     }
