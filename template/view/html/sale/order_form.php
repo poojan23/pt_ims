@@ -217,9 +217,9 @@
                      <div class="hr-line-dashed"></div>
                      
                     <div class="form-group" id="showCloseDiv" style="display:none;">
-                        <label for="inputName" class="col-sm-2 control-label">Closed Order &nbsp; </label>
+                        <label for="inputName" class="col-sm-2 control-label"><?= $label_close ?> </label>
                         <div class="col-sm-10">
-                            <label class="radio-inline"><input type="radio" name="closed" value="<?php echo $closed; ?>" id="closed">Yes</label>
+                            <label class="checkbox-inline"><input type="radio" name="closed" value="<?php echo $closed; ?>" id="closed">Yes</label>
                         </div>
                     </div>
                 </div>

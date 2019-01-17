@@ -429,6 +429,48 @@ class ControllerSaleOutward extends Controller {
         $this->response->setOutput(json_encode($json));
     }
 
+    public function getPieces() {
+        $json = array();
+
+        if (isset($this->request->post['order_id'])) {
+            $order_id = $this->request->post['order_id'];
+        } else {
+            $order_id = 0;
+        }
+
+        $this->load->model('sale/outward');
+
+        $results = $this->model_sale_outward->getPieces($order_id);
+
+        $json = array(
+            'pieces' => $results['pieces'],
+        );
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
+
+    public function getRemGrossWeight() {
+        $json = array();
+
+        if (isset($this->request->post['coil_no'])) {
+            $coil_no = $this->request->post['coil_no'];
+        } else {
+            $coil_no = 0;
+        }
+
+        $this->load->model('sale/outward');
+
+        $results = $this->model_sale_outward->getRemGrossWeight($coil_no);
+
+        $json = array(
+            'gross_weight' => $results['gross_weight'],
+        );
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
+
     protected function validateForm() {
         if (!$this->member->hasPermission('modify', 'sale/order')) {
             $this->error['warning'] = $this->language->get('error_warning');

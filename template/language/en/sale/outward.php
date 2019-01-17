@@ -40,6 +40,7 @@ $_['label_gr_wt']            = 'Gross Weight';
 $_['label_net_wt'] 	     = 'Net Weight';
 $_['label_pack'] 	     = 'Packaging';
 $_['label_service'] 	     = 'Service Type';
+$_['label_close'] 	     = 'Close Order';
 
 // Placeholder
 $_['entry_truck_no']         = 'Truck No.';

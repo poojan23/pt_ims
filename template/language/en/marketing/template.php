@@ -1,6 +1,7 @@
 <?php
 # Heading
 $_['heading_title']         = 'E-Mail Templates';
+$_['header_title']         = 'E-Mail Templates';
 
 # Text
 $_['text_title']            = 'E-Mail Template List';

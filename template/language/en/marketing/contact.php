@@ -1,6 +1,7 @@
 <?php
 # Heading
 $_['heading_title']         = 'Mail';
+$_['header_title']         = 'Mail';
 
 # Text
 $_['text_title']            = 'Mail';

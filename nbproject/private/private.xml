@@ -13,7 +13,7 @@
             <url>template/controller/sale/inward.php</url>
             <bookmark id="3">
                 <name/>
-                <line>161</line>
+                <line>162</line>
                 <key/>
             </bookmark>
         </file>
@@ -28,11 +28,14 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/report/monthly_report.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/reports/monthly_report.php</file>
-            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/inward.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/sale/order.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/outward_form.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/order.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/sale/outward.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/language/en/sale/outward.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/model/sale/outward.php</file>
             <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/controller/sale/order.php</file>
+            <file>file:/C:/ATDI/LMS/htdocs/pt_ims/template/view/html/sale/order_form.php</file>
         </group>
     </open-files>
 </project-private>

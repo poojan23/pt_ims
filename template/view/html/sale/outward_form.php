@@ -39,12 +39,18 @@
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
             <?php endif; ?>
+            <div class="alert alert-danger alert-dismissible"  id="piecesLimit" style="display: none;"><i class="fa fa-exclamation-circle"></i> Pieces Exceeds The Limit!
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+            <div class="alert alert-danger alert-dismissible"  id="errorLimit" style="display: none;"><i class="fa fa-exclamation-circle"></i> Gross Weight Exceeds The Limit!
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5><?php echo $text_form; ?></h5>
                     <div class="ibox-tools">
                         <div class="text-right">
-                            <button type="submit" form="form-order" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
+                            <button type="submit" form="form-order" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>" id="submitForm"><i class="ace-icon fa fa-floppy-o"></i></button>
                             <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
                         </div>
                     </div>
@@ -182,24 +188,21 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
-                           
+
                             <div class="hr-line-dashed"></div>
-                                <div class="form-group  <?php echo (!empty($error_order_no)) ? 'has-error' : ''; ?>">
-                                    <label class="col-sm-2 control-label"><?= $label_order_no; ?></label>
-                                    <div class="col-sm-10">
-                                        <select data-placeholder="<?= $entry_order_no; ?>" class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">
-                                            
-                                        </select>
+                            <div class="form-group  <?php echo (!empty($error_order_no)) ? 'has-error' : ''; ?>">
+                                <label class="col-sm-2 control-label"><?= $label_order_no; ?></label>
+                                <div class="col-sm-10">
+                                    <select data-placeholder="<?= $entry_order_no; ?>" class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">
 
-                                        <?php if (isset($error_order_no)) : ?>
-                                            <span class="help-block"><?php echo $error_order_no; ?></span>
-                                        <?php endif; ?>
-                                    </div>
+                                    </select>
+
+                                    <?php if (isset($error_order_no)) : ?>
+                                        <span class="help-block"><?php echo $error_order_no; ?></span>
+                                    <?php endif; ?>
                                 </div>
+                            </div>
 
-<!--                            <div class="hr-line-dashed"></div>
-                            
-                            <div id='getcuttingID'></div>-->
                             <div class="hr-line-dashed"></div>
 
                             <div id='showDetails'>
@@ -256,7 +259,7 @@
 
                                 <div class="form-group <?php echo (!empty($error_pieces)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_pieces; ?></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculateWt();" placeholder="<?= $label_pieces; ?>">
+                                        <input type="text" class="form-control" name="pieces" id="pieces" onkeyup="calculatePieces();" placeholder="<?= $label_pieces; ?>">
                                         <?php if (isset($error_pieces)) : ?>
                                             <span class="help-block"><?php echo $error_pieces; ?></span>
                                         <?php endif; ?>
@@ -266,7 +269,7 @@
 
                                 <div class="form-group <?php echo (!empty($error_gross_weight)) ? 'has-error' : ''; ?>"><label class="col-sm-2 control-label"><?= $label_gr_wt; ?></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="gross_weight" id="gross_weight" placeholder="<?= $label_gr_wt; ?>">
+                                        <input type="text" class="form-control" name="gross_weight" id="gross_weight" placeholder="<?= $label_gr_wt; ?>" onkeyup="calculateGrossWt();">
                                         <?php if (isset($error_gross_weight)) : ?>
                                             <span class="help-block"><?php echo $error_gross_weight; ?></span>
                                         <?php endif; ?>
@@ -284,7 +287,14 @@
                                         </label>
                                     </div>    
                                 </div>
+                                <div class="hr-line-dashed"></div>
 
+                                <div class="form-group" id="showCloseDiv" style="display:none;">
+                                    <label for="inputName" class="col-sm-2 control-label"><?= $label_close ?></label>
+                                    <div class="col-sm-10">
+                                        <label class="checkbox-inline"><input type="radio" name="closed" value="<?php echo $closed; ?>" id="closed">Yes</label>
+                                    </div>
+                                </div>
                                 <input type="hidden" id="hdnOrderId" name="hdnOrderId">
                                 <input type="hidden" id="hdnthickness" name="hdnthickness">
                                 <input type="hidden" id="hdnwidth" name="hdnwidth">
@@ -299,7 +309,6 @@
                         ?>
 
                     </form>
-
                 </div>
             </div>
         </div>
@@ -317,118 +326,187 @@
 <script src="template/view/dist/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
 <script type="text/javascript">
-                                        $('select[name=\'coil_no\']').on('change', function () {
-                                            var $this = $(this).val();
-                                            $.ajax({
-                                                url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
-                                                dataType: 'json',
-                                                type: 'POST',
-                                                data: 'coil_no=' + $this,
-                                                beforeSend: function () {
-                                                    $('#showOrderNo').hide();
-                                                },
-                                                complete: function () {
-                                                    $('#showOrderNo').show();
-                                                },
-                                                success: function (json) {
-                                                    console.log(json);
-                                                    var bind = '';
-                                                     bind += "<option value=''>Select Order No</option>";
-//                                                    var bind = '<div id="showOrderNo"><div class="form-group">'
-//                                                    bind += '<label for="inputName" class="col-sm-2 control-label">Order No &nbsp; </label>'
-//                                                    bind += '<div class="col-sm-10">'
-//                                                    bind += '<select class="form-control" id="order_no" name="order_no" onchange="getCuttingDetails();">'
-//                                                    bind += '<option value="">Select Order No</option>'
-                                                    for (var i = 0; i < json.length; i++)
-                                                    {
-                                                        var order = json[i].order_no;
-                                                        if(order == '<?php echo $order_no; ?>') {
-                                                            bind += '<option value="' + order + '" selected="selected">' + order + '</option>';
-                                                        } else {
-                                                            bind += '<option value="' + order + '">' + order + '</option>';
+                                            $('select[name=\'coil_no\']').on('change', function () {
+                                                var $this = $(this).val();
+                                                $.ajax({
+                                                    url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
+                                                    dataType: 'json',
+                                                    type: 'POST',
+                                                    data: 'coil_no=' + $this,
+                                                    beforeSend: function () {
+                                                        $('#showOrderNo').hide();
+                                                    },
+                                                    complete: function () {
+                                                        $('#showOrderNo').show();
+                                                    },
+                                                    success: function (json) {
+                                                        console.log(json);
+                                                        var bind = '';
+                                                        bind += "<option value=''>Select Order No</option>";
+                                                        for (var i = 0; i < json.length; i++)
+                                                        {
+                                                            var order = json[i].order_no;
+                                                            if (order == '<?php echo $order_no; ?>') {
+                                                                bind += '<option value="' + order + '" selected="selected">' + order + '</option>';
+                                                            } else {
+                                                                bind += '<option value="' + order + '">' + order + '</option>';
+                                                            }
                                                         }
+                                                        $('#order_no').html(bind);
+                                                    },
+                                                    error: function (xhr, ajaxOptions, thrownError) {
+                                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
                                                     }
-//                                                    bind += '</select>'
-//                                                    bind += '</div>'
-//                                                    bind += '</div></div>';
-                                                    $('#order_no').html(bind);
-//                                                        alert(order_no);
-//                                                    $("#order_no").val(order_no);
-                                                },
-                                                error: function (xhr, ajaxOptions, thrownError) {
-                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                                }
+                                                });
                                             });
-                                        });
-$('#showDetails').hide();
-                                        if ($('select[name=\'coil_no\']').val() != '') {
-                                            console.log($('select[name=\'order_no\']'));
-                                            //$('#showDetails').hide();
-                                        } else {
-                                            if ($('select[name=\'order_no\']').val() == '') {
-                                                //$('#showOrderNo').hide();
-                                                $('#showDetails').hide();
-                                            }
-                                        }
-//                                        if ($('select[name=\'order_no\']').val() == '') {
-//                                            $('#showOrderNo').hide();
-//                                                $('#showDetails').hide();
-//                                        }
-
-                                        function getCuttingDetails()
-                                        {
-
-                                            var $this = $('#order_no').val();
-                                            $.ajax({
-                                                url: 'index.php?url=sale/outward/getOutwardDetailsByOrderNo&member_token=' + getURLVar('member_token'),
-                                                dataType: 'json',
-                                                type: 'POST',
-                                                data: 'order_no=' + $this,
-                                                beforeSend: function () {
+                                            $('#showDetails').hide();
+                                            if ($('select[name=\'coil_no\']').val() != '') {
+                                                console.log($('select[name=\'order_no\']'));
+                                            } else {
+                                                if ($('select[name=\'order_no\']').val() == '') {
                                                     $('#showDetails').hide();
-                                                },
-                                                complete: function () {
-//                                                    $('#showDetails').show();
-//                                                    $('#showOrderNo').show();
-                                                },
-                                                success: function (json) {
-                                                    $('#showDetails').show();
-                                                    $("#hdnOrderId").val(json['order_id']);
-                                                    $("#hdnCustomerId").val(json['customer_id']);
-                                                    $("#customer_name").val(json['customer_name']);
-                                                    $("#hdnProductId").val(json['product_id']);
-                                                    $("#product_code").val(json['product_code']);
-                                                    $("#thickness").val(json['thickness']);
-                                                    $("#hdnthickness").val(json['thickness']);
-                                                    $("#width").val(json['width']);
-                                                    $("#hdnwidth").val(json['width']);
-                                                    $("#length").val(json['length']);
-                                                    $("#hdnlength").val(json['thickness']);
-                                                    $("#service_type").val(json['service_type']);
-                                                    $("#hdnservice").val(json['service_type']);
-                                                },
-                                                error: function (xhr, ajaxOptions, thrownError) {
-                                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
                                                 }
+                                            }
+
+                                            function getCuttingDetails()
+                                            {
+
+                                                var $this = $('#order_no').val();
+                                                $.ajax({
+                                                    url: 'index.php?url=sale/outward/getOutwardDetailsByOrderNo&member_token=' + getURLVar('member_token'),
+                                                    dataType: 'json',
+                                                    type: 'POST',
+                                                    data: 'order_no=' + $this,
+                                                    beforeSend: function () {
+                                                        $('#showDetails').hide();
+                                                    },
+                                                    complete: function () {
+
+                                                    },
+                                                    success: function (json) {
+                                                        $('#showDetails').show();
+                                                        $("#hdnOrderId").val(json['order_id']);
+                                                        $("#hdnCustomerId").val(json['customer_id']);
+                                                        $("#customer_name").val(json['customer_name']);
+                                                        $("#hdnProductId").val(json['product_id']);
+                                                        $("#product_code").val(json['product_code']);
+                                                        $("#thickness").val(json['thickness']);
+                                                        $("#hdnthickness").val(json['thickness']);
+                                                        $("#width").val(json['width']);
+                                                        $("#hdnwidth").val(json['width']);
+                                                        $("#length").val(json['length']);
+                                                        $("#hdnlength").val(json['thickness']);
+                                                        $("#service_type").val(json['service_type']);
+                                                        $("#hdnservice").val(json['service_type']);
+                                                    },
+                                                    error: function (xhr, ajaxOptions, thrownError) {
+                                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                                    }
+                                                });
+
+                                            }
+
+                                            $(document).ready(function () {
+
+                                                $('#data_1 .input-group.date').datepicker({
+                                                    todayBtn: "linked",
+                                                    keyboardNavigation: false,
+                                                    forceParse: false,
+                                                    calendarWeeks: true,
+                                                    autoclose: true,
+                                                    format: "yyyy-mm-dd"
+                                                });
+
                                             });
 
-                                        }
-</script>
-<script>
-    $(document).ready(function () {
+                                            $('#coil_no').chosen({width: "100%"});
 
-        $('#data_1 .input-group.date').datepicker({
-            todayBtn: "linked",
-            keyboardNavigation: false,
-            forceParse: false,
-            calendarWeeks: true,
-            autoclose: true,
-            format: "yyyy-mm-dd"
-        });
+                                            function calculatePieces()
+                                            {
+                                                var order_id = $('#hdnOrderId').val();
 
-    });
+                                                $.ajax({
+                                                    url: 'index.php?url=sale/outward/getPieces&member_token=' + getURLVar('member_token'),
+                                                    dataType: 'json',
+                                                    type: 'POST',
+                                                    data: 'order_id=' + order_id,
+                                                    beforeSend: function () {
 
-    $('#coil_no').chosen({width: "100%"});
+                                                    },
+                                                    complete: function () {
 
+                                                    },
+                                                    success: function (json) {
+                                                        var rempieces = json['pieces'];
 
+                                                        var cuttingpieces = parseInt($('#pieces').val());
+
+                                                        var pieceDiff = parseInt(rempieces) - parseInt(cuttingpieces);
+                                                        if (pieceDiff < -1) {
+                                                            $('#pieces').css('border-color', 'red');
+                                                            $('#piecesLimit').show();
+                                                            $('#showCloseDiv').hide();
+                                                            document.getElementById("submitForm").disabled = true;
+
+                                                        } else {
+                                                            $('#pieces').css('border-color', '');
+                                                            $('#piecesLimit').hide();
+                                                            $('#showCloseDiv').hide();
+                                                            document.getElementById("submitForm").disabled = false;
+                                                        }
+
+                                                        if (pieceDiff <= 0 && pieceDiff > -2) {
+                                                            $('#showCloseDiv').show();
+                                                            $('#piecesLimit').hide();
+                                                        }
+                                                    },
+                                                    error: function (xhr, ajaxOptions, thrownError) {
+
+                                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                                    }
+                                                });
+                                            }
+
+                                            function calculateGrossWt()
+                                            {
+                                                var coil_no = $('#coil_no').val();
+
+                                                $.ajax({
+                                                    url: 'index.php?url=sale/outward/getRemGrossWeight&member_token=' + getURLVar('member_token'),
+                                                    dataType: 'json',
+                                                    type: 'POST',
+                                                    data: 'coil_no=' + coil_no,
+                                                    beforeSend: function () {
+
+                                                    },
+                                                    complete: function () {
+
+                                                    },
+                                                    success: function (json) {
+                                                        var remainingGRWt = parseInt(json['gross_weight']);
+                                                        var grossWeight = parseInt($('#gross_weight').val());
+                                                        var thickness = $('#thickness').val();
+                                                        var width = $('#width').val();
+                                                        var cuttinglength = $('#length').val();
+                                                        var cuttingpieces = $('#pieces').val();
+                                                        var lowerLimit = parseInt(remainingGRWt - 500);
+                                                        var upperLimit = parseInt(remainingGRWt + 500);
+                                                        if (grossWeight > upperLimit)
+                                                        {
+                                                            $('#gross_weight').css('border-color', 'red');
+                                                            $('#errorLimit').show();
+                                                            document.getElementById("submitForm").disabled = true;
+
+                                                        } else {
+                                                            $('#gross_weight').css('border-color', '');
+                                                            $('#errorLimit').hide();
+                                                            document.getElementById("submitForm").disabled = false;
+                                                        }
+                                                    },
+                                                    error: function (xhr, ajaxOptions, thrownError) {
+
+                                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                                    }
+                                                });
+                                            }
 </script>

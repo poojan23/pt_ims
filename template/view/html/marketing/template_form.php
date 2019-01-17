@@ -1,67 +1,63 @@
 <?php echo $header; ?>
 <?php echo $nav; ?>
-<div class="main-content">
-    <div class="main-content-inner">
-        <div class="breadcrumbs ace-save-state breadcrumbs-fixed" id="breadcrumbs">
-            <ul class="breadcrumb">
-                <?php for($i = 0; $i < count($breadcrumbs); $i++) : ?>
-                    <?php if($i != (count($breadcrumbs) - 1)) : ?>
-                        <?php if($i == 0) : ?>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2><?php echo $header_title; ?></h2>
+        <ol class="breadcrumb">
+            <?php for ($i = 0; $i < count($breadcrumbs); $i++) : ?>
+                <?php if ($i != (count($breadcrumbs) - 1)) : ?>
+                    <?php if ($i == 0) : ?>
                         <li>
                             <i class="ace-icon fa fa-home home-icon"></i>
                             <a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
                         </li>
-                        <?php else : ?>
+                    <?php else : ?>
                         <li>
                             <a href="<?php echo $breadcrumbs[$i]['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
                         </li>
-                        <?php endif; ?>
-                    <?php else : ?>
-                    <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
                     <?php endif; ?>
-                <?php endfor; ?>               
-            </ul><!-- /.breadcrumb -->
+                <?php else : ?>
+                    <li class="active"><?php echo $breadcrumbs[$i]['text']; ?></li>
+                <?php endif; ?>
+            <?php endfor; ?>         
+        </ol>
+    </div>
+    <div class="col-lg-2">
 
-            <div class="nav-search" id="nav-search">
-                <form class="form-search">
-                    <span class="input-icon">
-                        <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                        <i class="ace-icon fa fa-search nav-search-icon"></i>
-                    </span>
-                </form>
-            </div><!-- /.nav-search -->
-        </div>
-
-        <div id="content" class="page-content">
-            <div class="page-header">
-                <h1 class="pull-left">
-                    <?php echo $heading_title; ?>
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="ibox float-e-margins">
+        <div id="content" class="ibox-content">
+            <div class="">
+<!--                <h1 class="pull-left">
+                    <?php echo $text_title; ?>
                     <small>
                         <i class="ace-icon fa fa-angle-double-right"></i>
-                        <?php echo $text_form; ?>
+                        <?php echo $text_title; ?>
                     </small>
-                </h1>
-                <div class="text-right">
-                    <button type="submit" form="form-template" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-floppy-o"></i></button>
-                    <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
+                </h1>-->
+                <div class="">
+                   
+                    <div class="ibox-tools">
+                        <div class="text-right">
+                            <button type="submit" form="form-template" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-envelope-o"></i></button>
+                            <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
+                        </div>
+                    </div>
+
                 </div>
             </div><!-- /.page-header -->
-            <?php if($warning_err) : ?>
-            <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> <?php echo $warning_err; ?>
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-            </div>
-            <?php endif; ?>
-
             <div class="alert-box"></div>
-            <div class="row">
+             <div class="row">
                 <div class="col-xs-12">
                     <!-- PAGE CONTENT BEGINS -->
                     <form id="form-template" class="form-horizontal" action="<?php echo $action; ?>" method="POST" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="widget-box">
-                                <div class="widget-header">
+<!--                                <div class="widget-header">
                                     <h4 class="widget-title"><i class="ace-icon fa fa-envelope"></i> <?php echo $text_form; ?></h4>
-                                </div>
+                                </div>-->
 
                                 <div class="widget-body">
                                     <div class="widget-main">
@@ -154,9 +150,11 @@
                     </form><!-- PAGE CONTENT ENDS -->
                 </div><!-- /.col -->
             </div><!-- /.row -->
+            
         </div><!-- /.page-content -->
     </div>
-</div>
+</div><!-- /.main-content -->
+
 <?php echo $footer; ?>
 <script type="text/javascript">
     $('textarea[data-toggle=\'ckeditor\']').ckeditor();

@@ -152,6 +152,24 @@ class ModelSaleOutward extends Model {
 
         return $query->rows;
     }
+    
+    public function getPieces($order_id) {
+        $query = $this->db->query("SELECT max(order_weight_id) as order_weight_id FROM " . DB_PREFIX . "order_weight WHERE order_id = '" .(int) $order_id . "'");
+        
+        $pieces = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_weight WHERE order_weight_id = '" .(int) $query->row['order_weight_id'] . "'");
+        
+        return $pieces->row;
+    }
+    
+    public function getRemGrossWeight($coil_no) {
+        $inward_id = $this->db->query("SELECT inward_id FROM " . DB_PREFIX . "inward WHERE coil_no = '" . $coil_no . "'");
+        
+        $query = $this->db->query("SELECT  max(inward_weight_id) as inward_weight_id  FROM " . DB_PREFIX . "inward_weight WHERE inward_id = '" .(int) $inward_id->row['inward_id'] . "'");
+        
+        $gross_weight = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" .(int) $query->row['inward_weight_id'] . "'");
+        
+        return $gross_weight->row;
+    }
 
     public function getOutwardDetailsByOrderNo($order_no) {
         $query = $this->db->query("SELECT o.*,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code FROM " . DB_PREFIX . "order o "
