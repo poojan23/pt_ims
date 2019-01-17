@@ -112,13 +112,13 @@ class ControllerUserProfile extends Controller
             $data['lastname'] = '';
         }
 
-        if(isset($this->request->post['designation'])) {
-            $data['designation'] = $this->request->post['designation'];
-        } elseif(!empty($member_info)) {
-            $data['designation'] = $member_info['designation'];
-        } else {
-            $data['designation'] = '';
-        }
+//        if(isset($this->request->post['designation'])) {
+//            $data['designation'] = $this->request->post['designation'];
+//        } elseif(!empty($member_info)) {
+//            $data['designation'] = $member_info['designation'];
+//        } else {
+//            $data['designation'] = '';
+//        }
 
         if(isset($this->request->post['gender'])) {
             $data['gender'] = $this->request->post['gender'];
@@ -128,21 +128,21 @@ class ControllerUserProfile extends Controller
             $data['gender'] = 'm';
         }
 
-        if(isset($this->request->post['birthdate'])) {
-            $data['birthdate'] = $this->request->post['birthdate'];
-        } elseif(!empty($member_info)) {
-            $data['birthdate'] = ($member_info['birthdate'] != '0000-00-00') ? $member_info['birthdate'] : '';
-        } else {
-            $data['birthdate'] = '';
-        }
-
-        if(isset($this->request->post['anniversary'])) {
-            $data['anniversary'] = $this->request->post['anniversary'];
-        } elseif(!empty($member_info)) {
-            $data['anniversary'] = ($member_info['anniversary'] != '0000-00-00') ? $member_info['anniversary'] : '';
-        } else {
-            $data['anniversary'] = '';
-        }
+//        if(isset($this->request->post['birthdate'])) {
+//            $data['birthdate'] = $this->request->post['birthdate'];
+//        } elseif(!empty($member_info)) {
+//            $data['birthdate'] = ($member_info['birthdate'] != '0000-00-00') ? $member_info['birthdate'] : '';
+//        } else {
+//            $data['birthdate'] = '';
+//        }
+//
+//        if(isset($this->request->post['anniversary'])) {
+//            $data['anniversary'] = $this->request->post['anniversary'];
+//        } elseif(!empty($member_info)) {
+//            $data['anniversary'] = ($member_info['anniversary'] != '0000-00-00') ? $member_info['anniversary'] : '';
+//        } else {
+//            $data['anniversary'] = '';
+//        }
 
         if(isset($this->request->post['email'])) {
             $data['email'] = $this->request->post['email'];
@@ -160,12 +160,12 @@ class ControllerUserProfile extends Controller
             $data['telephone'] = '';
         }
 
-        if(isset($this->request->post['fax'])) {
-            $data['fax'] = $this->request->post['fax'];
+        if(isset($this->request->post['mobile'])) {
+            $data['mobile'] = $this->request->post['mobile'];
         } elseif(!empty($member_info)) {
-            $data['fax'] = $member_info['fax'];
+            $data['mobile'] = $member_info['mobile'];
         } else {
-            $data['fax'] = '';
+            $data['mobile'] = '';
         }
 
         if(isset($this->request->post['password'])) {

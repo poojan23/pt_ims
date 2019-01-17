@@ -9,7 +9,7 @@
                         <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $firstname; ?> <?php echo $lastname; ?></strong>
                             </span> <span class="text-muted text-xs block"><?php echo $member_group; ?> <b class="caret"></b></span> </span> </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="index.php?url=user/profile&member_token=lREg2yXoC7AvxcZIeLqb7731FQrO2PgR">Profile</a></li>
                         <li><a href="<?php echo $logout; ?>">Logout</a></li>
                         <!--<li><a href="mailbox.html">Mailbox</a></li>-->
 <!--                        <li class="divider"></li>
