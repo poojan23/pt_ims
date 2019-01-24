@@ -112,7 +112,7 @@
                             <div class="hr-line-dashed"></div>
 
                             <div class="form-group"><label class="col-sm-2 control-label">' . $label_net_wt . '</label>
-                                <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" value=' . $net_weight . ' id="netWeight" readonly=""></div>
+                                <div class="col-sm-10"><input type="text" class="form-control" name="net_weight" value=' . $net_weight . ' id="net_weight" readonly=""></div>
                             </div>';
                         } else {
 
@@ -212,7 +212,7 @@
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_net_wt; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="netWeight" id="netWeight" readonly=""></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="net_weight" id="net_weight" readonly=""></div>
                     </div>
                      <div class="hr-line-dashed"></div>
                      
@@ -223,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="hidden" id="hdnInwardId" name="hdnInwardId">
+                <input type="hidden" id="hdnInwardId" name="hdnInwardId" value="<?php $hdnInwardId; ?>">
                 <input type="hidden" id="hdnInwardWeightId" name="hdnInwardWeightId">
                 <input type="hidden" id="hdnthickness" name="hdnthickness">
                 <input type="hidden" id="hdnwidth" name="hdnwidth">
@@ -260,6 +260,7 @@
 
                                 $('select[name=\'coil_no\']').on('change', function () {
                                     var $this = $(this).val();
+                                  
                                     $('#showDetails').hide();
                                     $.ajax({
                                         url: 'index.php?url=sale/order/getOrderDetailsByCoilNo&member_token=' + getURLVar('member_token'),
@@ -298,7 +299,9 @@
 
                                 function calculateWt()
                                 {
-                                    var inward_id = $('#hdnInwardId').val();
+                          
+                                    var hdnInwardId = $('#hdnInwardId').val();
+                                              alert(hdnInwardId);
                                     var thickness = $('#thickness').val();
                                     var width = $('#width').val();
                                     var cuttinglength = $('#length').val();
@@ -324,7 +327,7 @@
                                         url: 'index.php?url=sale/order/getNetWeight&member_token=' + getURLVar('member_token'),
                                         dataType: 'json',
                                         type: 'POST',
-                                        data: 'inward_id=' + inward_id,
+                                        data: 'hdnInwardId=' + hdnInwardId,
                                         beforeSend: function () {
 //                                            $('#showDetails').hide();
                                         },
@@ -338,12 +341,12 @@
                                             var upperLimit = parseInt(remainingNetWt) + parseInt(500);
                                             if (net_Weight >= upperLimit)
                                             {
-                                                $('#netWeight').css('border-color', 'red');
+                                                $('#net_weight').css('border-color', 'red');
                                                 $('#errorLimit').show();
                                                 document.getElementById("submitForm").disabled = true;
 
                                             } else {
-                                                $('#netWeight').css('border-color', '');
+                                                $('#net_weight').css('border-color', '');
                                                 $('#errorLimit').hide();
                                                 $('#showCloseDiv').hide();
                                                 $("#closed").val('0');
@@ -370,7 +373,7 @@
 
 
 
-                                    $('#netWeight').val(net_Weight);
+                                    $('#net_weight').val(net_Weight);
                                 }
 </script>
 <script>

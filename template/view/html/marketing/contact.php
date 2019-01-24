@@ -41,8 +41,8 @@
                    
                     <div class="ibox-tools">
                         <div class="text-right">
-                            <button type="submit" form="form-product" class="btn btn-white btn-info btn-bold" data-toggle="tooltip" title="<?php echo $button_save; ?>"><i class="ace-icon fa fa-envelope-o"></i></button>
-                            <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
+                           <button id="button-send" class="btn btn-white btn-info btn-bold" onclick="send('index.php?url=marketing/contact/send&member_token=<?php echo $member_token; ?>');" data-loading-text="<?php echo $text_loading; ?>" data-toggle="tooltip" title="<?php echo $button_send; ?>"><i class="ace-icon fa fa-envelope-o"></i></button>
+                           <a href="<?php echo $cancel; ?>" class="btn btn-white btn-light btn-bold" data-toggle="tooltip" title="<?php echo $button_cancel; ?>"><i class="ace-icon fa fa-reply"></i></a>
                         </div>
                     </div>
 

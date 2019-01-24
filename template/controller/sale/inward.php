@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 class ControllerSaleInward extends Controller {
 
     private $error = array();

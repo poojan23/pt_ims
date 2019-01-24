@@ -139,6 +139,12 @@ class ModelSaleInward extends Model {
 
         return $query->row;
     }
+
+    public function getAllCoilNo() {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward WHERE closed = '0'");
+
+        return $query->rows;
+    }
     
     public function getproductType($product_type) {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_type WHERE product_type_id = '" . (int)($product_type) . "'");

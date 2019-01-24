@@ -328,6 +328,7 @@
 <script type="text/javascript">
                                             $('select[name=\'coil_no\']').on('change', function () {
                                                 var $this = $(this).val();
+                                           
                                                 $.ajax({
                                                     url: 'index.php?url=sale/outward/getOrderNosByCoilNo&member_token=' + getURLVar('member_token'),
                                                     dataType: 'json',
@@ -452,11 +453,13 @@
                                                             $('#pieces').css('border-color', '');
                                                             $('#piecesLimit').hide();
                                                             $('#showCloseDiv').hide();
+                                                            $("#closed").val('0');
                                                             document.getElementById("submitForm").disabled = false;
                                                         }
 
                                                         if (pieceDiff <= 0 && pieceDiff > -2) {
                                                             $('#showCloseDiv').show();
+                                                            $("#closed").val('1');
                                                             $('#piecesLimit').hide();
                                                         }
                                                     },

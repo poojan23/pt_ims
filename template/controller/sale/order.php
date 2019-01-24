@@ -299,11 +299,19 @@ class ControllerSaleOrder extends Controller {
             $data['service_type'] = '';
         }
         
+        if (isset($this->request->post['hdnInwardId'])) {
+            $data['hdnInwardId'] = $this->request->post['hdnInwardId'];
+        } elseif (!empty($order_info)) {
+            $data['hdnInwardId'] = $order_info['hdnInwardId'];
+        } else {
+            $data['hdnInwardId'] = '';
+        }
+        
        
 
         $this->load->model('sale/inward');
 
-        $data['coil_nos'] = $this->model_sale_inward->getInwards();
+        $data['coil_nos'] = $this->model_sale_inward->getAllCoilNo();
 //         print_r($data['coil_nos']);exit;
         if (isset($this->request->post['coil_no'])) {
             $data['coil_no'] = $this->request->post['coil_no'];
@@ -342,6 +350,7 @@ class ControllerSaleOrder extends Controller {
         $this->load->model('sale/order');
 
         $results = $this->model_sale_order->getOrderDetailsByCoilNo($coil_no);
+     
         $json = array(
             'inward_id' => $results['inward_id'],
             'net_weight' => $results['net_weight'],
@@ -356,6 +365,8 @@ class ControllerSaleOrder extends Controller {
             'width' => $results['width'],
             'closed' => $results['closed']
         );
+       
+        
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
     }
@@ -363,8 +374,8 @@ class ControllerSaleOrder extends Controller {
     public function getNetWeight() {
         $json = array();
 
-        if (isset($this->request->post['inward_id'])) {
-            $inward_id = $this->request->post['inward_id'];
+        if (isset($this->request->post['hdnInwardId'])) {
+            $inward_id = $this->request->post['hdnInwardId'];
         } else {
             $inward_id = 0;
         }
@@ -372,7 +383,7 @@ class ControllerSaleOrder extends Controller {
         $this->load->model('sale/order');
 
         $results = $this->model_sale_order->getNetWeight($inward_id);
-       
+//        print_r($results);exit;
         $json = array(
             'net_weight' => $results['net_weight'],
         );

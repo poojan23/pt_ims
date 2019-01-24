@@ -98,9 +98,9 @@ class ControllerMarketingContact extends Controller
                         );
 
                         $email_total = $this->model_customer_customer->getTotalCustomers($customer_data);
-
+                        
                         $results = $this->model_customer_customer->getCustomers($customer_data);
-
+                        
                         foreach($results as $result) {
                             $emails[] = $result['email'];
                             $inputs[$result['customer_id']][] = $result['firstname'] . ' ' . $result['lastname'];
@@ -108,10 +108,11 @@ class ControllerMarketingContact extends Controller
                             $inputs[$result['customer_id']][] = $result['lastname'];
                             $inputs[$result['customer_id']][] = $result['email'];
                             $inputs[$result['customer_id']][] = $result['telephone'];
-                            $inputs[$result['customer_id']][] = $result['fax'];
+                            $inputs[$result['customer_id']][] = $result['mobile'];
                         }
+                        print_r($inputs);exit;
                         break;
-
+                        
                     case 'customer_all':
                         # code...
                         $customer_data = array(
@@ -130,7 +131,7 @@ class ControllerMarketingContact extends Controller
                             $inputs[$result['customer_id']][] = $result['lastname'];
                             $inputs[$result['customer_id']][] = $result['email'];
                             $inputs[$result['customer_id']][] = $result['telephone'];
-                            $inputs[$result['customer_id']][] = $result['fax'];
+                            $inputs[$result['customer_id']][] = $result['mobile'];
                         }
                         break;
 
@@ -153,7 +154,7 @@ class ControllerMarketingContact extends Controller
                             $inputs[$result['customer_id']][] = $result['lastname'];
                             $inputs[$result['customer_id']][] = $result['email'];
                             $inputs[$result['customer_id']][] = $result['telephone'];
-                            $inputs[$result['customer_id']][] = $result['fax'];
+                            $inputs[$result['customer_id']][] = $result['mobile'];
                         }
                         break;
 
@@ -170,7 +171,7 @@ class ControllerMarketingContact extends Controller
                                     $inputs[$customer_info['customer_id']][] = $customer_info['lastname'];
                                     $inputs[$customer_info['customer_id']][] = $customer_info['email'];
                                     $inputs[$customer_info['customer_id']][] = $customer_info['telephone'];
-                                    $inputs[$customer_info['customer_id']][] = $customer_info['fax'];
+                                    $inputs[$customer_info['customer_id']][] = $customer_info['mobile'];
                                 }
                             }
 
@@ -190,7 +191,7 @@ class ControllerMarketingContact extends Controller
                                 $inputs[$customer_info['customer_id']][] = $customer_info['lastname'];
                                 $inputs[$customer_info['customer_id']][] = $customer_info['email'];
                                 $inputs[$customer_info['customer_id']][] = $customer_info['telephone'];
-                                $inputs[$customer_info['customer_id']][] = $customer_info['fax'];
+                                $inputs[$customer_info['customer_id']][] = $customer_info['mobile'];
                             
 
                                 if(!empty($this->request->post['files'])) {
@@ -228,7 +229,7 @@ class ControllerMarketingContact extends Controller
                     $string = html_entity_decode($this->request->post['message'], ENT_QUOTES, 'UTF-8');
 
                     $strings = array();
-
+                    
                     foreach($inputs as $input) {
                         $input = array_combine($keys, $input);
 
@@ -240,7 +241,7 @@ class ControllerMarketingContact extends Controller
 
                         $strings[] = $userMessage;
                     }
-
+                    
                     for($i = 0; $i < count($strings); $i++) {
                         $uniq_id = uniqid();
 

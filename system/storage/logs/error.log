@@ -5833,3 +5833,513 @@
 2019-Jan-17 09:48:16 - PHP Notice: Undefined index: member_role_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\user\user.php on line 21
 2019-Jan-17 09:48:16 - PHP Notice: Undefined index: gender in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\profile.php on line 126
 2019-Jan-17 09:48:16 - PHP Notice: Undefined variable: designation in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\profile.php on line 160
+2019-Jan-18 04:50:17 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-18 04:50:17 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-18 04:50:17 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-21 04:48:02 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-21 04:48:02 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-21 04:48:02 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-21 05:00:47 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:00:47 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\php5725.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:27 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:06:31 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:23 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:24 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:07:25 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:07:39 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:07:39 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:07:39 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:07:39 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:07:40 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:07:41 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:07:42 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:07:43 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:08:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:08:54 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:08:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:08:54 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:08:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:08:54 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:08:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:08:54 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:08:55 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:08:56 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:08:57 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:08:58 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:10:43 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:43 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:43 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:43 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:43 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:43 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:43 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:43 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:44 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:10:45 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:10:46 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:10:47 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:10:55 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:10:55 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\php9FEB.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:10:58 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:58 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:58 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:58 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:10:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:10:59 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:11:00 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:11:01 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:11:02 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:29:37 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:37 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:37 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:37 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:45 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:29:45 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\phpDD6F.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:29:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:29:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 156
+2019-Jan-21 05:30:54 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:30:54 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\phpEC9E.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:31:42 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:31:42 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\phpA4C4.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:33:09 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:33:09 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\phpFAFE.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:33:11 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:11 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:33:11 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:11 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:33:11 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:11 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:33:11 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:11 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 237
+2019-Jan-21 05:33:53 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:33:53 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\phpA5C6.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:33:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:33:54 - PHP Warning: array_combine(): Both parameters should have an equal number of elements in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 233
+2019-Jan-21 05:35:17 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:35:18 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:35:19 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:35:20 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:40:42 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:40:43 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:40:44 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:40:45 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:44:48 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:44:49 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:44:50 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:44:51 - PHP Warning: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\ATDI\LMS\htdocs\pt_ims\system\library\mail\mail.php on line 78
+2019-Jan-21 05:45:40 - PHP Warning: move_uploaded_file(C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png): failed to open stream: No such file or directory in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:45:40 - PHP Warning: move_uploaded_file(): Unable to move 'C:\Windows\Temp\php71E0.tmp' to 'C:\ATDI\LMS\htdocs\pt_ims\system\storage/download\temp/Dashboard desktop.png' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 438
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:41 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:43 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:48:46 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:48:53 - PHP Notice: Undefined index: success in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 299
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:07 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:08 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:19 - PHP Notice: Undefined index: success in C:\ATDI\LMS\htdocs\pt_ims\template\controller\marketing\contact.php on line 299
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:45 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:49:47 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: customer_group in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 797
+2019-Jan-21 05:50:00 - PHP Notice: Undefined index: fax in C:\ATDI\LMS\htdocs\pt_ims\template\controller\customer\customer.php on line 802
+2019-Jan-23 05:57:10 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-23 05:57:10 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-23 05:57:10 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-23 06:32:11 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:32:49 - PHP Notice: Undefined variable: closed in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 295
+2019-Jan-23 06:35:27 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 06:35:27 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 06:35:53 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:36:59 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:42:05 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:43:06 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:44:35 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 06:44:35 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 06:45:36 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:46:14 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:53:03 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 06:53:03 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 06:54:15 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:54:47 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:56:34 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 06:56:34 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 06:57:01 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 06:57:31 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 07:02:10 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 8
+2019-Jan-23 08:59:42 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 08:59:42 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:04:06 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 09:04:06 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:04:33 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 09:04:33 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:05:38 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 13
+2019-Jan-23 09:05:38 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 56
+2019-Jan-23 09:07:02 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 13
+2019-Jan-23 09:07:02 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 56
+2019-Jan-23 09:08:01 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 13
+2019-Jan-23 09:08:56 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 13
+2019-Jan-23 09:10:13 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 09:10:13 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:10:34 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 09:10:34 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:17:17 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 09:17:17 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:17:23 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 142
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:19:03 - PHP Warning: Illegal string offset 'coil_no' in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\order_form.php on line 145
+2019-Jan-23 09:21:37 - PHP Notice: Undefined variable: closed in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 295
+2019-Jan-23 09:25:58 - PHP Notice: Undefined variable: closed in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 295
+2019-Jan-23 09:33:19 - PHP Notice: Undefined variable: closed in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 295
+2019-Jan-23 09:44:12 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 09:44:12 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 09:44:48 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-23 09:44:56 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-23 09:49:59 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-23 10:41:13 - PHP Notice: Undefined variable: query2 in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 106
+2019-Jan-23 10:41:13 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 106
+2019-Jan-23 10:41:13 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 10:41:59 - PHP Notice: Undefined variable: query2 in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 106
+2019-Jan-23 10:41:59 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 106
+2019-Jan-23 10:41:59 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 10:42:22 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 10:45:05 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 10:45:05 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 10:45:43 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 10:47:45 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 10:53:11 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 11:09:38 - PHP Notice: Undefined variable: query2 in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 111
+2019-Jan-23 11:10:08 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 112
+2019-Jan-23 11:10:31 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 114
+2019-Jan-23 11:10:31 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 114
+2019-Jan-23 11:10:47 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 112
+2019-Jan-23 11:10:58 - PHP Notice: Trying to get property of non-object in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 112
+2019-Jan-23 11:10:58 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 11:12:33 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 11:14:17 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 11:16:26 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 11:16:28 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 11:17:25 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 11:17:25 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 11:17:45 - PHP Warning: Invalid argument supplied for foreach() in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\sale\outward_form.php on line 177
+2019-Jan-23 12:50:04 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-23 12:50:04 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-23 12:52:42 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-23 12:52:42 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-23 12:52:42 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-23 12:52:53 - PHP Notice: Use of undefined constant HTTPS_SERVER - assumed 'HTTPS_SERVER' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 19
+2019-Jan-23 12:52:56 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-23 12:52:56 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-23 12:52:56 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-23 12:53:35 - PHP Notice: Undefined index: gender in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\profile.php on line 126
+2019-Jan-23 12:53:35 - PHP Notice: Undefined variable: designation in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\profile.php on line 160
+2019-Jan-23 13:03:00 - PHP Notice: Undefined index: email in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 87
+2019-Jan-23 13:03:00 - PHP Notice: Undefined index: email in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 97
+2019-Jan-23 13:03:00 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-23 13:03:00 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-23 13:03:00 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-23 13:03:06 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-23 13:03:06 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-23 13:03:06 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-23 13:03:11 - PHP Notice: Use of undefined constant HTTPS_SERVER - assumed 'HTTPS_SERVER' in C:\ATDI\LMS\htdocs\pt_ims\template\controller\user\login.php on line 19
+2019-Jan-24 04:59:59 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-24 04:59:59 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-24 04:59:59 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44
+2019-Jan-24 06:36:52 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-24 06:36:52 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-24 06:37:30 - PHP Notice: Undefined property: Language::$get in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 45
+2019-Jan-24 06:37:57 - PHP Notice: Undefined property: Language::$get in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 45
+2019-Jan-24 06:40:42 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-24 06:40:42 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-24 06:41:06 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 441
+2019-Jan-24 06:41:06 - PHP Notice: Undefined index: hdnproductType in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\inward.php on line 451
+2019-Jan-24 06:43:45 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:45:26 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:46:02 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:46:14 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:46:18 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:46:41 - PHP Notice: Undefined variable: order_id in C:\ATDI\LMS\htdocs\pt_ims\template\model\sale\order.php on line 56
+2019-Jan-24 06:47:04 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:47:12 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:48:55 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:51:01 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:51:06 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:51:06 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:51:15 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:51:18 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:53:52 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 377
+2019-Jan-24 06:54:49 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 378
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 347
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 348
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 349
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 350
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 351
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 352
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 353
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 354
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 355
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 356
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 357
+2019-Jan-24 06:56:15 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 358
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 347
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 348
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 349
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 350
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 351
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 352
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 353
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 354
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 355
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 356
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 357
+2019-Jan-24 06:57:42 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 358
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: inward_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 347
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 348
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: gross_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 349
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: inward_weight_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 350
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: customer_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 351
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: customer_name in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 352
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: product_id in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 353
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: product_code in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 354
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: product_type in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 355
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: thickness in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 356
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: width in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 357
+2019-Jan-24 06:58:36 - PHP Notice: Undefined index: closed in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 358
+2019-Jan-24 07:08:04 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 380
+2019-Jan-24 07:08:10 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 380
+2019-Jan-24 07:09:05 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 380
+2019-Jan-24 07:11:57 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 388
+2019-Jan-24 07:12:17 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 388
+2019-Jan-24 07:14:55 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 388
+2019-Jan-24 07:15:14 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 388
+2019-Jan-24 07:16:54 - PHP Notice: Undefined index: net_weight in C:\ATDI\LMS\htdocs\pt_ims\template\controller\sale\order.php on line 388
+2019-Jan-24 08:26:48 - PHP Notice: Undefined variable: email_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 33
+2019-Jan-24 08:26:48 - PHP Notice: Undefined variable: password_err in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 38
+2019-Jan-24 08:26:48 - PHP Notice: Undefined variable: entry_remember in C:\ATDI\LMS\htdocs\pt_ims\template\view\html\user\login.php on line 44

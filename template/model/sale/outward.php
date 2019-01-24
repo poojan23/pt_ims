@@ -4,18 +4,21 @@ class ModelSaleOutward extends Model {
 
     public function addOutward($data) {
         $outward_info = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE order_no = '" . (string) $data['order_no'] . "'");
-
+        
+        $this->db->query("UPDATE " . DB_PREFIX . "order SET   `closed` = '" . (isset($data['closed']) ? $data['closed'] : 0) . "'  WHERE order_no = '" . (string) $data['order_no'] . "'");
+         
         if ($outward_info->num_rows) {
-            $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_weight WHERE order_id = '" . (int) $outward_info->row['order_id'] . "'");
-
+             $query1 = $this->db->query("SELECT max(order_weight_id) as order_weight_id FROM " . DB_PREFIX . "order_weight WHERE order_id = '" . (int) $outward_info->row['order_id'] . "'");
+             
+            $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_weight WHERE order_weight_id = '" . (int) $query1->row['order_weight_id'] . "'");
             if ($query->row) {
-                $this->db->query("UPDATE " . DB_PREFIX . "order_weight SET delivery_date = '" . $data['delivery_date'] . "' WHERE order_no = '" . (string) $data['order_no'] . "'");
+//                $this->db->query("UPDATE " . DB_PREFIX . "order_weight SET delivery_date = '" . $data['delivery_date'] . "' WHERE order_no = '" . (string) $data['order_no'] . "'");
 
                 $inward_info = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward_weight WHERE inward_weight_id = '" . $outward_info->row['inward_weight_id'] . "'");
 
                 $this->db->query("UPDATE " . DB_PREFIX . "inward_weight SET gross_weight = '" . ($inward_info->row['gross_weight'] - $data['gross_weight']) . "' WHERE inward_weight_id = '" . $outward_info->row['inward_weight_id'] . "'");
 
-                $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET order_id = '" . (int) $data['hdnOrderId'] . "',order_no = '" . $data['order_no'] . "',date_added='" . $data['delivery_date'] . "',delivery_date='" . $data['delivery_date'] . "', net_weight = '" . $query->row['net_weight'] . "',pieces='" . ($query->row['pieces'] - $data['pieces']) . "'");
+                $this->db->query("INSERT INTO " . DB_PREFIX . "order_weight SET order_id = '" . (int) $data['hdnOrderId'] . "',order_no = '" . $data['order_no'] . "',date_added='" . $query->row['delivery_date'] . "',delivery_date='" . $data['delivery_date'] . "', net_weight = '" . $query->row['net_weight'] . "',pieces='" . ($query->row['pieces'] - $data['pieces']) . "'");
 
                 $order_weight_id = $this->db->lastInsertId();
 
@@ -42,7 +45,7 @@ class ModelSaleOutward extends Model {
                 $delivery_id = $this->db->lastInsertId();
             }
         }
-
+ 
         return $delivery_id;
     }
 
@@ -148,7 +151,7 @@ class ModelSaleOutward extends Model {
     }
 
     public function getOrderNosByCoilNo($coil_no) {
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE coil_no = '" . $coil_no . "'");
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order WHERE coil_no = '" . $coil_no . "' AND closed= '0'");
 
         return $query->rows;
     }

@@ -339,7 +339,14 @@ class ControllerSaleOutward extends Controller {
         } else {
             $data['coil_no'] = '';
         }
-
+        if (isset($this->request->post['closed'])) {
+            $data['closed'] = $this->request->post['closed'];
+        } elseif (!empty($order_info)) {
+            $data['closed'] = $order_info['closed'];
+        } else {
+            $data['closed'] = '';
+        }
+        
         if (isset($this->request->post['packaging'])) {
             $data['packaging'] = $this->request->post['packaging'];
         } elseif (!empty($outward_info)) {
