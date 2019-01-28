@@ -29,3 +29,4 @@ $_['text_transfer_inward']  = 'Transfer Inward';
 $_['text_director_report']  = 'Director Report';
 $_['text_outward_summary']  = 'Outward';
 $_['text_monthly_report']   = 'Summary';
+$_['text_stock_balance']    = 'Stock Balance';

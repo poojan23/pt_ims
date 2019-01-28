@@ -196,6 +196,18 @@ class ControllerCustomerCustomer extends Controller {
             $data['mobile_err'] = '';
         }
 
+        if (isset($this->error['gst'])) {
+            $data['gst_err'] = $this->error['gst'];
+        } else {
+            $data['gst_err'] = '';
+        }
+
+        if (isset($this->error['closing_gross_weight'])) {
+            $data['closing_err'] = $this->error['closing_gross_weight'];
+        } else {
+            $data['closing_err'] = '';
+        }
+
         if (isset($this->error['address'])) {
             $data['address_err'] = $this->error['address'];
         } else {
@@ -286,6 +298,23 @@ class ControllerCustomerCustomer extends Controller {
             $data['mobile'] = '';
         }
 
+        if (isset($this->request->post['gst'])) {
+            $data['gst'] = $this->request->post['gst'];
+        } elseif (!empty($customer_info)) {
+            $data['gst'] = $customer_info['gst'];
+        } else {
+            $data['gst'] = '';
+        }
+
+        if (isset($this->request->post['closing_gross_weight'])) {
+            $data['closing_gross_weight'] = $this->request->post['closing_gross_weight'];
+        } elseif (!empty($customer_info)) {
+            $data['closing_gross_weight'] = $customer_info['closing_gross_weight'];
+        } else {
+            $data['closing_gross_weight'] = '';
+        }
+      
+
         if (isset($this->request->post['newsletter'])) {
             $data['newsletter'] = $this->request->post['newsletter'];
         } elseif (!empty($customer_info)) {
@@ -349,7 +378,14 @@ class ControllerCustomerCustomer extends Controller {
         if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
             $this->error['email'] = $this->language->get('error_email');
         }
-
+        
+        if ((utf8_strlen($this->request->post['gst']) < 1) || (utf8_strlen(trim($this->request->post['firstname']) > 12))) {
+            $this->error['gst'] = $this->language->get('error_gst');
+        }
+        
+        if (($this->request->post['closing_gross_weight'] == '')) {
+            $this->error['closing_gross_weight'] = $this->language->get('error_closing');
+        }
         $customer_info = $this->model_customer_customer->getCustomerByEmail($this->request->post['email']);
 
         if (!isset($this->request->get['customer_id'])) {

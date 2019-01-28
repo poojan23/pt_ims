@@ -69,6 +69,8 @@ $_['entry_comment']         = 'Comment';
 $_['entry_download_name']   = 'Download Name';
 $_['entry_filename']        = 'Filename';
 $_['entry_mask']            = 'Mask';
+$_['entry_gst']             = 'GST No.';
+$_['entry_closing']         = 'Closing balance';
 $_['entry_customer_group']  = 'Select Customer Group';
 
 # Button
@@ -97,3 +99,5 @@ $_['error_filename']        = 'Filename must be between 3 and 128 characters!';
 $_['error_exists']          = 'File does not exist!';
 $_['error_mask']            = 'Mask must be between 3 and 128 characters!';
 $_['error_filetype']        = 'Invalid file type!';
+$_['error_gst']             = 'GST No. must be 12 characters!';
+$_['error_closing']         = 'Please enter closing balance!';

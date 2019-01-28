@@ -295,10 +295,10 @@ class ControllerCommonNav extends Controller
             # Reports
             $report = array();
 
-            if($this->member->hasPermission('access', 'report/report')) {
+            if($this->member->hasPermission('access', 'report/stock_balance')) {
                 $report[] = array(
-                    'name'      => $this->language->get('text_report'),
-                    'href'      => $this->url->link('report/report', 'member_token=' . $this->session->data['member_token']),
+                    'name'      => $this->language->get('text_stock_balance'),
+                    'href'      => $this->url->link('report/stock_balance', 'member_token=' . $this->session->data['member_token']),
                     'children'  => array()
                 );
             }

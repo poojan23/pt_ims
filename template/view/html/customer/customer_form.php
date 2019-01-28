@@ -39,7 +39,6 @@
 
         </div>
         <div class="ibox-content">
-
             <?php if ($warning_err) : ?>
                 <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> <?php echo $warning_err; ?>
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -152,8 +151,34 @@
 
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" name="mobile" placeholder="<?php echo $entry_mobile; ?>" value="<?php echo $mobile; ?>" id="input-mobile">
-                                                                <?php if (isset($telephone_err)) : ?>
+                                                                <?php if (isset($mobile_err)) : ?>
                                                                     <span class="help-block"><?php echo $mobile_err; ?></span>
+                                                                <?php endif; ?>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="form-group <?php echo (!empty($gst_err)) ? 'has-error' : ''; ?>">
+                                                            <label for="input-gst" class="col-sm-2 control-label"><?php echo $entry_gst; ?> <span class="red">*</span></label>
+
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" name="gst" placeholder="<?php echo $entry_gst; ?>" value="<?php echo $gst; ?>" id="input-gst">
+                                                                <?php if (isset($gst_err)) : ?>
+                                                                    <span class="help-block"><?php echo $gst_err; ?></span>
+                                                                <?php endif; ?>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="form-group <?php echo (!empty($closing_err)) ? 'has-error' : ''; ?>">
+                                                            <label for="input-closing" class="col-sm-2 control-label"><?php echo $entry_closing; ?> <span class="red">*</span></label>
+
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" name="closing_gross_weight" placeholder="<?php echo $entry_closing; ?>" value="<?php echo $closing_gross_weight; ?>" id="input-closing">
+                                                                <?php if (isset($closing_err)) : ?>
+                                                                    <span class="help-block"><?php echo $closing_err; ?></span>
                                                                 <?php endif; ?>
                                                             </div>
                                                         </div>

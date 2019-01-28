@@ -373,20 +373,20 @@ class ControllerSaleOrder extends Controller {
 
     public function getNetWeight() {
         $json = array();
-
+        
         if (isset($this->request->post['hdnInwardId'])) {
-            $inward_id = $this->request->post['hdnInwardId'];
+            $hdnInwardId = $this->request->post['hdnInwardId'];
         } else {
-            $inward_id = 0;
+            $hdnInwardId = 0;
         }
 
         $this->load->model('sale/order');
 
-        $results = $this->model_sale_order->getNetWeight($inward_id);
-//        print_r($results);exit;
+        $results = $this->model_sale_order->getNetWeight($hdnInwardId);
         $json = array(
             'net_weight' => $results['net_weight'],
         );
+       
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
     }

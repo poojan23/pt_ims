@@ -212,7 +212,7 @@
                     <div class="hr-line-dashed"></div>
 
                     <div class="form-group"><label class="col-sm-2 control-label"><?= $label_net_wt; ?></label>
-                        <div class="col-sm-10"><input type="text" class="form-control" name="net_weight" id="net_weight" readonly=""></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="net_weight" value="<?php echo $net_weight; ?>" id="net_weight" readonly=""></div>
                     </div>
                      <div class="hr-line-dashed"></div>
                      
@@ -301,7 +301,6 @@
                                 {
                           
                                     var hdnInwardId = $('#hdnInwardId').val();
-                                              alert(hdnInwardId);
                                     var thickness = $('#thickness').val();
                                     var width = $('#width').val();
                                     var cuttinglength = $('#length').val();
@@ -336,7 +335,6 @@
                                         },
                                         success: function (json) {
                                             var remainingNetWt = json['net_weight'];
-
                                             var lowerLimit = parseInt(remainingNetWt) - parseInt(500);
                                             var upperLimit = parseInt(remainingNetWt) + parseInt(500);
                                             if (net_Weight >= upperLimit)
@@ -365,7 +363,7 @@
                                         },
                                         error: function (xhr, ajaxOptions, thrownError) {
 
-                                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+//                                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
                                         }
                                     });
 
