@@ -11,6 +11,11 @@ class ModelCustomerCustomer extends Model {
         $customer_id = $this->db->lastInsertId();
 
         $this->db->query("INSERT INTO " . DB_PREFIX . "clop SET customer_id = '" . (int) $customer_id . "', org_id='1',  opening_date = '" . $openingDate . "', opening_gross_weight = '" . $data['closing_gross_weight'] . "', closing_date = '" . $closingDate . "', closing_gross_weight = '" . $this->db->escape($data['closing_gross_weight']) . "', date_modified = NOW(), date_added = NOW()");
+        $year = date("y");
+        $month = date("m");
+        $unique_id= $year."".$month."".$customer_id;
+        
+        $this->db->query("UPDATE " . DB_PREFIX . "customer SET unique_id = '" .$unique_id . "' WHERE customer_id = '" . (int) $customer_id . "'");
 
         if (isset($data['address'])) {
             foreach ($data['address'] as $key => $address) {

@@ -121,11 +121,22 @@
                                             "bSearchable": false,
                                             "bSortable": false
                                         },
-                                        {"data": "customer_name"},
+                                       
+                                        {
+                                            data: function (data, type, row) {
+                                                if (type === 'display') {
+                                                    return '<a href="<?php echo $view; ?>&customer_id=' + data.customer_id + '">' + data.customer_name + '</a>';
+                                                }
+                                                return data;
+                                            },
+                                            "bSearchable": false,
+                                            "bSortable": false,
+                                            "width": 80
+                                        },
                                         {"data": "opening_gross_weight"},
                                         {"data": "inwardTotal"},
                                         {"data": "outwardTotal"},
-                                        {"data": "closing_gross_weight"}
+                                        {"data": "closing"}
                                     
                                     ],
 

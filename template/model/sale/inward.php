@@ -5,9 +5,11 @@ class ModelSaleInward extends Model {
     public function addInward($data) {
         $truck_no = strtoupper($data['truck_no']);
         $coil_no = strtoupper($data['coil_no']);
-        
-//        $query = $this->db->query("SELECT coil_no FROM " . DB_PREFIX . "inward WHERE coil_no = '" . $this->db->escape($coil_no) . "'");
-        
+       
+        $product_type = $this->db->query("SELECT product_type FROM " . DB_PREFIX . "product_type WHERE product_type_id = '" . (int) $data['product_type_id'] . "'");
+       
+        $cust_unique_id = $this->db->query("SELECT unique_id FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int) $data['customer_id'] . "'");
+
         $this->db->query("INSERT INTO " . DB_PREFIX . "inward SET inward_date='" . $data['inward_date'] . "', customer_id = '" . (int) $data['customer_id'] . "', "
                 . " product_id = '" . (int) $data['product_id'] . "', product_type_id = '" . (int) $data['product_type_id'] . "', truck_no = '" . $this->db->escape($truck_no) . "',"
                 . " coil_no = '" . $this->db->escape($coil_no) . "',thickness = '" . $data['thickness'] . "', width = '" . $data['width'] . "',   `length` = '" . (isset($data['length']) ? $data['length'] : 0) . "',  `pieces` = '" . (isset($data['pieces']) ? $data['pieces'] : 0) . "',"
@@ -15,6 +17,17 @@ class ModelSaleInward extends Model {
 
         $inward_id = $this->db->lastInsertId();
 
+        $year = date("y");
+        $month = date("m");
+        if ($month > '03' && $month <= '12') {
+            $y = $year . "-" . ($year + 1);
+        } else {
+            $y = ($year - 1) . "-" . $year;
+        }
+        $unique_id =$product_type->row['product_type']."/".$cust_unique_id->row['unique_id']."/".$y."/".$inward_id;
+        
+        $this->db->query("UPDATE " . DB_PREFIX . "inward SET unique_id = '" .$unique_id . "' WHERE inward_id = '" . (int) $inward_id . "'");
+        
         $this->db->query("INSERT INTO " . DB_PREFIX . "inward_weight SET date_added='" . $data['inward_date'] . "',gross_weight='" . $data['gross_weight'] . "', net_weight = '" . $data['net_weight'] . "',inward_id = '" . (int) $inward_id . "', org_id = '1', cutting_date='" . $data['inward_date'] . "'");
 
         return $inward_id;
@@ -72,7 +85,7 @@ class ModelSaleInward extends Model {
         $date2 = date('Y-m-d');
         $date1 = date('Y-m-d');
         $date1 = date('Y-m-d', strtotime($date1 . ' -6 day'));
-     
+
         $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " WHERE (i.inward_date BETWEEN '" . $date1 . "' AND '" . $date2 . "' ) GROUP BY i.inward_date");
@@ -82,7 +95,7 @@ class ModelSaleInward extends Model {
 
     public function getMonthlyInward() {
         $date1 = date('Y-m-01');
-        $date2 =  date('Y-m-t');
+        $date2 = date('Y-m-t');
 
         $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,sum(i.thickness) as totalThickness,(DATE_FORMAT(i.inward_date,'%Y-%m'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
@@ -90,8 +103,8 @@ class ModelSaleInward extends Model {
 
         return $query->rows;
     }
-    
-    public function getQuarterlyInward($date1,$date2) {
+
+    public function getQuarterlyInward($date1, $date2) {
 
         $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,(DATE_FORMAT(i.inward_date,'%Y-%m'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
@@ -99,7 +112,8 @@ class ModelSaleInward extends Model {
 
         return $query->rows;
     }
-    public function getYearlyInward($date1,$date2) {
+
+    public function getYearlyInward($date1, $date2) {
 
         $query = $this->db->query("SELECT i.*,sum(i.gross_weight) as totalInward,(DATE_FORMAT(i.inward_date,'%Y'))  as crt,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name FROM " . DB_PREFIX . "inward i "
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
@@ -145,13 +159,13 @@ class ModelSaleInward extends Model {
 
         return $query->rows;
     }
-    
+
     public function getproductType($product_type) {
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_type WHERE product_type_id = '" . (int)($product_type) . "'");
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_type WHERE product_type_id = '" . (int) ($product_type) . "'");
 
         return $query->row;
     }
-    
+
     public function getCoilNosByCustomerId($customer_id) {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "inward WHERE customer_id = '" . $customer_id . "'");
 
@@ -169,7 +183,6 @@ class ModelSaleInward extends Model {
 
     public function getInwardDetailsByCoilNo($coil_no) {
         $query = $this->db->query("SELECT i.*,CONCAT(c.firstname, ' ' , c.lastname) AS customer_name,p.product_code,pt.product_type FROM " . DB_PREFIX . "inward i "
-       
                 . " LEFT JOIN " . DB_PREFIX . "customer c ON i.customer_id = c.customer_id "
                 . " LEFT JOIN " . DB_PREFIX . "product_type pt ON i.product_type_id = pt.product_type_id "
                 . " LEFT JOIN " . DB_PREFIX . "product p ON i.product_id = p.product_id WHERE i.coil_no = '" . $coil_no . "'");

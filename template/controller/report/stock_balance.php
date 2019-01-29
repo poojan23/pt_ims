@@ -39,14 +39,15 @@ class ControllerReportStockBalance extends Controller {
         } else {
             $data['success'] = '';
         }
-
+        $data['view'] = $this->url->link('report/stock_report', 'member_token=' . $this->session->data['member_token'], true);
+        
         $data['header'] = $this->load->controller('common/header');
         $data['nav'] = $this->load->controller('common/nav');
         $data['footer'] = $this->load->controller('common/footer');
 
         $this->response->setOutput($this->load->view('reports/stock_balance', $data));
     }
-
+    
     public function getData() {
         $json = array();
 
@@ -62,11 +63,12 @@ class ControllerReportStockBalance extends Controller {
 
         foreach ($results as $result) {
             $nestedData['customer_id'] = $result['customer_id'];
-            $nestedData['opening_gross_weight'] = $result['opening_gross_weight'];
+            $nestedData['opening_gross_weight'] = $result['opening_gross_weight']/1000;
             $nestedData['closing_gross_weight'] = $result['closing_gross_weight'];
             $nestedData['customer_name'] = $result['customer_name'];
-            $nestedData['inwardTotal'] = $result['inwardTotal'];
-            $nestedData['outwardTotal'] = $result['outwardTotal'];
+            $nestedData['inwardTotal'] = $result['inwardTotal']/1000;
+            $nestedData['outwardTotal'] = $result['outwardTotal']/1000;
+            $nestedData['closing'] = $result['closing']/1000;
 
             $table[] = $nestedData;
         }
